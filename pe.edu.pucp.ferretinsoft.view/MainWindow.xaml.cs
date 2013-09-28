@@ -24,5 +24,11 @@ namespace pe.edu.pucp.ferretinsoft.view
         {
             InitializeComponent();
         }
+
+        private void comprasBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MCompras.MC_MainWindow MCWindow = new MCompras.MC_MainWindow();
+            MCWindow.Show();
+        }
     }
 }

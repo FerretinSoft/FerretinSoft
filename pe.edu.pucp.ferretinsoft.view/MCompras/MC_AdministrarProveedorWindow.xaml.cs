@@ -15,19 +15,13 @@ using System.Windows.Shapes;
 namespace pe.edu.pucp.ferretinsoft.view.MCompras
 {
     /// <summary>
-    /// Interaction logic for MC_MainWindow.xaml
+    /// Lógica de interacción para MC_AdministrarProveedorWindow.xaml
     /// </summary>
-    public partial class MC_MainWindow : Window
+    public partial class MC_AdministrarProveedorWindow : Window
     {
-        public MC_MainWindow()
+        public MC_AdministrarProveedorWindow()
         {
             InitializeComponent();
-        }
-
-        private void adminProveedoresBtn_Click(object sender, RoutedEventArgs e)
-        {
-            MC_AdministrarProveedorWindow MCadmp = new MC_AdministrarProveedorWindow();
-            MCadmp.Show();
         }
     }
 }

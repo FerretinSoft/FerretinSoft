@@ -1,7 +1,7 @@
 ﻿<Window x:Class="pe.edu.pucp.ferretinsoft.view.MCompras.MC_MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MC_MainWindow" Height="478" Width="482">
+        Title="Módulo de Compras" Height="478" Width="481.522" Icon="/Resources/ferretin_ico.ico">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Resources/texture_1_100.png" TileMode="FlipX" 
@@ -22,7 +22,7 @@
                 <ImageBrush ImageSource="/Resources/forward_32.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="adminProveedoresBtn" Content="" HorizontalAlignment="Left" Margin="108,118,0,0" VerticalAlignment="Top" Width="32" Height="32">
+        <Button x:Name="adminProveedoresBtn" Content="" HorizontalAlignment="Left" Margin="108,118,0,0" VerticalAlignment="Top" Width="32" Height="32" Click="adminProveedoresBtn_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Resources/forward_32.png"/>
             </Button.Background>

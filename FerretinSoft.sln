@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pe.edu.pucp.ferretinsoft.view", "pe.edu.pucp.ferretinsoft.view\pe.edu.pucp.ferretinsoft.view.csproj", "{3D7D76E9-0090-41C1-AEEA-1D789EEADF4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pe.edu.pucp.ferretinsoft.model", "pe.edu.pucp.ferretinsoft.model\pe.edu.pucp.ferretinsoft.model.csproj", "{8711C7B7-A2D3-41CC-8F90-DC3F2C47F0C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D7D76E9-0090-41C1-AEEA-1D789EEADF4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D7D76E9-0090-41C1-AEEA-1D789EEADF4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D7D76E9-0090-41C1-AEEA-1D789EEADF4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D7D76E9-0090-41C1-AEEA-1D789EEADF4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8711C7B7-A2D3-41CC-8F90-DC3F2C47F0C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8711C7B7-A2D3-41CC-8F90-DC3F2C47F0C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8711C7B7-A2D3-41CC-8F90-DC3F2C47F0C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8711C7B7-A2D3-41CC-8F90-DC3F2C47F0C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

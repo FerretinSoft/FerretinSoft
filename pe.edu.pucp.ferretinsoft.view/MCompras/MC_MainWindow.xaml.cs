@@ -40,20 +40,20 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
 
         private void ordCompraBtn_Click(object sender, RoutedEventArgs e)
         {
-            MC_AdministrarOCCotizacion MCadoc = new MC_AdministrarOCCotizacion();
-            MCadoc.ShowDialog();
+            MC_AdministrarOCCotizacion MCadmOC = new MC_AdministrarOCCotizacion();
+            MCadmOC.ShowDialog();
         }
 
         private void repComprasBtn_Click(object sender, RoutedEventArgs e)
         {
-            //ReportesComprasWindow repW = new ReportesComprasWindow();
-            //repW.ShowDialog();
+            MC_Reportes MCrep = new MC_Reportes();
+            MCrep.ShowDialog();
         }
 
-        private void repComprasBtn_Copy_Click(object sender, RoutedEventArgs e)
+        private void solicitudAbastBtn_Click(object sender, RoutedEventArgs e)
         {
-            //ComprasSolicitudAbastecimiento solAbast = new ComprasSolicitudAbastecimiento();
-            //solAbast.ShowDialog();
+            MC_AtenderSolicitudWindow MCatnSol = new MC_AtenderSolicitudWindow();
+            MCatnSol.ShowDialog();
         }
     }
 }

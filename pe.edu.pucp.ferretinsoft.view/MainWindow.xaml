@@ -10,44 +10,46 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="confBtn" Content="" HorizontalAlignment="Left" Margin="299,372,0,0" VerticalAlignment="Top" Width="75" Height="75">
-            <Button.Background>
-                <ImageBrush ImageSource="Resources/settings_64.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="reportesBtn" Content="" HorizontalAlignment="Left" Margin="299,250,0,0" VerticalAlignment="Top" Width="75" Height="75">
-            <Button.Background>
-                <ImageBrush ImageSource="Resources/opened_folder_64.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="rrhhBtn" Content="" HorizontalAlignment="Left" Margin="299,133,0,0" VerticalAlignment="Top" Width="75" Height="75">
-            <Button.Background>
-                <ImageBrush ImageSource="Resources/user_male2_64.png" Stretch="None"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="almacenBtn" Content="" HorizontalAlignment="Left" Margin="73,372,0,0" VerticalAlignment="Top" Width="75" Height="75" RenderTransformOrigin="-0.039,0.507">
-            <Button.Background>
-                <ImageBrush ImageSource="Resources/money_64.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="comprasBtn" Content="" HorizontalAlignment="Left" Margin="73,250,0,0" VerticalAlignment="Top" Width="75" Height="75" RenderTransformOrigin="2.372,0.391" Click="comprasBtn_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="Resources/download_64.png"/>
-            </Button.Background>
-        </Button>
         <Image HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" VerticalAlignment="Top" Width="300" Source="Resources/ferretinLogo2.png">
         </Image>
-        <Label Content="Ventas" HorizontalAlignment="Left" Margin="166,156,0,0" VerticalAlignment="Top" Width="75" FontSize="16" FontFamily="Arial" Background="#00000000" Foreground="Black"/>
-        <Label Content="Seguridad" HorizontalAlignment="Left" Margin="393,393,0,0" VerticalAlignment="Top" Width="122" FontFamily="Arial" FontSize="16" Background="#00000000" Foreground="Black"/>
-        <Label Content="Reportes" HorizontalAlignment="Left" Margin="393,271,0,0" VerticalAlignment="Top" Width="89" FontSize="16" FontFamily="Arial" RenderTransformOrigin="0.469,0.162" Background="#00000000" Foreground="Black"/>
-        <Label Content="RR.HH." HorizontalAlignment="Left" Margin="393,156,0,0" VerticalAlignment="Top" Width="75" FontSize="16" FontFamily="Arial" Background="#00000000" Foreground="Black"/>
-        <Label Content="Almacén" HorizontalAlignment="Left" Margin="166,393,0,0" VerticalAlignment="Top" Width="86" FontSize="16" FontFamily="Arial" Background="#00000000" Foreground="Black"/>
-        <Label Content="Compras" HorizontalAlignment="Left" Margin="166,271,0,0" VerticalAlignment="Top" Width="89" FontSize="16" FontFamily="Arial" RenderTransformOrigin="0.386,0.584" Background="#00000000" Foreground="Black"/>
-        <Button x:Name="ventasBtn" Content="" HorizontalAlignment="Left" Margin="73,133,0,0" VerticalAlignment="Top" Width="75" Height="75">
-            <Button.Background>
-                <ImageBrush ImageSource="Resources/shopping_cart_loaded_64.png" Stretch="None"/>
-            </Button.Background>
-        </Button>
+        <Grid Margin="73,133,63,84" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="confBtn" Content="" HorizontalAlignment="Left" Margin="226,239,0,0" VerticalAlignment="Top" Width="75" Height="75">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/settings_64.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="reportesBtn" Content="" HorizontalAlignment="Left" Margin="226,117,0,0" VerticalAlignment="Top" Width="75" Height="75">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/opened_folder_64.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="rrhhBtn" Content="" HorizontalAlignment="Left" Margin="226,0,0,0" VerticalAlignment="Top" Width="75" Height="75">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/user_male2_64.png" Stretch="None"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="almacenBtn" Content="" HorizontalAlignment="Left" Margin="0,239,0,0" VerticalAlignment="Top" Width="75" Height="75" RenderTransformOrigin="-0.039,0.507">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/money_64.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="comprasBtn" Content="" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top" Width="75" Height="75" RenderTransformOrigin="2.372,0.391" Click="comprasBtn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/download_64.png"/>
+                </Button.Background>
+            </Button>
+            <Label Content="Ventas" HorizontalAlignment="Left" Margin="93,23,0,0" VerticalAlignment="Top" Width="75" FontSize="16" FontFamily="Arial" Background="#00000000" Foreground="Black"/>
+            <Label Content="Seguridad" HorizontalAlignment="Left" Margin="320,260,0,0" VerticalAlignment="Top" Width="122" FontFamily="Arial" FontSize="16" Background="#00000000" Foreground="Black"/>
+            <Label Content="Reportes" HorizontalAlignment="Left" Margin="320,138,0,0" VerticalAlignment="Top" Width="89" FontSize="16" FontFamily="Arial" RenderTransformOrigin="0.469,0.162" Background="#00000000" Foreground="Black"/>
+            <Label Content="RR.HH." HorizontalAlignment="Left" Margin="320,23,0,0" VerticalAlignment="Top" Width="75" FontSize="16" FontFamily="Arial" Background="#00000000" Foreground="Black"/>
+            <Label Content="Almacén" HorizontalAlignment="Left" Margin="93,260,0,0" VerticalAlignment="Top" Width="86" FontSize="16" FontFamily="Arial" Background="#00000000" Foreground="Black"/>
+            <Label Content="Compras" HorizontalAlignment="Left" Margin="93,138,0,0" VerticalAlignment="Top" Width="89" FontSize="16" FontFamily="Arial" RenderTransformOrigin="0.386,0.584" Background="#00000000" Foreground="Black"/>
+            <Button x:Name="ventasBtn" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/shopping_cart_loaded_64.png" Stretch="None"/>
+                </Button.Background>
+            </Button>
+        </Grid>
         <StatusBar Height="35" VerticalAlignment="Bottom">
             <StatusBar.ItemsPanel>
                 <ItemsPanelTemplate>

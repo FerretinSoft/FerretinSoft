@@ -30,5 +30,11 @@ namespace pe.edu.pucp.ferretinsoft.view
             MCompras.MC_MainWindow MCWindow = new MCompras.MC_MainWindow();
             MCWindow.Show();
         }
+
+        private void confBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MSeguridad.MS_MainWindow MSWindow = new MSeguridad.MS_MainWindow();
+            MSWindow.Show();
+        }
     }
 }

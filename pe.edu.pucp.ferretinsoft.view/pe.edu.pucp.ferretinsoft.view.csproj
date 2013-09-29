@@ -77,7 +77,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MSeguridad\MS_AdministrarPerfiles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MSeguridad\MS_AdministrarTiendas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MSeguridad\MS_AdministrarUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MSeguridad\MS_AuditoriaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MSeguridad\MS_LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MSeguridad\MS_MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MSeguridad\MS_ParametrosWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -92,8 +116,26 @@
     <Compile Include="MCompras\MC_MainWindow.xaml.cs">
       <DependentUpon>MC_MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MSeguridad\MS_AdministrarPerfiles.xaml.cs">
+      <DependentUpon>MS_AdministrarPerfiles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MSeguridad\MS_AdministrarTiendas.xaml.cs">
+      <DependentUpon>MS_AdministrarTiendas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MSeguridad\MS_AdministrarUsuarios.xaml.cs">
+      <DependentUpon>MS_AdministrarUsuarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MSeguridad\MS_AuditoriaWindow.xaml.cs">
+      <DependentUpon>MS_AuditoriaWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MSeguridad\MS_LoginWindow.xaml.cs">
       <DependentUpon>MS_LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MSeguridad\MS_MainWindow.xaml.cs">
+      <DependentUpon>MS_MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MSeguridad\MS_ParametrosWindow.xaml.cs">
+      <DependentUpon>MS_ParametrosWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

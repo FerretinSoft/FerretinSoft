@@ -13,7 +13,7 @@
         <Image HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" VerticalAlignment="Top" Width="300" Source="Resources/ferretinLogo2.png">
         </Image>
         <Grid Margin="73,133,63,84" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="confBtn" Content="" HorizontalAlignment="Left" Margin="226,239,0,0" VerticalAlignment="Top" Width="75" Height="75">
+            <Button x:Name="confBtn" Content="" HorizontalAlignment="Left" Margin="226,239,0,0" VerticalAlignment="Top" Width="75" Height="75" Click="confBtn_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="Resources/settings_64.png"/>
                 </Button.Background>

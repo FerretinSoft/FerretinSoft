@@ -121,6 +121,46 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MVentas\MV_AdministrarNotaCreditoWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_AdministrarProformasWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_AdministrarVentasWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_ClientesWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_DevolucionesWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_PagoWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_RegistrarVentaWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_ReportesVentasWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_ServiciosPostVentaWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MCompras\MC_AdministrarOCCotizacionWindow.xaml.cs">
@@ -165,6 +205,36 @@
     <Compile Include="MSeguridad\MS_ParametrosWindow.xaml.cs">
       <DependentUpon>MS_ParametrosWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MVentas\MV_AdministrarNotaCreditoWindow.xaml.cs">
+      <DependentUpon>MV_AdministrarNotaCreditoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_AdministrarProformasWindow.xaml.cs">
+      <DependentUpon>MV_AdministrarProformasWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_AdministrarVentasWindow.xaml.cs">
+      <DependentUpon>MV_AdministrarVentasWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_ClientesWindow.xaml.cs">
+      <DependentUpon>MV_ClientesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_DevolucionesWindow.xaml.cs">
+      <DependentUpon>MV_DevolucionesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_MainWindow.xaml.cs">
+      <DependentUpon>MV_MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_PagoWindow.xaml.cs">
+      <DependentUpon>MV_PagoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_RegistrarVentaWindow.xaml.cs">
+      <DependentUpon>MV_RegistrarVentaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_ReportesVentasWindow.xaml.cs">
+      <DependentUpon>MV_ReportesVentasWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_ServiciosPostVentaWindow.xaml.cs">
+      <DependentUpon>MV_ServiciosPostVentaWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -194,7 +264,6 @@
   <ItemGroup>
     <Folder Include="MAlmacen\" />
     <Folder Include="MRecursosHumanos\" />
-    <Folder Include="MVentas\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\add2_48.png" />

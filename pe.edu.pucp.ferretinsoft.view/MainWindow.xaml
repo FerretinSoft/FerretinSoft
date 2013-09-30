@@ -1,17 +1,17 @@
-﻿<Window x:Class="pe.edu.pucp.ferretinsoft.view.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="FerretinSoft" Height="562" Width="586" Icon="/Resources/ferretin_ico.ico">
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="pe.edu.pucp.ferretinsoft.view.MainWindow"
+        Title="FerretinSoft" Icon="/Resources/ferretin_ico.ico" WindowStartupLocation="CenterScreen" Height="585" Width="561">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="Resources/texture_1_100.png" TileMode="FlipX" 
-            Viewport="0,0,100,100" ViewportUnits="Absolute"/>
+				Viewport="0,0,100,100" ViewportUnits="Absolute"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Image HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" VerticalAlignment="Top" Width="300" Source="Resources/ferretinLogo2.png">
-        </Image>
+        <Image HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" VerticalAlignment="Top" Width="300" Source="Resources/ferretinLogo2.png"/>
         <Grid Margin="73,133,63,84" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button x:Name="confBtn" Content="" HorizontalAlignment="Left" Margin="226,239,0,0" VerticalAlignment="Top" Width="75" Height="75" Click="confBtn_Click">
                 <Button.Background>
@@ -44,7 +44,7 @@
             <Label Content="RR.HH." HorizontalAlignment="Left" Margin="320,23,0,0" VerticalAlignment="Top" Width="75" FontSize="16" FontFamily="Arial" Background="#00000000" Foreground="Black"/>
             <Label Content="Almacén" HorizontalAlignment="Left" Margin="93,260,0,0" VerticalAlignment="Top" Width="86" FontSize="16" FontFamily="Arial" Background="#00000000" Foreground="Black"/>
             <Label Content="Compras" HorizontalAlignment="Left" Margin="93,138,0,0" VerticalAlignment="Top" Width="89" FontSize="16" FontFamily="Arial" RenderTransformOrigin="0.386,0.584" Background="#00000000" Foreground="Black"/>
-            <Button x:Name="ventasBtn" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75">
+            <Button x:Name="ventasBtn" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75" Click="ventasBtn_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="Resources/shopping_cart_loaded_64.png" Stretch="None"/>
                 </Button.Background>

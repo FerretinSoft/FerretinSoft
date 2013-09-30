@@ -42,5 +42,13 @@ namespace pe.edu.pucp.ferretinsoft.view
             MVentas.MV_MainWindow MVWindow = new MVentas.MV_MainWindow();
             MVWindow.Show();
         }
+
+        private void rrhhBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MRecursosHumanos.MR_MainWindow MRWindow = new MRecursosHumanos.MR_MainWindow();
+            MRWindow.Show();
+
+        }
+
     }
 }

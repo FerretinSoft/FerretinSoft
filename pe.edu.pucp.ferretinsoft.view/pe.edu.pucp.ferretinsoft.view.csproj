@@ -93,6 +93,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MRecursosHumanos\MR_AdministrarPersonalWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MRecursosHumanos\MR_MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MSeguridad\MS_AdministrarPerfiles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -184,6 +192,12 @@
     <Compile Include="MCompras\MC_ReportesWindow.xaml.cs">
       <DependentUpon>MC_ReportesWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MRecursosHumanos\MR_AdministrarPersonalWindow.xaml.cs">
+      <DependentUpon>MR_AdministrarPersonalWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MRecursosHumanos\MR_MainWindow.xaml.cs">
+      <DependentUpon>MR_MainWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MSeguridad\MS_AdministrarPerfiles.xaml.cs">
       <DependentUpon>MS_AdministrarPerfiles.xaml</DependentUpon>
     </Compile>
@@ -263,7 +277,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MAlmacen\" />
-    <Folder Include="MRecursosHumanos\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\add2_48.png" />

@@ -23,7 +23,7 @@
                     <ImageBrush ImageSource="Resources/opened_folder_64.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="rrhhBtn" Content="" HorizontalAlignment="Left" Margin="226,0,0,0" VerticalAlignment="Top" Width="75" Height="75">
+            <Button x:Name="rrhhBtn" Content="" HorizontalAlignment="Left" Margin="226,0,0,0" VerticalAlignment="Top" Width="75" Height="75" Click="rrhhBtn_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="Resources/user_male2_64.png" Stretch="None"/>
                 </Button.Background>

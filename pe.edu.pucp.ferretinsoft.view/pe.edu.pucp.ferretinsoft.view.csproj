@@ -65,7 +65,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MAlmacen\MA_InventarioProductosWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MAlmacen\MA_MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MAlmacen\MA_MantenimientoProductosWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MAlmacen\MA_MovimientosWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -175,8 +187,17 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MAlmacen\MA_InventarioProductosWindow.xaml.cs">
+      <DependentUpon>MA_InventarioProductosWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MAlmacen\MA_MainWindow.xaml.cs">
       <DependentUpon>MA_MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MAlmacen\MA_MantenimientoProductosWindow.xaml.cs">
+      <DependentUpon>MA_MantenimientoProductosWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MAlmacen\MA_MovimientosWindow.xaml.cs">
+      <DependentUpon>MA_MovimientosWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MCompras\MC_AdministrarOCCotizacionWindow.xaml.cs">
       <DependentUpon>MC_AdministrarOCCotizacionWindow.xaml</DependentUpon>

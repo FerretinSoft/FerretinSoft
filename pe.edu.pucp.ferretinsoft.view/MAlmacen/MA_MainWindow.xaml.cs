@@ -34,20 +34,20 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
 
         private void invProdBtn_Click(object sender, RoutedEventArgs e)
         {
-            /*InventarioProductosWindow pw = new InventarioProductosWindow();
-            pw.Show();*/
+            MA_InventarioProductosWindow invWindow = new MA_InventarioProductosWindow();
+            invWindow.Show();
         }
 
         private void prodBtn_Click(object sender, RoutedEventArgs e)
         {
-            //MantenimientoProductosWindow mw = new MantenimientoProductosWindow();
-            //mw.Show();
+            MA_MantenimientoProductosWindow prodWindow = new MA_MantenimientoProductosWindow();
+            prodWindow.Show();
         }
 
         private void movBtn_Click(object sender, RoutedEventArgs e)
         {
-            //MovimientosWindow mw = new MovimientosWindow();
-            //mw.Show();
+            MA_MovimientosWindow movWindow = new MA_MovimientosWindow();
+            movWindow.Show();
         }
     }
 }

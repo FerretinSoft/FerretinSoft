@@ -28,7 +28,7 @@
                     <ImageBrush ImageSource="Resources/user_male2_64.png" Stretch="None"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="almacenBtn" Content="" HorizontalAlignment="Left" Margin="0,239,0,0" VerticalAlignment="Top" Width="75" Height="75" RenderTransformOrigin="-0.039,0.507">
+            <Button x:Name="almacenBtn" Content="" HorizontalAlignment="Left" Margin="0,239,0,0" VerticalAlignment="Top" Width="75" Height="75" RenderTransformOrigin="-0.039,0.507" Click="almacenBtn_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="Resources/money_64.png"/>
                 </Button.Background>

@@ -50,5 +50,11 @@ namespace pe.edu.pucp.ferretinsoft.view
 
         }
 
+        private void almacenBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MAlmacen.MA_MainWindow maMain = new MAlmacen.MA_MainWindow();
+            maMain.Show();
+        }
+
     }
 }

@@ -65,6 +65,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MAlmacen\MA_MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MCompras\MC_AdministrarOCCotizacionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -171,6 +175,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MAlmacen\MA_MainWindow.xaml.cs">
+      <DependentUpon>MA_MainWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MCompras\MC_AdministrarOCCotizacionWindow.xaml.cs">
       <DependentUpon>MC_AdministrarOCCotizacionWindow.xaml</DependentUpon>
     </Compile>
@@ -275,9 +282,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MAlmacen\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\add2_48.png" />
     <Resource Include="Resources\add_20.png" />

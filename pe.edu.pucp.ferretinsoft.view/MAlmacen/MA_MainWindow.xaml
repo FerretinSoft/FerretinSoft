@@ -61,7 +61,7 @@
                 <Label Content="© 2013 Ferretin Corp" Width="134" Margin="0" HorizontalAlignment="Right"/>
             </StatusBarItem>
         </StatusBar>
-        <Button x:Name="repAlmacenBtn" Content="" HorizontalAlignment="Left" Margin="128,279,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.44,-0.101">
+        <Button x:Name="repAlmacenBtn" Content="" HorizontalAlignment="Left" Margin="128,279,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.44,-0.101" Click="repAlmacenBtn_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/forward_32.png"/>
             </Button.Background>

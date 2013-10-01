@@ -49,5 +49,11 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
             MA_MovimientosWindow movWindow = new MA_MovimientosWindow();
             movWindow.Show();
         }
+
+        private void repAlmacenBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MA_ReportesWindow repWindow = new MA_ReportesWindow();
+            repWindow.Show();
+        }
     }
 }

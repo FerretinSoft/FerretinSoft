@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D7D76E9-0090-41C1-AEEA-1D789EEADF4A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pe.edu.pucp.ferretinsoft.view</RootNamespace>
+    <AssemblyName>pe.edu.pucp.ferretinsoft.view</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MCompras\MC_AdministrarOCCotizacionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MCompras\MC_AdministrarProveedorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MCompras\MC_AtenderSolicitudWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MCompras\MC_BuscarProveedorProductoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MCompras\MC_ConsolidarSolicitudesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MCompras\MC_MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MCompras\MC_ReportesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MRecursosHumanos\MR_AdministrarPersonalWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MRecursosHumanos\MR_MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MSeguridad\MS_AdministrarPerfiles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MSeguridad\MS_AdministrarTiendas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MSeguridad\MS_AdministrarUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MSeguridad\MS_AuditoriaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MSeguridad\MS_LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MSeguridad\MS_MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MSeguridad\MS_ParametrosWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVentas\MV_AdministrarNotaCreditoWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_AdministrarProformasWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_AdministrarVentasWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_ClientesWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_DevolucionesWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_PagoWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_RegistrarVentaWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_ReportesVentasWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_ServiciosPostVentaWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MCompras\MC_AdministrarOCCotizacionWindow.xaml.cs">
+      <DependentUpon>MC_AdministrarOCCotizacionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MCompras\MC_AdministrarProveedorWindow.xaml.cs">
+      <DependentUpon>MC_AdministrarProveedorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MCompras\MC_AtenderSolicitudWindow.xaml.cs">
+      <DependentUpon>MC_AtenderSolicitudWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MCompras\MC_BuscarProveedorProductoWindow.xaml.cs">
+      <DependentUpon>MC_BuscarProveedorProductoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MCompras\MC_ConsolidarSolicitudesWindow.xaml.cs">
+      <DependentUpon>MC_ConsolidarSolicitudesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MCompras\MC_MainWindow.xaml.cs">
+      <DependentUpon>MC_MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MCompras\MC_ReportesWindow.xaml.cs">
+      <DependentUpon>MC_ReportesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MRecursosHumanos\MR_AdministrarPersonalWindow.xaml.cs">
+      <DependentUpon>MR_AdministrarPersonalWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MRecursosHumanos\MR_MainWindow.xaml.cs">
+      <DependentUpon>MR_MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MSeguridad\MS_AdministrarPerfiles.xaml.cs">
+      <DependentUpon>MS_AdministrarPerfiles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MSeguridad\MS_AdministrarTiendas.xaml.cs">
+      <DependentUpon>MS_AdministrarTiendas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MSeguridad\MS_AdministrarUsuarios.xaml.cs">
+      <DependentUpon>MS_AdministrarUsuarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MSeguridad\MS_AuditoriaWindow.xaml.cs">
+      <DependentUpon>MS_AuditoriaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MSeguridad\MS_LoginWindow.xaml.cs">
+      <DependentUpon>MS_LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MSeguridad\MS_MainWindow.xaml.cs">
+      <DependentUpon>MS_MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MSeguridad\MS_ParametrosWindow.xaml.cs">
+      <DependentUpon>MS_ParametrosWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_AdministrarNotaCreditoWindow.xaml.cs">
+      <DependentUpon>MV_AdministrarNotaCreditoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_AdministrarProformasWindow.xaml.cs">
+      <DependentUpon>MV_AdministrarProformasWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_AdministrarVentasWindow.xaml.cs">
+      <DependentUpon>MV_AdministrarVentasWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_ClientesWindow.xaml.cs">
+      <DependentUpon>MV_ClientesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_DevolucionesWindow.xaml.cs">
+      <DependentUpon>MV_DevolucionesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_MainWindow.xaml.cs">
+      <DependentUpon>MV_MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_PagoWindow.xaml.cs">
+      <DependentUpon>MV_PagoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_RegistrarVentaWindow.xaml.cs">
+      <DependentUpon>MV_RegistrarVentaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_ReportesVentasWindow.xaml.cs">
+      <DependentUpon>MV_ReportesVentasWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVentas\MV_ServiciosPostVentaWindow.xaml.cs">
+      <DependentUpon>MV_ServiciosPostVentaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MAlmacen\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\add2_48.png" />
+    <Resource Include="Resources\add_20.png" />
+    <Resource Include="Resources\back_20.png" />
+    <Resource Include="Resources\briefcase_48.png" />
+    <Resource Include="Resources\cliente_1.png" />
+    <Resource Include="Resources\download_64.png" />
+    <Resource Include="Resources\edit_20.png" />
+    <Resource Include="Resources\email_48.png" />
+    <Resource Include="Resources\enterprise_logo_rgb_for_web.jpg" />
+    <Resource Include="Resources\fav_48.png" />
+    <Resource Include="Resources\ferreteriaTienda.jpg" />
+    <Resource Include="Resources\ferretinLogo1.png" />
+    <Resource Include="Resources\ferretinLogo2.png" />
+    <Resource Include="Resources\ferretin_ico.ico" />
+    <Resource Include="Resources\forward_32.png" />
+    <Resource Include="Resources\help_20.png" />
+    <Resource Include="Resources\help_48.png" />
+    <Resource Include="Resources\home_32.png" />
+    <Resource Include="Resources\home_64.png" />
+    <Resource Include="Resources\house_32.png" />
+    <Resource Include="Resources\logo_hogar.gif" />
+    <Resource Include="Resources\mail1_48.png" />
+    <Resource Include="Resources\money_64.png" />
+    <Resource Include="Resources\new_20.png" />
+    <Resource Include="Resources\next_20.png" />
+    <Resource Include="Resources\opened_folder_64.png" />
+    <Resource Include="Resources\print_20.png" />
+    <Resource Include="Resources\print_48.png" />
+    <Resource Include="Resources\refresh2_48.png" />
+    <Resource Include="Resources\sanitarios.png" />
+    <Resource Include="Resources\save1_48.png" />
+    <Resource Include="Resources\save_48.png" />
+    <Resource Include="Resources\search1_20.png" />
+    <Resource Include="Resources\settings_64.png" />
+    <Resource Include="Resources\shopping_cart_64.png" />
+    <Resource Include="Resources\shopping_cart_loaded_64.png" />
+    <Resource Include="Resources\texture_2_100.png" />
+    <Resource Include="Resources\texture_3_100.png" />
+    <Resource Include="Resources\tools_20.png" />
+    <Resource Include="Resources\tools_40.png" />
+    <Resource Include="Resources\trash_20.png" />
+    <Resource Include="Resources\users_64.png" />
+    <Resource Include="Resources\user_male2_64.png" />
+    <Resource Include="Resources\view_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\texture_1_100.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

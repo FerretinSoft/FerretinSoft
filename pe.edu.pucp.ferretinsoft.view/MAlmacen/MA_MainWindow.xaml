@@ -31,7 +31,7 @@
                 <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/forward_32.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="solCompraBtn" Content="" HorizontalAlignment="Left" Margin="128,237,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.44,-0.101">
+        <Button x:Name="solAbastecimientoBtn" Content="" HorizontalAlignment="Left" Margin="128,237,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.44,-0.101" Click="solAbastecimientoBtn_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/forward_32.png"/>
             </Button.Background>

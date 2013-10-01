@@ -85,6 +85,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MAlmacen\MA_SolicitudAbastecimientoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MCompras\MC_AdministrarOCCotizacionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -205,6 +209,9 @@
     </Compile>
     <Compile Include="MAlmacen\MA_ReportesWindow.xaml.cs">
       <DependentUpon>MA_ReportesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MAlmacen\MA_SolicitudAbastecimientoWindow.xaml.cs">
+      <DependentUpon>MA_SolicitudAbastecimientoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MCompras\MC_AdministrarOCCotizacionWindow.xaml.cs">
       <DependentUpon>MC_AdministrarOCCotizacionWindow.xaml</DependentUpon>

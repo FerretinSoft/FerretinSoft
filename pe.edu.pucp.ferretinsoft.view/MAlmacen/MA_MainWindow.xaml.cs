@@ -55,5 +55,11 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
             MA_ReportesWindow repWindow = new MA_ReportesWindow();
             repWindow.Show();
         }
+
+        private void solAbastecimientoBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MA_SolicitudAbastecimientoWindow solWindow = new MA_SolicitudAbastecimientoWindow();
+            solWindow.Show();
+        }
     }
 }

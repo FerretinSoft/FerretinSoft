@@ -3,7 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Inventario de Productos" Height="487" Width="704" Icon="/pe.edu.pucp.ferretinsoft.view;component/Resources/ferretin_ico.ico">
     <Grid>
-        <TabControl x:Name="inventarioTab" Margin="0" Grid.RowSpan="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TabControl x:Name="inventarioTab" Margin="0">
             <TabItem Header="Inventario">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>

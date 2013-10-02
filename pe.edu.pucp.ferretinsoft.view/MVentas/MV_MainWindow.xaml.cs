@@ -53,12 +53,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             repW.Show();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            MV_ServiciosPostVentaWindow w = new MV_ServiciosPostVentaWindow();
-            w.Owner = this;
-            w.Show();
-        }
+        
 
         private void administrarProformasBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -67,6 +62,50 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             w.Show();
         }
 
+        private void StackPanel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, MouseButtonEventArgs e)
+        {
+            ventasMenu.Visibility = System.Windows.Visibility.Hidden;
+            postVentaMenu.Visibility = System.Windows.Visibility.Visible;
+        }
+        private void regresarVentasBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ventasMenu.Visibility = System.Windows.Visibility.Visible;
+            postVentaMenu.Visibility = System.Windows.Visibility.Hidden;
+        }
+        private void anularVentaBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MV_AdministrarVentasWindow pw = new MV_AdministrarVentasWindow();
+            pw.Show();
+        }
+
+        private void administrarDevolucionBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MV_DevolucionesWindow pw = new MV_DevolucionesWindow();
+            pw.Show();
+        }
+
+        
+        private void administrarNotaCreditoBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MV_AdministrarNotaCreditoWindow w = new MV_AdministrarNotaCreditoWindow();
+            w.Show();
+        }
+
+        
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        
+
+        
         
 
     }

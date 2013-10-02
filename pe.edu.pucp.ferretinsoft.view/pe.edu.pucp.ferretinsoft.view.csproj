@@ -193,10 +193,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MVentas\MV_ServiciosPostVentaWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MAlmacen\MA_InventarioProductosWindow.xaml.cs">
@@ -294,9 +290,6 @@
     </Compile>
     <Compile Include="MVentas\MV_ReportesVentasWindow.xaml.cs">
       <DependentUpon>MV_ReportesVentasWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MVentas\MV_ServiciosPostVentaWindow.xaml.cs">
-      <DependentUpon>MV_ServiciosPostVentaWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

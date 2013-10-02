@@ -20,11 +20,11 @@
                 <ListBoxItem Content="Reporte de movimientos"/>
             </ListBox>
             <Label Content="Reportes favoritos" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16" FontStyle="Italic" Grid.Column="1"/>
-            <ListBox HorizontalAlignment="Left" Height="186" Margin="10,50,0,0" VerticalAlignment="Top" Width="194" Grid.Column="1">
+            <ListBox HorizontalAlignment="Left" Height="186" Margin="9,50,0,0" VerticalAlignment="Top" Width="194" Grid.Column="1">
                 <ListBoxItem Content="Reporte de movimientos diario"/>
                 <ListBoxItem Content="Reporte de movimientos mensual"/>
             </ListBox>
-            <Label Content="Seleccione un reporte y presione Siguiente." HorizontalAlignment="Left" Margin="10,246,0,0" VerticalAlignment="Top" Width="308" Grid.ColumnSpan="2"/>
+            <Label Content="Seleccione un reporte y presione Siguiente. " HorizontalAlignment="Left" Margin="10,246,0,0" VerticalAlignment="Top" Width="308" Grid.ColumnSpan="2"/>
         </Grid>
         <Grid x:Name="repConfGrid" Margin="0" Visibility="Collapsed">
             <Label Content="Configure los parámetros del reporte." HorizontalAlignment="Left" Margin="10,246,0,0" VerticalAlignment="Top" Width="308" Grid.ColumnSpan="2"/>

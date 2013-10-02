@@ -6,11 +6,11 @@
         <TabControl HorizontalAlignment="Left" Height="453" VerticalAlignment="Top" Width="704">
             <TabItem Header="Tipo de Movimientos">
                 <Grid Background="#FFE5E5E5" Margin="0,0,0,34">
-                    <DataGrid Margin="10,50,10,29" SelectionChanged="DataGrid_SelectionChanged">
+                    <DataGrid HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Height="304" Width="674">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Width="200" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre de movimiento"/>
-                            <DataGridComboBoxColumn Header="Categoría del movimiento" Width="Auto"/>
-                            <DataGridTextColumn Width="280" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descripción"/>
+                            <DataGridTextColumn Header="Nombre de movimiento" Width="180"/>
+                            <DataGridComboBoxColumn Header="Categoría del movimiento" Width="200"/>
+                            <DataGridTextColumn Header="Descripción" Width="250"/>
                             <DataGridCheckBoxColumn Header="Estado"/>
                         </DataGrid.Columns>
                     </DataGrid>

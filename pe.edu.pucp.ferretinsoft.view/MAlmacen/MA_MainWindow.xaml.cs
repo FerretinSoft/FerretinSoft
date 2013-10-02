@@ -40,7 +40,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
 
         private void prodBtn_Click(object sender, RoutedEventArgs e)
         {
-            MA_MantenimientoProductosWindow prodWindow = new MA_MantenimientoProductosWindow();
+            MA_MantenimientoMovimientosWindow prodWindow = new MA_MantenimientoMovimientosWindow();
             prodWindow.Show();
         }
 

@@ -73,6 +73,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MAlmacen\MA_MantenimientoMovimientosWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MAlmacen\MA_MantenimientoProductosWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -200,6 +204,9 @@
     </Compile>
     <Compile Include="MAlmacen\MA_MainWindow.xaml.cs">
       <DependentUpon>MA_MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MAlmacen\MA_MantenimientoMovimientosWindow.xaml.cs">
+      <DependentUpon>MA_MantenimientoMovimientosWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MAlmacen\MA_MantenimientoProductosWindow.xaml.cs">
       <DependentUpon>MA_MantenimientoProductosWindow.xaml</DependentUpon>

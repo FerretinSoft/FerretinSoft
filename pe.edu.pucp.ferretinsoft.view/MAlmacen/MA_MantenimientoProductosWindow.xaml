@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Productos" Height="487" Width="704" Icon="/pe.edu.pucp.ferretinsoft.view;component/Resources/ferretin_ico.ico">
     <Grid>
-        <TabControl x:Name="inventarioTab" Margin="0" Grid.RowSpan="2">
+        <TabControl x:Name="inventarioTab">
             <TabItem Header="Búsqueda">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
@@ -183,6 +183,43 @@
                     </DataGrid>
                     <Button Content="Guardar" HorizontalAlignment="Left" Margin="221,0,0,5" Grid.Row="1" Width="75" Height="20"/>
                     <Button Content="Cancelar" HorizontalAlignment="Left" Margin="374,0,0,5" Grid.Row="1" Width="75" Height="20"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Categorías" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="83" Margin="-1,0,0,0">
+                <Grid Background="#FFE5E5E5">
+                    <TreeView Background="#FFF5F5F5" HorizontalAlignment="Left" Height="366" Margin="10,49,0,0" VerticalAlignment="Top" Width="225">
+                        <TreeViewItem Header="Categoría Principal" IsExpanded="True">
+                            <TreeViewItem Header="Subcategoría" HorizontalAlignment="Left" Width="647"/>
+                        </TreeViewItem>
+                        <TreeViewItem Header="Otra Categoría Principal" IsExpanded="True">
+                            <TreeViewItem Header="TreeViewItem" HorizontalAlignment="Left" Width="647" IsExpanded="True">
+                                <TreeViewItem Header="Sub-subcategoría" HorizontalAlignment="Left" Width="628"/>
+                            </TreeViewItem>
+                        </TreeViewItem>
+                    </TreeView>
+                    <Label Content="Nombre de categoría:" HorizontalAlignment="Left" Margin="283,49,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Categorías padre:" HorizontalAlignment="Left" Margin="283,86,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Estado:" HorizontalAlignment="Left" Margin="283,126,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Descripción:" HorizontalAlignment="Left" Margin="283,166,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="476,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="476,88,0,0" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="476,132,0,0" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Height="123" Margin="476,176,90,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <Button Content="Guardar" HorizontalAlignment="Left" Margin="416,343,0,0" VerticalAlignment="Top" Width="76"/>
+                    <ToolBar HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="24">
+                        <Button x:Name="nuevoProductoBtn" Content="" VerticalAlignment="Stretch" Width="20" Margin="0,0,2,-1">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/add_20.png" Stretch="None"/>
+                            </Button.Background>
+                        </Button>
+
+                        <Button Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,0">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/trash_20.png"/>
+                            </Button.Background>
+                        </Button>
+
+                    </ToolBar>
                 </Grid>
             </TabItem>
 

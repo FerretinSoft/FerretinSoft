@@ -104,12 +104,12 @@
                         <ColumnDefinition Width="67*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Label Content="Código Mov.:" HorizontalAlignment="Left" Margin="15,17,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
-                    <Label Content="Tipo Movimiento:" HorizontalAlignment="Left" Margin="15,59,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
+                    <Label Content="Tipo Movimiento:" HorizontalAlignment="Left" Margin="15,57,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
                     <TextBox Height="23" Margin="121,21,18,0" TextWrapping="Wrap" Text="02013B5874" VerticalAlignment="Top" IsEnabled="False"/>
-                    <Label Content="Desde:" HorizontalAlignment="Left" Margin="15,141,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="56"/>
-                    <Label Content="Hasta:" HorizontalAlignment="Left" Margin="15,181,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="74"/>
-                    <TextBox HorizontalAlignment="Left" Height="69" Margin="18,349,0,0" TextWrapping="Wrap" Text="&lt;Comentarios aquí&gt;" VerticalAlignment="Top" Width="252"/>
-                    <Label Content="Documento No.:" HorizontalAlignment="Left" Margin="15,223,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="99"/>
+                    <Label Content="Desde:" HorizontalAlignment="Left" Margin="15,138,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="56"/>
+                    <Label Content="Hasta:" HorizontalAlignment="Left" Margin="15,182,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="74"/>
+                    <TextBox HorizontalAlignment="Left" Height="50" Margin="18,368,0,0" TextWrapping="Wrap" Text="&lt;Comentarios aquí&gt;" VerticalAlignment="Top" Width="252"/>
+                    <Label Content="Documento No.:" HorizontalAlignment="Left" Margin="15,224,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="99"/>
                     <ComboBox HorizontalAlignment="Right" Margin="0,142,18,0" VerticalAlignment="Top" Width="149" Height="22">
                         <ComboBoxItem Content="Almacén Central"/>
                         <ComboBoxItem Content="Tienda 1"/>
@@ -129,7 +129,7 @@
                         <ComboBoxItem Content="Salida - Despacho"/>
                         <ComboBoxItem Content="Baja"/>
                     </ComboBox>
-                    <Label Content="Comentario:" HorizontalAlignment="Left" Margin="15,323,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="84"/>
+                    <Label Content="Comentario:" HorizontalAlignment="Left" Margin="15,337,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="84"/>
                     <DataGrid Grid.Column="1" Margin="10,0,10,84" VerticalAlignment="Bottom" Height="323">
                         <DataGrid.Columns>
                             <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cód Producto"/>
@@ -137,18 +137,18 @@
                             <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cantidad"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Label Content="Fecha:" HorizontalAlignment="Left" Margin="15,101,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
+                    <Label Content="Fecha:" HorizontalAlignment="Left" Margin="15,99,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
                     <DatePicker HorizontalAlignment="Left" Margin="121,101,0,0" VerticalAlignment="Top" Width="149" Height="24"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="121,227,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149"/>
-                    <Label Content="Estado:" HorizontalAlignment="Left" Margin="15,291,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="74"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="121,291,0,0" VerticalAlignment="Top" Width="149" Height="22">
+                    <Label Content="Estado:" HorizontalAlignment="Left" Margin="15,300,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="74"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="121,304,0,0" VerticalAlignment="Top" Width="149" Height="22">
                         <ComboBoxItem Content="Completado"/>
                         <ComboBoxItem Content="Anulado"/>
                         <ComboBoxItem Content="En progreso"/>
                     </ComboBox>
-                    <Button Content="Guardar" Grid.Column="1" HorizontalAlignment="Left" Margin="85,379,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button Content="Cancelar" Grid.Column="1" HorizontalAlignment="Left" Margin="227,379,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="2.495,0.446"/>
-                    <Button Content="Generar Documento" HorizontalAlignment="Left" Margin="121,259,0,0" VerticalAlignment="Top" Width="149" Click="Button_Click"/>
+                    <Button Content="GUARDAR" Grid.Column="1" HorizontalAlignment="Left" Margin="85,379,0,0" VerticalAlignment="Top" Width="75" Height="30"/>
+                    <Button Content="CANCELAR" Grid.Column="1" HorizontalAlignment="Left" Margin="227,379,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="2.495,0.446" Height="30"/>
+                    <Button Content="GENERAR DOCUMENTO" HorizontalAlignment="Left" Margin="121,259,0,0" VerticalAlignment="Top" Width="149" Click="Button_Click" Height="30"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Tipo de Movimientos">

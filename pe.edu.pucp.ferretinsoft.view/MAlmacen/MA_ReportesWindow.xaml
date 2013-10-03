@@ -83,9 +83,9 @@
             </Grid>
 
         </Grid>
-        <Button x:Name="repSigBtn" Content="Siguiente &gt;" HorizontalAlignment="Left" Margin="301,11,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="repSigBtn_Click"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="381,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" IsCancel="True"/>
-        <Button x:Name="repAntBtn" Content="&lt; Anterior" HorizontalAlignment="Left" Margin="221,11,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="repAntBtn_Click"/>
+        <Button x:Name="repSigBtn" Content="SIGUIENTE &gt;" HorizontalAlignment="Left" Margin="301,0,0,0" Grid.Row="1" Width="75" Click="repSigBtn_Click" Height="31"/>
+        <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="381,0,0,0" Grid.Row="1" Width="75" IsCancel="True" Height="31"/>
+        <Button x:Name="repAntBtn" Content="&lt; ANTERIOR" HorizontalAlignment="Left" Margin="221,0,0,0" Grid.Row="1" Width="75" IsEnabled="False" Click="repAntBtn_Click" Height="31"/>
         <Separator Height="2" Margin="0" Grid.Row="1" VerticalAlignment="Top"/>
 
     </Grid>

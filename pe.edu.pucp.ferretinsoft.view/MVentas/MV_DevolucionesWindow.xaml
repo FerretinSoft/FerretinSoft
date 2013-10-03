@@ -30,9 +30,9 @@
                     <Label Content="Fecha desde:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="82" Margin="27,80,0,0" Grid.ColumnSpan="2"/>
                     <DatePicker HorizontalAlignment="Left" Margin="15,81,0,0" VerticalAlignment="Top" Width="162" Height="25" Grid.Column="1"/>
                     <DatePicker HorizontalAlignment="Left" Margin="389,81,0,0" VerticalAlignment="Top" Width="162" Height="25" Grid.Column="1"/>
-                    <Button x:Name="buscarDevolucionBtn" HorizontalAlignment="Left" Margin="650,81,0,0" VerticalAlignment="Top" Width="20" Height="20" RenderTransformOrigin="0.3,-0.35" Grid.Column="1">
+                    <Button x:Name="buscarDevolucionBtn" HorizontalAlignment="Left" Margin="650,81,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35" Grid.Column="1">
                         <Button.Background>
-                            <ImageBrush ImageSource="../Resources/search1_20.png"/>
+                            <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
                     </Button>
                     <DataGrid Margin="5,36,5,5" Grid.Row="1" Grid.ColumnSpan="2">
@@ -82,7 +82,7 @@
                     <TextBox IsEnabled="false" HorizontalAlignment="Left" Height="23" Margin="124,228,0,0" TextWrapping="Wrap" Text="&lt;dd/mm/aa&gt;" VerticalAlignment="Top" Width="156"/>
                     <Label Content="Estado:" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Width="114"/>
                     <TextBox IsEnabled="false" HorizontalAlignment="Left" Height="23" Margin="124,259,0,0" TextWrapping="Wrap" Text="&lt;Estado Nota Crédito&gt;" VerticalAlignment="Top" Width="156"/>
-                    <GroupBox Header="Importe" Margin="570,321,10,10" BorderBrush="Black" RenderTransformOrigin="0.5,0.5"/>
+                    <GroupBox Header="Importe" Margin="570,321,11,11" BorderBrush="Black" RenderTransformOrigin="0.5,0.5"/>
                     <Label Content="Sub Total:" HorizontalAlignment="Left" Margin="599,363,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423" Height="23"/>
                     <Label Content="Total a Pagar:" HorizontalAlignment="Left" Margin="599,427,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423"/>
                     <Label Content="%IGV:" HorizontalAlignment="Left" Margin="599,395,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423"/>
@@ -113,17 +113,17 @@
                         <ColumnDefinition Width="67*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Label Content="Doc. Venta:" HorizontalAlignment="Left" Margin="18,20,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
-                    <TextBox Height="23" Margin="129,20,0,0" TextWrapping="Wrap" Text="02013B5874" VerticalAlignment="Top" IsEnabled="True"/>
+                    <TextBox Height="23" Margin="119,20,10,0" TextWrapping="Wrap" Text="02013B5874" VerticalAlignment="Top" IsEnabled="True"/>
                     <TextBox HorizontalAlignment="Left" Height="69" Margin="16,391,0,0" TextWrapping="Wrap" Text="&lt;Comentarios aquí&gt;" VerticalAlignment="Top" Width="271"/>
                     <Label Content="Fecha Devolución:" HorizontalAlignment="Left" Margin="18,85,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="109" />
                     <Label Content="RUC:" HorizontalAlignment="Left" Margin="18,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" />
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="130,54,0,0" TextWrapping="Wrap" Text="&lt;RUC Cliente&gt;" VerticalAlignment="Top" Width="156" IsEnabled="False"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="130,54,0,0" TextWrapping="Wrap" Text="&lt;RUC Cliente&gt;" VerticalAlignment="Top" Width="209" IsEnabled="False"/>
                     <Label Content="Vendedor:" HorizontalAlignment="Left" Margin="34,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="1"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="118,20,0,0" TextWrapping="Wrap" Text="&lt;Nombre Vendedor&gt;" VerticalAlignment="Top" Width="272" Grid.Column="1" IsEnabled="False"/>
                     <Label Content="Razón Social:" HorizontalAlignment="Left" Margin="34,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="1"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="118,54,0,0" TextWrapping="Wrap" Text="&lt;Razón Social Cliente&gt;" VerticalAlignment="Top" Width="272" Grid.Column="1" IsEnabled="False"/>
                     <Label Content="Total Devolución:" HorizontalAlignment="Left" Margin="228,372,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="1" FontSize="15" Width="148"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="360,377,0,0" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" Width="100" IsEnabled="False" TextAlignment="Right" Grid.Column="1" RenderTransformOrigin="1.107,0.434"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="360,377,0,0" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" Width="117" IsEnabled="False" TextAlignment="Right" Grid.Column="1" RenderTransformOrigin="1.107,0.434"/>
                     <Label Content="Total Comprado:" HorizontalAlignment="Left" Margin="228,227,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="1" FontSize="15" Width="148"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="360,232,0,0" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" Width="100" IsEnabled="False" TextAlignment="Right" Grid.Column="1" RenderTransformOrigin="1.107,0.434"/>
                     <Label Content="Comentario:" HorizontalAlignment="Left" Margin="16,363,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="84"/>
@@ -151,9 +151,9 @@
                             <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Importe"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="130,87,0,0" TextWrapping="Wrap" Text="&lt;dd/mm/aa&gt;" VerticalAlignment="Top" Width="156" IsEnabled="False"/>
-                    <Button Content="Guardar" Grid.Column="1" HorizontalAlignment="Left" Margin="86,424,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button Content="Cancelar" Grid.Column="1" HorizontalAlignment="Left" Margin="228,424,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="2.495,0.446" Click="Button_Click_1"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="130,87,0,0" TextWrapping="Wrap" Text="&lt;dd/mm/aa&gt;" VerticalAlignment="Top" Width="209" IsEnabled="False"/>
+                    <Button Content="GUARDAR" Grid.Column="1" HorizontalAlignment="Left" Margin="260,430,0,0" VerticalAlignment="Top" Width="75" Height="30"/>
+                    <Button Content="CANCELAR" Grid.Column="1" HorizontalAlignment="Left" Margin="402,430,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="2.495,0.446" Click="Button_Click_1" Height="30"/>
                 </Grid>
             </TabItem>
         </TabControl>

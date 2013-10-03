@@ -18,7 +18,7 @@
                 <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Importe"/>
             </DataGrid.Columns>
         </DataGrid>
-        <GroupBox Header="Importe" Margin="140,181,37,66" BorderBrush="Black"/>
+        <GroupBox Header="Importe" Margin="129,181,37,66" BorderBrush="Black"/>
         <Label Content="Sub Total:" HorizontalAlignment="Left" Margin="140,208,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423" Height="23"/>
         <Label Content="Total a Pagar:" HorizontalAlignment="Left" Margin="140,268,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423"/>
         <Label Content="%IGV:" HorizontalAlignment="Left" Margin="140,238,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423"/>
@@ -30,8 +30,8 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="425,204,0,0" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" Width="100" IsEnabled="False" TextAlignment="Right"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="425,234,0,0" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" Width="100" IsEnabled="False" TextAlignment="Right"/>
 
-        <Button Content="Imprimir Documento" HorizontalAlignment="Left" Margin="243,326,0,0" VerticalAlignment="Top" Width="143" Height="24"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="398,326,0,0" VerticalAlignment="Top" Width="143" Height="24" Click="Button_Click_1"/>
+        <Button Content="IMPRIMIR DOCUMENTO" HorizontalAlignment="Left" Margin="243,326,0,0" VerticalAlignment="Top" Width="143" Height="30"/>
+        <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="398,326,0,0" VerticalAlignment="Top" Width="143" Height="30" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

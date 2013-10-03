@@ -136,8 +136,8 @@
                             <DataGridHyperlinkColumn Width="1*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Estado"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button Content="Guardar" HorizontalAlignment="Left" Margin="221,0,0,5" Grid.Row="1" Width="75" Height="20"/>
-                    <Button Content="Cancelar" HorizontalAlignment="Left" Margin="374,0,0,5" Grid.Row="1" Width="75" Height="20"/>
+                    <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="221,0,0,5" Grid.Row="1" Width="75" Height="30"/>
+                    <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="374,0,0,5" Grid.Row="1" Width="75" Height="30"/>
                 </Grid>
             </TabItem>
 

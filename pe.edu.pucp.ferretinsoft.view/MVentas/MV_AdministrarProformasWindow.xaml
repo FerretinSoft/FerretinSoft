@@ -168,7 +168,7 @@
                             <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Importe"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <GroupBox Header="Importe" Margin="381,203,0,10" Grid.Row="1" BorderBrush="Black"/>
+                    <GroupBox Header="Importe" Margin="380,203,0,12" Grid.Row="1" BorderBrush="Black"/>
                     <Label Content="Sub Total:" HorizontalAlignment="Left" Margin="393,224,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423" Height="23"/>
                     <Label Content="Total a Pagar:" HorizontalAlignment="Left" Margin="393,294,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423"/>
                     <Label Content="%IGV:" HorizontalAlignment="Left" Margin="393,259,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423"/>
@@ -206,8 +206,8 @@
                         <TextBox Grid.Column="1" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="04/jul/2013" VerticalAlignment="Top" Width="77" Margin="0,30,-106,0" TextAlignment="Right" IsEnabled="false"/>
                     </Grid>
                     <Grid Grid.Column="1" Margin="0,278,0,0" Grid.Row="1">
-                        <Button x:Name="registrarProformaBtn" Content="REGISTRAR" HorizontalAlignment="Left" Margin="47,22,0,0" VerticalAlignment="Top" Width="75" Height="35" Click="registrarProformaBtn_Click"/>
-                        <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="186,22,0,0" VerticalAlignment="Top" Width="75" Height="35" Click="cancelarBtn_Click"/>
+                        <Button x:Name="registrarProformaBtn" Content="REGISTRAR" HorizontalAlignment="Left" Margin="47,22,0,0" VerticalAlignment="Top" Width="75" Height="30" Click="registrarProformaBtn_Click"/>
+                        <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="186,22,0,0" VerticalAlignment="Top" Width="75" Height="30" Click="cancelarBtn_Click"/>
 
                     </Grid>
                 </Grid>

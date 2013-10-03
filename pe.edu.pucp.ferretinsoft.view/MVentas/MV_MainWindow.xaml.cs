@@ -62,16 +62,6 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             w.Show();
         }
 
-        private void StackPanel_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, MouseButtonEventArgs e)
-        {
-            ventasMenu.Visibility = System.Windows.Visibility.Hidden;
-            postVentaMenu.Visibility = System.Windows.Visibility.Visible;
-        }
         private void regresarVentasBtn_Click(object sender, RoutedEventArgs e)
         {
             ventasMenu.Visibility = System.Windows.Visibility.Visible;
@@ -96,17 +86,12 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             w.Show();
         }
 
-        
-
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        private void postVentaBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            ventasMenu.Visibility = System.Windows.Visibility.Hidden;
+            postVentaMenu.Visibility = System.Windows.Visibility.Visible;
         }
 
-        private void admClientesBtn_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         
 

@@ -12,7 +12,7 @@
         </Grid.ColumnDefinitions>
         <TabControl x:Name="solicitudesTab" Margin="0" Grid.RowSpan="2">
             <TabItem Header="Buscar">
-                <Grid Background="#FFE5E5E5">
+                <Grid Background="#FFE5E5E5" Margin="0,-1,0.089,1.23">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
@@ -20,10 +20,12 @@
                         <RowDefinition Height="133*"></RowDefinition>
                         <RowDefinition Height="295*"></RowDefinition>
                     </Grid.RowDefinitions>
-                    <GroupBox x:Name="nombreFilterTxt" Header="Parámetros" Margin="10,12" BorderBrush="Black"/>
+                    <GroupBox x:Name="nombreFilterTxt" Header="Parámetros" Margin="0,10,20.089,14.194" BorderBrush="Black"/>
                     <Label Content="Almacén:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="64" Margin="22,39,0,0"/>
                     <Label Content="Estado:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="65" Margin="323,39,0,0"/>
-                    <Button x:Name="buscarClienteBtn" HorizontalAlignment="Left" Margin="637,80,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35">
+                    <Button x:Name="consolidarBtn" Content="Consolidar" Margin="577,0,37.089,68.194" VerticalAlignment="Bottom" Height="30" Click="consolidarBtn_Click" RenderTransformOrigin="0.594,-0.567"/>
+                    <Button x:Name="buscarClienteBtn" HorizontalAlignment="Left" Margin="620,74,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35">
+                       
                         <Button.Background>
                             <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
@@ -43,7 +45,7 @@
                         <CheckBox Content="Tienda 2" IsChecked="True"/>
                         <CheckBox Content="Tienda 3" IsChecked="True"/>
                     </ComboBox>
-                    <ComboBox x:Name="categoriaCombo" HorizontalAlignment="Left" Margin="402,43,0,0" VerticalAlignment="Top" Width="223" Height="22">
+                    <ComboBox x:Name="categoriaCombo" HorizontalAlignment="Left" Margin="402,43,0,0" VerticalAlignment="Top" Width="134" Height="22">
                         <CheckBox Content="Todo" IsChecked="True"/>
                         <CheckBox Content="Pendientes" IsChecked="True"/>
                         <CheckBox Content="Parcialmente atendidas" IsChecked="True"/>
@@ -51,7 +53,7 @@
                     </ComboBox>
                     <Label Content="Fecha hasta:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="89" Margin="323,80,0,0"/>
                     <Label Content="Fecha desde:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="92" Margin="22,80,0,0" RenderTransformOrigin="0.48,2.068"/>
-                    <DatePicker HorizontalAlignment="Left" Margin="435,81,0,0" VerticalAlignment="Top" Width="190"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="402,81,0,0" VerticalAlignment="Top" Width="190"/>
                     <DatePicker HorizontalAlignment="Left" Margin="114,81,0,0" VerticalAlignment="Top" Width="157"/>
                 </Grid>
             </TabItem>

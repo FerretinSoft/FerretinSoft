@@ -101,6 +101,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MCompras\MC_AgregarProdProveedor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MCompras\MC_AtenderSolicitudWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -221,6 +225,9 @@
     </Compile>
     <Compile Include="MCompras\MC_AdministrarProveedorWindow.xaml.cs">
       <DependentUpon>MC_AdministrarProveedorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MCompras\MC_AgregarProdProveedor.xaml.cs">
+      <DependentUpon>MC_AgregarProdProveedor.xaml</DependentUpon>
     </Compile>
     <Compile Include="MCompras\MC_AtenderSolicitudWindow.xaml.cs">
       <DependentUpon>MC_AtenderSolicitudWindow.xaml</DependentUpon>

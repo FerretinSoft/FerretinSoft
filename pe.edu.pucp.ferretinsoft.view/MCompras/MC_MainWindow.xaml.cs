@@ -52,8 +52,10 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
 
         private void solicitudAbastBtn_Click(object sender, RoutedEventArgs e)
         {
-            MC_AtenderSolicitudWindow MCatnSol = new MC_AtenderSolicitudWindow();
-            MCatnSol.ShowDialog();
+          //  MC_AtenderSolicitudWindow MCatnSol = new MC_AtenderSolicitudWindow();
+            //MCatnSol.ShowDialog();
+            MAlmacen.MA_SolicitudAbastecimientoWindow solabas= new  MAlmacen.MA_SolicitudAbastecimientoWindow();
+            solabas.Show();
         }
     }
 }

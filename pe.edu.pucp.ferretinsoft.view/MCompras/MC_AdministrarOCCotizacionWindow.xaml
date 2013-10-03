@@ -139,7 +139,7 @@
                     <Label Content="Estado:" Grid.Column="2" HorizontalAlignment="Left" Margin="38,403,0,0" VerticalAlignment="Top"/>
                     <Button Content="Generar OC" Grid.Column="2" HorizontalAlignment="Left" Margin="66,353,0,0" VerticalAlignment="Top" Width="100" Height="35"/>
                     <ToolBar Margin="5,110,0,0" Width="67" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2">
-                        <Button x:Name="agregarProducto" Content="" VerticalAlignment="Bottom" Width="20" Margin="0,-1" Click="nuevaOrdenBtn_Click" Height="20">
+                        <Button x:Name="agregarProducto" Content="" VerticalAlignment="Top" Width="20" Margin="0,1,0,-0.895" Click="nuevoProdProveedorBtn_Click" Height="20">
                             <Button.Background>
                                 <ImageBrush ImageSource="/Resources/add_20.png" Stretch="None"/>
                             </Button.Background>

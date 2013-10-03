@@ -33,5 +33,11 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
         {
             solicitudesTab.SelectedIndex = 0;
         }
+
+        private void consolidarBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MCompras.MC_ConsolidarSolicitudesWindow consoli =  new MCompras.MC_ConsolidarSolicitudesWindow();
+            consoli.Show();
+        }
     }
 }

@@ -32,6 +32,12 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
         private void edOrdenCompraBtn_Click(object sender, RoutedEventArgs e)
         {
             ordenesCompraTab.SelectedIndex = 1;
-        }  
+        }
+
+        private void nuevoProdProveedorBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MC_AgregarProdProveedor agprodp = new MC_AgregarProdProveedor();
+            agprodp.Show();
+        } 
     }
 }

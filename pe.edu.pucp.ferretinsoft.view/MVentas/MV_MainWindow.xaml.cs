@@ -103,6 +103,11 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
 
         }
 
+        private void admClientesBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         
 
         

@@ -114,6 +114,32 @@
                     <TextBox HorizontalAlignment="Left" Height="57" Margin="16,197,0,0" TextWrapping="Wrap" Text="&lt;Comentarios aquí&gt;" VerticalAlignment="Top" Width="262"/>
                 </Grid>
             </TabItem>
+            <TabItem Header="Promociones">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="377*"/>
+                        <RowDefinition Height="51*"/>
+                    </Grid.RowDefinitions>
+
+                    <DataGrid Margin="10" Grid.Row="0" Grid.RowSpan="1">
+                        <DataGrid.Columns>
+                            <DataGridHyperlinkColumn Width="1.2*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cód. Producto"/>
+                            <DataGridTextColumn Width="1.8*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>
+                            <DataGridTextColumn Width="1.1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Fecha Desde"/>
+                            <DataGridTextColumn Width="1.1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Fecha Hasta"/>
+                            <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descuento"/>
+                            <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Puntos"/>
+                            <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cantidad"/>
+                            <DataGridHyperlinkColumn Width="1*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Estado"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="Guardar" HorizontalAlignment="Left" Margin="221,0,0,5" Grid.Row="1" Width="75" Height="20"/>
+                    <Button Content="Cancelar" HorizontalAlignment="Left" Margin="374,0,0,5" Grid.Row="1" Width="75" Height="20"/>
+                </Grid>
+            </TabItem>
 
         </TabControl>
 

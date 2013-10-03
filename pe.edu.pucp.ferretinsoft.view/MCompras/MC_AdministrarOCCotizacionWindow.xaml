@@ -24,16 +24,16 @@
                     <Label Content="Fecha desde:" Height="26" VerticalAlignment="Top" Margin="24,64,588,0" Grid.ColumnSpan="3"/>
                     <DatePicker HorizontalAlignment="Left" Margin="36,64,0,0" VerticalAlignment="Top" Width="172" Height="24" Grid.Column="2"/>
                     <DatePicker HorizontalAlignment="Left" Margin="402,64,0,0" VerticalAlignment="Top" Width="172" Height="24" RenderTransformOrigin="0.572,0.545" Grid.Column="2"/>
-                    <TextBox HorizontalAlignment="Left" Height="20" Margin="36,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.667,0.4" Grid.Column="2"/>
+                    <TextBox HorizontalAlignment="Left" Height="20" Margin="36,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" RenderTransformOrigin="0.667,0.4" Grid.Column="2"/>
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="402,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Grid.Column="2"/>
 
-                    <Button x:Name="buscarUsuariosBtn" HorizontalAlignment="Left" Margin="661,61,0,0" Width="23" RenderTransformOrigin="0.3,-0.35" Height="23" VerticalAlignment="Top" Grid.Column="2">
+                    <Button x:Name="buscarUsuariosBtn" HorizontalAlignment="Left" Margin="661,61,0,0" Width="32" RenderTransformOrigin="0.3,-0.35" Height="32" VerticalAlignment="Top" Grid.Column="2">
                         <Button.Background>
-                            <ImageBrush ImageSource="/Resources/search1_20.png"/>
+                            <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
                     </Button>
 
-                    <Button x:Name="buscarProveedorBtn" HorizontalAlignment="Left" Margin="574,37,0,0" Width="18" RenderTransformOrigin="0.3,-0.35" Height="18" VerticalAlignment="Top" Grid.Column="2">
+                    <Button x:Name="buscarProveedorBtn" HorizontalAlignment="Left" Margin="579,38,0,0" Width="18" RenderTransformOrigin="0.3,-0.35" Height="18" VerticalAlignment="Top" Grid.Column="2">
                         <Button.Background>
                             <ImageBrush ImageSource="/Resources/search1_20.png"/>
                         </Button.Background>
@@ -78,7 +78,7 @@
                     <GroupBox Header="Parametros" Margin="5,5,0,0" BorderBrush="Black" Height="105" VerticalAlignment="Top" HorizontalAlignment="Left" Width="619" Grid.ColumnSpan="3">
                     </GroupBox>
                     <Label Content="Código:" HorizontalAlignment="Left" Margin="15,30,0,0" VerticalAlignment="Top" Height="26" Width="51" Grid.ColumnSpan="2"/>
-                    <TextBox HorizontalAlignment="Left" Height="20" Margin="104,33,0,0" TextWrapping="Wrap" Text="000157" VerticalAlignment="Top" Width="90" IsEnabled="False" Grid.Column="1"/>
+                    <TextBox HorizontalAlignment="Left" Height="20" Margin="104,33,0,0" TextWrapping="Wrap" Text="000157" VerticalAlignment="Top" Width="172" IsEnabled="False" Grid.Column="1"/>
                     <Label Content="Proveedor:" HorizontalAlignment="Left" Margin="300,30,0,0" VerticalAlignment="Top" Height="26" Width="67" Grid.Column="1"/>
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="403,33,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="172" Grid.Column="1"/>
                     <Label Content="Fecha de pedido:" Margin="15,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.183,0.438" Height="26" HorizontalAlignment="Left" Width="103" Grid.ColumnSpan="2"/>
@@ -126,18 +126,18 @@
                     <DatePicker Height="24" VerticalAlignment="Top" Margin="104,63,0,0" HorizontalAlignment="Left" Width="172" Grid.Column="1"/>
                     <Label Content="Emitido por:" HorizontalAlignment="Left" Margin="38,10,0,0" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="75"/>
                     <Label Content="Aprobado por:" HorizontalAlignment="Left" Margin="38,55,0,0" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="87"/>
-                    <Button Content="Guardar" HorizontalAlignment="Left" Margin="38,439,0,0" VerticalAlignment="Top" Width="75" Height="22" Grid.Column="2" RenderTransformOrigin="0.36,0.455"/>
+                    <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="38,431,0,0" VerticalAlignment="Top" Width="75" Height="30" Grid.Column="2" RenderTransformOrigin="0.36,0.455"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="38,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" IsEnabled="False" Grid.Column="2"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="38,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" IsEnabled="False" Grid.Column="2"/>
-                    <Button x:Name="buscarProveedor" HorizontalAlignment="Left" Margin="575,33,0,0" Width="18" RenderTransformOrigin="0.3,-0.35" Height="18" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2">
+                    <Button x:Name="buscarProveedor" HorizontalAlignment="Left" Margin="581,33,0,0" Width="18" RenderTransformOrigin="0.3,-0.35" Height="18" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2">
                         <Button.Background>
                             <ImageBrush ImageSource="/Resources/search1_20.png"/>
                         </Button.Background>
                     </Button>
-                    <ComboBox Grid.Column="2" HorizontalAlignment="Left" Margin="91,406,0,0" VerticalAlignment="Top" Width="103"/>
-                    <Button Content="Cancelar" Grid.Column="2" HorizontalAlignment="Left" Margin="119,439,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.253,0.048" Height="22"/>
-                    <Label Content="Estado:" Grid.Column="2" HorizontalAlignment="Left" Margin="38,403,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Generar OC" Grid.Column="2" HorizontalAlignment="Left" Margin="66,353,0,0" VerticalAlignment="Top" Width="100" Height="35"/>
+                    <ComboBox Grid.Column="2" HorizontalAlignment="Left" Margin="91,398,0,0" VerticalAlignment="Top" Width="103"/>
+                    <Button Content="CANCELAR" Grid.Column="2" HorizontalAlignment="Left" Margin="119,431,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.253,0.048" Height="30"/>
+                    <Label Content="Estado:" Grid.Column="2" HorizontalAlignment="Left" Margin="38,395,0,0" VerticalAlignment="Top"/>
+                    <Button Content="GENERAR OC" Grid.Column="2" HorizontalAlignment="Left" Margin="66,333,0,0" VerticalAlignment="Top" Width="100" Height="30"/>
                     <ToolBar Margin="5,110,0,0" Width="67" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2">
                         <Button x:Name="agregarProducto" Content="" VerticalAlignment="Top" Width="20" Margin="0,1,0,-0.895" Click="nuevoProdProveedorBtn_Click" Height="20">
                             <Button.Background>

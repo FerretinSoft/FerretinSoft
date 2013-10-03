@@ -15,14 +15,14 @@
                 </DataGrid.Columns>
             </DataGrid>
             <Label Content="Producto:" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="76,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="79,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="245"/>
             <Label Content="Categoria:" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top"/>
-            <ComboBox HorizontalAlignment="Left" Margin="79,57,0,0" VerticalAlignment="Top" Width="117"/>
-            <Label Content="Desde:" HorizontalAlignment="Left" Margin="350,42,0,0" VerticalAlignment="Top"/>
-            <Label Content="Hasta:" HorizontalAlignment="Left" Margin="463,42,0,0" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="396,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="510,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54"/>
-            <GroupBox Header="Rango de Precios" HorizontalAlignment="Left" Height="62" Margin="347,20,0,0" VerticalAlignment="Top" Width="222" BorderBrush="Black"/>
+            <ComboBox HorizontalAlignment="Left" Margin="79,57,0,0" VerticalAlignment="Top" Width="245"/>
+            <GroupBox Header="Rango de Precios" HorizontalAlignment="Left" Height="62" Margin="347,20,0,0" VerticalAlignment="Top" Width="357" BorderBrush="Black"/>
+            <Label Content="Desde:" HorizontalAlignment="Left" Margin="358,42,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.877,0.608"/>
+            <Label Content="Hasta:" HorizontalAlignment="Left" Margin="537,42,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="431,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="82"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="602,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="89" RenderTransformOrigin="2.005,0.511"/>
         </Grid>
     </Grid>
 </Window>

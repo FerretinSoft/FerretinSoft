@@ -17,9 +17,9 @@
                     <Label Content="Nombre:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="57" Margin="198,39,0,0"/>
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="59,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="261,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="341"/>
-                    <Button x:Name="buscarClienteBtn" HorizontalAlignment="Left" Margin="640,42,0,0" VerticalAlignment="Top" Width="20" Height="20" RenderTransformOrigin="0.3,-0.35">
+                    <Button x:Name="buscarClienteBtn" HorizontalAlignment="Left" Margin="640,42,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35">
                         <Button.Background>
-                            <ImageBrush ImageSource="/Resources/search1_20.png"/>
+                            <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
                     </Button>
                     <DataGrid Margin="5,40,5,5" Grid.Row="1">
@@ -93,10 +93,10 @@
                     </ComboBox>
                     <Label Content="Fecha Nac." HorizontalAlignment="Left" Margin="10,373,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4"/>
                     <DatePicker HorizontalAlignment="Left" Margin="47,375,0,0" VerticalAlignment="Top" Grid.Column="3" Width="97"/>
-                    <Button Content="Guardar" HorizontalAlignment="Left" Margin="217.75,427,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="3"/>
+                    <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="218,417,0,10" VerticalAlignment="Bottom" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="3" Height="30"/>
                     <Label Content="Fecha ingreso:" HorizontalAlignment="Left" Margin="25,22,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="4"/>
                     <DatePicker HorizontalAlignment="Left" Margin="154,24,0,0" VerticalAlignment="Top" Grid.Column="4" Width="181"/>
-                    <Button Content="Cancelar" HorizontalAlignment="Left" Margin="12,427,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="4"/>
+                    <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="12,0,0,10" VerticalAlignment="Bottom" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="4" Height="30"/>
                     <Label Content="Dirección:&#x9;" HorizontalAlignment="Left" Margin="10,213,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="73.75,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" Grid.Column="3"/>
                     <Label Content="Cargo:" HorizontalAlignment="Left" Margin="25,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="4"/>

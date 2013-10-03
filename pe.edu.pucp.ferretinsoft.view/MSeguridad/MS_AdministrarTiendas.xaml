@@ -32,9 +32,9 @@
                         <ComboBoxItem/> Otros
                     </ComboBox>
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="58,43,0,0" Text="LINCE001" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Grid.Column="2"/>
-                    <Button x:Name="buscarClienteBtn" HorizontalAlignment="Left" Margin="635,66,0,0" VerticalAlignment="Top" Width="20" Height="20" RenderTransformOrigin="0.3,-0.35" Grid.Column="2">
+                    <Button x:Name="buscarClienteBtn" HorizontalAlignment="Left" Margin="635,76,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35" Grid.Column="2">
                         <Button.Background>
-                            <ImageBrush ImageSource="/Resources/search1_20.png"/>
+                            <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
                     </Button>
                     <DataGrid Margin="10,41,10,42" Grid.Row="1" Grid.ColumnSpan="3" SelectionChanged="DataGrid_SelectionChanged">
@@ -103,8 +103,8 @@
                     <TextBox HorizontalAlignment="Left" Height="26" Margin="21,243,0,0" TextWrapping="Wrap" Text="example@domain.com" VerticalAlignment="Top" Width="220" Grid.Column="4"/>
                     <Label Content="Fecha de &#xA;Creacion:" HorizontalAlignment="Left" Margin="1,271,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="2" Height="40" Grid.Column="2" Width="75"/>
                     <DatePicker HorizontalAlignment="Left" Margin="21,283,0,0" VerticalAlignment="Top" Grid.Column="4" Height="27" Width="102"/>
-                    <Button Content="Guardar" HorizontalAlignment="Left" Margin="165,533,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="1.347,-0.05" Grid.Column="4" Height="22"/>
-                    <Button Content="Cancelar" HorizontalAlignment="Left" Margin="37,533,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="5" Height="22"/>
+                    <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="165,533,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="1.347,-0.05" Grid.Column="4" Height="30"/>
+                    <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="37,533,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="5" Height="30"/>
                     <TextBox HorizontalAlignment="Left" Height="100" Margin="21,408,0,0" TextWrapping="Wrap" Text="&lt;Descripcion aquí&gt;" VerticalAlignment="Top" Width="220" Grid.Column="4"/>
                     <Label Content="Descripcion:" HorizontalAlignment="Left" Margin="1,406,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="3" Height="26" Width="74"/>
                     <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="107,271,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">

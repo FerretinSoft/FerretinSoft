@@ -20,7 +20,7 @@
 
         <Image HorizontalAlignment="Center" Height="75" Margin="42,0,43,0" VerticalAlignment="Top" Width="300" Source="/Resources/ferretinLogo2.png" Grid.Column="1" Grid.Row="1"/>
 
-        <Button x:Name="iniSesionBtn" Content="INICIAR SESIÓN" HorizontalAlignment="Center" Margin="0,0,0,50" VerticalAlignment="Bottom" Width="110" Height="34" Click="iniSesionBtn_Click" Grid.Column="1" Grid.Row="1" />
+        <Button x:Name="iniSesionBtn" Content="INICIAR SESIÓN" HorizontalAlignment="Center" Margin="0,0,0,50" VerticalAlignment="Bottom" Width="110" Height="30" Click="iniSesionBtn_Click" Grid.Column="1" Grid.Row="1" />
 
         <StatusBar Height="35" VerticalAlignment="Bottom" Grid.ColumnSpan="3" Grid.Row="2">
             <StatusBar.ItemsPanel>

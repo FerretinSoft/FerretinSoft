@@ -8,7 +8,7 @@
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
 
-        <GroupBox Header="Sistema" Margin="10,10,10,138" BorderBrush="Black"/>
+        <GroupBox Header="Sistema" Margin="8,10,10,138" BorderBrush="Black"/>
         <Label Content="Tiempo Maximo de Sesión activa:" HorizontalAlignment="Left" Margin="22,61,0,0" VerticalAlignment="Top" Height="26" Width="192"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="267,65,0,0" TextWrapping="Wrap" Text="30" VerticalAlignment="Top" Width="86" IsEnabled="False" TextChanged="TextBox_TextChanged_1"/>
         <Label Content="N° de intentos para ingresar contraseña:" HorizontalAlignment="Left" Margin="22,30,0,0" VerticalAlignment="Top" Height="42" Width="230"/>
@@ -18,14 +18,14 @@
         <Label Content="Duración de la clave de los usuarios:" HorizontalAlignment="Left" Margin="22,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="203"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="267,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" Text="6"/>
 
-        <GroupBox Header="Ventas" Margin="10,173,10,67" BorderBrush="Black"/>
+        <GroupBox Header="Ventas" Margin="8,173,10,60" BorderBrush="Black"/>
         <Label Content="Vigencia de las Proforma:" HorizontalAlignment="Left" Margin="22,185,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="192"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="267,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86"/>
 
         <Label Content="Tipo de cambio del dólar:" HorizontalAlignment="Left" Margin="22,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="151"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="267,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86"/>
-        <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="109,261,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Height="22"/>
-        <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="262,261,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Height="22"/>
+        <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="109,261,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Height="30"/>
+        <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="262,261,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Height="30"/>
         <Label Content="(minutos)" HorizontalAlignment="Left" Margin="358,61,0,0" VerticalAlignment="Top" Height="26" Width="61"/>
         <Label Content="(meses)" HorizontalAlignment="Left" Margin="358,92,0,0" VerticalAlignment="Top" Height="26" Width="61"/>
         <Label Content="(días)" HorizontalAlignment="Left" Margin="358,185,0,0" VerticalAlignment="Top" Height="26" Width="61"/>

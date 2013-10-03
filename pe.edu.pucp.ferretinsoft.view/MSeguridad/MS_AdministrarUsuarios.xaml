@@ -29,9 +29,9 @@
                     <TextBox HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Margin="132,57,0,0"/>
                     <TextBox HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" Margin="421,57,0,0" />
 
-                    <Button x:Name="buscarUsuariosBtn" HorizontalAlignment="Left" Margin="641,42,0,0" VerticalAlignment="Top" Width="20" Height="20" RenderTransformOrigin="0.3,-0.35">
+                    <Button x:Name="buscarUsuariosBtn" HorizontalAlignment="Left" Margin="639,46,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35">
                         <Button.Background>
-                            <ImageBrush ImageSource="/Resources/search1_20.png"/>
+                            <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
                     </Button>
                     <DataGrid Margin="10" Grid.Row="2">
@@ -117,13 +117,13 @@
                     </ComboBox>
                     <Label Content="Fecha Nac." HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="1"/>
                     <DatePicker HorizontalAlignment="Left" Margin="82,115,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-                    <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="258,350,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05"/>
+                    <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="258,350,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Height="30"/>
                     <Label Content="Fecha Contrato:" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="1"/>
                     <DatePicker HorizontalAlignment="Left" Margin="121,147,0,0" VerticalAlignment="Top" Grid.Column="1" Width="207"/>
                     <Label Content="Comentarios:" HorizontalAlignment="Left" Margin="10,263,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="1"/>
                     <TextBox HorizontalAlignment="Left" Height="48" Margin="121,267,0,0" TextWrapping="Wrap" Text="&lt;Comentarios aquí&gt;" VerticalAlignment="Top" Width="207" Grid.Column="1"/>
-                    <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="29,350,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="1"/>
-                    <Button Content="GENERAR" HorizontalAlignment="Left" Margin="184,208,0,0" VerticalAlignment="Top" Width="144" RenderTransformOrigin="1.347,-0.05" Grid.Column="1" />
+                    <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="29,350,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="1" Height="30"/>
+                    <Button Content="GENERAR" HorizontalAlignment="Left" Margin="184,201,0,0" VerticalAlignment="Top" Width="144" RenderTransformOrigin="1.347,-0.05" Grid.Column="1" Height="30" />
                     <Label Content="Generar Nueva Contraseña:" HorizontalAlignment="Left" Margin="10,204,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="1"/>
                     <Label Content="Perfil:" HorizontalAlignment="Left" Margin="14,296,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
                     <ComboBox Name="Pefil" HorizontalAlignment="Left" Margin="87,296,0,0" VerticalAlignment="Top" Width="246">

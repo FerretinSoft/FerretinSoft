@@ -129,7 +129,7 @@
                         <ComboBoxItem Content="Salida - Despacho"/>
                         <ComboBoxItem Content="Baja"/>
                     </ComboBox>
-                    <Label Content="Comentario:" HorizontalAlignment="Left" Margin="15,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="84"/>
+                    <Label Content="Comentario:" HorizontalAlignment="Left" Margin="15,323,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="84"/>
                     <DataGrid Grid.Column="1" Margin="10,0,10,84" VerticalAlignment="Bottom" Height="323">
                         <DataGrid.Columns>
                             <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cód Producto"/>
@@ -140,14 +140,41 @@
                     <Label Content="Fecha:" HorizontalAlignment="Left" Margin="15,101,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
                     <DatePicker HorizontalAlignment="Left" Margin="121,101,0,0" VerticalAlignment="Top" Width="149" Height="24"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="121,227,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149"/>
-                    <Label Content="Estado:" HorizontalAlignment="Left" Margin="15,265,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="74"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="121,270,0,0" VerticalAlignment="Top" Width="149" Height="22">
+                    <Label Content="Estado:" HorizontalAlignment="Left" Margin="15,291,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="74"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="121,291,0,0" VerticalAlignment="Top" Width="149" Height="22">
                         <ComboBoxItem Content="Completado"/>
                         <ComboBoxItem Content="Anulado"/>
                         <ComboBoxItem Content="En progreso"/>
                     </ComboBox>
                     <Button Content="Guardar" Grid.Column="1" HorizontalAlignment="Left" Margin="85,379,0,0" VerticalAlignment="Top" Width="75"/>
                     <Button Content="Cancelar" Grid.Column="1" HorizontalAlignment="Left" Margin="227,379,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="2.495,0.446"/>
+                    <Button Content="Generar Documento" HorizontalAlignment="Left" Margin="121,259,0,0" VerticalAlignment="Top" Width="149" Click="Button_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Tipo de Movimientos">
+                <Grid Background="#FFE5E5E5" Margin="0">
+                    <DataGrid Margin="10,50,10,10">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Nombre de movimiento" Width="2*"/>
+                            <DataGridComboBoxColumn Header="Categoría del movimiento" Width="2*"/>
+                            <DataGridTextColumn Header="Descripción" Width="3*"/>
+                            <DataGridCheckBoxColumn Header="Estado" Width="1*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <ToolBar HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="24">
+                        <Button x:Name="nuevoProductoBtn" Content="" VerticalAlignment="Stretch" Width="20" Margin="0,0,2,-1">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/add_20.png" Stretch="None"/>
+                            </Button.Background>
+                        </Button>
+
+                        <Button Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,0">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/trash_20.png"/>
+                            </Button.Background>
+                        </Button>
+
+                    </ToolBar>
                 </Grid>
             </TabItem>
         </TabControl>

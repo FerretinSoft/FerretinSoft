@@ -18,7 +18,7 @@
         <Label Content="Duración de la clave de los usuarios:" HorizontalAlignment="Left" Margin="22,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="203"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="267,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" Text="6"/>
 
-        <GroupBox Header="Ventas" Margin="8,173,10,60" BorderBrush="Black"/>
+        <GroupBox Header="Ventas" Margin="8,173,10,0" BorderBrush="Black" Height="75" VerticalAlignment="Top"/>
         <Label Content="Vigencia de las Proforma:" HorizontalAlignment="Left" Margin="22,185,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="192"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="267,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86"/>
 

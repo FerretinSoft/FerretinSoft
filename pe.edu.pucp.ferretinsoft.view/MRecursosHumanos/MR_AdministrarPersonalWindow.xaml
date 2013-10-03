@@ -93,7 +93,7 @@
                     </ComboBox>
                     <Label Content="Fecha Nac." HorizontalAlignment="Left" Margin="10,373,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4"/>
                     <DatePicker HorizontalAlignment="Left" Margin="47,375,0,0" VerticalAlignment="Top" Grid.Column="3" Width="97"/>
-                    <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="218,417,0,10" VerticalAlignment="Bottom" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="3" Height="30"/>
+                    <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="218,0,0,10" VerticalAlignment="Bottom" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="3" Height="30"/>
                     <Label Content="Fecha ingreso:" HorizontalAlignment="Left" Margin="25,22,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="4"/>
                     <DatePicker HorizontalAlignment="Left" Margin="154,24,0,0" VerticalAlignment="Top" Grid.Column="4" Width="181"/>
                     <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="12,0,0,10" VerticalAlignment="Bottom" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="4" Height="30"/>

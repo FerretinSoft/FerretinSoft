@@ -1,51 +1,80 @@
 ﻿<Window x:Class="pe.edu.pucp.ferretinsoft.view.MVentas.MV_AdministrarNotaCreditoWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Administrar Nota de Crédito" Height="481.029" Width="704" Icon="../Resources/ferretin_ico.ico">
+        Title="Administrar Nota de Crédito" Icon="../Resources/ferretin_ico.ico">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="454*"/>
-            <RowDefinition Height="3*"/>
-        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Resources/texture_3_100.png" TileMode="FlipX" 
+            Viewport="0,0,100,100" ViewportUnits="Absolute"/>
+        </Grid.Background>
         <TabControl x:Name="NotaCreditoTab" Grid.RowSpan="2">
-            <TabItem Header="Resumen">
+            <TabItem Header="Notas de Crédito">
                 <Grid Background="#FFE5E5E5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="47*"/>
-                        <ColumnDefinition Width="296*"/>
-                    </Grid.ColumnDefinitions>
+                    
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="122*"></RowDefinition>
-                        <RowDefinition Height="303*"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <GroupBox Header="Parámetros" Margin="3,26,5,264" BorderBrush="Black" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-                    <Label Content="N° Nota Cred:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="75" Margin="27,55,0,0" Grid.ColumnSpan="2"/>
-                    <Label Content="Cliente:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="57" Margin="27,86,0,0"/>
-                    <Label Content="Vendedor:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="75" Margin="260,55,0,0" Grid.Column="1"/>
-                    <TextBox HorizontalAlignment="Left" Height="20" Margin="15,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Grid.Column="1"/>
-                    <TextBox Text="Razón Social/Nombre" HorizontalAlignment="Left" Height="20" Margin="260,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.Column="1"/>
-                    <TextBox Text="Vendedor" HorizontalAlignment="Left" Height="20" Margin="346,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" Grid.Column="1"/>
-                    <TextBox Text ="DNI/RUC" HorizontalAlignment="Left" Height="20" Margin="15,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Grid.Column="1"/>
-                    <Label Content="Fecha hasta:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="75" Margin="260,121,0,0" Grid.Column="1" Grid.RowSpan="2"/>
-                    <Label Content="Fecha desde:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="82" Margin="27,0,0,0" Grid.ColumnSpan="2" Grid.Row="1"/>
-                    <DatePicker HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Top" Width="162" Height="25" Grid.Column="1" Grid.Row="1"/>
-                    <DatePicker HorizontalAlignment="Left" Margin="346,121,0,0" VerticalAlignment="Top" Width="162" Height="25" Grid.Column="1" Grid.RowSpan="2"/>
-                    <Button x:Name="buscarClienteBtn" HorizontalAlignment="Left" Margin="157,86,0,0" VerticalAlignment="Top" Width="20" Height="20" RenderTransformOrigin="0.3,-0.35" Grid.Column="1" Click="buscarClienteBtn_Click">
-                        <Button.Background>
-                            <ImageBrush ImageSource="../Resources/search1_20.png"/>
-                        </Button.Background>
-                    </Button>
-                    <Button x:Name="buscarNotaCreditoBtn" HorizontalAlignment="Left" Margin="550,114,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35" Grid.Column="1" Grid.RowSpan="2">
-                        <Button.Background>
-                            <ImageBrush ImageSource="../Resources/refresh2_48.png"/>
-                        </Button.Background>
-                    </Button>
-                    <Button x:Name="buscarVendedorBtn" HorizontalAlignment="Left" Margin="488,57,0,0" VerticalAlignment="Top" Width="20" Height="20" RenderTransformOrigin="0.3,-0.35" Grid.Column="1" Click="buscarVendedorBtn_Click">
-                        <Button.Background>
-                            <ImageBrush ImageSource="../Resources/search1_20.png"/>
-                        </Button.Background>
-                    </Button>
-                    <DataGrid Margin="5,72,5,5" Grid.Row="1" Grid.ColumnSpan="2">
+                    <GroupBox Margin="5" Header="Parámetros de Búsqueda" BorderBrush="Gray" Grid.Row="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="160"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="160"></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Label Content="N° Nota de Crédito:" Grid.Row="0" Grid.Column="0" VerticalContentAlignment="Center"/>
+                            <Label Content="Cliente:" Grid.Row="1" Grid.Column="0" VerticalContentAlignment="Center"/>
+                            <Label Content="Fecha Desde:" Grid.Row="2" Grid.Column="0" VerticalContentAlignment="Center"/>
+                            <Label Content="Vendedor:" Grid.Row="0" Grid.Column="2" VerticalContentAlignment="Center"/>
+                            <Label Content="Fecha Hasta:" Grid.Row="3" Grid.Column="2" VerticalContentAlignment="Center"/>
+
+                            <TextBox VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Margin="0,0,25,0"/>
+                            <Grid Grid.Row="1" Grid.Column="1" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBox VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+                                <Button Margin="0,0,5,0" x:Name="buscarClienteBtn" VerticalAlignment="Center" Width="20" Height="20" Click="buscarClienteBtn_Click" BorderThickness="0" Grid.Column="1">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="../Resources/search1_20.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </Grid>
+
+                            <Grid Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBox Text="Vendededor" VerticalAlignment="Center" IsEnabled="False"/>
+                                <Button x:Name="buscarVendedorBtn" VerticalAlignment="Center" Width="20" Height="20" Grid.Column="1" BorderThickness="0" Click="buscarVendedorBtn_Click">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="../Resources/search1_20.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </Grid>
+                            <TextBox Text="Razón Social/Nombre" VerticalAlignment="Center" VerticalContentAlignment="Center" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="1" IsEnabled="False"/>
+                            <DatePicker VerticalAlignment="Center" Grid.Column="1" Grid.Row="2"  BorderThickness="0"/>
+                            <DatePicker VerticalAlignment="Center" Grid.Column="3" Grid.Row="2" BorderThickness="0"/>
+
+                            <Button x:Name="buscarProformasBtn" Grid.Row="3" BorderThickness="0" Grid.Column="5" Width="25" Height="25" VerticalAlignment="Center">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="../Resources/refresh2_48.png"/>
+                                </Button.Background>
+                            </Button>
+                        </Grid>
+                    </GroupBox>
+                    
+                    <DataGrid Margin="5" Grid.Row="1">
                         <DataGrid.Columns>
                             <DataGridHyperlinkColumn Width="1.5*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Num. Doc."/>
                             <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="ID Cliente"/>
@@ -56,63 +85,71 @@
                             <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Importe"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <ToolBar HorizontalAlignment="Left" Margin="11,43,0,0" Grid.Row="1" VerticalAlignment="Top" Height="24" Width="68">
-                        <Button x:Name="detalleNotaCreditoBtn" Content="" VerticalAlignment="Bottom" Width="20" Margin="0,0,0,-1" Click="detalleNotaCreditoBtn_Click" Height="20">
-                            <Button.Background>
-                                <ImageBrush ImageSource="../Resources/view_48.png"/>
-                            </Button.Background>
-                        </Button>
-                        <Button Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,0" ToolTip="Anular">
-                            <Button.Background>
-                                <ImageBrush ImageSource="../Resources/trash_20.png"/>
-                            </Button.Background>
-                        </Button>
-                    </ToolBar>
                 </Grid>
             </TabItem>
             <TabItem Header="Detalle">
                 <Grid Background="#FFE5E5E5">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="43*"/>
-                        <RowDefinition Height="367*"/>
-                        <RowDefinition Height="9*"/>
-                    </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="285*"/>
-                        <ColumnDefinition Width="393*"/>
-                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="3*" MinWidth="230" MaxWidth="400"/>
+                        <ColumnDefinition Width="7*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Content="Doc. Nota Crédito:" HorizontalAlignment="Left" Margin="9,4,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-                    <TextBox IsEnabled="false" HorizontalAlignment="Left" Height="23" Margin="123,4,0,0" TextWrapping="Wrap" Text="&lt;41414141&gt;" VerticalAlignment="Top" Width="156" Grid.Row="1"/>
-                    <Label Content="Fecha Nota Crédito:" HorizontalAlignment="Left" Margin="9,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Row="1"/>
-                    <TextBox IsEnabled="false" HorizontalAlignment="Left" Height="23" Margin="123,37,0,0" TextWrapping="Wrap" Text="dd/mm/aaa" VerticalAlignment="Top" Width="156" Grid.Row="1"/>
-                    <Label Content="ID Cliente:" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Width="69" Grid.Row="1"/>
-                    <TextBox IsEnabled="false" HorizontalAlignment="Left" Height="23" Margin="123,66,0,0" TextWrapping="Wrap" Text="&lt;DNI/RUC Cliente&gt;" VerticalAlignment="Top" Width="156" Grid.Row="1"/>
-                    <Label Content="Nombre Cliente:" HorizontalAlignment="Left" Margin="9,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Row="1"/>
-                    <TextBox IsEnabled="false" HorizontalAlignment="Left" Height="23" Margin="123,97,0,0" TextWrapping="Wrap" Text="&lt;Razón Social/Nombre&gt;" VerticalAlignment="Top" Width="156" Grid.Row="1"/>
-                    <Label Content="Vendedor:" HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Width="71" Grid.Row="1"/>
-                    <TextBox IsEnabled="false" HorizontalAlignment="Left" Height="23" Margin="122,128,0,0" TextWrapping="Wrap" Text="&lt;Nombre Vendedor&gt;" VerticalAlignment="Top" Width="156" Grid.Row="1"/>
-                    <Label Content="Fecha Vencimiento:" HorizontalAlignment="Left" Margin="10,159,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Width="112" Grid.Row="1"/>
-                    <TextBox IsEnabled="false" HorizontalAlignment="Left" Height="23" Margin="122,159,0,0" TextWrapping="Wrap" Text="&lt;dd/mm/aaa&gt;" VerticalAlignment="Top" Width="156" Grid.Row="1"/>
-                    <Label Content="Estado:" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-                    <TextBox IsEnabled="false" HorizontalAlignment="Left" Height="23" Margin="122,190,0,0" TextWrapping="Wrap" Text="&lt;Pendiente&gt;" VerticalAlignment="Top" Width="156" Grid.Row="1"/>
-                    <DataGrid Margin="2,1,2,0.687" Grid.Column="1" Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Label Content="N° Nota de Crédito:" />
+                        <Label Content="Fecha Registro:" Grid.Row="1" />
+                        <Label Content="Cliente:" Grid.Row="2" />
+                        <Label Content="Fecha Vencimiento:" Grid.Row="4"/>
+                        <Label Content="Vendedor:" Grid.Row="5"/>
+                        <Label Content="Estado:" Grid.Row="7"/>
+                        <Label Content="Moneda:" Grid.Row="8"/>
+                        <Label Content="Total Devolución:" Grid.Row="9"/>
+
+                        <TextBox IsEnabled="false" Text="41414141" VerticalAlignment="Center" Grid.Column="1"/>
+                        <TextBox IsEnabled="false" Text="dd/mm/aaa" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1"/>
+                        <TextBox IsEnabled="false" Text="&lt;DNI/RUC Cliente&gt;" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2"/>
+                        <TextBox IsEnabled="false" Text="&lt;Razón Social/Nombre&gt;" VerticalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3"/>
+                        <TextBox IsEnabled="false" Text="dd/mm/aaa" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4"/>
+                        <TextBox IsEnabled="false" Text="&lt;Nombre Vendedor&gt;" VerticalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6"/>
+                        <TextBox IsEnabled="false" Text="Pendiente" VerticalAlignment="Center" Grid.Column="1" Grid.Row="7"/>
+                        <TextBox IsEnabled="false" Text="Soles" VerticalAlignment="Center" Grid.Column="1" Grid.Row="8"/>
+                        <TextBox IsEnabled="false" Text="100" VerticalAlignment="Center" HorizontalContentAlignment="Right" Grid.Column="1" Grid.Row="9"/>
+                        <Button Grid.Row="11" Grid.Column="1" HorizontalAlignment="Right" Padding="10,0" Height="30">IMPRIMIR</Button>
+                    </Grid>
+                    <DataGrid Margin="5" Grid.Column="1">
                         <DataGrid.Columns>
-                            <DataGridHyperlinkColumn Width="1.2*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cód Prod."/>
-                            <DataGridTextColumn Width="1.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descripción"/>
-                            <DataGridTextColumn Width="0.7*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cant."/>
-                            <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Moneda"/>
-                            <DataGridTextColumn Width="0.9*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Precio"/>
-                            <DataGridTextColumn Width="0.9*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Dscto"/>
+                            <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cód Prod."/>
+                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descripción"/>
+                            <DataGridTextColumn Width="0.98*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cant. Dev."/>
+                            <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Motivo"/>
+                            <DataGridTextColumn Width="0.7*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Moneda"/>
+                            <DataGridTextColumn Width="0.7*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Precio"/>
+                            <DataGridTextColumn Width="0.7*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Dscto. (%)"/>
                             <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Importe"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Label Content="Moneda:" HorizontalAlignment="Left" Margin="10,221,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423" Grid.Row="1" Width="112"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="122,221,0,0" TextWrapping="Wrap" Text="Soles" VerticalAlignment="Top" Width="156" IsEnabled="False" TextAlignment="Left" RenderTransformOrigin="0.84,0.391" Grid.Row="1"/>
-                    <Label Content="Total devolución:" HorizontalAlignment="Left" Margin="11,252,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423" Grid.Row="1" Width="112"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="123,252,0,0" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" Width="156" IsEnabled="False" TextAlignment="Left" RenderTransformOrigin="0.84,0.391" Grid.Row="1"/>
-
-
+                    
+                    <GridSplitter Grid.RowSpan="2" Width="2" BorderBrush="Gray"/>
 
                 </Grid>
             </TabItem>

@@ -16,7 +16,7 @@
             </Button.Background>
         </Button>
 
-        <StackPanel x:Name="ventasMenu" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0">
+        <StackPanel x:Name="ventasMenu" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0">
             <Label Content="Ventas" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold" />
             <StackPanel Orientation="Horizontal" Margin="0,10" Cursor="Hand" MouseDown="registrarVentaBtn_Click">
                 <Button x:Name="registrarVentaBtn" Content="" Width="32" Height="32" Click="registrarVentaBtn_Click">
@@ -24,15 +24,24 @@
                         <ImageBrush ImageSource="../Resources/forward_32.png"/>
                     </Button.Background>
                 </Button>
-                <Label Content="Registros de venta" FontSize="16"/>
+                <Label Content="Registrar Venta" FontSize="16"/>
             </StackPanel>
+            <StackPanel Orientation="Horizontal"  Margin="0,10" Cursor="Hand" MouseDown="anularVentaBtn_Click">
+                <Button x:Name="anularVentaBtn" Content="" Width="32" Height="32" Click="anularVentaBtn_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="../Resources/forward_32.png"/>
+                    </Button.Background>
+                </Button>
+                <Label Content="Ventas y Promociones" FontSize="16"/>
+            </StackPanel>
+            
             <StackPanel Orientation="Horizontal" Margin="0,10" Cursor="Hand" MouseDown="admClientesBtn_Click">
                 <Button x:Name="admClientesBtn" Content="" Width="32" Height="32" Click="admClientesBtn_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="../Resources/forward_32.png"/>
                     </Button.Background>
                 </Button>
-                <Label Content="Adminstración de Clientes" FontSize="16"/>
+                <Label Content="Administrar Clientes" FontSize="16"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,10" Cursor="Hand" MouseDown="postVentaBtn_Click">
                 <Button x:Name="postVentaBtn" Content="" Width="32" Height="32" Click="postVentaBtn_Click">
@@ -50,13 +59,14 @@
                 </Button>
                 <Label Content="Administrar Proformas" FontSize="16"/>
             </StackPanel>
+            
             <StackPanel Orientation="Horizontal" Margin="0,10" Cursor="Hand" MouseDown="repVentasBtn_Click">
                 <Button x:Name="repVentasBtn" Content="" Width="32" Height="32" Click="repVentasBtn_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="../Resources/forward_32.png"/>
                     </Button.Background>
                 </Button>
-                <Label Content="Reportes de ventas" FontSize="16"/>
+                <Label Content="Generar Reportes" FontSize="16"/>
             </StackPanel>
         </StackPanel>
 
@@ -70,14 +80,7 @@
                 </Button>
                 <Label Content="Administrar Devoluciones" FontSize="16"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal"  Margin="0,10" Cursor="Hand" MouseDown="anularVentaBtn_Click">
-                <Button x:Name="anularVentaBtn" Content="" Width="32" Height="32" Click="anularVentaBtn_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="../Resources/forward_32.png"/>
-                    </Button.Background>
-                </Button>
-                <Label Content="Administrar Ventas" FontSize="16"/>
-            </StackPanel>
+            
             <StackPanel Orientation="Horizontal"  Margin="0,10" Cursor="Hand" MouseDown="administrarNotaCreditoBtn_Click">
                 <Button x:Name="administrarNotaCreditoBtn" Content="" Width="32" Height="32" Click="administrarNotaCreditoBtn_Click">
                     <Button.Background>

@@ -43,5 +43,11 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             this.Close();
         }
 
+        private void buscarProformaBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MV_AdministrarProformasWindow profWindow = new MV_AdministrarProformasWindow();
+            profWindow.Show();
+        }
+
     }
 }

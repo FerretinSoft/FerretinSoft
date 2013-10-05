@@ -29,8 +29,8 @@
                     <DataGrid Margin="10" Grid.Row="1" Grid.ColumnSpan="2">
                         <DataGrid.Columns>
                             <DataGridCheckBoxColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
-                            <DataGridHyperlinkColumn Width="2.5*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="RUC"/>
                             <DataGridTextColumn Width="5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Razon Social"/>
+                            <DataGridHyperlinkColumn Width="2.5*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="RUC"/>                         
                             <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Rubro"/>
                             <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Teléfono"/>
                         </DataGrid.Columns>

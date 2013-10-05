@@ -16,9 +16,9 @@
                         <RowDefinition Height="37*"></RowDefinition>
                         <RowDefinition Height="255*"/>
                     </Grid.RowDefinitions>
-                    <GroupBox Header="Parámetros" Margin="10,10,10,19" BorderBrush="Black" Grid.ColumnSpan="3"/>
+                    <GroupBox Header="Parámetros" Margin="10,10,10,34" BorderBrush="Black" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
                     <Label Content="Codigo:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="63" Margin="24,33,0,0" Grid.ColumnSpan="2"/>
-
+                    <Label Content="Tipo:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="63" Margin="24,95,0,0" Grid.ColumnSpan="2"/>
                     <Label Content="Proveedor:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="68" Margin="295,33,0,0" RenderTransformOrigin="0.471,1.193" Grid.Column="2"/>
                     <Label Content="Fecha hasta:" HorizontalAlignment="Right" Width="75" Margin="0,63,341,0" Height="27" VerticalAlignment="Top" RenderTransformOrigin="0.595,0.549" Grid.Column="2"/>
                     <Label Content="Fecha desde:" Height="26" VerticalAlignment="Top" Margin="24,64,588,0" Grid.ColumnSpan="3"/>
@@ -26,8 +26,8 @@
                     <DatePicker HorizontalAlignment="Left" Margin="402,64,0,0" VerticalAlignment="Top" Width="172" Height="24" RenderTransformOrigin="0.572,0.545" Grid.Column="2"/>
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="36,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" RenderTransformOrigin="0.667,0.4" Grid.Column="2"/>
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="402,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Grid.Column="2"/>
-
-                    <Button x:Name="buscarUsuariosBtn" HorizontalAlignment="Left" Margin="661,61,0,0" Width="32" RenderTransformOrigin="0.3,-0.35" Height="32" VerticalAlignment="Top" Grid.Column="2">
+                    <ComboBox HorizontalAlignment="Left" Height="20" Margin="36,101,0,0" VerticalAlignment="Top" Width="172" Grid.Column="2"/>
+                    <Button x:Name="buscarUsuariosBtn" HorizontalAlignment="Left" Margin="660,89,0,0" Width="32" RenderTransformOrigin="0.3,-0.35" Height="32" VerticalAlignment="Top" Grid.Column="2">
                         <Button.Background>
                             <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
@@ -39,7 +39,7 @@
                         </Button.Background>
                     </Button>
 
-                    <ToolBar Margin="10,112,0,0" Width="90" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="3">
+                    <ToolBar Margin="10,16,0,0" Width="90" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="3" Grid.Row="1">
                         <Button x:Name="nuevaOrdenCompraBtn" Content="" VerticalAlignment="Bottom" Width="20" Margin="0,-1" Click="nuevaOrdenBtn_Click" Height="20">
                             <Button.Background>
                                 <ImageBrush ImageSource="/Resources/add_20.png" Stretch="None"/>
@@ -57,7 +57,7 @@
                         </Button>
                     </ToolBar>
 
-                    <DataGrid Margin="10,16,10,10" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" Grid.ColumnSpan="3">
+                    <DataGrid Margin="10,41,10,10" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.RowSpan="2">
                         <DataGrid.Columns>
                             <DataGridCheckBoxColumn Width="0*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
                             <DataGridHyperlinkColumn Width="2*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Código"/>
@@ -81,7 +81,7 @@
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="104,33,0,0" TextWrapping="Wrap" Text="000157" VerticalAlignment="Top" Width="172" IsEnabled="False" Grid.Column="1"/>
                     <Label Content="Proveedor:" HorizontalAlignment="Left" Margin="300,30,0,0" VerticalAlignment="Top" Height="26" Width="67" Grid.Column="1"/>
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="403,33,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="172" Grid.Column="1"/>
-                    <Label Content="Fecha de pedido:" Margin="15,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.183,0.438" Height="26" HorizontalAlignment="Left" Width="103" Grid.ColumnSpan="2"/>
+                    <Label Content="Fecha de emision:" Margin="15,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.183,0.438" Height="26" HorizontalAlignment="Left" Width="103" Grid.ColumnSpan="2"/>
                     <DataGrid Margin="5,140,183,0" RenderTransformOrigin="0.5, 0.5" Height="249" VerticalAlignment="Top" Grid.ColumnSpan="3" >
                         <DataGrid.Columns>
                             <DataGridCheckBoxColumn Width="1*" Binding="{x:Null}" CanUserSort="False" CanUserResize="False" ClipboardContentBinding="{x:Null}"/>

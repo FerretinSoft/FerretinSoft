@@ -8,8 +8,8 @@
                 <DataGrid.Columns>
                     <DataGridCheckBoxColumn Width="0.8*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
                     <DataGridTextColumn Width="3.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Producto"/>
-                    <DataGridTextColumn Width="3.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="RUC"/>
                     <DataGridTextColumn Width="4.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Razon Social"/>
+                    <DataGridTextColumn Width="3.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="RUC"/>                   
                     <DataGridTextColumn Width="1.7*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Precio"/>
                     <DataGridTextColumn Width="2.7*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tiempo de Entrega"/>
                 </DataGrid.Columns>

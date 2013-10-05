@@ -10,7 +10,8 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using Microsoft.Win32;
+
 
 namespace pe.edu.pucp.ferretinsoft.view.MCompras
 {
@@ -22,6 +23,23 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
         public MC_AdministrarProveedorWindow()
         {
             InitializeComponent();
+        }
+
+        private void importarProducto_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dirDialog = new OpenFileDialog();
+            dirDialog.ShowDialog();
+        }
+
+        private void nuevoProveedorBtn_Click(object sender, RoutedEventArgs e)
+        {
+            proveedorTab.SelectedIndex = 1;
+        }
+
+        private void nuevoProductoBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MC_AgregarProdCatalogoWindow prdCat = new MC_AgregarProdCatalogoWindow();
+            prdCat.ShowDialog();
         }
     }
 }

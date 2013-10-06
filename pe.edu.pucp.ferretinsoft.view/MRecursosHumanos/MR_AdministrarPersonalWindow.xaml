@@ -112,7 +112,7 @@
                         <ListBoxItem Content="Tienda 1"/>
                         <ListBoxItem Content="Tienda 2"/>
                     </ComboBox>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="154,123,0,0" TextWrapping="Wrap" Text="S/. 1200.00" VerticalAlignment="Top" Width="179" IsEnabled="False" Grid.Column="4"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="154,123,0,0" TextWrapping="Wrap" Text="S/. 1200.00" VerticalAlignment="Top" Width="179" Grid.Column="4"/>
                     <Label Content="Historial:" HorizontalAlignment="Left" Margin="25,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="4"/>
                     <DataGrid Grid.Column="4" HorizontalAlignment="Left" Margin="27,314,0,0" VerticalAlignment="Top" Height="85" Width="308">
                         <DataGrid.Columns>

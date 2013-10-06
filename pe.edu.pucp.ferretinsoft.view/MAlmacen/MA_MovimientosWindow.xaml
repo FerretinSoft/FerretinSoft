@@ -151,9 +151,9 @@
                     <Button Content="GENERAR DOCUMENTO" HorizontalAlignment="Left" Margin="121,259,0,0" VerticalAlignment="Top" Width="149" Click="Button_Click" Height="30"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Tipo de Movimientos">
+            <TabItem Header="Tipos de Movimiento">
                 <Grid Background="#FFE5E5E5" Margin="0">
-                    <DataGrid Margin="10,50,10,10">
+                    <DataGrid Margin="10">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Nombre de movimiento" Width="2*"/>
                             <DataGridComboBoxColumn Header="Categoría del movimiento" Width="2*"/>
@@ -161,20 +161,6 @@
                             <DataGridCheckBoxColumn Header="Estado" Width="1*"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <ToolBar HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="24">
-                        <Button x:Name="nuevoProductoBtn" Content="" VerticalAlignment="Stretch" Width="20" Margin="0,0,2,-1">
-                            <Button.Background>
-                                <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/add_20.png" Stretch="None"/>
-                            </Button.Background>
-                        </Button>
-
-                        <Button Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,0">
-                            <Button.Background>
-                                <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/trash_20.png"/>
-                            </Button.Background>
-                        </Button>
-
-                    </ToolBar>
                 </Grid>
             </TabItem>
         </TabControl>

@@ -1,14 +1,14 @@
 ﻿<Window x:Class="pe.edu.pucp.ferretinsoft.view.MSeguridad.MS_ParametrosWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Parametros del Sistema" Height="336.283" Width="450.771" Icon="/Resources/ferretin_ico.ico">
+        Title="Parametros del Sistema" Height="400" Width="450.771" Icon="/Resources/ferretin_ico.ico">
     <Grid Background="#FFE5E5E5" Margin="0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
 
-        <GroupBox Header="Sistema" Margin="8,10,10,138" BorderBrush="Black"/>
+        <GroupBox Header="Sistema" Margin="10,10,10,216" BorderBrush="Black"/>
         <Label Content="Tiempo Maximo de Sesión activa:" HorizontalAlignment="Left" Margin="22,61,0,0" VerticalAlignment="Top" Height="26" Width="192"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="267,65,0,0" TextWrapping="Wrap" Text="30" VerticalAlignment="Top" Width="86" IsEnabled="False" TextChanged="TextBox_TextChanged_1"/>
         <Label Content="N° de intentos para ingresar contraseña:" HorizontalAlignment="Left" Margin="22,30,0,0" VerticalAlignment="Top" Height="42" Width="230"/>
@@ -18,21 +18,30 @@
         <Label Content="Duración de la clave de los usuarios:" HorizontalAlignment="Left" Margin="22,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="203"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="267,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" Text="6"/>
 
-        <GroupBox Header="Ventas" Margin="8,173,10,0" BorderBrush="Black" Height="75" VerticalAlignment="Top"/>
+        <GroupBox Header="Ventas" Margin="10,154,10,0" BorderBrush="Black" Height="156" VerticalAlignment="Top"/>
         <Label Content="Vigencia de las Proforma:" HorizontalAlignment="Left" Margin="22,185,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="192"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="267,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="267,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86"/>
 
         <Label Content="Tipo de cambio del dólar:" HorizontalAlignment="Left" Margin="22,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="151"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="267,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86"/>
-        <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="109,261,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Height="30"/>
-        <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="262,261,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Height="30"/>
+        <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="114,330,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Height="30"/>
+        <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="267,330,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Height="30"/>
         <Label Content="(minutos)" HorizontalAlignment="Left" Margin="358,61,0,0" VerticalAlignment="Top" Height="26" Width="61"/>
         <Label Content="(meses)" HorizontalAlignment="Left" Margin="358,92,0,0" VerticalAlignment="Top" Height="26" Width="61"/>
-        <Label Content="(días)" HorizontalAlignment="Left" Margin="358,185,0,0" VerticalAlignment="Top" Height="26" Width="61"/>
+        <Label Content="(días)" HorizontalAlignment="Left" Margin="358,180,0,0" VerticalAlignment="Top" Height="26" Width="61"/>
         <Label Content="(soles)" HorizontalAlignment="Left" Margin="358,123,0,0" VerticalAlignment="Top" Height="26" Width="61"/>
         <Label Content="Vigencia de las Notas de Crédito:" HorizontalAlignment="Left" Margin="22,211,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="192"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="267,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86"/>
-        <Label Content="(días)" HorizontalAlignment="Left" Margin="358,211,0,0" VerticalAlignment="Top" Height="26" Width="61"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="267,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86"/>
+        <Label Content="(días)" HorizontalAlignment="Left" Margin="358,206,0,0" VerticalAlignment="Top" Height="26" Width="61"/>
+
+        <Label Content="Cantidad de Soles por punto de descuento:" HorizontalAlignment="Left" Margin="22,235,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="245"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="267,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86"/>
+        <Label Content="(soles)" HorizontalAlignment="Left" Margin="358,232,0,0" VerticalAlignment="Top" Height="26" Width="61"/>
+
+
+        <Label Content="Cantidad de Soles de descuento por punto:" HorizontalAlignment="Left" Margin="22,261,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="245"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="267,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86"/>
+        <Label Content="(soles)" HorizontalAlignment="Left" Margin="358,263,0,0" VerticalAlignment="Top" Height="26" Width="61"/>
 
     </Grid>
 </Window>

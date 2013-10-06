@@ -61,5 +61,11 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
             MA_SolicitudAbastecimientoWindow solWindow = new MA_SolicitudAbastecimientoWindow();
             solWindow.Show();
         }
+
+        private void mantCatBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MA_MantenimientoCategoriasWindow catWindow = new MA_MantenimientoCategoriasWindow();
+            catWindow.Show();
+        }
     }
 }

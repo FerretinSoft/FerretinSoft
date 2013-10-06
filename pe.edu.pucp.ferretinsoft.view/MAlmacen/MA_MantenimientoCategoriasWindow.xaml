@@ -1,7 +1,7 @@
 ﻿<Window x:Class="pe.edu.pucp.ferretinsoft.view.MAlmacen.MA_MantenimientoCategoriasWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Administración de Categorías" Height="487" Width="704" Icon="/pe.edu.pucp.ferretinsoft.view;component/Resources/ferretin_ico.ico">
+        Title="Administración de Categorías" Height="487" Width="704" Icon="/pe.edu.pucp.ferretinsoft.view;component/Resources/ferretin_ico.ico" ResizeMode="CanMinimize">
     <Grid Background="#FFE5E5E5">
         <TreeView Background="#FFF5F5F5" HorizontalAlignment="Left" Height="366" Margin="10,49,0,0" VerticalAlignment="Top" Width="225">
             <TreeViewItem Header="Categoría Principal" IsExpanded="True">

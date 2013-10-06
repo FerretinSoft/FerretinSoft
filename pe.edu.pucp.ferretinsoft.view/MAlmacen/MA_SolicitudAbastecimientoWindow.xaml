@@ -1,7 +1,7 @@
 ﻿<Window x:Class="pe.edu.pucp.ferretinsoft.view.MAlmacen.MA_SolicitudAbastecimientoWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Solicitudes de Abastecimiento" Height="487" Width="704" Icon="/pe.edu.pucp.ferretinsoft.view;component/Resources/ferretin_ico.ico">
+        Title="Solicitudes de Abastecimiento" Height="487" Width="704" Icon="/pe.edu.pucp.ferretinsoft.view;component/Resources/ferretin_ico.ico" ResizeMode="CanMinimize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="203*"/>

@@ -1,7 +1,7 @@
 ﻿<Window x:Class="pe.edu.pucp.ferretinsoft.view.MRecursosHumanos.MR_AdministrarPersonalWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Administración de Personal" Height="516.362" Width="704" Icon="/Resources/ferretin_ico.ico">
+        Title="Administración de Personal" Height="516.362" Width="704" Icon="/Resources/ferretin_ico.ico" Topmost="True">
     <Grid>
         <TabControl x:Name="personalTab" Margin="0" Grid.RowSpan="2">
             <TabItem Header="Búsqueda">

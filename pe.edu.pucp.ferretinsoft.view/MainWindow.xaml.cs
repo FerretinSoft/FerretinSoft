@@ -45,9 +45,8 @@ namespace pe.edu.pucp.ferretinsoft.view
 
         private void rrhhBtn_Click(object sender, RoutedEventArgs e)
         {
-            MRecursosHumanos.MR_MainWindow MRWindow = new MRecursosHumanos.MR_MainWindow();
+            MRecursosHumanos.MR_MainWindow MRWindow = new MRecursosHumanos.MR_MainWindow();            
             MRWindow.Show();
-
         }
 
         private void almacenBtn_Click(object sender, RoutedEventArgs e)

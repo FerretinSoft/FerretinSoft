@@ -11,19 +11,20 @@
         <Label Content="Productos del Proveedor" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
         <Button Content="GUARDAR" Margin="100,315,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.347,-0.05" Height="30" HorizontalAlignment="Left" Width="70"/>
         <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="18,315,0,0" VerticalAlignment="Top" Width="70" RenderTransformOrigin="1.347,-0.05" Height="30" Grid.Column="1"/>
-        <Label Content="Productos Orden de Compra" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="1"/>
+        <Label Content="Productos Orden de Compra" HorizontalAlignment="Left" Margin="18,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="1"/>
         <TextBox Height="244" Margin="18,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" Width="144"/>
-        <Label Content="Producto 1" HorizontalAlignment="Left" Margin="20,65,0,0" VerticalAlignment="Top" />
-        <Label Content="Producto 2" HorizontalAlignment="Left" Margin="20,86,0,0" VerticalAlignment="Top"/>
-        <Label Content="Producto 3" HorizontalAlignment="Left" Margin="20,107,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,-0.23"/>
-        <Label Content="Producto 4" HorizontalAlignment="Left" Margin="20,128,0,0" VerticalAlignment="Top"/>
-        <Label Content="Producto 5" HorizontalAlignment="Left" Margin="20,149,0,0" VerticalAlignment="Top"/>
-        <Label Content="Producto 6" HorizontalAlignment="Left" Margin="20,170,0,0" VerticalAlignment="Top"/>
-        <Label Content="Producto 7" HorizontalAlignment="Left" Margin="20,191,0,0" VerticalAlignment="Top"/>
-        <Label Content="Producto 8" HorizontalAlignment="Left" Margin="20,212,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,1.707"/>
+        <Label Content="Producto 1" HorizontalAlignment="Left" Margin="19,65,0,0" VerticalAlignment="Top" />
+        <Label Content="Producto 2" HorizontalAlignment="Left" Margin="19,86,0,0" VerticalAlignment="Top"/>
+        <Label Content="Producto 3" HorizontalAlignment="Left" Margin="19,107,0,0" VerticalAlignment="Top"/>
+        <Label Content="Producto 4" HorizontalAlignment="Left" Margin="32,89,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="Producto 5" HorizontalAlignment="Left" Margin="19,128,0,0" VerticalAlignment="Top"/>
+        <Label Content="Producto 6" HorizontalAlignment="Left" Margin="19,150,0,0" VerticalAlignment="Top"/>
+        <Label Content="Producto 7" HorizontalAlignment="Left" Margin="32,65,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="Producto 8" HorizontalAlignment="Left" Margin="19,173,0,0" VerticalAlignment="Top"/>
         <ScrollBar Margin="147,61,0,0" Width="17" HorizontalAlignment="Left" Height="244" VerticalAlignment="Top"/>
-        <Button Content=">" Margin="0,112,194,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="32" Grid.ColumnSpan="2"/>
-        <Button Content="&lt;" Margin="0,154,195,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="32" Grid.ColumnSpan="2"/>
+        <Button Content=">" Margin="0,149,194,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="32" Grid.ColumnSpan="2"/>
+        <Button Content="&lt;" Margin="0,176,194,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="32" Grid.ColumnSpan="2"/>
         <CheckBox Content="Seleccionar Todos" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="Seleccionar Todos" HorizontalAlignment="Left" Margin="18,45,0,0" VerticalAlignment="Top" Grid.Column="1"/>
     </Grid>
 </Window>

@@ -38,6 +38,12 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
         {
             MC_AgregarProdProveedor agprodp = new MC_AgregarProdProveedor();
             agprodp.Show();
+        }
+
+        private void buscarProveedorBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MC_AdministrarProveedorWindow busqProv = new MC_AdministrarProveedorWindow();
+            busqProv.ShowDialog();
         } 
     }
 }

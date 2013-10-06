@@ -37,7 +37,7 @@
             </Button.Background>
         </Button>
         <Label Content="Inventario de Productos" HorizontalAlignment="Left" Margin="175,111,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Label Content="Mantenimiento de Productos" HorizontalAlignment="Left" Margin="175,153,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Administración de Productos" HorizontalAlignment="Left" Margin="175,153,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="Movimientos" HorizontalAlignment="Left" Margin="175,240,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="Solicitudes de Abastecimiento" HorizontalAlignment="Left" Margin="175,283,0,0" VerticalAlignment="Top" FontSize="16"/>
         <StatusBar Height="35" VerticalAlignment="Bottom">
@@ -72,6 +72,6 @@
                 <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/forward_32.png"/>
             </Button.Background>
         </Button>
-        <Label Content="Mantenimiento de Categorías" HorizontalAlignment="Left" Margin="175,197,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Administración de Categorías" HorizontalAlignment="Left" Margin="175,197,0,0" VerticalAlignment="Top" FontSize="16"/>
     </Grid>
 </Window>

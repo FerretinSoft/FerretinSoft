@@ -24,9 +24,5 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

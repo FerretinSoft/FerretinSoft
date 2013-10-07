@@ -48,12 +48,12 @@
                                 <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/add_20.png" Stretch="None"/>
                             </Button.Background>
                         </Button>
-                        <Button x:Name="editarProductoBtn" Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,0" Click="editarProductoBtn_Click">
+                        <Button x:Name="editarProductoBtn" Content="" Height="20" VerticalAlignment="Bottom" Width="20" Margin="0,0,2,-1" Click="editarProductoBtn_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/edit_20.png"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,0">
+                        <Button Content="" VerticalAlignment="Bottom" Width="20" Margin="0,0,2,-1" Height="20">
                             <Button.Background>
                                 <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/trash_20.png"/>
                             </Button.Background>

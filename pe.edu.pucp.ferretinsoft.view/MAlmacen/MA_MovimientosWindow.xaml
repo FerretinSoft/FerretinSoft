@@ -4,7 +4,7 @@
         Title="Movimientos de Almacén" Height="487" Width="704" Icon="/pe.edu.pucp.ferretinsoft.view;component/Resources/ferretin_ico.ico" ResizeMode="CanMinimize">
     <Grid>
         <TabControl x:Name="resumenMovTab" Margin="0" Grid.RowSpan="2">
-            <TabItem Header="Resumen">
+            <TabItem Header="Búsqueda">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="41*"/>
@@ -21,7 +21,7 @@
                             <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
                     </Button>
-                    <DataGrid Margin="5" Grid.Row="1" Grid.ColumnSpan="2">
+                    <DataGrid Margin="5,30,5,5" Grid.Row="1" Grid.ColumnSpan="2">
                         <DataGrid.Columns>
                             <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Fecha"/>
                             <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tipo Mov."/>
@@ -31,7 +31,7 @@
                             <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Comentario"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <ComboBox x:Name="almacenCombo" HorizontalAlignment="Left" Margin="9,43,0,0" VerticalAlignment="Top" Width="180" Height="22" Grid.Column="1">
+                    <ComboBox x:Name="almacenCombo" HorizontalAlignment="Left" Margin="28,43,0,0" VerticalAlignment="Top" Width="161" Height="22" Grid.Column="1">
                         <CheckBox Content="Todos" IsChecked="True"/>
                         <CheckBox Content="Almacén Central"/>
                         <CheckBox Content="Tienda 1" IsChecked="True"/>
@@ -44,57 +44,24 @@
                     <Label Content="Fecha desde:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="82" Margin="22,80,0,0" Grid.ColumnSpan="2"/>
                     <DatePicker Grid.Column="1" HorizontalAlignment="Left" Margin="27,80,0,0" VerticalAlignment="Top" Width="162"/>
                     <DatePicker Grid.Column="1" HorizontalAlignment="Left" Margin="325,80,0,0" VerticalAlignment="Top" Width="162"/>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Detalle">
-                <Grid Background="#FFE5E5E5" Margin="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="48*"></ColumnDefinition>
-                        <ColumnDefinition Width="67*"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Label Content="Código Mov.:" HorizontalAlignment="Left" Margin="15,17,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
-                    <Label Content="Tipo Movimiento:" HorizontalAlignment="Left" Margin="15,59,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
-                    <TextBox Height="23" Margin="121,21,18,0" TextWrapping="Wrap" Text="02013B5874" VerticalAlignment="Top" IsEnabled="False"/>
-                    <Label Content="Desde:" HorizontalAlignment="Left" Margin="15,141,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="56"/>
-                    <Label Content="Hasta:" HorizontalAlignment="Left" Margin="15,181,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="74"/>
-                    <TextBox HorizontalAlignment="Left" Height="69" Margin="18,349,0,0" TextWrapping="Wrap" Text="&lt;Comentarios aquí&gt;" VerticalAlignment="Top" Width="252"/>
-                    <Label Content="Documento No.:" HorizontalAlignment="Left" Margin="15,223,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="99"/>
-                    <ComboBox HorizontalAlignment="Right" Margin="0,142,18,0" VerticalAlignment="Top" Width="149" Height="22">
-                        <ComboBoxItem Content="Almacén Central" IsSelected="True"/>
-                        <ComboBoxItem Content="Tienda 1"/>
-                        <ComboBoxItem Content="Tienda 2"/>
-                        <ComboBoxItem Content="Tienda 3"/>
-                    </ComboBox>
-                    <ComboBox HorizontalAlignment="Left" Margin="121,186,0,0" VerticalAlignment="Top" Width="149" Height="22">
-                        <ComboBoxItem Content="Almacén Central"/>
-                        <ComboBoxItem Content="Tienda 1" IsSelected="True"/>
-                        <ComboBoxItem Content="Tienda 2"/>
-                        <ComboBoxItem Content="Tienda 3"/>
-                    </ComboBox>
-                    <ComboBox x:Name="almacenCombo_Copy" HorizontalAlignment="Left" Margin="121,61,0,0" VerticalAlignment="Top" Width="149" Height="22" SelectedIndex="1">
-                        <ComboBoxItem Content="Entrada - Compra"/>
-                        <ComboBoxItem Content="Entrada - Despacho"/>
-                        <ComboBoxItem Content="Salida - Venta" IsSelected="True"/>
-                        <ComboBoxItem Content="Salida - Despacho"/>
-                        <ComboBoxItem Content="Baja"/>
-                    </ComboBox>
-                    <Label Content="Comentario:" HorizontalAlignment="Left" Margin="15,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="84"/>
-                    <DataGrid Grid.Column="1" Margin="10,0,10,10" VerticalAlignment="Bottom" Height="397">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cód Producto"/>
-                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>
-                            <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cantidad"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
-                    <Label Content="Fecha:" HorizontalAlignment="Left" Margin="15,101,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
-                    <DatePicker HorizontalAlignment="Left" Margin="121,101,0,0" VerticalAlignment="Top" Width="149" Height="24"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="121,227,0,0" TextWrapping="Wrap" Text="028333" VerticalAlignment="Top" Width="149"/>
-                    <Label Content="Estado:" HorizontalAlignment="Left" Margin="15,265,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="74"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="121,270,0,0" VerticalAlignment="Top" Width="149" Height="22">
-                        <ComboBoxItem Content="Completado" IsSelected="True"/>
-                        <ComboBoxItem Content="Anulado"/>
-                        <ComboBoxItem Content="En progreso"/>
-                    </ComboBox>
+                    <ToolBar HorizontalAlignment="Left" Margin="9,128,0,0" VerticalAlignment="Top" Height="24" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                        <Button x:Name="nuevoMvimientoBtn" Content="" VerticalAlignment="Top" Width="20" Margin="0,0,2,-1" Height="20">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/add_20.png" Stretch="None"/>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="editarMovimientoBtn" Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,0">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/edit_20.png"/>
+                            </Button.Background>
+                        </Button>
+                        <Button Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,0">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/trash_20.png"/>
+                            </Button.Background>
+                        </Button>
+
+                    </ToolBar>
                 </Grid>
             </TabItem>
             <TabItem Header="Nuevo Movimiento">
@@ -116,7 +83,7 @@
                         <ComboBoxItem Content="Tienda 2"/>
                         <ComboBoxItem Content="Tienda 3"/>
                     </ComboBox>
-                    <ComboBox HorizontalAlignment="Left" Margin="121,186,0,0" VerticalAlignment="Top" Width="149" Height="22">
+                    <ComboBox HorizontalAlignment="Left" Margin="119,186,0,0" VerticalAlignment="Top" Width="149" Height="22">
                         <ComboBoxItem Content="Almacén Central"/>
                         <ComboBoxItem Content="Tienda 1"/>
                         <ComboBoxItem Content="Tienda 2"/>
@@ -148,7 +115,7 @@
                     </ComboBox>
                     <Button Content="GUARDAR" Grid.Column="1" HorizontalAlignment="Left" Margin="85,379,0,0" VerticalAlignment="Top" Width="75" Height="30"/>
                     <Button Content="CANCELAR" Grid.Column="1" HorizontalAlignment="Left" Margin="227,379,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="2.495,0.446" Height="30"/>
-                    <Button Content="GENERAR DOCUMENTO" HorizontalAlignment="Left" Margin="121,259,0,0" VerticalAlignment="Top" Width="149" Click="Button_Click" Height="30"/>
+                    <Button Content="GENERAR DOCUMENTO" HorizontalAlignment="Left" Margin="121,259,0,0" VerticalAlignment="Top" Width="149" Height="30"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Tipos de Movimiento">

@@ -39,6 +39,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
         private void nuevoProductoBtn_Click(object sender, RoutedEventArgs e)
         {
             MC_AgregarProdCatalogoWindow prdCat = new MC_AgregarProdCatalogoWindow();
+            prdCat.Owner = this;
             prdCat.ShowDialog();
         }
     }

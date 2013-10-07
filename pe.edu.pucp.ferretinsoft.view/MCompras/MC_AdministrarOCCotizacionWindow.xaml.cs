@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using pe.edu.pucp.ferretinsoft.view.Resources.Custom_Controls;
 
 namespace pe.edu.pucp.ferretinsoft.view.MCompras
 {
@@ -22,11 +23,40 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
         public MC_AdministrarOCCotizacion()
         {
             InitializeComponent();
+            var tab = ordenesCompraTab.Items[1] as TabItem;
+            tab.IsEnabled = false;
         }
 
         private void nuevaOrdenBtn_Click(object sender, RoutedEventArgs e)
         {
-            ordenesCompraTab.SelectedIndex = 1;
+            var tab = ordenesCompraTab.Items[1] as TabItem;
+
+            MessageBoxResult result = CustomMessageBox.ShowYesNo(
+                "¿Que tipo de documento desea agregar?",
+                "Cotización/Órden de Compra",
+                "Cotizacion",
+                "Órden de Compra",
+                MessageBoxImage.Question);
+
+            if (result.Equals(MessageBoxResult.Yes))
+            {
+                tipoDocLbl.Content = "Cotización";
+                fecValPagoLbl.Content = "Fecha de Validez";
+                fecEmisioLbl.Content = "Fecha de Ingreso";
+                tab.IsEnabled = true;
+                ordenesCompraTab.SelectedIndex = 1;               
+            }
+
+
+            if (result.Equals(MessageBoxResult.No))
+            {
+                fecValPagoLbl.Content = "Fecha de Pago";
+                fecEmisioLbl.Content = "Fecha de Emisión";
+                tipoDocLbl.Content = "Órden de Compra";
+                tab.IsEnabled = true;
+                ordenesCompraTab.SelectedIndex = 1;             
+            }
+                
         }
 
         private void edOrdenCompraBtn_Click(object sender, RoutedEventArgs e)

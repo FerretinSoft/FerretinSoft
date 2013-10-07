@@ -20,17 +20,20 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
     /// </summary>
     public partial class MC_AdministrarOCCotizacion : Window
     {
+        TabItem tabBusqueda;
+        TabItem tabEdicion;
+
         public MC_AdministrarOCCotizacion()
         {
             InitializeComponent();
-            var tab = ordenesCompraTab.Items[1] as TabItem;
-            tab.IsEnabled = false;
+            tabBusqueda = (TabItem)ordenesCompraTab.Items[0];
+            tabEdicion = (TabItem)ordenesCompraTab.Items[1];
+            tabEdicion.IsEnabled = false;
         }
 
         private void nuevaOrdenBtn_Click(object sender, RoutedEventArgs e)
         {
-            var tab = ordenesCompraTab.Items[1] as TabItem;
-
+            
             MessageBoxResult result = CustomMessageBox.ShowYesNo(
                 "¿Que tipo de documento desea agregar?",
                 "Cotización/Órden de Compra",
@@ -43,7 +46,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
                 tipoDocLbl.Content = "Cotización";
                 fecValPagoLbl.Content = "Fecha de Validez";
                 fecEmisioLbl.Content = "Fecha de Ingreso";
-                tab.IsEnabled = true;
+                tabEdicion.IsEnabled = true;
                 ordenesCompraTab.SelectedIndex = 1;               
             }
 
@@ -53,7 +56,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
                 fecValPagoLbl.Content = "Fecha de Pago";
                 fecEmisioLbl.Content = "Fecha de Emisión";
                 tipoDocLbl.Content = "Órden de Compra";
-                tab.IsEnabled = true;
+                tabEdicion.IsEnabled = true;
                 ordenesCompraTab.SelectedIndex = 1;             
             }
                 
@@ -67,13 +70,19 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
         private void nuevoProdProveedorBtn_Click(object sender, RoutedEventArgs e)
         {
             MC_AgregarProdProveedor agprodp = new MC_AgregarProdProveedor();
-            agprodp.Show();
+            agprodp.ShowDialog();
         }
 
         private void buscarProveedorBtn_Click(object sender, RoutedEventArgs e)
         {
             MC_AdministrarProveedorWindow busqProv = new MC_AdministrarProveedorWindow();
             busqProv.ShowDialog();
-        } 
+        }
+
+        private void cancelarBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ordenesCompraTab.SelectedIndex = 0;
+            tabEdicion.IsEnabled = false;
+        }
     }
 }

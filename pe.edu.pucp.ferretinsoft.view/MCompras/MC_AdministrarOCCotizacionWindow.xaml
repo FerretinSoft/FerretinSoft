@@ -129,10 +129,10 @@
                     <Label x:Name="fecValPagoLbl" Content="Fecha de pago:" Margin="314,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.183,0.438" Height="26" HorizontalAlignment="Left" Width="116" Grid.Column="1"/>
                     <DatePicker Margin="426,61,0,0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="171" Grid.Column="1"/>
                     <DatePicker Height="24" VerticalAlignment="Top" Margin="110,63,0,0" HorizontalAlignment="Left" Width="172" Grid.Column="1"/>
-                    <Label Content="Emitido por:" HorizontalAlignment="Left" Margin="59,6,0,0" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="75"/>
+                    <Label Content="Ingresado por:" HorizontalAlignment="Left" Margin="59,6,0,0" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="98"/>
                     <Label Content="Aprobado por:" HorizontalAlignment="Left" Margin="59,52,0,0" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="87"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="59,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" Grid.Column="2"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="59,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" Grid.Column="2"/>
+                    <TextBox x:Name="aprobadoPorTxtBox" HorizontalAlignment="Left" Height="23" Margin="59,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" Grid.Column="2"/>
+                    <TextBox x:Name="ingresadoPorTxtBox" HorizontalAlignment="Left" Height="23" Margin="59,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" Grid.Column="2"/>
                     <Button x:Name="buscarProveedor" HorizontalAlignment="Left" Margin="598,33,0,0" Width="18" RenderTransformOrigin="0.3,-0.35" Height="18" VerticalAlignment="Top" Grid.Column="1">
                         <Button.Background>
                             <ImageBrush ImageSource="/Resources/search1_20.png"/>
@@ -150,8 +150,8 @@
                             </Button.Background>
                         </Button>
                     </ToolBar>
-                    <Button Content="GUARDAR" Grid.Column="2" HorizontalAlignment="Left" Margin="96,432,0,0" VerticalAlignment="Top" Width="80" Height="30"/>
-                    <Button Content="CANCELAR" Grid.Column="2" HorizontalAlignment="Left" Margin="96,469,0,0" VerticalAlignment="Top" Width="80" Height="30"/>
+                    <Button x:Name="guardarBtn" Content="GUARDAR" Grid.Column="2" HorizontalAlignment="Left" Margin="96,432,0,0" VerticalAlignment="Top" Width="80" Height="30"/>
+                    <Button x:Name="cancelarBtn" Content="CANCELAR" Grid.Column="2" HorizontalAlignment="Left" Margin="96,469,0,0" VerticalAlignment="Top" Width="80" Height="30" Click="cancelarBtn_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>

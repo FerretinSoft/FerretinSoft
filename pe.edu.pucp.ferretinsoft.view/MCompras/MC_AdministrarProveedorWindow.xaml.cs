@@ -20,9 +20,15 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
     /// </summary>
     public partial class MC_AdministrarProveedorWindow : Window
     {
+        TabItem tabBusqueda;
+        TabItem tabEdicion;
+
         public MC_AdministrarProveedorWindow()
         {
             InitializeComponent();
+            tabBusqueda = (TabItem)proveedorTab.Items[0];
+            tabEdicion = (TabItem)proveedorTab.Items[1];
+            tabEdicion.IsEnabled = false;
         }
 
         private void importarProducto_Click(object sender, RoutedEventArgs e)
@@ -33,6 +39,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
 
         private void nuevoProveedorBtn_Click(object sender, RoutedEventArgs e)
         {
+            tabEdicion.IsEnabled = true;
             proveedorTab.SelectedIndex = 1;
         }
 
@@ -41,6 +48,12 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
             MC_AgregarProdCatalogoWindow prdCat = new MC_AgregarProdCatalogoWindow();
             prdCat.Owner = this;
             prdCat.ShowDialog();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            proveedorTab.SelectedIndex = 0;
+            tabEdicion.IsEnabled = false;
         }
     }
 }

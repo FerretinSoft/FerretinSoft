@@ -85,7 +85,7 @@
                    
                 </Grid>
             </TabItem>
-            <TabItem Header="Detalle">
+            <TabItem Header="Detalle de Venta">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="3*" MinWidth="150" MaxWidth="400"/>

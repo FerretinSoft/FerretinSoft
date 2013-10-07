@@ -23,5 +23,10 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
         {
             InitializeComponent();
         }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

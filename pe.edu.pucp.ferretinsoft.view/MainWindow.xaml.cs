@@ -27,8 +27,9 @@ namespace pe.edu.pucp.ferretinsoft.view
 
         private void comprasBtn_Click(object sender, RoutedEventArgs e)
         {
-            MCompras.MC_MainWindow MCWindow = new MCompras.MC_MainWindow();
+            MCompras.MC_MainWindow MCWindow = MCompras.MC_MainWindow.instance;
             MCWindow.Show();
+            MCWindow.Focus();
         }
 
         private void confBtn_Click(object sender, RoutedEventArgs e)

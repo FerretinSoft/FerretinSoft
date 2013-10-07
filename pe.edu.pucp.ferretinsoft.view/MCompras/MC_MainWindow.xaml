@@ -1,7 +1,7 @@
-﻿<Window x:Class="pe.edu.pucp.ferretinsoft.view.MCompras.MC_MainWindow"
+﻿<Window x:Name="MCWindow" x:Class="pe.edu.pucp.ferretinsoft.view.MCompras.MC_MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Módulo de Compras" Height="500" Width="520" MinWidth="520" MinHeight="500" Icon="/Resources/ferretin_ico.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight">
+        Title="Módulo de Compras" Height="500" Width="520" MinWidth="520" MinHeight="500" Icon="/Resources/ferretin_ico.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight" Closed="MCWindow_Closed">
     <Grid Margin="0">
         <Grid.Background>
             <ImageBrush ImageSource="/Resources/texture_1_100.png" TileMode="FlipX" 

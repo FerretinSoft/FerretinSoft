@@ -24,9 +24,9 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
             InitializeComponent();
         }
 
-        private void AgregarProducto(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

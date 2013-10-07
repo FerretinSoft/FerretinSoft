@@ -21,7 +21,7 @@
                     <DataGrid Margin="10,114,10,10">
                         <DataGrid.Columns>
                             <DataGridCheckBoxColumn Width="0.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
-                            <DataGridTextColumn Width="5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Razon Social"/>
+                            <DataGridTextColumn Width="5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Razón Social"/>
                             <DataGridHyperlinkColumn Width="2.5*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="RUC"/>
                             <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Rubro"/>
                             <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Teléfono"/>
@@ -43,7 +43,7 @@
                     </ToolBar>
                 </Grid>
             </TabItem>
-            <TabItem Header="Edición">
+            <TabItem Header="Edición" IsHitTestVisible="False">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="13*"></ColumnDefinition>
@@ -102,13 +102,18 @@
                             <DataGridTextColumn Width="2.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tiempo de entrega"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <ToolBar Grid.Column="3" HorizontalAlignment="Left" Margin="355,42,0,0" VerticalAlignment="Top" Height="25" Width="75" Grid.ColumnSpan="2">
-                        <Button x:Name="nuevoProductoBtn" Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,0" Click="nuevoProductoBtn_Click">
+                    <ToolBar Grid.Column="3" HorizontalAlignment="Left" Margin="355,42,0,0" VerticalAlignment="Top" Height="25" Width="92" Grid.ColumnSpan="2">
+                        <Button x:Name="nuevoProductoBtn" Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,4,0" Click="nuevoProductoBtn_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="/Resources/add_20.png" Stretch="None"/>
                             </Button.Background>
                         </Button>
-                        <Button x:Name="importarProducto" Content="" VerticalAlignment="Top" Width="20" RenderTransformOrigin="1.75,-0.8" Height="20" Click="importarProducto_Click">
+                        <Button x:Name="eliminarProdBtn" Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,4,0">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/Resources/trash_20.png"/>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="importarProducto" Content="" VerticalAlignment="Top" Width="20" Height="20" Click="importarProducto_Click" Margin="0,0,0,0">
                             <Button.Background>
                                 <ImageBrush ImageSource="/Resources/back_20.png" Stretch="None"/>
                             </Button.Background>

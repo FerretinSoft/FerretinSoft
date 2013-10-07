@@ -19,6 +19,20 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
     /// </summary>
     public partial class MC_MainWindow : Window
     {
+        private static MC_MainWindow INSTANCE;
+
+        public static MC_MainWindow instance  
+        {
+            get
+            {
+                if (INSTANCE == null)
+                {
+                    INSTANCE = new MC_MainWindow();
+                }
+                return INSTANCE;
+            }
+        }
+
         public MC_MainWindow()
         {
             InitializeComponent();
@@ -30,6 +44,13 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
             {
                 this.Close();
             }
+        }
+
+        private void ventasBtn_Click(object sender, RoutedEventArgs e)
+        {
+             MC_MainWindow MCWindow = MC_MainWindow.instance;
+             MCWindow.Show();
+             MCWindow.Focus();
         }
 
         private void adminProveedoresBtn_Click(object sender, RoutedEventArgs e)
@@ -52,10 +73,13 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
 
         private void solicitudAbastBtn_Click(object sender, RoutedEventArgs e)
         {
-          //  MC_AtenderSolicitudWindow MCatnSol = new MC_AtenderSolicitudWindow();
-            //MCatnSol.ShowDialog();
             MAlmacen.MA_SolicitudAbastecimientoWindow solabas= new  MAlmacen.MA_SolicitudAbastecimientoWindow();
-            solabas.Show();
+            solabas.ShowDialog();
+        }
+
+        private void MCWindow_Closed(object sender, EventArgs e)
+        {
+            INSTANCE = null;
         }
     }
 }

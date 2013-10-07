@@ -39,8 +39,9 @@ namespace pe.edu.pucp.ferretinsoft.view
 
         private void ventasBtn_Click(object sender, RoutedEventArgs e)
         {
-            MVentas.MV_MainWindow MVWindow = new MVentas.MV_MainWindow();
+            MVentas.MV_MainWindow MVWindow = MVentas.MV_MainWindow.instance;
             MVWindow.Show();
+            MVWindow.Focus();
         }
 
         private void rrhhBtn_Click(object sender, RoutedEventArgs e)

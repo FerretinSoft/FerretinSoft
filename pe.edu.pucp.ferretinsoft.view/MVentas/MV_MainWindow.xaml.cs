@@ -19,6 +19,19 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
     /// </summary>
     public partial class MV_MainWindow : Window
     {
+        private static MV_MainWindow INSTANCE;
+        public static MV_MainWindow instance  
+        {
+            get
+            {
+                if (INSTANCE == null)
+                {
+                    INSTANCE = new MV_MainWindow();
+                }
+                return INSTANCE;
+            }
+        }
+
         public MV_MainWindow()
         {
             InitializeComponent();
@@ -92,6 +105,10 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             postVentaMenu.Visibility = System.Windows.Visibility.Visible;
         }
 
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            INSTANCE = null;
+        }
 
 
         

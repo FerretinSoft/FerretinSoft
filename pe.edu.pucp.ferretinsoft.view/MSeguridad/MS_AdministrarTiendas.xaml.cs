@@ -34,5 +34,10 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
 
         }
 
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
     }
 }

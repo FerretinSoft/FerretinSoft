@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Administración de Productos" Height="487" Width="704" Icon="/pe.edu.pucp.ferretinsoft.view;component/Resources/ferretin_ico.ico" ResizeMode="CanMinimize">
     <Grid>
-        <TabControl x:Name="inventarioTab">
+        <TabControl x:Name="mantenimientoTab">
             <TabItem Header="Búsqueda">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
@@ -43,12 +43,12 @@
                     <Label Content="Nombre:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="64" Margin="15,43,0,0"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="0,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Grid.Column="1"/>
                     <ToolBar HorizontalAlignment="Left" Margin="9,29,0,0" VerticalAlignment="Top" Height="24" Grid.ColumnSpan="2" Grid.Row="1">
-                        <Button x:Name="nuevoEmpleadoBtn" Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,-1" Click="nuevoEmpleadoBtn_Click">
+                        <Button x:Name="nuevoProductoBtn" Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,-1" Click="nuevoProductoBtn_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/add_20.png" Stretch="None"/>
                             </Button.Background>
                         </Button>
-                        <Button x:Name="edEmpleadoBtn" Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,0" Click="edEmpleadoBtn_Click">
+                        <Button x:Name="editarProductoBtn" Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,0" Click="editarProductoBtn_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/edit_20.png"/>
                             </Button.Background>

@@ -23,5 +23,17 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
         {
             InitializeComponent();
         }
+
+        private void nuevoProductoBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mantenimientoTab.SelectedIndex = 1;
+        }
+
+        private void editarProductoBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mantenimientoTab.SelectedIndex = 1;
+        }
+
+        
     }
 }

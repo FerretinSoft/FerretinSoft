@@ -62,7 +62,7 @@
             </Button>
 
         </ToolBar>
-        <Grid Margin="5,29,5,5"  Grid.Column="0" Grid.Row="1">
+        <Grid Margin="5,24,5,5"  Grid.Column="0" Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
@@ -71,7 +71,7 @@
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
-            <DataGrid Grid.Row="0" Grid.Column="0" Height="184" VerticalAlignment="Bottom">
+            <DataGrid Grid.Row="0" Grid.Column="0" Height="179" VerticalAlignment="Bottom">
                 <DataGrid.Columns>
                     <DataGridHyperlinkColumn Width="1.5*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Código"/>
                     <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descripción"/>

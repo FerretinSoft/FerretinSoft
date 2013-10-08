@@ -15,7 +15,7 @@
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <GroupBox Margin="5" Header="Parámetros" BorderBrush="Gray" Grid.Row="0">
+                    <GroupBox Margin="5,5,5,24" Header="Parámetros" BorderBrush="Gray" Grid.Row="0">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
@@ -73,7 +73,16 @@
                             </Button>
                         </Grid>
                     </GroupBox>
+                    <ToolBar HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Height="24">
 
+                        
+                        <Button x:Name="detalleNotaCreditoBtn" Content="" VerticalAlignment="Bottom" Width="20" Margin="0,0,2,-1" Click="detalleNotaCreditoBtn_Click" Height="20">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/edit_20.png"/>
+                            </Button.Background>
+                        </Button>
+
+                    </ToolBar>
                     <DataGrid Margin="5" Grid.Row="1">
                         <DataGrid.Columns>
                             <DataGridHyperlinkColumn Width="1.5*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Num. Doc."/>

@@ -42,7 +42,7 @@
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition Width="Auto"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <TextBox VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+                                <TextBox VerticalAlignment="Center" Text="DNI/RUC" HorizontalAlignment="Stretch"/>
                                 <Button Margin="0,0,5,0" x:Name="buscarClienteBtn" VerticalAlignment="Center" Width="20" Height="20" Click="buscarClienteBtn_Click" BorderThickness="0" Grid.Column="1">
                                     <Button.Background>
                                         <ImageBrush ImageSource="../Resources/search1_20.png"/>

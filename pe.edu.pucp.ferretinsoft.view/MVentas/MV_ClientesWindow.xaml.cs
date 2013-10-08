@@ -19,9 +19,23 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
     /// </summary>
     public partial class MV_ClientesWindow : Window
     {
+        
         public MV_ClientesWindow()
         {
             InitializeComponent();
+            seleccionarListaPanel.Visibility = System.Windows.Visibility.Collapsed;
+            seleccionarDetallePanel.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
+        public MV_ClientesWindow(MV_AdministrarVentasWindow MV_AdministrarVentasWindow)
+        {
+            InitializeComponent();
+            seleccionarListaPanel.Visibility = System.Windows.Visibility.Visible;
+            seleccionarDetallePanel.Visibility = System.Windows.Visibility.Visible;
+            edicionTab.Visibility = System.Windows.Visibility.Collapsed;
+            nuevoTab.Visibility = System.Windows.Visibility.Collapsed;
+            seleccionarListaClienteBtn.Click += MV_AdministrarVentasWindow.seleccionarCliente;
+            Show();
         }
 
         private void nuevoClienteBtn_Click(object sender, RoutedEventArgs e)
@@ -37,6 +51,11 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             clientesTab.SelectedIndex = 0;
+        }
+
+        private void cancelarListaClienteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

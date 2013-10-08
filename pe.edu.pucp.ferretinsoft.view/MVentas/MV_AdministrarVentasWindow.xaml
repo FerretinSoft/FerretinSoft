@@ -13,6 +13,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition></RowDefinition>
+                        <RowDefinition x:Name="rowSelectVentaLista" Height="Auto"></RowDefinition>
                     </Grid.RowDefinitions>
                     <GroupBox Margin="5" Header="Parámetros de Búsqueda" BorderBrush="Gray" Grid.Row="0">
                         <Grid>
@@ -82,10 +83,13 @@
                             <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Importe"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                   
+                    <StackPanel Orientation="Horizontal" Margin="5" Grid.Row="2" HorizontalAlignment="Center">
+                        <Button Height="30" x:Name="seleccionarListaVentaBtn" Content="Seleccionar" Padding="5,0" Margin="5,0"/>
+                        <Button Height="30" x:Name="cancelarListaVentaBtn" Content="Cancelar" Padding="5,0" Margin="5,0" Click="cancelarListaVentaBtn_Click" />
+                    </StackPanel>
                 </Grid>
             </TabItem>
-            <TabItem Header="Detalle de Venta">
+            <TabItem Header="Detalle de Venta" x:Name="detalleVentaTab" IsEnabled="False">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="3*" MinWidth="150" MaxWidth="400"/>
@@ -94,6 +98,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition x:Name="rowSelectVentaDetalle" Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Grid Margin="5">
                         <Grid.ColumnDefinitions>
@@ -167,10 +172,13 @@
                         </DataGrid.Columns>
                     </DataGrid>
                     <GridSplitter Grid.RowSpan="2" Width="2" BorderBrush="Gray"/>
-
+                    <StackPanel Orientation="Horizontal" Margin="5" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+                        <Button Height="30" x:Name="seleccionarVentaDetalleBtn" Content="Seleccionar" Padding="5,0" Margin="5,0"/>
+                        <Button Height="30" x:Name="cancelarVentaDetalleBtn" Content="Cancelar" Padding="5,0" Margin="5,0" Click="cancelarListaVentaBtn_Click" />
+                    </StackPanel>
                 </Grid>
             </TabItem>
-            <TabItem Header="Promociones">
+            <TabItem Header="Promociones" x:Name="promocionesTab">
                 <Grid Background="#FFE5E5E5">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -222,7 +230,7 @@
                     </DataGrid>
                 </Grid>
             </TabItem>
-            <TabItem Header="Nueva Promoción">
+            <TabItem Header="Nueva Promoción" x:Name="nuevaPromocionTab">
                 <Grid Background="#FFE5E5E5">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"></RowDefinition>

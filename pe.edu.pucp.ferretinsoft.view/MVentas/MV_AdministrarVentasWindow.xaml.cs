@@ -19,19 +19,40 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
     /// </summary>
     public partial class MV_AdministrarVentasWindow : Window
     {
+        public int selectedCodVenta = 0;
+
         public MV_AdministrarVentasWindow()
         {
             InitializeComponent();
+            rowSelectVentaLista.Height = new GridLength(0);
+            rowSelectVentaDetalle.Height = new GridLength(0);
+        }
+
+        public MV_AdministrarVentasWindow(MV_DevolucionesWindow devolucionesWindow)
+        {
+            InitializeComponent();
+            Owner = devolucionesWindow;
+            rowSelectVentaLista.Height = GridLength.Auto;
+            rowSelectVentaDetalle.Height = GridLength.Auto;
+            promocionesTab.Visibility = System.Windows.Visibility.Collapsed;
+            nuevaPromocionTab.Visibility = System.Windows.Visibility.Collapsed;
+            seleccionarListaVentaBtn.Click += devolucionesWindow.seleccionarVenta;
+            Show();
         }
         private void detalleVentaBtn_Click(object sender, RoutedEventArgs e)
         {
             VentasTab.SelectedIndex = 1;
         }
 
+        MV_ClientesWindow clientesWindow;
         private void buscarClienteBtn_Click(object sender, RoutedEventArgs e)
         {
-            //ClientesWindow pw = new ClientesWindow();
-            //pw.Show();
+            clientesWindow = new MV_ClientesWindow(this);
+        }
+
+        public void seleccionarCliente(object sender, RoutedEventArgs e)
+        {
+            clientesWindow.Close();
         }
 
         private void buscarVendedorBtn_Click(object sender, RoutedEventArgs e)
@@ -39,5 +60,18 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             //PersonalAdminWindow pw = new PersonalAdminWindow();
             //pw.Show();
         }
+
+
+        private void cerrarVentana()
+        {
+            this.Close();
+        }
+
+        private void cancelarListaVentaBtn_Click(object sender, RoutedEventArgs e)
+        {
+            cerrarVentana();
+        }
+
+        
     }
 }

@@ -116,6 +116,12 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             w.Show();
         }
 
+        private void admValesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MV_AdministrarValesWindow w = new MV_AdministrarValesWindow();
+            w.Show();
+        }
+
 
         
 

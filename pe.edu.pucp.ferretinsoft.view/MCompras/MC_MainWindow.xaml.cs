@@ -81,5 +81,11 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
         {
             INSTANCE = null;
         }
+
+        private void gRemisioinBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MC_AdministrarGuiaRemiWindow gRemi = new MC_AdministrarGuiaRemiWindow();
+            gRemi.Show();
+        }
     }
 }

@@ -27,5 +27,10 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
         {
             VentasTab.SelectedIndex = 1;
         }
+
+        private void nuevaPromocionBtn_Click(object sender, RoutedEventArgs e)
+        {
+            VentasTab.SelectedIndex = 1;
+        }
     }
 }

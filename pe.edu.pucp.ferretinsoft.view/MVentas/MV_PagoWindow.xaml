@@ -33,21 +33,20 @@
                         <ColumnDefinition ></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Label Content="RUC:" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
-                    <TextBox Grid.Column="1" VerticalAlignment="Center"/>
+                    <TextBox Grid.Column="1" Text ="DNI/RUC" VerticalAlignment="Center"/>
                     <Label Grid.Column="2" Content="Razón Social:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <TextBox Grid.Column="3" VerticalAlignment="Center"/>
+                    <TextBox Grid.Column="3" Text ="Razón Social/Nombre Apellido"  VerticalAlignment="Center"/>
                 </Grid>
             </Grid>
         </GroupBox>
-        
-        
+
+
         <DataGrid Grid.Row="2" Margin="5,0" VerticalAlignment="Stretch">
             <DataGrid.Columns>
                 <DataGridComboBoxColumn Width="1*" ClipboardContentBinding="{x:Null}" Header="Modo de pago" SelectedValueBinding="{x:Null}" SelectedItemBinding="{x:Null}" TextBinding="{x:Null}"/>
                 <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descripción"/>
                 <DataGridComboBoxColumn Width="1*" ClipboardContentBinding="{x:Null}" Header="Moneda" SelectedValueBinding="{x:Null}" SelectedItemBinding="{x:Null}" TextBinding="{x:Null}"/>
                 <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Importe"/>
-                <DataGridTextColumn Width=".5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Puntos"/>
             </DataGrid.Columns>
         </DataGrid>
         <Grid Grid.Row="3" Margin="10,5">
@@ -55,7 +54,7 @@
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                 <ColumnDefinition Width="80"></ColumnDefinition>
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
-                <ColumnDefinition Width="50"></ColumnDefinition>
+                <ColumnDefinition Width="60"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                 <ColumnDefinition Width="80"></ColumnDefinition>
@@ -65,35 +64,35 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            
+
             <Label Grid.Row="0" Grid.Column="5" Content="Sub Total:" />
             <Label Grid.Row="1" Grid.Column="5" Content="% IGV:"/>
             <Label Grid.Row="2" Grid.Column="5" Content="Total a Pagar:"/>
 
-            <TextBox Grid.Row="0" Grid.Column="6" TextAlignment="Right" Text="0.00" VerticalAlignment="Center" IsEnabled="False"/>
-            <TextBox Grid.Row="1" Grid.Column="6" TextAlignment="Right" Text="0.00" VerticalAlignment="Center" IsEnabled="False"/>
-            <TextBox Grid.Row="2" Grid.Column="6" TextAlignment="Right" Text="0.00" VerticalAlignment="Center" IsEnabled="False"/>
+            <TextBox Grid.Row="0" Grid.Column="6" TextAlignment="Right" Text="0.00" VerticalAlignment="Center" IsEnabled="False" Height="22" Margin="0,2"/>
+            <TextBox Grid.Row="1" Grid.Column="6" TextAlignment="Right" Text="0.00" VerticalAlignment="Center" IsEnabled="False" Height="22" Margin="0,2"/>
+            <TextBox Grid.Row="2" Grid.Column="6" TextAlignment="Right" Text="0.00" VerticalAlignment="Center" IsEnabled="False" Height="22" Margin="0,2"/>
 
             <Label Grid.Row="0" Grid.Column="0" Content="Cobrado:" />
             <Label Grid.Row="1" Grid.Column="0" Content="Diferencia:" />
             <Label Grid.Row="2" Grid.Column="0" Content="Cód. Vale:" />
-            <Label Grid.Row="0" Grid.Column="2" Content="Puntos Usados:" />
+            <Label Grid.Row="0" Grid.Column="2" Content="Puntos Canjeados:" />
             <Label Grid.Row="1" Grid.Column="2" Content="Puntos Ganados:" />
-            <Button Grid.Row="2" Grid.Column="2" Content="APLICAR VALE" HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="5,0" Margin="5,0,5,0"/>
-            
-            <TextBox Grid.Row="0" Grid.Column="1" TextAlignment="Right" Text="0.00" VerticalAlignment="Center" IsEnabled="False"/>
-            <TextBox Grid.Row="1" Grid.Column="1" TextAlignment="Right" Text="0.00" VerticalAlignment="Center" IsEnabled="False"/>
-            <TextBox Grid.Row="2" Grid.Column="1" TextAlignment="Right" Text="123456" VerticalAlignment="Center" IsEnabled="True"/>
-            <TextBox Grid.Row="0" Grid.Column="3" TextAlignment="Right" Text="0" VerticalAlignment="Center" IsEnabled="False"/>
-            <TextBox Grid.Row="1" Grid.Column="3" TextAlignment="Right" Text="0" VerticalAlignment="Center" IsEnabled="False"/>
-            <TextBox Grid.Row="2" Grid.Column="3" TextAlignment="Right" Text="S/. " VerticalAlignment="Center" IsEnabled="False"/>
+            <Button Grid.Row="2" Grid.Column="2" Content="APLICAR VALE" HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="5,0" Margin="5,3" Height="20"/>
+
+            <TextBox Grid.Row="0" Grid.Column="1" TextAlignment="Right" Text="0.00" VerticalAlignment="Center" IsEnabled="False" Height="22" Margin="0,2"/>
+            <TextBox Grid.Row="1" Grid.Column="1" TextAlignment="Right" Text="0.00" VerticalAlignment="Center" IsEnabled="False" Height="22" Margin="0,2"/>
+            <TextBox Grid.Row="2" Grid.Column="1" TextAlignment="Right" Text="123456" VerticalAlignment="Center" IsEnabled="True" Height="22" Margin="0,2"/>
+            <TextBox Grid.Row="0" Grid.Column="3" TextAlignment="Right" Text="0" VerticalAlignment="Center" IsEnabled="False" Height="22" Margin="0,2"/>
+            <TextBox Grid.Row="1" Grid.Column="3" TextAlignment="Right" Text="0" VerticalAlignment="Center" IsEnabled="False" Height="22" Margin="0,2"/>
+            <TextBox Grid.Row="2" Grid.Column="3" TextAlignment="Right" Text="S/. " VerticalAlignment="Center" IsEnabled="False" Height="22" Margin="0,2"/>
         </Grid>
         <Grid Grid.Row="5" Margin="10,5">
-        
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="IMPRIMIR DOCUMENTO" VerticalAlignment="Center" Height="30" Padding="5,0" Margin="0,0,5,0"/>
-            <Button Content="CANCELAR" VerticalAlignment="Center"  Height="30" Click="Button_Click_1" Padding="5,0" Margin="0"/>
-        </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="IMPRIMIR DOCUMENTO" VerticalAlignment="Center" Height="30" Padding="5,0" Margin="0,0,5,0"/>
+                <Button Content="CANCELAR" VerticalAlignment="Center"  Height="30" Click="Button_Click_1" Padding="5,0" Margin="0"/>
+            </StackPanel>
         </Grid>
 
     </Grid>

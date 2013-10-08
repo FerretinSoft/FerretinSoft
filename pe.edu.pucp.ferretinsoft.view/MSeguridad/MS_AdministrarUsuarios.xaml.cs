@@ -40,5 +40,11 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
             //pw.ShowDialog();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MS_GenerarContraseñaWindow cw = new MS_GenerarContraseñaWindow();
+            cw.ShowDialog();
+        }
+
     }
 }

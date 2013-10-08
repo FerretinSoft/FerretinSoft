@@ -24,6 +24,7 @@
                     <Label Content="Nombres:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="68" Margin="331,26,0,0"/>
                     <Label Content="Apellidos:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="68" Margin="331,52,0,0"/>
                     <Label Content="Perfil:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="124" Margin="16,82,0,0" Grid.RowSpan="2" />
+                    <Label Content="Estado:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="124" Margin="331,83,0,0" Grid.RowSpan="2" />
 
 
 
@@ -31,15 +32,21 @@
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="421,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203"/>
                     <TextBox HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Margin="132,57,0,0"/>
                     <TextBox HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" Margin="421,57,0,0" />
-                    <ComboBox x:Name="categoriaCombo" HorizontalAlignment="Left" Margin="132,83,0,0" VerticalAlignment="Top" Width="180" Height="22" Grid.RowSpan="2">
+                    <ComboBox x:Name="perfilCombo" HorizontalAlignment="Left" Margin="132,83,0,0" VerticalAlignment="Top" Width="180" Height="22" Grid.RowSpan="2">
                         <CheckBox Content="Todos" IsChecked="True"/>
                         <CheckBox Content="Perfil A" IsChecked="True"/>
                         <CheckBox Content="Perfil B" IsChecked="True"/>
                         <CheckBox Content="Perfil C" IsChecked="True"/>
                     </ComboBox>
 
+                    <ComboBox x:Name="estadoCombo" HorizontalAlignment="Left" Margin="421,82,0,0" VerticalAlignment="Top" Width="203" Height="22" Grid.RowSpan="2">
+                        <CheckBox Content="Todos" IsChecked="True"/>
+                        <CheckBox Content="Activo" IsChecked="True"/>
+                        <CheckBox Content="Inactivo" IsChecked="True"/>
+                    </ComboBox>
 
-                    <Button x:Name="buscarUsuariosBtn" HorizontalAlignment="Left" Margin="629,73,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35" Grid.RowSpan="2">
+
+                    <Button x:Name="buscarUsuariosBtn" HorizontalAlignment="Left" Margin="629,77,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35" Grid.RowSpan="2">
                         <Button.Background>
                             <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
@@ -107,7 +114,7 @@
 
                     <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="258,323,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Height="30"/>
                     <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="29,323,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="1" Height="30"/>
-                    <Button Content="GENERAR" HorizontalAlignment="Left" Margin="10,272,0,0" VerticalAlignment="Top" Width="182" RenderTransformOrigin="1.347,-0.05" Grid.Column="1" Height="30" />
+                    <Button Content="GENERAR" HorizontalAlignment="Left" Margin="10,272,0,0" VerticalAlignment="Top" Width="182" RenderTransformOrigin="1.347,-0.05" Grid.Column="1" Height="30" Click="Button_Click" />
                     <Label Content="Generar Nueva Contraseña:" HorizontalAlignment="Left" Margin="177,272,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
                     <Label Content="Perfil:" HorizontalAlignment="Left" Margin="177,234,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
 

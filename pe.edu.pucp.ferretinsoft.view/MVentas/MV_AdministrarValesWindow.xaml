@@ -7,7 +7,7 @@
             <ImageBrush ImageSource="../Resources/texture_3_100.png" TileMode="FlipX" 
             Viewport="0,0,100,100" ViewportUnits="Absolute"/>
         </Grid.Background>
-        <TabControl x:Name="clientesTab" Margin="0">
+        <TabControl x:Name="ValeTab" Margin="0">
             <TabItem Header="Búsqueda" x:Name="busquedaTab">
                 <Grid Background="#FFE5E5E5">
                     <Grid.RowDefinitions>
@@ -46,12 +46,12 @@
                     </GroupBox>
                     <ToolBar HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" Height="24" Width="68">
 
-                        <Button x:Name="nuevoClienteBtn" Content="" VerticalAlignment="Top" Width="20" Margin="0,0,2,-1" Click="nuevoClienteBtn_Click" Height="20">
+                        <Button x:Name="nuevoValeBtn" Content="" VerticalAlignment="Top" Width="20" Margin="0,0,2,-1" Click="nuevoValeBtn_Click" Height="20">
                             <Button.Background>
                                 <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/add_20.png"/>
                             </Button.Background>
                         </Button>
-                        <Button x:Name="detalleClienteBtn" Content="" VerticalAlignment="Bottom" Width="20" Margin="0,0,2,-1" Click="edClienteBtn_Click" Height="20">
+                        <Button x:Name="detalleValeBtn" Content="" VerticalAlignment="Bottom" Width="20" Margin="0,0,2,-1" Click="edValeBtn_Click" Height="20">
                             <Button.Background>
                                 <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/edit_20.png"/>
                             </Button.Background>

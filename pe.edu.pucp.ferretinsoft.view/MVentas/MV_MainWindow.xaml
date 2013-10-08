@@ -66,7 +66,7 @@
                 </Button>
                 <Label Content="Administrar Proformas" FontSize="16"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,10" Cursor="Hand" MouseDown="administrarProformasBtn_Click">
+            <StackPanel Orientation="Horizontal" Margin="0,10" Cursor="Hand" MouseDown="admValesBtn_Click">
             <Button x:Name="administrarValesBtn" Content="" Width="32" Height="32" Click="admValesBtn_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="../Resources/forward_32.png"/>

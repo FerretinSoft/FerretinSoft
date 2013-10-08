@@ -23,5 +23,10 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
         {
             InitializeComponent();
         }
+
+        private void buscarEmpresaBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

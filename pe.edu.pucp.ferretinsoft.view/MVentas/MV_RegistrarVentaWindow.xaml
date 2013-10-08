@@ -9,7 +9,7 @@
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>
-            <ColumnDefinition MaxWidth="250" Width="250"></ColumnDefinition>
+            <ColumnDefinition x:Name="clienteViewColumn" MaxWidth="250" Width="0"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -19,7 +19,7 @@
         <Grid Margin="5,5"  Grid.Column="0" Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
-                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="120"></ColumnDefinition>
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
@@ -34,10 +34,20 @@
             <Label Grid.Column="0" Grid.Row="1" Content="Cód. Venta:" Margin="0,0,0,0"/>
             <Label Grid.Column="2" Grid.Row="1" Content="Vendedor:" Margin="0,0,0,0"/>
             <Label Grid.Column="0" Grid.Row="3" Content="Cliente:"  Margin="0,0,0,0"/>
-            <TextBox Grid.Column="1" Grid.Row="0" IsEnabled="False" Text="24/09/2013" VerticalContentAlignment="Center" Margin="0,2,5,2" VerticalAlignment="Center"/>
-            <TextBox Grid.Column="1" Grid.Row="1" IsEnabled="False" Text="000012" VerticalContentAlignment="Center" Margin="0,2,5,2" VerticalAlignment="Center"/>
-            <TextBox Grid.Column="1" Grid.Row="2" IsEnabled="True" Text="DNI/RUC" VerticalContentAlignment="Center" Margin="0,2,5,2" VerticalAlignment="Center"/>
-
+            <TextBox Grid.Column="1" Grid.Row="0" IsEnabled="False" Text="24/09/2013" VerticalContentAlignment="Center" Margin="0,2,18,2" VerticalAlignment="Center"/>
+            <TextBox Grid.Column="1" Grid.Row="1" IsEnabled="False" Text="Auto" VerticalContentAlignment="Center" Margin="0,2,18,2" VerticalAlignment="Center"/>
+            <Grid Grid.Column="1" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox  IsEnabled="True" Text="DNI/RUC" VerticalContentAlignment="Center" VerticalAlignment="Center" TextChanged="TextBox_TextChanged"/>
+                <Button x:Name="buscarClienteBtn" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Width="18" Height="18" Margin="0,5,0,5" Padding="0" BorderThickness="0" Click="buscarClienteBtn_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="../Resources/search1_20.png"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
             <TextBox Grid.Column="3" Grid.Row="0" IsEnabled="False" Text="" VerticalContentAlignment="Center" Margin="0,2,20,2" VerticalAlignment="Center"/>
             <Button Grid.Column="3" Grid.Row="0" x:Name="buscarProformaBtn" HorizontalAlignment="Right" VerticalAlignment="Center" Width="18" Height="18" Margin="0,5,0,5" Padding="0" Click="buscarProformaBtn_Click" BorderThickness="0">
                 <Button.Background>
@@ -45,33 +55,30 @@
                 </Button.Background>
             </Button>
             <TextBox Grid.Column="3" Grid.Row="1" IsEnabled="False" Text="Nombre Apellido" VerticalContentAlignment="Center" Margin="0,2,0,2" VerticalAlignment="Center" />
-            <TextBox Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="2" Text="Nombre Apellido/Razón Social" IsEnabled="False" VerticalContentAlignment="Center" Margin="0,2,0,2" VerticalAlignment="Center"/>
 
         </Grid>
-        <ToolBar HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Height="24" Grid.Row="1">
-            <Button x:Name="nuevoProductoBtn" Content="" VerticalAlignment="Stretch" Width="20" Margin="0,0,2,-1">
-                <Button.Background>
-                    <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/add_20.png" Stretch="None"/>
-                </Button.Background>
-            </Button>
-
-            <Button Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,0">
-                <Button.Background>
-                    <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/trash_20.png"/>
-                </Button.Background>
-            </Button>
-
-        </ToolBar>
-        <Grid Margin="5,24,5,5"  Grid.Column="0" Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
+        
+        <Grid Margin="5,5"  Grid.Column="0" Grid.Row="1">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
-            <DataGrid Grid.Row="0" Grid.Column="0" Height="179" VerticalAlignment="Bottom">
+            <ToolBar HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Height="24" Grid.Row="0">
+                <Button x:Name="nuevoProductoBtn" Content="" VerticalAlignment="Stretch" Width="20" Margin="0,0,2,-1">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/add_20.png" Stretch="None"/>
+                    </Button.Background>
+                </Button>
+
+                <Button Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,0">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/trash_20.png"/>
+                    </Button.Background>
+                </Button>
+            </ToolBar>
+            <DataGrid Grid.Row="1" Grid.Column="0" VerticalAlignment="Stretch" Margin="0,5">
                 <DataGrid.Columns>
                     <DataGridHyperlinkColumn Width="0.5*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header=""/>
                     <DataGridHyperlinkColumn Width="1.5*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Código"/>
@@ -85,7 +92,7 @@
                     <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Canjear"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Grid Grid.Row="1" Grid.Column="0" Margin="0,5">
+            <Grid Grid.Row="2" Grid.Column="0" Margin="0,5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"></ColumnDefinition>
                     <ColumnDefinition Width="180"></ColumnDefinition>
@@ -112,7 +119,7 @@
                     <TextBox TextWrapping="Wrap" Text="0.00" Grid.Column="1" HorizontalContentAlignment="Right" Grid.Row="3" VerticalContentAlignment="Center" Margin="0,2,0,2"/>
                 </Grid>
             </Grid>
-            <Grid Grid.Row="2" Margin="0,5,0,0">
+            <Grid Grid.Row="3" Margin="0,5,0,0">
                 <Button Grid.Column="1" x:Name="pagarBtn" Content="PAGAR" HorizontalAlignment="Right"  VerticalAlignment="Center" Width="75" Height="30" Click="pagarBtn_Click" Margin="0,0,80,0"/>
                 <Button Grid.Column="1" Content="CANCELAR" HorizontalAlignment="Right"  VerticalAlignment="Center" Width="75" Height="30" Click="Button_Click_1"/>
             </Grid>

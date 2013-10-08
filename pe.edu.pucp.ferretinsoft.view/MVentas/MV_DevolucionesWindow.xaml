@@ -36,7 +36,7 @@
                             <Label Content="Vendedor:" Grid.Row="0" Grid.Column="2"/>
                             <Label Content="Cliente:" Grid.Row="2" Grid.Column="0"/>
                             <Label Content="Fecha Hasta:" Grid.Row="3" Grid.Column="2"/>
-                            <TextBox Text ="RUC/DNI" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" IsEnabled="False" Margin="0,2,25,2" />
+                            <TextBox Text ="RUC/DNI" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="0,2,25,2" />
                             <TextBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="0,0,25,0"/>
 
                             <Grid Grid.Column="1" Grid.Row="1">
@@ -117,7 +117,8 @@
                         <DataGrid.Columns>
                             <DataGridHyperlinkColumn Width="1.5*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Núm Devolución"/>
                             <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Doc. Venta"/>
-                            <DataGridTextColumn Width="4*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cliente"/>
+                            <DataGridTextColumn Width="1.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="ID Cliente"/>
+                            <DataGridTextColumn Width="4*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre Cliente"/>
                             <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Fecha Devolución"/>
                             <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Importe"/>
                         </DataGrid.Columns>
@@ -251,7 +252,7 @@
                                 <RowDefinition></RowDefinition>
                             </Grid.RowDefinitions>
                             <Label Content="Cód. Devolución:" VerticalAlignment="Center"/>
-                            <TextBox Text="123456789123" VerticalAlignment="Center" IsEnabled="True" Grid.Column="1" Margin="0,0,26,0"/>
+                            <TextBox Text="123456789123" VerticalAlignment="Center" IsEnabled="false" Grid.Column="1" Margin="0,0,26,0"/>
                             <Label Content="Cliente:" VerticalAlignment="Center" Grid.Row="1" Grid.Column="2"/>
                             <Grid Grid.Column="3" Grid.Row="1">
                                 <Grid.ColumnDefinitions>

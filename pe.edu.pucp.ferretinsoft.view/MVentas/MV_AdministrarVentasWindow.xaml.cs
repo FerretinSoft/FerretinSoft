@@ -72,6 +72,16 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             cerrarVentana();
         }
 
+        private void editarVentaBtn_Click(object sender, RoutedEventArgs e)
+        {
+            VentasTab.SelectedIndex = 1;
+        }
+
+        private void editarPromocionBtn_Click(object sender, RoutedEventArgs e)
+        {
+            VentasTab.SelectedIndex = 3;
+        }
+
         
     }
 }

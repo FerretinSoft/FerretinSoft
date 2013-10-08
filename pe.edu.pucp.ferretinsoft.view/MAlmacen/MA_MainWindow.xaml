@@ -1,7 +1,7 @@
 ﻿<Window x:Class="pe.edu.pucp.ferretinsoft.view.MAlmacen.MA_MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Módulo de Almacén" Height="550" Width="525" Icon="/pe.edu.pucp.ferretinsoft.view;component/Resources/ferretin_ico.ico" ResizeMode="CanMinimize">
+        Title="Módulo de Almacén" WindowStartupLocation="CenterScreen" Height="550" Width="525" Icon="/pe.edu.pucp.ferretinsoft.view;component/Resources/ferretin_ico.ico" ResizeMode="CanMinimize">
     <Grid Margin="0">
         <Grid.Background>
             <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/texture_1_100.png" TileMode="FlipX" 

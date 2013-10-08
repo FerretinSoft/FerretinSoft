@@ -16,7 +16,7 @@
                         <RowDefinition Height="37*"></RowDefinition>
                         <RowDefinition Height="255*"/>
                     </Grid.RowDefinitions>
-                    <GroupBox Header="Parámetros" Margin="10,10,10,5" BorderBrush="Black" Grid.ColumnSpan="3"/>
+                    <GroupBox Header="Parámetros" Margin="10,10,10,3" BorderBrush="Black" Grid.ColumnSpan="3"/>
                     <Label Content="Codigo:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="63" Margin="24,33,0,0" Grid.ColumnSpan="2"/>
                     <Label Content="Tipo:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="63" Margin="24,95,0,0" Grid.ColumnSpan="2"/>
                     <Label Content="Estado:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="63" Margin="295,95,0,0" Grid.Column="2"/>
@@ -27,14 +27,14 @@
                     <DatePicker HorizontalAlignment="Left" Margin="402,64,0,0" VerticalAlignment="Top" Width="130" Height="24" Grid.Column="2"/>
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="36,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.667,0.4" Grid.Column="2"/>
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="402,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Grid.Column="2"/>
-                    <ComboBox HorizontalAlignment="Left" Height="20" Margin="36,101,0,0" VerticalAlignment="Top" Width="130" Grid.Column="2">
-                        <Label Content="Orden de Compra"/>
-                        <Label Content="Cotizacion"/>
+                    <ComboBox HorizontalAlignment="Left" Height="20" Margin="36,101,0,0" SelectedIndex="0" VerticalAlignment="Top" Width="130" Grid.Column="2">
+                        <ListBoxItem Content="Orden de Compra"/>
+                        <ListBoxItem Content="Cotizacion"/>
                     </ComboBox>
-                    <ComboBox HorizontalAlignment="Left" Height="20" Margin="402,101,0,0" VerticalAlignment="Top" Width="130" Grid.Column="2">
-                        <Label Content="Ingresada"/>
-                        <Label Content="Emitida"/>
-                        <Label Content="Anulada"/>
+                    <ComboBox HorizontalAlignment="Left" Height="20" SelectedIndex="0" Margin="402,101,0,0" VerticalAlignment="Top" Width="130" Grid.Column="2">
+                        <ListBoxItem Content="Ingresada"/>
+                        <ListBoxItem Content="Emitida"/>
+                        <ListBoxItem Content="Anulada"/>
                     </ComboBox>
                     <Button x:Name="buscarUsuariosBtn" HorizontalAlignment="Left" Margin="707,58,0,0" Width="32" RenderTransformOrigin="0.3,-0.35" Height="32" VerticalAlignment="Top" Grid.Column="2">
                         <Button.Background>
@@ -48,31 +48,26 @@
                         </Button.Background>
                     </Button>
 
-                    <ToolBar Margin="10,0,0,0" Width="64" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1">
+                    <ToolBar Margin="10,2,0,0" Width="45" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1">
                         <Button x:Name="nuevaOrdenCompraBtn" Content="" VerticalAlignment="Bottom" Width="20" Margin="0,-1" Click="nuevaOrdenBtn_Click" Height="20">
                             <Button.Background>
                                 <ImageBrush ImageSource="/Resources/add_20.png" Stretch="None"/>
-                            </Button.Background>
-                        </Button>
-                        <Button Content="" Height="20" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.624,-0.688">
-                            <Button.Background>
-                                <ImageBrush ImageSource="/Resources/trash_20.png"/>
                             </Button.Background>
                         </Button>
                     </ToolBar>
 
                     <DataGrid Margin="10,30,10,10" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.RowSpan="2">
                         <DataGrid.Columns>
-                            <DataGridCheckBoxColumn Width="0*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
-                            <DataGridHyperlinkColumn Width="2*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Código"/>
-                            <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Proveedor"/>
-                            <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Fecha"/>
-                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Estado"/>
+                            <DataGridCheckBoxColumn Width="1.8*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tipo"/>
+                            <DataGridHyperlinkColumn Width="1.8*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Código"/>
+                            <DataGridTextColumn Width="3.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Proveedor"/>
+                            <DataGridTextColumn Width="2.0*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Fecha"/>
+                            <DataGridTextColumn Width="1.8*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Estado"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
             </TabItem>
-            <TabItem Header="Edición" IsHitTestVisible="False">
+            <TabItem Header="Detalle" IsHitTestVisible="False">
                 <Grid Background="#FFE5E5E5" Margin="0,2,0,-2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="19*"/>
@@ -88,13 +83,13 @@
                     <Label x:Name="fecEmisioLbl" Content="Fecha de emision:" Margin="15,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.183,0.438" Height="26" HorizontalAlignment="Left" Width="105" Grid.ColumnSpan="2"/>
                     <DataGrid Margin="10,135,178,0" RenderTransformOrigin="0.5, 0.5" Height="298" VerticalAlignment="Top" Grid.ColumnSpan="3" >
                         <DataGrid.Columns>
-                            <DataGridCheckBoxColumn Width="1*" Binding="{x:Null}" CanUserSort="False" CanUserResize="False" ClipboardContentBinding="{x:Null}"/>
-                            <DataGridHyperlinkColumn Width="3.5*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Producto"/>
-                            <DataGridTextColumn Width="3.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descripción"/>
-                            <DataGridTextColumn Width="1.8*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Unidad"/>
-                            <DataGridTextColumn Width="1.8*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Precio Unit."/>
-                            <DataGridTextColumn Width="1.8*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cantidad"/>
-                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Total"/>
+                            <DataGridHyperlinkColumn Width="3.8*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Producto"/>
+                            <DataGridTextColumn Width="3.0*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descripción"/>
+                            <DataGridTextColumn Width="1.7*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Unidad"/>
+                            <DataGridTextColumn Width="1.7*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Precio Unit."/>
+                            <DataGridTextColumn Width="1.7*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cantidad"/>
+                            <DataGridTextColumn Width="2.0*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Total"/>
+                            <DataGridCheckBoxColumn Width="1.6*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Seleccionar"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <GroupBox Header="Resumen" Margin="10,438,179,0" BorderBrush="Black" Height="61" VerticalAlignment="Top" Grid.ColumnSpan="3">

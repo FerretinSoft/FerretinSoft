@@ -12,7 +12,10 @@
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="65,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="300,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
                     <Label Content="Rubro:" HorizontalAlignment="Left" Margin="567,35,0,0" VerticalAlignment="Top"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="620,41,0,0" VerticalAlignment="Top" Height="20" Width="120" RenderTransformOrigin="1.625,5.182"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="620,39,0,0" VerticalAlignment="Top" Height="20" Width="120" RenderTransformOrigin="1.625,5.182" SelectedIndex="0">
+                        <ListBoxItem Content="Electrificación"/>
+                        <ListBoxItem Content="Equipos industriales"/>
+                    </ComboBox>
                     <Button x:Name="buscarClienteBtn" HorizontalAlignment="Left" Margin="819,33,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35">
                         <Button.Background>
                             <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
@@ -43,7 +46,7 @@
                     </ToolBar>
                 </Grid>
             </TabItem>
-            <TabItem Header="Edición">
+            <TabItem Header="Detalle">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="13*"></ColumnDefinition>
@@ -97,7 +100,7 @@
                     <Label Content="Teléfono contacto:" HorizontalAlignment="Left" Margin="10,428,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="108"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="101,430,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Column="3" Text="&lt;Teléfono contacto&gt;"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="101,337,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Column="3" Text="&lt;Teléfono Proveedor&gt;" RenderTransformOrigin="0.514,1.435"/>
-                    <DataGrid x:Name="dgwCatalogo" Grid.Column="3" Margin="355,72,10,0" VerticalAlignment="Top" Height="390" CanUserAddRows="True" IsTabStop="True" Grid.ColumnSpan="2" >
+                    <DataGrid x:Name="dgwCatalogo" Grid.Column="3" Margin="355,70,10,0" VerticalAlignment="Top" Height="392" CanUserAddRows="True" IsTabStop="True" Grid.ColumnSpan="2" >
                         <DataGrid.Columns>
                             <DataGridTextColumn Width="2.6*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Producto"/>
                             <DataGridTextColumn Width="1.1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Unidad"/>
@@ -106,7 +109,7 @@
                             <DataGridCheckBoxColumn Width="1.25*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Seleccionar"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <ToolBar Grid.Column="3" HorizontalAlignment="Left" Margin="355,42,0,0" VerticalAlignment="Top" Height="25" Width="92" Grid.ColumnSpan="2">
+                    <ToolBar Grid.Column="3" HorizontalAlignment="Left" Margin="355,40,0,0" VerticalAlignment="Top" Height="25" Width="92" Grid.ColumnSpan="2">
                         <Button x:Name="nuevoProductoBtn" Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,4,0" Click="nuevoProductoBtn_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="/Resources/add_20.png" Stretch="None"/>
@@ -123,7 +126,7 @@
                             </Button.Background>
                         </Button>
                     </ToolBar>
-                    <Label Content="Catálogo de Productos:" Grid.Column="3" HorizontalAlignment="Left" Margin="355,16,0,0" VerticalAlignment="Top" Height="26" Width="131" Grid.ColumnSpan="2"/>
+                    <Label Content="Catálogo de Productos:" Grid.Column="3" HorizontalAlignment="Left" Margin="355,15,0,0" VerticalAlignment="Top" Height="26" Width="131" Grid.ColumnSpan="2"/>
                 </Grid>
             </TabItem>
         </TabControl>

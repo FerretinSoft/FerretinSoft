@@ -49,11 +49,6 @@
                                 <ImageBrush ImageSource="/Resources/edit_20.png"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,0">
-                            <Button.Background>
-                                <ImageBrush ImageSource="/Resources/trash_20.png"/>
-                            </Button.Background>
-                        </Button>
 
                     </ToolBar>
 
@@ -70,11 +65,11 @@
 
                     <Label Content="Perfil:" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="70,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
-                    <TextBox HorizontalAlignment="Left" Height="183" Margin="14,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217"/>
+                    <TextBox HorizontalAlignment="Left" Height="183" Margin="15,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217"/>
 
-                    <Label Content="Descripción:" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
-                    <Button Content="GUARDAR" Margin="156,350,10,0" VerticalAlignment="Top" RenderTransformOrigin="1.347,-0.05" Height="30"/>
-                    <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="17,350,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="1" Height="30"/>
+                    <Label Content="Descripción:" HorizontalAlignment="Left" Margin="11,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
+                    <Button Content="GUARDAR" Margin="156,335,10,0" VerticalAlignment="Top" RenderTransformOrigin="1.347,-0.05" Height="30"/>
+                    <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="17,335,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="1" Height="30"/>
                     <Label Content="Asignar Privilegios:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="1"/>
                     <TreeView Margin="17,51,10,67" Grid.Column="1">
 

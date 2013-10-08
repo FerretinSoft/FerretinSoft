@@ -68,6 +68,9 @@
     <Compile Include="MSeguridad\MS_GenerarContraseñaWindow.xaml.cs">
       <DependentUpon>MS_GenerarContraseñaWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MVentas\MV_AdministrarPromocionesWindow.xaml.cs">
+      <DependentUpon>MV_AdministrarPromocionesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Custom Controls\CustomMessageBox.cs" />
     <Compile Include="Resources\Custom Controls\CustomMessageBoxWindow.xaml.cs">
       <DependentUpon>CustomMessageBoxWindow.xaml</DependentUpon>
@@ -200,6 +203,10 @@
     <Page Include="MVentas\MV_AdministrarProformasWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVentas\MV_AdministrarPromocionesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MVentas\MV_AdministrarVentasWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

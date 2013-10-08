@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Administración de Categorías" Height="487" Width="704" Icon="/pe.edu.pucp.ferretinsoft.view;component/Resources/ferretin_ico.ico" ResizeMode="CanMinimize">
     <Grid Background="#FFE5E5E5">
-        <TreeView Background="#FFF5F5F5" HorizontalAlignment="Left" Height="366" Margin="10,49,0,0" VerticalAlignment="Top" Width="225">
+        <TreeView Background="#FFF5F5F5" HorizontalAlignment="Left" Height="366" Margin="10,49,0,0" VerticalAlignment="Top" Width="268">
             <TreeViewItem Header="Categoría Principal" IsExpanded="True">
                 <TreeViewItem Header="Subcategoría" HorizontalAlignment="Left" Width="647"/>
             </TreeViewItem>
@@ -13,15 +13,13 @@
                 </TreeViewItem>
             </TreeViewItem>
         </TreeView>
-        <Label Content="Nombre de categoría:" HorizontalAlignment="Left" Margin="283,49,0,0" VerticalAlignment="Top"/>
-        <Label Content="Categorías padre:" HorizontalAlignment="Left" Margin="283,86,0,0" VerticalAlignment="Top"/>
-        <Label Content="Estado:" HorizontalAlignment="Left" Margin="283,126,0,0" VerticalAlignment="Top"/>
-        <Label Content="Descripción:" HorizontalAlignment="Left" Margin="283,166,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="476,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ComboBox HorizontalAlignment="Left" Margin="476,88,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox HorizontalAlignment="Left" Margin="476,132,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox Height="123" Margin="476,176,90,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="416,343,0,0" VerticalAlignment="Top" Width="76" Height="30"/>
+        <Label Content="Nombre de categoría:" HorizontalAlignment="Left" Margin="307,49,0,0" VerticalAlignment="Top"/>
+        <Label Content="Categorías padre:" HorizontalAlignment="Left" Margin="307,86,0,0" VerticalAlignment="Top"/>
+        <Label Content="Descripción:" HorizontalAlignment="Left" Margin="307,166,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="438,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229"/>
+        <ComboBox HorizontalAlignment="Left" Margin="438,88,0,0" VerticalAlignment="Top" Width="229"/>
+        <TextBox Height="123" Margin="438,176,31,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="438,343,0,0" VerticalAlignment="Top" Width="76" Height="30"/>
         <ToolBar HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="24">
             <Button x:Name="nuevoProductoBtn" Content="" VerticalAlignment="Stretch" Width="20" Margin="0,0,2,-1">
                 <Button.Background>

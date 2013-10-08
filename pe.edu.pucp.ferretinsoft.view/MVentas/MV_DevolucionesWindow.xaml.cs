@@ -42,5 +42,38 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
         {
             DevolucionesTab.SelectedIndex = 0;
         }
+
+        private void DatePicker_IsEnabledChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+
+        }
+
+        private MV_AdministrarVentasWindow ventasWindow;
+        private void buscarVentaBtn_Click(object sender, RoutedEventArgs e)
+        {
+             ventasWindow = new MV_AdministrarVentasWindow(this);
+        }
+        public void seleccionarVenta(object sender, RoutedEventArgs e)
+        {
+            codVentaList.Text = ventasWindow.selectedCodVenta.ToString();
+            ventasWindow.Close();
+        }
+
+
+        private void codVentaList_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                cargarVenta();
+            }
+        }
+
+        private void cargarVenta()
+        {
+            if (codVentaList.Text.Length > 0)
+            {
+                //cargar venta
+            }
+        }
     }
 }

@@ -46,5 +46,10 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             //RegistrarNotaCreditoWindow pw = new RegistrarNotaCreditoWindow();
             //pw.Show();
         }
+
+        public void seleccionarCliente()
+        {
+            
+        }
     }
 }

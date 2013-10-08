@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Microsoft.Win32;
 using pe.edu.pucp.ferretinsoft.model;
+using System.Data;
 
 
 namespace pe.edu.pucp.ferretinsoft.view.MCompras
@@ -95,5 +96,21 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
             return proveedores;
         }
 
+        public void rucProveedor_Click(object sender, RoutedEventArgs e)
+        {
+            
+            var rowData = ((Hyperlink)e.OriginalSource).DataContext as Proveedor;
+
+            rucTxtBox.Text = rowData.codigo;
+            razSocTxtBox.Text = rowData.razSoc;
+            domTxtBox.Text = rowData.domicilio;
+            tlfTxtBox.Text = rowData.telefono;
+            pagWebTxtBox.Text = rowData.pagWeb;
+            contactoTxtBox.Text = rowData.nombContacto;
+            contactoTlfTxtBox.Text = rowData.tlfContacto;
+            idTxtBox.Text = rowData.ID;
+
+            proveedorTab.SelectedIndex = 1;
+        }
     }
 }

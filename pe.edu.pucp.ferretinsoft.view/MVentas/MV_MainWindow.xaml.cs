@@ -110,6 +110,12 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             INSTANCE = null;
         }
 
+        private void promocionesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MV_AdministrarPromocionesWindow w = new MV_AdministrarPromocionesWindow();
+            w.Show();
+        }
+
 
         
 

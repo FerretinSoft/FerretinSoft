@@ -32,9 +32,16 @@
                         <ImageBrush ImageSource="../Resources/forward_32.png"/>
                     </Button.Background>
                 </Button>
-                <Label Content="Ventas y Promociones" FontSize="16"/>
+                <Label Content="Consultar Ventas" FontSize="16"/>
             </StackPanel>
-            
+            <StackPanel Orientation="Horizontal"  Margin="0,10" Cursor="Hand" MouseDown="promocionesBtn_Click">
+                <Button x:Name="promocionesBtn" Content="" Width="32" Height="32" Click="promocionesBtn_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="../Resources/forward_32.png"/>
+                    </Button.Background>
+                </Button>
+                <Label Content="Administrar Promociones" FontSize="16"/>
+            </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,10" Cursor="Hand" MouseDown="admClientesBtn_Click">
                 <Button x:Name="admClientesBtn" Content="" Width="32" Height="32" Click="admClientesBtn_Click">
                     <Button.Background>

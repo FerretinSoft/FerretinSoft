@@ -349,7 +349,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\pe.edu.pucp.ferretinsoft.model\pe.edu.pucp.ferretinsoft.model.csproj">
+      <Project>{8711c7b7-a2d3-41cc-8f90-dc3f2c47f0c1}</Project>
+      <Name>pe.edu.pucp.ferretinsoft.model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\add2_48.png" />
     <Resource Include="Resources\add_20.png" />

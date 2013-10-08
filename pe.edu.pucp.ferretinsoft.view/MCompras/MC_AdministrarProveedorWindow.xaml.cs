@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Microsoft.Win32;
+using pe.edu.pucp.ferretinsoft.model;
 
 
 namespace pe.edu.pucp.ferretinsoft.view.MCompras
@@ -23,6 +24,8 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
         public MC_AdministrarProveedorWindow()
         {
             InitializeComponent();
+            proveedoresDg.ItemsSource = ListProveedores();
+
         }
 
         private void importarProducto_Click(object sender, RoutedEventArgs e)
@@ -47,5 +50,50 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
         {
             proveedorTab.SelectedIndex = 0;
         }
+
+        private List<Proveedor> ListProveedores()
+        {
+            List<Proveedor> proveedores = new List<Proveedor>();
+            proveedores.Add(new Proveedor()
+                {
+                    ID = "101",
+                    tipoProv = "Empresa",
+                    codigo = "20112355101",
+                    razSoc = "Aceros Arequipa",
+                    rubro = "Cemento",
+                    domicilio = "Av. La Marina 1167",
+                    dep = "Lima",
+                    prov = "Lima",
+                    dist = "Lima",
+                    cp = "Lima 13",
+                    telefono = "4570889",
+                    pagWeb = "www.acerosarequipa.com.pe",
+                    nombContacto = "Juan Perez",
+                    tlfContacto = "99384577"
+                }
+             );
+
+            proveedores.Add(new Proveedor()
+                {
+                    ID = "201",
+                    tipoProv = "Persona",
+                    codigo = "23004511231",
+                    razSoc = "Philips",
+                    rubro = "Electricidad",
+                    domicilio = "Av. La Paz 2688",
+                    dep = "Lima",
+                    prov = "Lima",
+                    dist = "Ate Vitarte",
+                    cp = "Lima 18",
+                    telefono = "4204789",
+                    pagWeb = "www.philips.com.pe",
+                    nombContacto = "Pedro Gonzales",
+                    tlfContacto = "980988264"
+                }
+            );
+
+            return proveedores;
+        }
+
     }
 }

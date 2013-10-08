@@ -21,12 +21,12 @@
                             <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
                     </Button>
-                    <DataGrid Margin="10,114,10,10">
+                    <DataGrid x:Name="proveedoresDg" Margin="10,114,10,10" ItemsSource="{Binding Path=ListProveedores}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Width="5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Razón Social"/>
-                            <DataGridHyperlinkColumn Width="2.5*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="RUC"/>
-                            <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Rubro"/>
-                            <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Teléfono"/>
+                            <DataGridTextColumn Width="5*" Header="Razón Social" Binding="{Binding Path=razSoc}"/>
+                            <DataGridHyperlinkColumn Width="2.5*" Header="RUC" Binding="{Binding Path=codigo}"/>
+                            <DataGridTextColumn Width="3*" Header="Rubro" Binding="{Binding Path=rubro}"/>
+                            <DataGridTextColumn Width="3*" Header="Teléfono" Binding="{Binding Path=telefono}"/>
                             <DataGridCheckBoxColumn Width="1.25*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Seleccionar"/>
                         </DataGrid.Columns>
                     </DataGrid>

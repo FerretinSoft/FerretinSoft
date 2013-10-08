@@ -62,6 +62,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MSeguridad\MS_CambiarContraseñaUsuario.xaml.cs">
+      <DependentUpon>MS_CambiarContraseñaUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MSeguridad\MS_GenerarContraseñaWindow.xaml.cs">
+      <DependentUpon>MS_GenerarContraseñaWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Custom Controls\CustomMessageBox.cs" />
     <Compile Include="Resources\Custom Controls\CustomMessageBoxWindow.xaml.cs">
       <DependentUpon>CustomMessageBoxWindow.xaml</DependentUpon>
@@ -164,6 +170,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MSeguridad\MS_AuditoriaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MSeguridad\MS_CambiarContraseñaUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MSeguridad\MS_GenerarContraseñaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -349,7 +363,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\pe.edu.pucp.ferretinsoft.model\pe.edu.pucp.ferretinsoft.model.csproj">
+      <Project>{8711c7b7-a2d3-41cc-8f90-dc3f2c47f0c1}</Project>
+      <Name>pe.edu.pucp.ferretinsoft.model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\add2_48.png" />
     <Resource Include="Resources\add_20.png" />

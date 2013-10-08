@@ -23,18 +23,14 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
         public MV_ClientesWindow()
         {
             InitializeComponent();
-            seleccionarListaPanel.Visibility = System.Windows.Visibility.Collapsed;
-            seleccionarDetallePanel.Visibility = System.Windows.Visibility.Collapsed;
+            
         }
 
         public MV_ClientesWindow(MV_AdministrarVentasWindow MV_AdministrarVentasWindow)
         {
             InitializeComponent();
-            seleccionarListaPanel.Visibility = System.Windows.Visibility.Visible;
-            seleccionarDetallePanel.Visibility = System.Windows.Visibility.Visible;
-            edicionTab.Visibility = System.Windows.Visibility.Collapsed;
-            nuevoTab.Visibility = System.Windows.Visibility.Collapsed;
-            seleccionarListaClienteBtn.Click += MV_AdministrarVentasWindow.seleccionarCliente;
+           
+            
             Show();
         }
 

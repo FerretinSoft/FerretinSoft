@@ -61,9 +61,9 @@
                     </ToolBar>
                     <DataGrid Margin="5,120,5,5">
                         <DataGrid.Columns>
-                            <DataGridHyperlinkColumn Width="2*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="ID"/>
-                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tipo"/>
-                            <DataGridTextColumn Width="4*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>
+                            <DataGridHyperlinkColumn Width="2*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="ID Cliente"/>
+                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tipo Cliente"/>
+                            <DataGridTextColumn Width="4*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre Cliente"/>
                             <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Teléfono"/>
                             <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Email"/>
                             <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Últ. Compra"/>

@@ -43,7 +43,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
 
         private void nuevaProformaBtn_Click(object sender, RoutedEventArgs e)
         {
-            ProformasTab.SelectedIndex = 2;
+            ProformasTab.SelectedIndex = 1;
         }
 
         private void registrarProformaBtn_Click(object sender, RoutedEventArgs e)

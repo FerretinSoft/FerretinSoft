@@ -18,7 +18,7 @@
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <GroupBox Header="Parámetros de Búsqueda" BorderBrush="Gray" Margin="5">
+                    <GroupBox Header="Parámetros" BorderBrush="Gray" Margin="5,5,5,29">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
@@ -65,7 +65,7 @@
                                     </Button.Background>
                                 </Button>
                             </Grid>
-                            <TextBox Text="Razón Social/Nombre" VerticalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="1" IsEnabled="False"/>
+                            <TextBox Text="Razón Social/Nombre" VerticalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="1" IsEnabled="False" Margin="0,3"/>
                             <DatePicker VerticalAlignment="Center" Grid.Column="1" Grid.Row="2"  Margin="0,3,10,3" BorderThickness="0"/>
                             <DatePicker VerticalAlignment="Center" Grid.Column="3" Grid.Row="2" BorderThickness="0"/>
 
@@ -76,7 +76,20 @@
                             </Button>
                         </Grid>
                     </GroupBox>
-                    
+                    <ToolBar HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Height="24">
+
+                        <Button x:Name="nuevaProformaBtn" Content="" VerticalAlignment="Top" Width="20" Margin="0,0,2,-1" Click="nuevaProformaBtn_Click" Height="20">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/add_20.png"/>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="detalleProformaBtn" Content="" VerticalAlignment="Bottom" Width="20" Margin="0,0,2,-1" Click="detalleProformaBtn_Click" Height="20">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/edit_20.png"/>
+                            </Button.Background>
+                        </Button>
+
+                    </ToolBar>
                     <DataGrid  Grid.Row="1" Margin="5">
                         <DataGrid.Columns>
                             <DataGridHyperlinkColumn Width="1.5*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Doc. Proforma"/>
@@ -89,95 +102,7 @@
                     </DataGrid>
                 </Grid>
             </TabItem>
-            <TabItem Header="Detalle" IsHitTestVisible="False">
-                <Grid Background="#FFE5E5E5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3*" MinWidth="150" MaxWidth="400"/>
-                        <ColumnDefinition Width="7*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <Grid Margin="5">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"></RowDefinition>
-                            <RowDefinition Height="Auto"></RowDefinition>
-                            <RowDefinition Height="Auto"></RowDefinition>
-                            <RowDefinition Height="Auto"></RowDefinition>
-                            <RowDefinition Height="Auto"></RowDefinition>
-                            <RowDefinition Height="Auto"></RowDefinition>
-                            <RowDefinition Height="Auto"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <Label Content="Cód. Proforma:" />
-                        <Label Content="Fecha Registro:" Grid.Row="1" />
-                        <Label Content="Cliente:" Grid.Row="2" />
-                        <Label Content="Fecha Vencimiento:" Grid.Row="4"/>
-                        <Label Content="Vendedor:" Grid.Row="5"/>
-                        
-                        <TextBox IsEnabled="false" Text="41414141" VerticalAlignment="Center" Grid.Column="1"/>
-                        <TextBox IsEnabled="false" Text="dd/mm/aaa" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1"/>
-                        <TextBox IsEnabled="false" Text="&lt;DNI/RUC Cliente&gt;" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2"/>
-                        <TextBox IsEnabled="false" Text="&lt;Razón Social/Nombre&gt;" VerticalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3"/>
-                        <TextBox IsEnabled="false" Text="dd/mm/aaa" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4"/>
-                        <TextBox IsEnabled="false" Text="&lt;Nombre Vendedor&gt;" VerticalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6"/>
-                        
-                    </Grid>
-                    <GroupBox Header="Importe" BorderBrush="Gray" Grid.Row="1" HorizontalAlignment="Stretch" Margin="5">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                <ColumnDefinition ></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <Label Content="Sub Total:" VerticalAlignment="Center"/>
-                            <Label Content="%IGV:" VerticalAlignment="Center" Grid.Row="1"/>
-                            <Label Content="Total a Pagar:" VerticalAlignment="Center" Grid.Row="2"/>
-
-                            <TextBox  Text="0.00" VerticalAlignment="Center" IsEnabled="False" TextAlignment="Right" Grid.Column="1"/>
-                            <TextBox  Text="0.00" VerticalAlignment="Center" IsEnabled="False" TextAlignment="Right" Grid.Column="1" Grid.Row="1"/>
-                            <TextBox  Text="0.00" VerticalAlignment="Center" IsEnabled="False" TextAlignment="Right" Grid.Column="1" Grid.Row="2"/>
-                        </Grid>
-                    </GroupBox>
-                    <DataGrid Margin="5" Grid.Column="1">
-                        <DataGrid.Columns>
-                            <DataGridHyperlinkColumn Width="1.2*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cód Prod."/>
-                            <DataGridTextColumn Width="1.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descripción"/>
-                            <DataGridTextColumn Width="0.7*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cant."/>
-                            <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Moneda"/>
-                            <DataGridTextColumn Width="0.9*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Precio"/>
-                            <DataGridTextColumn Width="0.9*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Dscto. (%)"/>
-                            <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Importe"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
-                    <GroupBox Header="Datos" BorderBrush="Gray" Grid.Column="1" Grid.Row="1" Margin="5">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                <ColumnDefinition></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <Label Content="Enviado a:" />
-                            <TextBox IsEnabled="False" VerticalAlignment="Center" Grid.Column="1"/>
-                            <Label Content="Comentarios:" Grid.Row="1"/>
-                            <TextBox IsEnabled="false" Grid.Row="1" Grid.Column="1"/>
-                        </Grid>
-                    </GroupBox>
-                    <GridSplitter Grid.RowSpan="2" Width="2" BorderBrush="Gray"/>
-
-                </Grid>
-            </TabItem>
+            
 
             <TabItem Header="Nueva Proforma">
                 <Grid Background="#FFE5E5E5">
@@ -209,9 +134,9 @@
                         <Label Grid.Column="0" Grid.Row="1" Content="Cód. Proforma:" Margin="0,0,0,0"/>
                         <Label Grid.Column="2" Grid.Row="1" Content="Vendedor:" Margin="0,0,0,0"/>
                         <Label Grid.Column="0" Grid.Row="2" Content="Cliente DNI/RUC:"  Margin="0,0,0,0"/>
-                        <Label Grid.Column="2" Grid.Row="3" Content="Fecha de Vencimiento:"  Margin="0,0,0,0"/>
+                        <Label Grid.Column="0" Grid.Row="3" Content="Fecha de Vencimiento:"  Margin="0,0,0,0"/>
 
-                        <DatePicker Grid.Column="3" Grid.Row="3" BorderThickness="0"/>
+                        <DatePicker Grid.Column="1" Grid.Row="3" BorderThickness="0" />
                         <TextBox Grid.Column="1" Grid.Row="0" IsEnabled="False" Text="24/09/2013" VerticalContentAlignment="Center" Margin="0,2,5,2" VerticalAlignment="Center"/>
                         <TextBox Grid.Column="1" Grid.Row="1" IsEnabled="False" Text="000012" VerticalContentAlignment="Center" Margin="0,2,5,2" VerticalAlignment="Center"/>
                         <TextBox Grid.Column="1" Grid.Row="2" IsEnabled="True" Text="" VerticalContentAlignment="Center" Margin="0,2,5,2" VerticalAlignment="Center"/>
@@ -223,7 +148,7 @@
                             </Button.Background>
                         </Button>
                         <TextBox Grid.Column="3" Grid.Row="1" IsEnabled="False" Text="" VerticalContentAlignment="Center" Margin="0,2,0,2" VerticalAlignment="Center" />
-                        <TextBox Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" IsEnabled="False" VerticalContentAlignment="Center" Margin="0,2,0,2" VerticalAlignment="Center"/>
+                        <TextBox Grid.Column="3" Grid.Row="2" IsEnabled="False" VerticalContentAlignment="Center" Margin="0,2,0,2" VerticalAlignment="Center"/>
 
                     </Grid>
                     <Grid Margin="5,5"  Grid.Column="0" Grid.Row="1">
@@ -248,18 +173,18 @@
                             </DataGrid.Columns>
                         </DataGrid>
                         <Grid Grid.Row="1" HorizontalAlignment="Right">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                    <ColumnDefinition Width="100"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition></RowDefinition>
-                                    <RowDefinition></RowDefinition>
-                                    <RowDefinition></RowDefinition>
-                                </Grid.RowDefinitions>
-                                <Label Content="Sub Total:"/>
-                                <Label Content="Total a Pagar:" Grid.Row="1"/>
-                                <Label Content="%IGV:" Grid.Row="2"/>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Label Content="Sub Total:"/>
+                            <Label Content="Total a Pagar:" Grid.Row="1"/>
+                            <Label Content="%IGV:" Grid.Row="2"/>
                             <TextBox Text="0.00" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" VerticalAlignment="Center" IsEnabled="False"/>
                             <TextBox Text="0.00" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" VerticalAlignment="Center" Grid.Row="1"  IsEnabled="False"/>
                             <TextBox Text="0.00" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" VerticalAlignment="Center" Grid.Row="2"  IsEnabled="False"/>
@@ -286,7 +211,7 @@
                         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,5,0,0">
                             <Button Grid.Column="1" x:Name="imprimirBtn" Content="IMPRIMIR" HorizontalAlignment="Right"  VerticalAlignment="Center" Width="75" Height="30" Margin="0,0,10,0"/>
                             <Button Grid.Column="1" x:Name="enviarEmailBtn" Content="ENVIAR EMAIL" HorizontalAlignment="Right" VerticalAlignment="Center" Height="30" Padding="5,0" Margin="0" />
-                            
+
                         </StackPanel>
                     </Grid>
 

@@ -34,8 +34,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             Owner = devolucionesWindow;
             rowSelectVentaLista.Height = GridLength.Auto;
             rowSelectVentaDetalle.Height = GridLength.Auto;
-            promocionesTab.Visibility = System.Windows.Visibility.Collapsed;
-            nuevaPromocionTab.Visibility = System.Windows.Visibility.Collapsed;
+            
             seleccionarListaVentaBtn.Click += devolucionesWindow.seleccionarVenta;
             Show();
         }

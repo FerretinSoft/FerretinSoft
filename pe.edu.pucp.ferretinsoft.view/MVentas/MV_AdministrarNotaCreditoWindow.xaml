@@ -132,7 +132,7 @@
                         <Label Content="Vendedor:" Grid.Row="5"/>
                         <Label Content="Estado:" Grid.Row="7"/>
                         <Label Content="Moneda:" Grid.Row="8"/>
-                        <Label Content="Total Devuelto:" Grid.Row="9"/>
+                        <Label Content="Importe:" Grid.Row="9"/>
 
                         <TextBox IsEnabled="false" Text="41414141" VerticalAlignment="Center" Grid.Column="1"/>
                         <TextBox IsEnabled="false" Text="dd/mm/aaa" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1"/>

@@ -20,11 +20,11 @@
                     </Button>
                     <DataGrid Margin="10,114,10,10">
                         <DataGrid.Columns>
-                            <DataGridCheckBoxColumn Width="0.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
                             <DataGridTextColumn Width="5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Razón Social"/>
                             <DataGridHyperlinkColumn Width="2.5*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="RUC"/>
                             <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Rubro"/>
                             <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Teléfono"/>
+                            <DataGridCheckBoxColumn Width="1.25*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Seleccionar"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <ToolBar HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Height="24">
@@ -43,7 +43,7 @@
                     </ToolBar>
                 </Grid>
             </TabItem>
-            <TabItem Header="Edición" IsHitTestVisible="False">
+            <TabItem Header="Edición">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="13*"></ColumnDefinition>
@@ -53,53 +53,57 @@
                         <ColumnDefinition Width="438*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Label Content="Código:" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.412,0.385" Grid.ColumnSpan="4" Height="26" Width="51"/>
-                    <Label Content="Tipo Proveedor:" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="26" Width="94"/>
+                    <Label Content="Tipo Proveedor:" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="26" Width="94"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="101,19,0,0" TextWrapping="Wrap" Text="000157" VerticalAlignment="Top" Width="144" IsEnabled="False" Grid.Column="3"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="101,54,0,0" VerticalAlignment="Top" Width="144" IsReadOnly="True" SelectedIndex="0" Grid.Column="3" Height="22">
+                    <ComboBox HorizontalAlignment="Left" Margin="101,48,0,0" VerticalAlignment="Top" Width="144" IsReadOnly="True" SelectedIndex="0" Grid.Column="3" Height="22">
                         <ListBoxItem Content="Empresa"/>
                         <ListBoxItem Content="Persona natural"/>
                     </ComboBox>
-                    <Label Content="DNI/RUC:" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="26" Width="61"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="101,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Column="3" Text="&lt;RUC o DNI Proveedor&gt;"/>
-                    <Label Content="Razón Social:" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="79"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="101,124,0,0" TextWrapping="Wrap" Text="&lt;Nombre Persona / Empresa&gt;" VerticalAlignment="Top" Width="214" Grid.Column="3"/>
-                    <Label Content="Rubro:" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="45"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="101,159,0,0" VerticalAlignment="Top" Width="144" IsReadOnly="True" SelectedIndex="0" Grid.Column="3" Height="22">
+                    <Label Content="DNI/RUC:" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="26" Width="61"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="101,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Column="3" Text="&lt;RUC o DNI Proveedor&gt;"/>
+                    <Label Content="Razón Social:" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="79"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="101,110,0,0" TextWrapping="Wrap" Text="&lt;Nombre Persona / Empresa&gt;" VerticalAlignment="Top" Width="214" Grid.Column="3"/>
+                    <Label Content="Rubro:" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="45"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="101,141,0,0" VerticalAlignment="Top" Width="144" IsReadOnly="True" SelectedIndex="0" Grid.Column="3" Height="22">
                         <ListBoxItem Content="Electrificación"/>
                         <ListBoxItem Content="Equipos industriales"/>
                     </ComboBox>
-                    <Label Content="Distrito:" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="51"/>
-                    <Label Content="Domicilio:" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="63"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="101,194,0,0" TextWrapping="Wrap" Text="&lt;Dirección&gt;" VerticalAlignment="Top" Width="214" Grid.Column="3"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="101,229,0,0" VerticalAlignment="Top" Width="144" Grid.Column="3" SelectedIndex="0" Height="22">
+                    <Label Content="Departamento:" HorizontalAlignment="Left" Margin="10,206,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="89"/>
+                    <Label Content="Domicilio:" HorizontalAlignment="Left" Margin="10,172,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="63"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="101,173,0,0" TextWrapping="Wrap" Text="&lt;Dirección&gt;" VerticalAlignment="Top" Width="214" Grid.Column="3"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="101,206,0,0" VerticalAlignment="Top" Width="144" Grid.Column="3" SelectedIndex="0" Height="22">
+                        <ListBoxItem Content="Lima"/>
+                        <ListBoxItem Content="La Libertad"/>
+                    </ComboBox>
+                    <Label Content="Provincia:" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="61" Grid.ColumnSpan="4"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="101,240,0,0" VerticalAlignment="Top" Width="144" Grid.Column="3" SelectedIndex="0" Height="22">
+                        <ListBoxItem Content="Lima"/>
+                    </ComboBox>
+                    <Label Content="Distrito:" HorizontalAlignment="Left" Margin="10,272,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="89"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="101,274,0,0" VerticalAlignment="Top" Width="144" Grid.Column="3" SelectedIndex="0" Height="22">
                         <ListBoxItem Content="Lince"/>
-                        <ListBoxItem Content="Surco"/>
                     </ComboBox>
-                    <Label Content="Provincia:" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="61" Grid.ColumnSpan="4"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="101,264,0,0" VerticalAlignment="Top" Width="144" Grid.Column="3" SelectedIndex="0" Height="22">
-                        <ListBoxItem Content="Lima"/>
+                    <Label Content="CP:" HorizontalAlignment="Left" Margin="10,306,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="89"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="101,306,0,0" VerticalAlignment="Top" Width="144" Grid.Column="3" SelectedIndex="0" Height="22">
+                        <ListBoxItem Content="Lima 14"/>
                     </ComboBox>
-                    <Label Content="Departamento:" HorizontalAlignment="Left" Margin="10,295,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="89"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="101,299,0,0" VerticalAlignment="Top" Width="144" Grid.Column="3" SelectedIndex="0" Height="22">
-                        <ListBoxItem Content="Lima"/>
-                    </ComboBox>
-                    <Label Content="Teléfono:" HorizontalAlignment="Left" Margin="10,331,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="59" Grid.ColumnSpan="4"/>
-                    <Label Content="Página Web:" HorizontalAlignment="Left" Margin="10,366,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="76"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="101,369,0,0" TextWrapping="Wrap" Text="&lt;Página Web del Proveedor&gt;" VerticalAlignment="Top" Width="214" Grid.Column="3"/>
-                    <Label Content="Nombre contacto:" HorizontalAlignment="Left" Margin="10,401,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="106"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="101,404,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Grid.Column="3" Text="&lt;Nombre del contacto&gt;"/>
+                    <Label Content="Teléfono:" HorizontalAlignment="Left" Margin="10,335,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="59" Grid.ColumnSpan="4"/>
+                    <Label Content="Página Web:" HorizontalAlignment="Left" Margin="10,364,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="76"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="101,367,0,0" TextWrapping="Wrap" Text="&lt;Página Web del Proveedor&gt;" VerticalAlignment="Top" Width="214" Grid.Column="3"/>
+                    <Label Content="Nombre contacto:" HorizontalAlignment="Left" Margin="10,397,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="106"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="101,399,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Grid.Column="3" Text="&lt;Nombre del contacto&gt;"/>
                     <Button x:Name="guardarBtn" Content="GUARDAR" Margin="295,474,1,0" VerticalAlignment="Top" RenderTransformOrigin="1.347,-0.05" Grid.Column="3" Height="28"/>
                     <Button x:Name="cancelarBtn" Content="CANCELAR" HorizontalAlignment="Left" Margin="30,474,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="4" Height="28" Click="Button_Click"/>
-                    <Label Content="Teléfono contacto:" HorizontalAlignment="Left" Margin="10,436,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="108"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="101,439,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Column="3" Text="&lt;Teléfono contacto&gt;"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="101,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Column="3" Text="&lt;Teléfono Proveedor&gt;" RenderTransformOrigin="0.514,1.435"/>
+                    <Label Content="Teléfono contacto:" HorizontalAlignment="Left" Margin="10,428,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="108"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="101,430,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Column="3" Text="&lt;Teléfono contacto&gt;"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="101,337,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Column="3" Text="&lt;Teléfono Proveedor&gt;" RenderTransformOrigin="0.514,1.435"/>
                     <DataGrid x:Name="dgwCatalogo" Grid.Column="3" Margin="355,72,10,0" VerticalAlignment="Top" Height="390" CanUserAddRows="True" IsTabStop="True" Grid.ColumnSpan="2" >
                         <DataGrid.Columns>
-                            <DataGridCheckBoxColumn Width="0.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
-                            <DataGridTextColumn Width="3.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Producto"/>
-                            <DataGridTextColumn Width="2.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Unidad"/>
-                            <DataGridTextColumn Width="1.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Precio"/>
-                            <DataGridTextColumn Width="2.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tiempo de entrega"/>
+                            <DataGridTextColumn Width="2.6*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Producto"/>
+                            <DataGridTextColumn Width="1.1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Unidad"/>
+                            <DataGridTextColumn Width="1.1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Precio"/>
+                            <DataGridTextColumn Width="2.0*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tiempo de entrega"/>
+                            <DataGridCheckBoxColumn Width="1.25*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Seleccionar"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <ToolBar Grid.Column="3" HorizontalAlignment="Left" Margin="355,42,0,0" VerticalAlignment="Top" Height="25" Width="92" Grid.ColumnSpan="2">

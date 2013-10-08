@@ -282,9 +282,6 @@
                             </Grid>
                             <Label Content="Vendedor:" VerticalAlignment="Center" Grid.Column="4"/>
                             <TextBox Text="&lt;Nombre Vendedor&gt;" VerticalAlignment="Center" Grid.Column="5" IsEnabled="False"/>
-
-                            <Label Content="Fecha Vencimiento:" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2"/>
-                            <DatePicker Grid.Column="1" Grid.Row="2" BorderThickness="0" VerticalAlignment="Center"/>
                             <TextBox Text="&lt;Nombre/Razón Social&gt;" VerticalAlignment="Center" Grid.Column="5" Grid.Row="1" IsEnabled="False" Margin="0,2"/>
                         </Grid>
                     </GroupBox>
@@ -319,7 +316,7 @@
                         </DataGrid.Columns>
                     </DataGrid>
                     <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal" Grid.Row="6" Margin="5,5">
-                        <Label Content="Total Devolución:"  VerticalAlignment="Center"/>
+                        <Label Content="Total Devuelto:"  VerticalAlignment="Center"/>
                         <TextBox  Text="0.00" VerticalAlignment="Center" Width="100" IsEnabled="False" TextAlignment="Right" />
                     </StackPanel>
                     <Grid Grid.Row="7" Margin="5,5">

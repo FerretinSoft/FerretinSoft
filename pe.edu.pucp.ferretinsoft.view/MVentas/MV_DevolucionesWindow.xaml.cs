@@ -28,12 +28,12 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
 
         }
 
-        private void nuevoDevolucionBtn_Click(object sender, RoutedEventArgs e)
+        private void nuevaDevolucionBtn_Click(object sender, RoutedEventArgs e)
         {
             DevolucionesTab.SelectedIndex = 2;
         }
 
-        private void consultarDevolucionBtn_Click(object sender, RoutedEventArgs e)
+        private void editarDevolucionBtn_Click(object sender, RoutedEventArgs e)
         {
             DevolucionesTab.SelectedIndex = 1;
         }

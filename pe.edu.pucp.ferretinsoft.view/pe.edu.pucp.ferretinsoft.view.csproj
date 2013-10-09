@@ -62,6 +62,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MCompras\MC_AdministrarGuiaRemiWindow.xaml.cs">
+      <DependentUpon>MC_AdministrarGuiaRemiWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MSeguridad\MS_CambiarContraseñaUsuario.xaml.cs">
       <DependentUpon>MS_CambiarContraseñaUsuario.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MAlmacen\MA_SolicitudAbastecimientoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MCompras\MC_AdministrarGuiaRemiWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -45,10 +45,10 @@
         </StatusBar>
         <Grid Grid.Column="1" HorizontalAlignment="Center" Height="100" Margin="0,156,0,0" Grid.Row="1" VerticalAlignment="Top" Width="375">
             <Label Content="Nombre De Usuario:" HorizontalAlignment="Left" Margin="0,10,0,0" Width="161" FontSize="16" FontFamily="Arial" Background="#00000000" Foreground="Black" Height="27" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Right" Height="20" Margin="0,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" IsEnabled="False" Text="Nombre de Usuario"/>
+            <TextBox HorizontalAlignment="Right" Height="23" Margin="0,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" Text="Nombre de Usuario"/>
 
             <Label Content="Contraseña:" HorizontalAlignment="Left" Margin="0,55,0,0" VerticalAlignment="Top" Width="161" FontSize="16" FontFamily="Arial" Background="#00000000" Foreground="Black" RenderTransformOrigin="0.488,-0.929" Height="35"/>
-            <PasswordBox HorizontalAlignment="Right" Height="20" Margin="0,61,0,0" VerticalAlignment="Top" Width="219" IsEnabled="False" Password="Contraseña"/>
+            <PasswordBox HorizontalAlignment="Right" Height="23" Margin="0,61,0,0" VerticalAlignment="Top" Width="219" Password="Contraseña"/>
 
 
         </Grid>

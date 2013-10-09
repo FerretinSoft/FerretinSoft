@@ -11,15 +11,15 @@
             <TabItem Header="Búsqueda" Margin="-2,-1">
                 <Grid Background="#FFE5E5E5" Margin="0,0,-2,0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="27*"/>
-                        <ColumnDefinition Width="55*"/>
+                        <ColumnDefinition Width="11*"/>
+                        <ColumnDefinition Width="71*"/>
                         <ColumnDefinition Width="689*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="132*"/>
                         <RowDefinition Height="445*"/>
                     </Grid.RowDefinitions>
-                    <GroupBox Header="Tienda" Margin="10" BorderBrush="Black" Grid.ColumnSpan="3"/>
+                    <GroupBox Header="Tienda" Margin="0,10,10,10" BorderBrush="Black" Grid.ColumnSpan="2" Grid.Column="1"/>
                     <Label Content="Código Tienda:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="93" Margin="15,41,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
                     <Label Content="Distrito:" HorizontalAlignment="Left" Margin="242,41,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="28" Grid.Column="2" Width="51"/>
                     <ComboBox HorizontalAlignment="Left" Margin="329,41,0,0" VerticalAlignment="Top" Width="99" Height="24" Grid.Column="2">
@@ -35,7 +35,7 @@
                             <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
                     </Button>
-                    <DataGrid Margin="10,33,10,10" Grid.Row="1" Grid.ColumnSpan="3" SelectionChanged="DataGrid_SelectionChanged">
+                    <DataGrid Margin="0,33,10,10" Grid.Row="1" Grid.ColumnSpan="2" SelectionChanged="DataGrid_SelectionChanged" Grid.Column="1">
                         <DataGrid.Columns>
                             <DataGridCheckBoxColumn Width="0.3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="N°"/>
                             <DataGridHyperlinkColumn Width="1*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Código"/>
@@ -49,14 +49,14 @@
                     <Label Content="Nombre Jefe:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="82" Margin="242,82,0,0" Grid.Column="2"/>
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="329,84,0,0" Text="Juan Perez" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Grid.Column="2"/>
                     <Label Content="Provincia:" HorizontalAlignment="Left" Margin="447,41,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="28" Grid.Column="2" Width="60"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="512,43,0,0" VerticalAlignment="Top" Width="85" Height="24" Grid.Column="2" SelectionChanged="ComboBox_SelectionChanged">
+                    <ComboBox HorizontalAlignment="Left" Margin="512,41,0,0" VerticalAlignment="Top" Width="85" Height="24" Grid.Column="2" SelectionChanged="ComboBox_SelectionChanged">
                         <ComboBoxItem/> Amazonas
                         <ComboBoxItem/> Ancash
                         <ComboBoxItem/> Apurimac
                         <ComboBoxItem/> Arequipa
                         <ComboBoxItem/> Otros
                     </ComboBox>
-                    <ToolBar HorizontalAlignment="Left" Margin="14,4,0,0" VerticalAlignment="Top" Height="24" Grid.ColumnSpan="2" Grid.Row="1">
+                    <ToolBar HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Grid.Row="1" Width="68" Grid.Column="1">
                         <Button x:Name="nuevoPerfilBtn" Content="" VerticalAlignment="Bottom" Width="20" Margin="0,0,2,-1" Height="20" Click="nuevaTiendaBtn_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/add_20.png" Stretch="None"/>
@@ -78,39 +78,40 @@
             <TabItem Header="Detalle" Margin="1,-1,-5,-2">
                 <Grid Background="#FFE5E5E5" Margin="0,-1">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="8*"/>
-                        <ColumnDefinition Width="11*"/>
+                        <ColumnDefinition Width="9*"/>
+                        <ColumnDefinition Width="12*"/>
                         <ColumnDefinition Width="0*"/>
-                        <ColumnDefinition Width="77*"/>
-                        <ColumnDefinition Width="249*"/>
-                        <ColumnDefinition Width="345*"/>
+                        <ColumnDefinition Width="86*"/>
+                        <ColumnDefinition Width="303*"/>
+                        <ColumnDefinition Width="23*"/>
+                        <ColumnDefinition Width="336*"/>
                     </Grid.ColumnDefinitions>
-                    <Image HorizontalAlignment="Left" Height="155" VerticalAlignment="Top" Width="172" Source="/Resources/ferreteriaTienda.jpg" Stretch="Fill" Margin="137,28,0,0" Grid.Column="5"/>
+                    <Image HorizontalAlignment="Left" Height="155" VerticalAlignment="Top" Width="172" Source="/Resources/ferreteriaTienda.jpg" Stretch="Fill" Margin="99,28,0,0" Grid.Column="6"/>
                     <Label Content="Código:" HorizontalAlignment="Left" Margin="1,26,0,0" VerticalAlignment="Top" Grid.Column="3" Height="26" Width="50"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="21,28,0,0" TextWrapping="Wrap" Text="CAL001" VerticalAlignment="Top" Width="144" IsEnabled="False" Grid.Column="4"/>
                     <Label Content="Nombre Tienda:" HorizontalAlignment="Left" Margin="1,62,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="3" Height="26" Width="94"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="21,64,0,0" TextWrapping="Wrap" Text="Ferretin Callao" VerticalAlignment="Top" Width="144" Grid.Column="4"/>
                     <Label Content="Dirección:" HorizontalAlignment="Left" Margin="1,137,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="3" Height="26" Width="62"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="21,139,0,0" TextWrapping="Wrap" Text="&lt;Direccion&gt;" VerticalAlignment="Top" Width="220" Grid.Column="4"/>
-                    <Label Content="CP:" HorizontalAlignment="Left" Margin="113,177,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="4" Height="30" Width="27"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="21,139,0,0" TextWrapping="Wrap" Text="&lt;Direccion&gt;" VerticalAlignment="Top" Width="238" Grid.Column="4"/>
+                    <Label Content="CP:" HorizontalAlignment="Left" Margin="144,177,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="4" Height="30" Width="27"/>
                     <Label Content="Distrito:" HorizontalAlignment="Left" Margin="1,177,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="3" Width="51"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="21,175,0,0" VerticalAlignment="Top" Width="76" Grid.Column="4" Height="26">
+                    <ComboBox HorizontalAlignment="Left" Margin="21,175,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4" Height="26">
                         <ComboBoxItem/> San Miguel
                         <ComboBoxItem/> Jesus Maria
                         <ComboBoxItem/> Barranco
                         <ComboBoxItem/> San Isidro
                         <ComboBoxItem/> Otros
                     </ComboBox>
-                    <Label Content="País:" HorizontalAlignment="Left" Margin="113,214,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="4" Height="29" Width="33"/>
+                    <Label Content="País:" HorizontalAlignment="Left" Margin="144,213,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="4" Height="29" Width="33"/>
                     <Label Content="Provincia:" HorizontalAlignment="Left" Margin="2,214,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="2" Height="29" Grid.Column="2" Width="61"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="21,214,0,0" VerticalAlignment="Top" Width="76" Grid.Column="4" Height="25">
+                    <ComboBox HorizontalAlignment="Left" Margin="21,214,0,0" VerticalAlignment="Top" Width="102" Grid.Column="4" Height="25">
                         <ComboBoxItem/> Amazonas
                         <ComboBoxItem/> Ancash
                         <ComboBoxItem/> Apurimac
                         <ComboBoxItem/> Arequipa
                         <ComboBoxItem/> Otros
                     </ComboBox>
-                    <ComboBox HorizontalAlignment="Left" Margin="165,214,0,0" VerticalAlignment="Top" Width="76" Grid.Column="4" Height="25">
+                    <ComboBox HorizontalAlignment="Left" Margin="187,214,0,0" VerticalAlignment="Top" Width="106" Grid.Column="4" Height="25">
                         <ComboBoxItem/> Alemania
                         <ComboBoxItem/> Belgica
                         <ComboBoxItem/> Chile
@@ -118,18 +119,18 @@
                         <ComboBoxItem/> Otros
                     </ComboBox>
                     <Label Content="Telf1:" HorizontalAlignment="Left" Margin="1,252,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="2" Height="28" Grid.Column="2" Width="38"/>
-                    <Label Content="Telf2:" HorizontalAlignment="Left" Margin="113,250,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="4" Height="28" Width="38"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="21,252,0,0" TextWrapping="Wrap" Text="999999999" VerticalAlignment="Top" Width="76" Grid.Column="4"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="165,252,0,0" TextWrapping="Wrap" Text="22222222" VerticalAlignment="Top" Width="76" Grid.Column="4"/>
+                    <Label Content="Telf2:" HorizontalAlignment="Left" Margin="144,252,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="4" Height="28" Width="38"/>
+                    <TextBox HorizontalAlignment="Left" Height="26" Margin="21,252,0,0" TextWrapping="Wrap" Text="999999999" VerticalAlignment="Top" Width="102" Grid.Column="4"/>
+                    <TextBox HorizontalAlignment="Left" Height="26" Margin="187,252,0,0" TextWrapping="Wrap" Text="22222222" VerticalAlignment="Top" Width="106" Grid.Column="4"/>
                     <Label Content="Email:" HorizontalAlignment="Left" Margin="2,288,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="2" Grid.ColumnSpan="2" Width="41"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="21,290,0,0" TextWrapping="Wrap" Text="example@domain.com" VerticalAlignment="Top" Width="220" Grid.Column="4"/>
+                    <TextBox HorizontalAlignment="Left" Height="26" Margin="21,290,0,0" TextWrapping="Wrap" Text="example@domain.com" VerticalAlignment="Top" Width="272" Grid.Column="4"/>
                     <Label Content="Fecha de &#xA;Creacion:" HorizontalAlignment="Left" Margin="2,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="2" Height="40" Grid.Column="2" Width="75"/>
-                    <DatePicker HorizontalAlignment="Left" Margin="21,331,0,0" VerticalAlignment="Top" Grid.Column="4" Height="27" Width="102"/>
-                    <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="165,548,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="1.347,-0.05" Grid.Column="4" Height="30"/>
-                    <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="37,550,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="5" Height="30"/>
-                    <TextBox HorizontalAlignment="Left" Height="89" Margin="21,445,0,0" TextWrapping="Wrap" Text="&lt;Descripcion aquí&gt;" VerticalAlignment="Top" Width="220" Grid.Column="4"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="21,331,0,0" VerticalAlignment="Top" Grid.Column="4" Height="27" Width="119"/>
+                    <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="183,550,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="1.347,-0.05" Grid.Column="4" Height="30"/>
+                    <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="2,550,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="6" Height="30"/>
+                    <TextBox HorizontalAlignment="Left" Height="89" Margin="21,445,0,0" TextWrapping="Wrap" Text="&lt;Descripcion aquí&gt;" VerticalAlignment="Top" Width="272" Grid.Column="4"/>
                     <Label Content="Descripcion:" HorizontalAlignment="Left" Margin="1,446,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="3" Height="26" Width="74"/>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="107,271,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="69,271,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
                         <System:String>9:00</System:String>
@@ -145,9 +146,9 @@
                         <System:String>7:00</System:String>
 
                     </ListBox>
-                    <Label Content="Apertura" HorizontalAlignment="Left" Margin="132,236,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="5" Width="65" Height="26"/>
-                    <Label Content="Cierre" HorizontalAlignment="Left" Margin="275,236,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="5" Width="60" Height="26"/>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="244,271,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <Label Content="Apertura" HorizontalAlignment="Left" Margin="94,236,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="6" Width="65" Height="26"/>
+                    <Label Content="Cierre" HorizontalAlignment="Left" Margin="237,236,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="6" Width="60" Height="26"/>
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="206,271,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
                         <System:String>9:00</System:String>
@@ -163,23 +164,23 @@
                         <System:String>7:00</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="164,271,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="126,271,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>am</System:String>
                         <System:String>pm</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="300,271,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="262,271,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
 
                         <System:String>am</System:String>
                         <System:String>pm</System:String>
 
                     </ListBox>
-                    <Label Content="Horarios de Atención" HorizontalAlignment="Left" Margin="164,205,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Grid.Column="5" Width="123"/>
-                    <TextBox HorizontalAlignment="Left" Height="26" Margin="21,372,0,0" TextWrapping="Wrap" Text="Juan Perez" VerticalAlignment="Top" Width="220" Grid.Column="4"/>
+                    <Label Content="Horarios de Atención" HorizontalAlignment="Left" Margin="126,205,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Grid.Column="6" Width="123"/>
+                    <TextBox HorizontalAlignment="Left" Height="26" Margin="21,372,0,0" TextWrapping="Wrap" Text="Juan Perez" VerticalAlignment="Top" Width="272" Grid.Column="4"/>
                     <Label Content="Jefe de Tienda:" HorizontalAlignment="Left" Margin="2,373,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="2" Grid.ColumnSpan="3" Width="94"/>
-                    <Label Content="Lunes:" HorizontalAlignment="Left" Margin="37,271,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="5" Width="53"/>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="107,306,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <Label Content="Lunes:" HorizontalAlignment="Left" Margin="2,271,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="6" Width="53"/>
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="69,306,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
                         <System:String>9:00</System:String>
@@ -198,7 +199,7 @@
                         <System:String>10:00</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="244,306,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="206,306,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
                         <System:String>9:00</System:String>
@@ -217,20 +218,20 @@
                         <System:String>10:00</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="164,306,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="126,306,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
 
                         <System:String>am</System:String>
                         <System:String>pm</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="300,306,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="262,306,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
 
                         <System:String>am</System:String>
                         <System:String>pm</System:String>
 
                     </ListBox>
-                    <Label Content="Martes:" HorizontalAlignment="Left" Margin="37,306,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="5" Width="53"/>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="107,341,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <Label Content="Martes:" HorizontalAlignment="Left" Margin="2,306,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="6" Width="53"/>
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="69,341,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
                         <System:String>9:00</System:String>
@@ -249,7 +250,7 @@
                         <System:String>10:00</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="244,341,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="206,341,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
                         <System:String>9:00</System:String>
@@ -268,20 +269,20 @@
                         <System:String>10:00</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="164,341,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="126,341,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
 
                         <System:String>am</System:String>
                         <System:String>pm</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="300,341,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="262,341,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
 
                         <System:String>am</System:String>
                         <System:String>pm</System:String>
 
                     </ListBox>
-                    <Label Content="Miercoles:" HorizontalAlignment="Left" Margin="37,341,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="5" Width="65"/>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="107,376,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <Label Content="Miercoles:" HorizontalAlignment="Left" Margin="2,341,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="6" Width="65"/>
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="69,376,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
                         <System:String>9:00</System:String>
@@ -300,7 +301,7 @@
                         <System:String>10:00</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="244,376,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="206,376,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
                         <System:String>9:00</System:String>
@@ -319,20 +320,20 @@
                         <System:String>10:00</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="164,376,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="126,376,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
 
                         <System:String>am</System:String>
                         <System:String>pm</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="300,376,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="262,376,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
 
                         <System:String>am</System:String>
                         <System:String>pm</System:String>
 
                     </ListBox>
-                    <Label Content="Jueves:" HorizontalAlignment="Left" Margin="37,376,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="5" Width="53"/>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="107,411,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <Label Content="Jueves:" HorizontalAlignment="Left" Margin="2,376,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="6" Width="53"/>
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="69,411,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
                         <System:String>9:00</System:String>
@@ -351,7 +352,7 @@
                         <System:String>10:00</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="244,411,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="206,411,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
                         <System:String>9:00</System:String>
@@ -370,20 +371,20 @@
                         <System:String>10:00</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="164,411,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="126,411,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
 
                         <System:String>am</System:String>
                         <System:String>pm</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="300,411,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="262,411,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
 
                         <System:String>am</System:String>
                         <System:String>pm</System:String>
 
                     </ListBox>
-                    <Label Content="Viernes:" HorizontalAlignment="Left" Margin="37,411,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="5" Width="53"/>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="107,446,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <Label Content="Viernes:" HorizontalAlignment="Left" Margin="2,411,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="6" Width="53"/>
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="69,446,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
                         <System:String>9:00</System:String>
@@ -402,7 +403,7 @@
                         <System:String>10:00</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="244,446,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="206,446,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
                         <System:String>9:00</System:String>
@@ -421,20 +422,20 @@
                         <System:String>10:00</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="164,446,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="126,446,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
 
                         <System:String>am</System:String>
                         <System:String>pm</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="300,446,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="262,446,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
 
                         <System:String>am</System:String>
                         <System:String>pm</System:String>
 
                     </ListBox>
-                    <Label Content="Sabado:" HorizontalAlignment="Left" Margin="37,446,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="5" Width="53"/>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="107,482,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <Label Content="Sabado:" HorizontalAlignment="Left" Margin="2,446,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="6" Width="53"/>
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="69,482,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
                         <System:String>9:00</System:String>
@@ -453,7 +454,7 @@
                         <System:String>10:00</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="244,482,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="206,482,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
                         <System:String>9:00</System:String>
@@ -472,29 +473,32 @@
                         <System:String>10:00</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="164,482,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="126,482,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
 
                         <System:String>am</System:String>
                         <System:String>pm</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="5" HorizontalAlignment="Left" Height="26" Margin="300,482,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="262,482,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
 
                         <System:String>am</System:String>
                         <System:String>pm</System:String>
 
                     </ListBox>
-                    <Label Content="Domingo:" HorizontalAlignment="Left" Margin="37,482,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="5" Width="65"/>
+                    <Label Content="Domingo:" HorizontalAlignment="Left" Margin="2,482,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="6" Width="65"/>
                     <Label Content="Código Jefe:" HorizontalAlignment="Left" Margin="1,407,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="2" Grid.ColumnSpan="3" Width="94"/>
                     <TextBox HorizontalAlignment="Left" Height="26" Margin="21,409,0,0" TextWrapping="Wrap" Text="45767888" VerticalAlignment="Top" Width="102" Grid.Column="4" IsEnabled="False"/>
                     <Label Content="Almacén &#xD;&#xA;Abastecedor:" HorizontalAlignment="Left" Margin="1,91,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="3" Height="41" Width="94"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="21,101,0,0" VerticalAlignment="Top" Width="93" Grid.Column="4" Height="26"/>
-                    <Label Content="Tipo:" HorizontalAlignment="Left" Margin="138,101,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="4" Height="30" Width="36"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="185,102,0,0" VerticalAlignment="Top" Width="56" Grid.Column="4" Height="25">
-                        <ComboBoxItem/> Compra
+                    <ComboBox HorizontalAlignment="Left" Margin="21,101,0,0" VerticalAlignment="Top" Width="105" Grid.Column="4" Height="26">
+                        <ComboBoxItem/> Almacen Central
+                        <ComboBoxItem/> Tienda 2
+                    </ComboBox>
+                    <Label Content="Tipo:" HorizontalAlignment="Left" Margin="144,101,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="4" Height="30" Width="36"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="187,102,0,0" VerticalAlignment="Top" Width="108" Grid.Column="4" Height="25">
+                        <ComboBoxItem/> Venta
                         <ComboBoxItem/> Compra/Venta
                     </ComboBox>
-                    <ComboBox HorizontalAlignment="Left" Margin="165,176,0,0" VerticalAlignment="Top" Width="76" Grid.Column="4" Height="25">
+                    <ComboBox HorizontalAlignment="Left" Margin="187,176,0,0" VerticalAlignment="Top" Width="106" Grid.Column="4" Height="25">
                         <ComboBoxItem/> Lima-01
                         <ComboBoxItem/> Lima-02
                         <ComboBoxItem/> Lima-03

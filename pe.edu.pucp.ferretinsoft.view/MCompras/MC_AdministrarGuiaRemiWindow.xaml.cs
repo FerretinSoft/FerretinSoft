@@ -28,5 +28,10 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
         {
 
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

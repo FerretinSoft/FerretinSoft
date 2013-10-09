@@ -72,7 +72,7 @@
                     </ComboBox>
                 </Grid>
             </TabItem>
-            <TabItem Header="Detalle" IsHitTestVisible="False">
+            <TabItem Header="Detalle" >
                 <Grid Background="#FFE5E5E5" Margin="0,-6,0.105,6.209">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="19*"/>

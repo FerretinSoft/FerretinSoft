@@ -25,6 +25,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
             InitializeComponent();
         }
 
+        
         private void nuevaOrdenBtn_Click(object sender, RoutedEventArgs e)
         {
             
@@ -83,6 +84,11 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
             MC_AdministrarProveedorWindow busqProv = new MC_AdministrarProveedorWindow();
             busqProv.Owner = this;
             busqProv.ShowDialog();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

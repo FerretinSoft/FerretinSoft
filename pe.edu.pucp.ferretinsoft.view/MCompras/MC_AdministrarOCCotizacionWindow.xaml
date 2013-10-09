@@ -81,7 +81,7 @@
                     <Label x:Name="provedorLbl" Content="Proveedor:" HorizontalAlignment="Left" Margin="314,30,0,0" VerticalAlignment="Top" Height="26" Width="121" Grid.Column="1"/>
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="426,33,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="172" Grid.Column="1"/>
                     <Label x:Name="fecEmisioLbl" Content="Fecha de emision:" Margin="15,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.183,0.438" Height="26" HorizontalAlignment="Left" Width="105" Grid.ColumnSpan="2"/>
-                    <DataGrid Margin="10,135,178,0" RenderTransformOrigin="0.5, 0.5" Height="298" VerticalAlignment="Top" Grid.ColumnSpan="3" >
+                    <DataGrid Margin="10,135,178.105,0" RenderTransformOrigin="0.5, 0.5" Height="232" VerticalAlignment="Top" Grid.ColumnSpan="3" >
                         <DataGrid.Columns>
                             <DataGridHyperlinkColumn Width="3.8*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Producto"/>
                             <DataGridTextColumn Width="3.0*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descripción"/>
@@ -92,12 +92,14 @@
                             <DataGridCheckBoxColumn Width="1.6*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Seleccionar"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <GroupBox Header="Resumen" Margin="10,438,179,0" BorderBrush="Black" Height="61" VerticalAlignment="Top" Grid.ColumnSpan="3">
-                        <TextBox HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" Width="126" IsEnabled="False" FontSize="20" TextAlignment="Right" Margin="462,1,0,0"/>
+                    <GroupBox Header="Resumen" Margin="328.393,383,183.105,0" BorderBrush="Black" Height="127" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1">
+                        <TextBox HorizontalAlignment="Right" Height="25" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" Width="114" IsEnabled="False" FontSize="16" TextAlignment="Right" Margin="0,66,42.77,0" TextChanged="TextBox_TextChanged"/>
                     </GroupBox>
-                    <Label Content="Total Articulos: " HorizontalAlignment="Left" Margin="1,459,0,0" VerticalAlignment="Top" Height="26" Width="92" Grid.Column="1"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="100,463,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="100" IsEnabled="False" TextAlignment="Right" Grid.Column="1"/>
-                    <Label Content="Total a Pagar:" HorizontalAlignment="Left" Margin="368,459,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423" Height="26" Width="82" Grid.Column="1"/>
+                    <TextBox Height="25" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" IsEnabled="False" FontSize="16" TextAlignment="Right" Margin="513.393,433,9.44,0" Grid.Column="1"/>
+                    <TextBox Height="25" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" IsEnabled="False" FontSize="16" TextAlignment="Right" Margin="513.393,402,9.44,0" Grid.Column="1" RenderTransformOrigin="3.68,-1.086"/>
+                    <Label Content="SubTotal:" HorizontalAlignment="Left" Margin="389.393,401,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423" Height="26" Width="82" Grid.Column="1" FontSize="14"/>
+                    <Label Content="IGV:" HorizontalAlignment="Left" Margin="389.393,432,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423" Height="26" Width="82" Grid.Column="1" FontSize="14"/>
+                    <Label Content="Total a Pagar:" HorizontalAlignment="Left" Margin="389.393,463,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423" Height="30" Width="94" Grid.Column="1" FontSize="14"/>
                     <Label Content="Datos Proveedor" HorizontalAlignment="Left" Margin="57,134,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="128" Grid.Column="2" Height="29"/>
                     <Grid HorizontalAlignment="Left" Height="105" Margin="0,140,0,0" VerticalAlignment="Top" Width="136" Grid.Column="2">
                         <Grid.ColumnDefinitions>

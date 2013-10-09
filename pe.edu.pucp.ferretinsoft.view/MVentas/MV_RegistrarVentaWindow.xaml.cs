@@ -24,13 +24,6 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             InitializeComponent();
         }
 
-        private void buscarClienteBtn_Click(object sender, RoutedEventArgs e)
-        {
-            //ClientesWindow cw = new ClientesWindow();
-            //cw.clientesTab.SelectedIndex = 0;
-            //cw.Show();
-        }
-
         private void pagarBtn_Click(object sender, RoutedEventArgs e)
         {
             MV_PagoWindow pw = new MV_PagoWindow();
@@ -47,6 +40,16 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
         {
             MV_AdministrarProformasWindow profWindow = new MV_AdministrarProformasWindow();
             profWindow.Show();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            clienteViewColumn.Width = GridLength.Auto;
+        }
+
+        private void buscarClienteBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
     }

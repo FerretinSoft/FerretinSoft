@@ -142,7 +142,6 @@
                         <Label Content="Cliente:" Grid.Row="3" />
                         <Label Content="Vendedor:" Grid.Row="5"/>
                         <Label Content="Estado:" Grid.Row="6"/>
-                        <Label Content="Comentarios:" Grid.Row="9"/>
                         <Label Content="Puntos Ganados:" Grid.Row="7"/>
                         <Label Content="Puntos Canjeados:" Grid.Row="8"/>
                         <TextBox IsEnabled="false" Text="41414141" VerticalAlignment="Center" Grid.Column="1" Height="22" Margin="0,2"/>
@@ -152,7 +151,6 @@
                         <TextBox IsEnabled="false" Text="&lt;Razón Social/Nombre&gt;" Margin="0,3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" Height="22"/>
                         <TextBox IsEnabled="false" Text="&lt;Nombre Vendedor&gt;" Margin="0,3" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5" Height="22"/>
                         <TextBox IsEnabled="false" Text="&lt;Cancelado&gt;" VerticalAlignment="Center" Grid.Column="1" Grid.Row="6" Height="22" Margin="0,2"/>
-                        <TextBox IsEnabled="false" Text="&lt;Comentarios aquí&gt;" VerticalAlignment="Top" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="10" Height="70"/>
                         <TextBox IsEnabled="false" Text="&lt;Ptos Ganados&gt;" VerticalAlignment="Center" Grid.Column="1" Grid.Row="7" Height="22" Margin="0,2"/>
                         <TextBox IsEnabled="false" Text="&lt;Ptos Canjeados&gt;" VerticalAlignment="Top" Grid.Column="1" Grid.Row="8" Height="22"/>
 

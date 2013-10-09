@@ -1,7 +1,7 @@
 ﻿<Window x:Class="pe.edu.pucp.ferretinsoft.view.MVentas.MV_ClientesWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Administrar Clientes" Icon="../Resources/ferretin_ico.ico" MaxHeight="465" MinWidth="600" Width="600" MinHeight="465" Height="465">
+        Title="Administrar Clientes" Icon="../Resources/ferretin_ico.ico" MaxHeight="480" MinWidth="600" Width="600" MinHeight="465" Height="465">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="../Resources/texture_3_100.png" TileMode="FlipX" 
@@ -61,12 +61,13 @@
                     </ToolBar>
                     <DataGrid Margin="5,120,5,5">
                         <DataGrid.Columns>
-                            <DataGridHyperlinkColumn Width="2*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="ID"/>
-                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tipo"/>
-                            <DataGridTextColumn Width="4*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>
+                            <DataGridHyperlinkColumn Width="2*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="ID Cliente"/>
+                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tipo Cliente"/>
+                            <DataGridTextColumn Width="4*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre Cliente"/>
                             <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Teléfono"/>
                             <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Email"/>
                             <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Últ. Compra"/>
+                            <DataGridTextColumn Width="1.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Puntos"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <StackPanel x:Name="seleccionarListaPanel" Orientation="Horizontal" Margin="291,5" Grid.Row="1" HorizontalAlignment="Center" Width="0"/>
@@ -74,10 +75,10 @@
             </TabItem>
 
             <TabItem Header="Detalles" x:Name="detallesTab">
-                <Grid Background="#FFE5E5E5">
+                <Grid Background="#FFE5E5E5" Margin="0,0,0,-10">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto" MinHeight="40"/>
                     </Grid.RowDefinitions>
                     <Grid Margin="5" >
                         <Grid.ColumnDefinitions>
@@ -101,6 +102,7 @@
                             <RowDefinition Height="Auto"></RowDefinition>
                             <RowDefinition Height="Auto"></RowDefinition>
                             <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
                         </Grid.RowDefinitions>
 
                         <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="../Resources/cliente_1.png" Stretch="Fill" Margin="10,10,0,0" Grid.RowSpan="3"/>
@@ -109,10 +111,10 @@
                         <Label Content="Nombre:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="3"/>
                         <Label Content="Contacto:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="4"/>
                         <Label Content="Dirección:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="5"/>
-                        <Label Content="Distrito:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="6"/>
+                        <Label Content="País:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="6"/>
                         <Label Content="Cód Post.:" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="6"/>
                         <Label Content="Provincia:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="7"/>
-                        <Label Content="País:" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="7"/>
+                        <Label Content="Distrito:" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="7"/>
                         <Label Content="Telf. 1:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="8"/>
                         <Label Content="Telf. 2:" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="8"/>
                         <Label Content="Email:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="9"/>
@@ -144,11 +146,11 @@
                         <TextBox VerticalAlignment="Center" Grid.Column="3" Grid.Row="8" Grid.ColumnSpan="1"/>
                         <TextBox VerticalAlignment="Center" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="3"/>
                         <DatePicker VerticalAlignment="Center" Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="2" BorderThickness="0" Margin="0,3"></DatePicker>
-                        <ComboBox VerticalAlignment="Center" Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2">
+                        <ComboBox VerticalAlignment="Center" Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2" Height="24" Margin="0,2,0,0">
                             <ComboBoxItem Content="Masculino"></ComboBoxItem>
                             <ComboBoxItem Content="Femenino"></ComboBoxItem>
                         </ComboBox>
-                    
+
 
                         <TextBox VerticalAlignment="Center" Grid.Column="5" Grid.Row="1" IsEnabled="False" Margin="0,12,28,12"/>
                         <DatePicker VerticalAlignment="Center" Grid.Column="5" Grid.Row="2" BorderThickness="0"></DatePicker>
@@ -161,7 +163,7 @@
 
                         <StackPanel Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="11" Orientation="Horizontal" HorizontalAlignment="Right"/>
                     </Grid>
-                    <StackPanel x:Name="seleccionarDetallePanel" Orientation="Horizontal" Margin="5" Grid.Row="1" HorizontalAlignment="Center">
+                    <StackPanel x:Name="seleccionarDetallePanel" Orientation="Horizontal" Margin="223,5" Grid.Row="1" HorizontalAlignment="Center" Width="136">
                         <Button Height="30" x:Name="seleccionarDetalleClienteBtn" Content="Guardar" Padding="5,0" Margin="5,0"/>
                         <Button Height="30" x:Name="cancelarDetalleClienteBtn" Content="Cancelar" Padding="5,0" Margin="5,0" Click="cancelarListaClienteBtn_Click" />
                     </StackPanel>

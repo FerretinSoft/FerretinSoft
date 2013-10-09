@@ -15,22 +15,18 @@ using System.Windows.Shapes;
 namespace pe.edu.pucp.ferretinsoft.view.MVentas
 {
     /// <summary>
-    /// Lógica de interacción para MV_AdministrarPromocionesWindow.xaml
+    /// Lógica de interacción para MV_AdministrarValesWindow.xaml
     /// </summary>
-    public partial class MV_AdministrarPromocionesWindow : Window
+    public partial class MV_AdministrarValesWindow : Window
     {
-        public MV_AdministrarPromocionesWindow()
+        public MV_AdministrarValesWindow()
         {
             InitializeComponent();
         }
-        private void editarPromocionBtn_Click(object sender, RoutedEventArgs e)
-        {
-            VentasTab.SelectedIndex = 1;
-        }
 
-        private void nuevaPromocionBtn_Click(object sender, RoutedEventArgs e)
+        private void buscarEmpresaBtn_Click(object sender, RoutedEventArgs e)
         {
-            VentasTab.SelectedIndex = 1;
+
         }
     }
 }

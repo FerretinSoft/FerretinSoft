@@ -1,7 +1,7 @@
 ﻿<Window x:Class="pe.edu.pucp.ferretinsoft.view.MSeguridad.MS_AdministrarPerfiles"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Administrar Perfiles" Height="448" Width="501" Icon="/Resources/ferretin_ico.ico">
+        Title="Administrar Perfiles" WindowStartupLocation="CenterScreen" Height="448" Width="501" Icon="/Resources/ferretin_ico.ico">
     <Grid>
         <TabControl x:Name="perfilesTab" Margin="0" Grid.RowSpan="2">
             <TabItem Header="Búsqueda">
@@ -14,28 +14,25 @@
                         <RowDefinition Height="58*"></RowDefinition>
                         <RowDefinition Height="274*"/>
                     </Grid.RowDefinitions>
-                    <GroupBox Header="Parámetros" Margin="10,-3,0,5" BorderBrush="Black"/>
-                    <Label Content="Perfil:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="62" Margin="16,20,0,0"/>
+                    <GroupBox Header="Parámetros" Margin="5,2,5,0" BorderBrush="Black"/>
+                    <Label Content="Perfil:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="62" Margin="21,22,0,0"/>
 
-                    <TextBox HorizontalAlignment="Left" Height="20" Margin="83,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227"/>
+                    <TextBox HorizontalAlignment="Left" Height="20" Margin="83,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227"/>
 
-                    <Label Content="Módulo:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="62" Margin="16,46,0,0"/>
+                    <Label Content="Módulo:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="62" Margin="21,48,0,0"/>
 
-                    <TextBox HorizontalAlignment="Left" Height="20" Margin="83,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227"/>
+                    <TextBox HorizontalAlignment="Left" Height="20" Margin="83,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227"/>
 
-                    <Button x:Name="buscarUsuariosBtn" HorizontalAlignment="Left" Margin="427,34,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35">
+                    <Button x:Name="buscarUsuariosBtn" HorizontalAlignment="Left" Margin="431,34,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35">
                         <Button.Background>
                             <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
                     </Button>
                     <DataGrid Margin="5,40,5,5" Grid.Row="1" Grid.RowSpan="2">
                         <DataGrid.Columns>
-                            <DataGridCheckBoxColumn Width="0*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
                             <DataGridHyperlinkColumn Width="2*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Perfil"/>
                             <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Módulo"/>
-
                             <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descripción"/>
-
                         </DataGrid.Columns>
                     </DataGrid>
                     <ToolBar HorizontalAlignment="Left" Margin="7,7,0,0" Grid.Row="1" VerticalAlignment="Top" Height="24">

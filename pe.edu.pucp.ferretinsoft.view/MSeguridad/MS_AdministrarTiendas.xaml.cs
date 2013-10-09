@@ -39,5 +39,19 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
 
         }
 
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void nuevaTiendaBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void edTiendaBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

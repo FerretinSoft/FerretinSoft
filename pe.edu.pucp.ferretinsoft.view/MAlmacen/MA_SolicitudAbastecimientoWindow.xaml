@@ -76,7 +76,7 @@
                     <GroupBox Header="Resumen" Margin="10,12" BorderBrush="Black"/>
                     <Label Content="Tienda:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="64" Margin="22,39,0,0"/>
                     <Label Content="Estado:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="65" Margin="323,39,0,0"/>
-                    <DataGrid Margin="5,5,5,5" Name="gridDetalle" Grid.Row="1" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"   ItemsSource="{Binding Path=listaSolicitudDetalle}">
+                    <DataGrid Name="gridDetalle" Margin="5,5,5,5"  Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding Path=listaSolicitudDetalle}" SelectionChanged="gridDetalle_SelectionChanged">
                         <DataGrid.Columns>
                             <DataGridTextColumn Width="1*" Binding="{Binding Path=Codigo}" Header="Cód. Producto"/>
                             <DataGridTextColumn Width="3*" Binding="{Binding Path=Nombre}" Header="Nombre"/>

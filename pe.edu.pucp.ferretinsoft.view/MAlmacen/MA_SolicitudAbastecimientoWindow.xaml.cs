@@ -22,10 +22,10 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
 
     public class DataDetalle
     {
-        public String Codigo;
-        public String Nombre;
-        public String Cantidad;
-        public String Estado;
+        public String Codigo { get; set; }
+        public String Nombre{ get; set; }
+        public String Cantidad{ get; set; }
+        public String Estado{ get; set; }
     }
 
     public partial class MA_SolicitudAbastecimientoWindow : Window
@@ -120,6 +120,11 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
 
             tiendaTxtBox.Text = rowData.tienda;
             estadoTxtBox.Text = rowData.estado;
+        }
+
+        private void gridDetalle_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
 
 

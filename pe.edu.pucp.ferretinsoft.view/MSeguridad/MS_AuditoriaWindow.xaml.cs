@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using pe.edu.pucp.ferretinsoft.model;
 
 namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
 {
@@ -22,6 +23,14 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
         public MS_AuditoriaWindow()
         {
             InitializeComponent();
+            auditoriasDg.ItemsSource = ListAuditorias();
+        }
+
+        public List<Auditoria> ListAuditorias(){
+            List<Auditoria> auditorias = new List<Auditoria>();            
+            Auditoria auditoria_1 = new Auditoria();
+            auditorias.Add(auditoria_1);
+            return auditorias;
         }
     }
 }

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using pe.edu.pucp.ferretinsoft.model;
 
 namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
 {
@@ -22,6 +23,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
         public MS_AdministrarTiendas()
         {
             InitializeComponent();
+            tiendaDg.ItemsSource = listTiendas();
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -53,5 +55,40 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
         {
             tiendaTab.SelectedIndex = 1;
         }
+
+        private List<Tienda> listTiendas()
+        {
+
+            List<Tienda> tiendas = new List<Tienda>();
+
+            Tienda tien1 = new Tienda();
+            tien1.codigo = "CAL001";
+            tien1.nombre = "Ferretin Callao";
+            tien1.direccion = "Av.Faucett 459";
+            tiendas.Add(tien1);
+
+
+            Tienda tien2 = new Tienda();
+            tien2.codigo = "PUE001";
+            tien2.nombre = "Ferretin Bertelo";
+            tien2.direccion = "Av.Bertelo 1520 ";
+            tiendas.Add(tien2);
+
+            Tienda tien3 = new Tienda();
+            tien3.codigo = "PUE002";
+            tien3.nombre = "Ferretin Bolivar";
+            tien3.direccion = "Av.Bolivar 1045 ";
+            tiendas.Add(tien3);
+
+            Tienda tien4 = new Tienda();
+            tien4.codigo = "SIS001";
+            tien4.nombre = "Ferretin San isidro";
+            tien4.direccion = "Av.2 de mayo 425";
+            tiendas.Add(tien4);
+
+            return tiendas;
+
+        }
+
     }
 }

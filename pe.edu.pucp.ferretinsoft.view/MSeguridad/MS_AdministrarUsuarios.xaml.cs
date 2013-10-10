@@ -62,12 +62,12 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
             UsuarioSistema usuario_3 = new UsuarioSistema();
             UsuarioSistema usuario_4 = new UsuarioSistema();
 
-            usuario_1.nombre = "Jose Carlos";
+            usuario_1.nombre = "Josefina Liz";
             usuario_1.apellido = "Solorzano Narvaez";
             usuario_1.codigo = "100001";
             usuario_1.estado = "Activo";
             usuario_1.perfil = "Vendedor";
-            usuario_1.nombreUsuario = "SNJose";
+            usuario_1.nombreUsuario = "SNJosefina";
             listaUsuarios.Add(usuario_1);
 
             usuario_2.nombre = "Cesar Luis";

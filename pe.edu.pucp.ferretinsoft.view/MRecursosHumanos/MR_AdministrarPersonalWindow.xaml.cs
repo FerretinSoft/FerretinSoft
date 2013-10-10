@@ -47,6 +47,9 @@ namespace pe.edu.pucp.ferretinsoft.view.MRecursosHumanos
             per1.codigo = "000001";
             per1.dni = "23453412";
             per1.nombreCompleto = "Marcelo Martinez Cervantes";
+            per1.nombre = "Marcelo ";
+            per1.apPat = "Martinez ";
+            per1.apMat = "Cervantes";
             per1.cargo = "Jefe de Tienda";
             per1.tienda = "Tienda 1";
             per1.direccion = "Av. La caleta 1150";
@@ -56,6 +59,9 @@ namespace pe.edu.pucp.ferretinsoft.view.MRecursosHumanos
             per2.codigo = "000002";
             per2.dni = "45342312";
             per2.nombreCompleto = "Luis Ezpinoza Sanchez";
+            per2.nombre = "Luis ";
+            per2.apPat = "Ezpinoza ";
+            per2.apMat = "Sanchez";            
             per2.cargo = "Asistente Venta";
             per2.tienda = "Tienda 3";
             per2.direccion = "Av. Universitaria 590";
@@ -65,6 +71,9 @@ namespace pe.edu.pucp.ferretinsoft.view.MRecursosHumanos
             per3.codigo = "000003";
             per3.dni = "81453412";
             per3.nombreCompleto = "Juan Carlos Condori Tipula";
+            per3.nombre = "Juan Carlos ";
+            per3.apPat = "Condori ";
+            per3.apMat = "Tipula";
             per3.cargo = "Jefe de RRHH";
             per3.tienda = "Tienda 5";
             per3.direccion = "Av. Palmares 9021";
@@ -78,6 +87,16 @@ namespace pe.edu.pucp.ferretinsoft.view.MRecursosHumanos
         {
 
             var rowData = ((Hyperlink)e.OriginalSource).DataContext as Personal;
+
+            codTxtBox.Text = rowData.codigo;
+            dniTxtBox.Text = rowData.dni;
+            nomTxtBox.Text = rowData.nombre;
+            apPatTxtBox.Text = rowData.apPat;
+            apMatTxtBox.Text = rowData.apMat;
+            telf1TxtBox.Text = rowData.telefono;
+            telf2TxtBox.Text = rowData.telefono;
+            dirTxtBox.Text = rowData.direccion;                       
+
             personalTab.SelectedIndex = 1;
         }
 

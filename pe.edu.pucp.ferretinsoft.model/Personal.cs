@@ -11,6 +11,9 @@ namespace pe.edu.pucp.ferretinsoft.model
         public string codigo { get; set; }
         public string dni { get; set; }
         public string nombreCompleto { get; set; }
+        public string nombre { get; set; }
+        public string apPat { get; set; }
+        public string apMat { get; set; }
         public string cargo { get; set; }
         public string tienda { get; set; }
         public string direccion { get; set; }

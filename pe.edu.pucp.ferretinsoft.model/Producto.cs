@@ -11,8 +11,11 @@ namespace pe.edu.pucp.ferretinsoft.model
         public string ID { set; get; }
         public string nombre { set; get; }
         public string categoria { set; get; }
+        public int cantidad { set; get; }
         public int stock { set; get; }
+        public int saldo { set; get; }
         public int stockMin { set; get; }
         public string almacen { set; get; }
+        public string estado { set; get; }
     }
 }

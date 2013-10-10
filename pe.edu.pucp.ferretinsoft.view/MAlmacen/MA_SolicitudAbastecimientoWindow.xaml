@@ -144,7 +144,7 @@
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Atender Solicitud">
+            <TabItem x:Name="Grid" Header="Atender Solicitud">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
@@ -157,9 +157,9 @@
                     <GroupBox Header="Resumen" Margin="10,12" BorderBrush="Black"/>
                     <Label Content="Tienda:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="64" Margin="351,39,0,0"/>
                     <Label Content="Estado:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="65" Margin="352,79,0,0"/>
-                    <DataGrid Margin="5,5,5,5" Grid.Row="1"  AutoGenerateColumns="False"  CanUserDeleteRows="False" IsReadOnly="True">
+                    <DataGrid x:Name="GridAtender" Margin="5,5,5,5" Grid.Row="1"  AutoGenerateColumns="False"  CanUserDeleteRows="False" IsReadOnly="True">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Width="1.2*" Binding="{Binding Path=producto}" Header="Cód.Producto"/>
+                            <DataGridTextColumn Width="1.2*" Binding="{Binding Path=ID}" Header="Cód.Producto"/>
                             <DataGridTextColumn Width="2*" Binding="{Binding Path=nombre}" Header="Nombre"/>
                             <DataGridTextColumn Width="1*" Binding="{Binding Path=cantidad}"  Header="Cantidad"/>
                             <DataGridTextColumn Width="1*" Binding="{Binding Path= stock}"  Header="En Stock"/>

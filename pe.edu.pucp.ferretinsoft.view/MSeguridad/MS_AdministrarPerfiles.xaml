@@ -22,9 +22,14 @@
 
                     <ComboBox x:Name="perfil" HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Width="222" Height="22" Grid.Column="1">
                         <CheckBox Content="Todos" IsChecked="True"/>
-                        <CheckBox Content="Perfil A" IsChecked="True"/>
-                        <CheckBox Content="Perfil B" IsChecked="True"/>
-                        <CheckBox Content="Perfil C" IsChecked="True"/>
+                        <CheckBox Content="Administrador de Sistema" IsChecked="True"/>
+                        <CheckBox Content="Asistente de Almacen" IsChecked="True"/>
+                        <CheckBox Content="Asistente de Ventas" IsChecked="True"/>
+                        <CheckBox Content="Jefe de Tienda" IsChecked="True"/>
+                        <CheckBox Content="Vendedor" IsChecked="True"/>
+                        
+                        
+                        
                     </ComboBox>
 
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="0,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Grid.Column="1"/>
@@ -34,11 +39,11 @@
                             <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
                     </Button>
-                    <DataGrid Margin="5,40,5,5" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                    <DataGrid x:Name="perfilDg" Margin="5,40,5,5" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2"  AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" >
                         <DataGrid.Columns>
-                            <DataGridHyperlinkColumn Width="2*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Perfil"/>
-                            <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Módulo"/>
-                            <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descripción"/>
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=perf}" Header="Perfil"/>
+                            <DataGridTextColumn Width="3*" Binding="{Binding Path=Modulo}"  Header="Módulo"/>
+                            <DataGridTextColumn Width="3*" Binding="{Binding Path=Descripcion}" Header="Descripción"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <ToolBar HorizontalAlignment="Left" Margin="7,7,0,0" Grid.Row="1" VerticalAlignment="Top" Height="24">

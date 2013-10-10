@@ -66,14 +66,13 @@
                         </Button>
 
                     </ToolBar>
-                    <DataGrid Margin="10" Grid.Row="1" Grid.RowSpan="1">
+                    <DataGrid Margin="10" Grid.Row="1" Grid.RowSpan="1" x:Name="promocionesGrid" IsManipulationEnabled="False" CanUserSortColumns="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" ItemsSource="{Binding Path=ListaPromociones}">
                         <DataGrid.Columns>
-                            <DataGridHyperlinkColumn Width="0.3*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header=""/>
-                            <DataGridHyperlinkColumn Width="1.2*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cód. Promoción"/>
-                            <DataGridTextColumn Width="1.8*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>
-                            <DataGridTextColumn Width="1.1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Fecha Desde"/>
-                            <DataGridTextColumn Width="1.1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Fecha Hasta"/>
-                            <DataGridHyperlinkColumn Width="1*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Estado"/>
+                            <DataGridHyperlinkColumn Width="1.2*" Binding="{Binding Path=Codigo}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cód. Promoción"/>
+                            <DataGridTextColumn Width="1.8*" Binding="{Binding Path=Nombre}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>
+                            <DataGridTextColumn Width="1.1*" Binding="{Binding Path=FechaDesde}" ClipboardContentBinding="{x:Null}" Header="Fecha Desde"/>
+                            <DataGridTextColumn Width="1.1*" Binding="{Binding Path=FechaHasta}" ClipboardContentBinding="{x:Null}" Header="Fecha Hasta"/>
+                            <DataGridHyperlinkColumn Width="1*" Binding="{Binding Path=Estado}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Estado"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>

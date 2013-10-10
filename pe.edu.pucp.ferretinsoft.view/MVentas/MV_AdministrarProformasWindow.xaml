@@ -92,7 +92,15 @@
                     </ToolBar>
                     <DataGrid x:Name="proformasGrid" Grid.Row="1" Margin="5" CanUserSortColumns="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" ItemsSource="{Binding Path=ListaProformas}">
                         <DataGrid.Columns>
-                            <DataGridHyperlinkColumn Width="1.5*" Binding="{Binding Path=Codigo}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cód. Proforma"/>
+                            <DataGridHyperlinkColumn Width="1.5*" Binding="{Binding Path=Codigo}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cód. Proforma">
+                            <DataGridHyperlinkColumn.ElementStyle>
+                                <Style>
+                                    <EventSetter Event="Hyperlink.Click" Handler="codProforma_Click"/>
+                                </Style>
+                            </DataGridHyperlinkColumn.ElementStyle>
+                           </DataGridHyperlinkColumn>
+                            
+                            
                             <DataGridTextColumn Width="2*" Binding="{Binding Path=Cliente.Codigo}" ClipboardContentBinding="{x:Null}" Header="Doc. Cliente"/>
                             <DataGridTextColumn Width="3*" Binding="{Binding Path=Cliente.Nombre}" ClipboardContentBinding="{x:Null}" Header="Nombre Cliente"/>
                             <DataGridTextColumn Width="3*" Binding="{Binding Path=Vendedor.Nombre}" ClipboardContentBinding="{x:Null}" Header="Vendedor"/>
@@ -133,13 +141,13 @@
                         <Label Grid.Column="2" Grid.Row="0" Content="Copiar desde Proforma:" Margin="0,0,0,0"/>
                         <Label Grid.Column="0" Grid.Row="1" Content="Cód. Proforma:" Margin="0,0,0,0"/>
                         <Label Grid.Column="2" Grid.Row="1" Content="Vendedor:" Margin="0,0,0,0"/>
-                        <Label Grid.Column="0" Grid.Row="2" Content="Cliente DNI/RUC:"  Margin="0,0,0,0"/>
+                        <Label Grid.Column="0" Grid.Row="2" Content="Cliente:"  Margin="0,0,0,0"/>
                         <Label Grid.Column="0" Grid.Row="3" Content="Fecha de Vencimiento:"  Margin="0,0,0,0"/>
 
                         <DatePicker Grid.Column="1" Grid.Row="3" BorderThickness="0" />
-                        <TextBox Grid.Column="1" Grid.Row="0" IsEnabled="False" Text="24/09/2013" VerticalContentAlignment="Center" Margin="0,2,5,2" VerticalAlignment="Center"/>
-                        <TextBox Grid.Column="1" Grid.Row="1" IsEnabled="False" Text="000012" VerticalContentAlignment="Center" Margin="0,2,5,2" VerticalAlignment="Center"/>
-                        <TextBox Grid.Column="1" Grid.Row="2" IsEnabled="True" Text="" VerticalContentAlignment="Center" Margin="0,2,5,2" VerticalAlignment="Center"/>
+                        <TextBox x:Name="fechaProformaTxtBox" Grid.Column="1" Grid.Row="0" IsEnabled="False" Text="24/09/2013" VerticalContentAlignment="Center" Margin="0,2,5,2" VerticalAlignment="Center"/>
+                        <TextBox x:Name="codProformaTxtBox"  Grid.Column="1" Grid.Row="1" IsEnabled="False" Text="000012" VerticalContentAlignment="Center" Margin="0,2,5,2" VerticalAlignment="Center"/>
+                        <TextBox x:Name="codClienteTxtBox" Grid.Column="1" Grid.Row="2" IsEnabled="True" Text="" VerticalContentAlignment="Center" Margin="0,2,5,2" VerticalAlignment="Center"/>
 
                         <TextBox Grid.Column="3" Grid.Row="0" IsEnabled="False" Text="" VerticalContentAlignment="Center" Margin="0,2,20,2" VerticalAlignment="Center"/>
                         <Button Grid.Column="3" Grid.Row="0" x:Name="buscarProformaBtn" HorizontalAlignment="Right" VerticalAlignment="Center" Width="18" Height="18" Margin="0,5,0,5" Padding="0" Click="buscarProformaBtn_Click" BorderThickness="0">
@@ -147,8 +155,8 @@
                                 <ImageBrush ImageSource="../Resources/search1_20.png"/>
                             </Button.Background>
                         </Button>
-                        <TextBox Grid.Column="3" Grid.Row="1" IsEnabled="False" Text="" VerticalContentAlignment="Center" Margin="0,2,0,2" VerticalAlignment="Center" />
-                        <TextBox Grid.Column="3" Grid.Row="2" IsEnabled="False" VerticalContentAlignment="Center" Margin="0,2,0,2" VerticalAlignment="Center"/>
+                        <TextBox x:Name="vendedorTxtBox" Grid.Column="3" Grid.Row="1" IsEnabled="False" Text="" VerticalContentAlignment="Center" Margin="0,2,0,2" VerticalAlignment="Center" />
+                        <TextBox x:Name="nombreClienteTxtBox" Grid.Column="3" Grid.Row="2" IsEnabled="False" VerticalContentAlignment="Center" Margin="0,2,0,2" VerticalAlignment="Center"/>
 
                     </Grid>
                     <Grid Margin="5,5"  Grid.Column="0" Grid.Row="1">
@@ -183,11 +191,11 @@
                                 <RowDefinition></RowDefinition>
                             </Grid.RowDefinitions>
                             <Label Content="Sub Total:"/>
-                            <Label Content="Total a Pagar:" Grid.Row="1"/>
-                            <Label Content="%IGV:" Grid.Row="2"/>
-                            <TextBox Text="0.00" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" VerticalAlignment="Center" IsEnabled="False"/>
-                            <TextBox Text="0.00" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" VerticalAlignment="Center" Grid.Row="1"  IsEnabled="False"/>
-                            <TextBox Text="0.00" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" VerticalAlignment="Center" Grid.Row="2"  IsEnabled="False"/>
+                            <Label Content="Total a Pagar:" Grid.Row="2"/>
+                            <Label Content="%IGV:" Grid.Row="1"/>
+                            <TextBox x:Name="subTotalTxtBox" Text="0.00" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" VerticalAlignment="Center" IsEnabled="False"/>
+                            <TextBox x:Name="igvProformaTxtBox" Text="0.00" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" VerticalAlignment="Center" Grid.Row="1"  IsEnabled="False"/>
+                            <TextBox x:Name="totalProformaTxtBox" Text="0.00" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" VerticalAlignment="Center" Grid.Row="2"  IsEnabled="False"/>
                         </Grid>
                         <Grid Grid.Row="1" Grid.Column="1">
                             <Grid.ColumnDefinitions>
@@ -237,7 +245,7 @@
                             <Label Content="Correo:" Grid.Row="3"/>
                             <Label Content="Últ. Compra:" Grid.Row="4"/>
                             <Label Content="&lt;Persona/Empresa&gt;" Grid.Row="0" Grid.Column="1" />
-                            <Label Content="&lt;RUC/DNI&gt;" Grid.Row="1" Grid.Column="1" />
+                            <Label  Content="&lt;RUC/DNI&gt;" Grid.Row="1" Grid.Column="1" />
                             <Label Content="&lt;teléfono&gt;" Grid.Row="2" Grid.Column="1" />
                             <Label Content="&lt;Email&gt;" Grid.Row="3" Grid.Column="1"/>
                             <Label Content="04/jul/2013" Grid.Row="4" Grid.Column="1"/>

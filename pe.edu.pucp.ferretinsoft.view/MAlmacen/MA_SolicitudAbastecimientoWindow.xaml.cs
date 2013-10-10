@@ -18,11 +18,24 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
     /// <summary>
     /// Lógica de interacción para MA_SolicitudAbastecimientoWindow.xaml
     /// </summary>
+    /// 
+
+    public class DataDetalle
+    {
+        public String codigo;
+        public String nombre;
+        public String cantidad;
+        public String estado;
+    }
+
     public partial class MA_SolicitudAbastecimientoWindow : Window
     {
         public MA_SolicitudAbastecimientoWindow()
         {
             InitializeComponent();
+            gridBusqueda.ItemsSource = listaSolicitudBusqueda();
+            gridDetalle.ItemsSource = listaSolicitudDetalle();
+            gridGenerar.ItemsSource = listaSolicitudGenerar();
         }
 
         private void atenderSolBtn_Click(object sender, RoutedEventArgs e)
@@ -41,41 +54,61 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
             consoli.Show();
         }
 
-        private List<SolicitudAbastecimiento> ListSolicitud()
+        public List<SolicitudAbastecimiento> listaSolicitudBusqueda()
         {
-            List<SolicitudAbastecimiento> solicitudes = new List<SolicitudAbastecimiento>();
+            List<SolicitudAbastecimiento> data = new List<SolicitudAbastecimiento>();
+            data.Add(new SolicitudAbastecimiento { ID="SOL01",tienda="Tienda 2",fecha="20/09/2013",estado="Atendido"});
+            data.Add(new SolicitudAbastecimiento { ID="SOL02",tienda="Tienda 1",fecha="21/09/2013",estado="Atendido"});
+            data.Add(new SolicitudAbastecimiento { ID="SOL03",tienda="Tienda 3",fecha="22/09/2013",estado="Atendido"});
+            data.Add(new SolicitudAbastecimiento { ID="SOL04",tienda="Tienda 1",fecha="25/09/2013",estado="No Atendido"});
+            data.Add(new SolicitudAbastecimiento { ID="SOL05",tienda="Tienda 2",fecha="27/09/2013",estado="No Atendido"});
+            data.Add(new SolicitudAbastecimiento { ID = "SOL06", tienda = "Tienda 3", fecha = "01/10/2013", estado = "No Atendido" });
 
-            SolicitudAbastecimiento sol1 = new SolicitudAbastecimiento();
-            SolicitudAbastecimiento sol2 = new SolicitudAbastecimiento();
-            SolicitudAbastecimiento sol3 = new SolicitudAbastecimiento();
+            return data;
 
-
-
-            ProductoAlmacen prod1 = new ProductoAlmacen();
-            prod1.codigo = "200001";
-            prod1.producto = "Cemento Premium ";
-            prod1.cantidad = "200";
-            prod1.stockactual = "150";
-            prod1.stockmin = "200";
-            ProductoAlmacen prod2 = new ProductoAlmacen();
-            prod2.codigo = "200002";
-            prod2.producto = "Cemento Regular";
-            prod2.cantidad = "300";
-            prod2.stockactual = "150";
-            prod2.stockmin = "200";
-            ProductoAlmacen prod3 = new ProductoAlmacen();
-            prod3.codigo = "200003";
-            prod3.producto = "Cemento Ladrillo";
-            prod3.cantidad = "500";
-            prod3.stockactual = "150";
-            prod3.stockmin = "200";
+        }
 
 
+        public List<DataDetalle> listaSolicitudDetalle()
+        {
+            List<DataDetalle> data = new List<DataDetalle>();
+            data.Add(new DataDetalle { codigo = "ABC123", nombre = "Cemento Premium ", cantidad = "300", estado = "" });
+            data.Add(new DataDetalle { codigo = "BBB123", nombre = "Cemento Regular", cantidad = "300", estado = "" });
+            data.Add(new DataDetalle { codigo = "AAA123", nombre = "Taladro Boch", cantidad = "400", estado = "" });
+            data.Add(new DataDetalle { codigo = "PPP123", nombre = "Inodor Trebol", cantidad = "500", estado = "" });
+            data.Add(new DataDetalle { codigo = "TTT123", nombre = "Botas de construcción", cantidad = "200", estado = "" });
+            data.Add(new DataDetalle { codigo = "ZZZ123", nombre = "Pinturs Tekno", cantidad = "100", estado = "" });
+
+            return data;
+
+        }
+
+        private List<ProductoAlmacen> listaSolicitudGenerar()
+        {
+            List<ProductoAlmacen> solicitudes = new List<ProductoAlmacen>();
 
 
-            sol1.tienda = "Tienda 1";
-            sol2.tienda = "Tienda 2";
-            sol3.tienda = "Tienda 3";
+        
+            solicitudes.Add(new ProductoAlmacen{codigo = "200001",
+            producto = "Cemento Premium ",
+            cantidad = "200",
+            stockactual = "150",
+            stockmin = "200"});
+
+            solicitudes.Add(new ProductoAlmacen{
+            codigo = "200002",
+            producto = "Cemento Regular",
+            cantidad = "300",
+            stockactual = "150",
+            stockmin = "200"});
+
+            solicitudes.Add(new ProductoAlmacen{
+            codigo = "200003",
+            producto = "Cemento Ladrillo",
+            cantidad = "500",
+            stockactual = "150",
+            stockmin = "200"});
+
 
             return solicitudes;
 

@@ -152,7 +152,12 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
             contactoTxtBox.Text = rowData.nombContacto;
             contactoTlfTxtBox.Text = rowData.tlfContacto;
             idTxtBox.Text = rowData.ID;
-
+            rubroCbx.SelectedIndex = 0;
+            tipoProvCbx.SelectedIndex = 0;
+            departCbx.SelectedIndex = 0;
+            provinciaCbx.SelectedIndex = 0;
+            distritoCbx1.SelectedIndex = 0;
+            cpCbx.SelectedIndex = 0;
             dgwCatalogo.ItemsSource = rowData.catalogo;
             proveedorTab.SelectedIndex = 1;
         }

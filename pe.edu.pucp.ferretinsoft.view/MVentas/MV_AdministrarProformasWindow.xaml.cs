@@ -30,28 +30,28 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
         {
             Vendedor vendedor = new Vendedor
             {
-                Codigo = 000000256256,
+                Codigo = 0000256256,
                 Nombre = "José Olaya Balandra"
             };
 
             List<Proforma> proformas = new List<Proforma>();
             proformas.Add(new Proforma
             {
-                Codigo = 0000025625,
+                Codigo = 25625,
                 FechaProforma = "09/10/2013",
-                Importe = "S/. 869.50",
+                Importe = 869.50,
                 Cliente = new Cliente
                 {
-                    Codigo = 000000526358,
+                    Codigo = 0000526358,
                     Nombre = "Constructora MPM S.A."
                 },
                 Vendedor = vendedor
             });
             proformas.Add(new Proforma
             {
-                Codigo = 0000025625,
+                Codigo = 25625,
                 FechaProforma = "10/10/2013",
-                Importe = "S/. 250.00",
+                Importe = 250.00,
                 Cliente = new Cliente
                 {
                     Codigo = 0000008569524,
@@ -61,9 +61,9 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             });
             proformas.Add(new Proforma
             {
-                Codigo = 0000025625,
+                Codigo = 25625,
                 FechaProforma = "11/10/2013",
-                Importe = "S/. 760.00",
+                Importe = 760.00,
                 Cliente = new Cliente
                 {
                     Codigo = 000000245632,
@@ -80,6 +80,21 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             ProformasTab.SelectedIndex = 1;
         }
 
+        public void codProforma_Click(object sender, RoutedEventArgs e)
+        {
+             var rowData = ((Hyperlink)e.OriginalSource).DataContext as Proforma;
+             codProformaTxtBox.Text = rowData.Codigo+"";
+             vendedorTxtBox.Text = rowData.Vendedor.Nombre;
+             codClienteTxtBox.Text = rowData.Cliente.Codigo + "";
+             nombreClienteTxtBox.Text = rowData.Cliente.Nombre;
+             fechaProformaTxtBox.Text = rowData.FechaProforma;
+             totalProformaTxtBox.Text = "S/." + rowData.Importe;
+             igvProformaTxtBox.Text = "S/." + (rowData.Importe * 0.18) + "";
+             double subtotal = (rowData.Importe - rowData.Importe * 0.18);
+             subTotalTxtBox.Text = "S/." + subtotal;
+             ProformasTab.SelectedIndex = 1;
+
+        }
         private void buscarClienteBtn_Click(object sender, RoutedEventArgs e)
         {
             //ClientesWindow pw = new ClientesWindow();

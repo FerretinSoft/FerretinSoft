@@ -496,13 +496,13 @@
                     <Label Content="Domingo:" HorizontalAlignment="Left" Margin="2,482,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="6" Width="65"/>
                     <Label Content="Código:" HorizontalAlignment="Left" Margin="11,481,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="1" Grid.ColumnSpan="4" Width="94"/>
                     <TextBox HorizontalAlignment="Left" Height="26" Margin="19,483,0,0" TextWrapping="Wrap" Text="45767888" VerticalAlignment="Top" Width="102" Grid.Column="4" IsEnabled="False"/>
-                    <Label Content="Almacén &#xD;&#xA;Abastecedor:" HorizontalAlignment="Left" Margin="1,91,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="3" Height="41" Width="94"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="21,101,0,0" VerticalAlignment="Top" Width="105" Grid.Column="4" Height="26">
+                    <Label Content="Almacén &#xD;&#xA;Abastecedor:" HorizontalAlignment="Left" Margin="88,87,0,0" VerticalAlignment="Top" Grid.Column="4" Height="41" Width="94"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="186,97,0,0" VerticalAlignment="Top" Width="105" Grid.Column="4" Height="26">
                         <ComboBoxItem/> Almacen Central
                         <ComboBoxItem/> Tienda 2
                     </ComboBox>
-                    <Label Content="Tipo:" HorizontalAlignment="Left" Margin="144,101,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="4" Height="30" Width="36"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="187,102,0,0" VerticalAlignment="Top" Width="108" Grid.Column="4" Height="25">
+                    <Label Content="Tipo:" HorizontalAlignment="Left" Margin="1,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="3" Height="30" Width="36"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="44,98,0,0" VerticalAlignment="Top" Width="108" Grid.Column="3" Height="25" Grid.ColumnSpan="2">
                         <ComboBoxItem/> Venta
                         <ComboBoxItem/> Compra/Venta
                     </ComboBox>

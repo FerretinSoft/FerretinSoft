@@ -22,10 +22,10 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
 
     public class DataDetalle
     {
-        public String codigo;
-        public String nombre;
-        public String cantidad;
-        public String estado;
+        public String Codigo;
+        public String Nombre;
+        public String Cantidad;
+        public String Estado;
     }
 
     public partial class MA_SolicitudAbastecimientoWindow : Window
@@ -33,8 +33,8 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
         public MA_SolicitudAbastecimientoWindow()
         {
             InitializeComponent();
-            gridBusqueda.ItemsSource = listaSolicitudBusqueda();
             gridDetalle.ItemsSource = listaSolicitudDetalle();
+            gridBusqueda.ItemsSource = listaSolicitudBusqueda();
             gridGenerar.ItemsSource = listaSolicitudGenerar();
         }
 
@@ -72,12 +72,12 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
         public List<DataDetalle> listaSolicitudDetalle()
         {
             List<DataDetalle> data = new List<DataDetalle>();
-            data.Add(new DataDetalle { codigo = "ABC123", nombre = "Cemento Premium ", cantidad = "300", estado = "" });
-            data.Add(new DataDetalle { codigo = "BBB123", nombre = "Cemento Regular", cantidad = "300", estado = "" });
-            data.Add(new DataDetalle { codigo = "AAA123", nombre = "Taladro Boch", cantidad = "400", estado = "" });
-            data.Add(new DataDetalle { codigo = "PPP123", nombre = "Inodor Trebol", cantidad = "500", estado = "" });
-            data.Add(new DataDetalle { codigo = "TTT123", nombre = "Botas de construcción", cantidad = "200", estado = "" });
-            data.Add(new DataDetalle { codigo = "ZZZ123", nombre = "Pinturs Tekno", cantidad = "100", estado = "" });
+            data.Add(new DataDetalle { Codigo = "ABC123", Nombre = "Cemento Premium ", Cantidad = "300", Estado = "a" });
+            data.Add(new DataDetalle { Codigo = "BBB123", Nombre = "Cemento Regular", Cantidad = "300", Estado = "a" });
+            data.Add(new DataDetalle { Codigo = "AAA123", Nombre = "Taladro Boch", Cantidad = "400", Estado = "a" });
+            data.Add(new DataDetalle { Codigo = "PPP123", Nombre = "Inodor Trebol", Cantidad = "500", Estado = "a" });
+            data.Add(new DataDetalle { Codigo = "TTT123", Nombre = "Botas de construcción", Cantidad = "200", Estado = "a" });
+            data.Add(new DataDetalle { Codigo = "ZZZ123", Nombre = "Pinturas Tekno", Cantidad = "100", Estado = "a" });
 
             return data;
 
@@ -111,9 +111,6 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
 
 
             return solicitudes;
-
-
-
         }
 
 

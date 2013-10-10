@@ -76,12 +76,12 @@
                     <GroupBox Header="Resumen" Margin="10,12" BorderBrush="Black"/>
                     <Label Content="Tienda:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="64" Margin="22,39,0,0"/>
                     <Label Content="Estado:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="65" Margin="323,39,0,0"/>
-                    <DataGrid Margin="5,5,5,5" Name="gridDetalle" Grid.Row="1" AutoGenerateColumns="False"  ItemsSource="{Binding Path=listaSolicitudDetalle}" CanUserDeleteRows="False" IsReadOnly="True">
+                    <DataGrid Margin="5,5,5,5" Name="gridDetalle" Grid.Row="1" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"   ItemsSource="{Binding Path=listaSolicitudDetalle}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Width="1*" Binding="{Binding Path=codigo}" Header="Cód. Producto"/>
-                            <DataGridTextColumn Width="3*" Binding="{Binding Path=nombre}" Header="Nombre"/>
-                            <DataGridTextColumn Width="1*" Binding="{Binding Path=cantidad}" Header="Cantidad"/>
-                            <DataGridTextColumn Width="1*" Binding="{Binding Path=estado}" Header="Estado"/>
+                            <DataGridTextColumn Width="1*" Binding="{Binding Path=Codigo}" Header="Cód. Producto"/>
+                            <DataGridTextColumn Width="3*" Binding="{Binding Path=Nombre}" Header="Nombre"/>
+                            <DataGridTextColumn Width="1*" Binding="{Binding Path=Cantidad}" Header="Cantidad"/>
+                            <DataGridTextColumn Width="1*" Binding="{Binding Path=Estado}" Header="Estado"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <Label Content="Fecha solicitud:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="111" Margin="22,81,0,0"/>
@@ -114,9 +114,9 @@
                     <DataGrid Name="gridGenerar" Margin="8,30,2,3" Grid.Row="1" AutoGenerateColumns="False"  CanUserDeleteRows="False" IsReadOnly="True">
                         <DataGrid.Columns>
                             <DataGridTextColumn Width="2*" Binding="{Binding Path=codigo}"  Header="Cód. Producto"/>
-                            <DataGridTextColumn Width="2*" Binding="{Binding Path=nombre}"  Header="Nombre"/>
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=producto}"  Header="Nombre"/>
                             <DataGridTextColumn Width="2*" Binding="{Binding Path=cantidad}"  Header="Cantidad"/>
-                            <DataGridTextColumn Width="2*" Binding="{Binding Path=stockact}" Header="En Stock" />
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=stockactual}" Header="En Stock" />
                             <DataGridTextColumn Width="2*" Binding="{Binding Path=stockmin}" Header="Stock mínimo"/>
                         </DataGrid.Columns>
                     </DataGrid>

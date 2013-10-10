@@ -44,6 +44,7 @@
     <Compile Include="Devolucion.cs" />
     <Compile Include="OrdenCompra.cs" />
     <Compile Include="Perfil.cs" />
+    <Compile Include="Personal.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="ProductoOrdenCompra.cs" />
     <Compile Include="ProductoProveedor.cs" />

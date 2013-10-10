@@ -10,5 +10,10 @@ namespace pe.edu.pucp.ferretinsoft.model
     {
         public int Codigo { get; set; }
         public String Nombre { get; set; }
+        public String TipoDocumento { get; set; }
+        public String TipoCliente { get; set; }
+        public String TelefonoCliente { get; set; }
+        public String EmailCliente { get; set; }
+        public int PuntosCliente { get; set; }
     }
 }

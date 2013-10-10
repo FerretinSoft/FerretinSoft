@@ -45,6 +45,9 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
                 tipoDocLbl.Content = "Cotización";
                 fecValPagoLbl.Content = "Fecha de Validez";
                 fecEmisioLbl.Content = "Fecha de Ingreso";
+                facturaGbox.Visibility = System.Windows.Visibility.Hidden;
+                facturaLbl.Visibility = System.Windows.Visibility.Hidden;
+                facturaTxtBox.Visibility = System.Windows.Visibility.Hidden;
                 ordenesCompraTab.SelectedIndex = 1;               
             }
 
@@ -54,6 +57,9 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
                 fecValPagoLbl.Content = "Fecha de Pago";
                 fecEmisioLbl.Content = "Fecha de Emisión";
                 tipoDocLbl.Content = "Órden de Compra";
+                facturaGbox.Visibility = System.Windows.Visibility.Hidden;
+                facturaLbl.Visibility = System.Windows.Visibility.Hidden;
+                facturaTxtBox.Visibility = System.Windows.Visibility.Hidden;
                 ordenesCompraTab.SelectedIndex = 1;             
             }
                 
@@ -115,6 +121,23 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
 
             ordenesCompra.Add(oc1);
 
+            OrdenCompra oc2 = new OrdenCompra();
+            oc2.codigo = "OC002";
+            oc2.proveedor = MC_AdministrarProveedorWindow.proveedores[1];
+            oc2.fecEmision = "15/08/2013";
+            oc2.fecPago = "";
+            oc2.aprobadoPor = "Jerry Rivera";
+            oc2.emitidoPor = "Carolina Suarez";
+            oc2.ultimaCompra = "01/11/2012";
+            oc2.subTotal = 2500;
+            oc2.igv = 475;
+            oc2.total = 2975;
+            oc2.estado = "Aprobada";
+            oc2.tipo = "Orden de Compra";
+
+            ordenesCompra.Add(oc2);
+
+
             return ordenesCompra;
         }
 
@@ -139,12 +162,49 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
 
             ordenesCompraTab.SelectedIndex = 1;
 
+            if (rowData.tipo.Equals("Orden de Compra"))
+            {
+                fecValPagoLbl.Content = "Fecha de Pago";
+                fecEmisioLbl.Content = "Fecha de Emisión";
+                tipoDocLbl.Content = "Órden de Compra";
+            }
+
+            if (rowData.tipo.Equals("Cotizacion"))
+            {
+                tipoDocLbl.Content = "Cotización";
+                fecValPagoLbl.Content = "Fecha de Validez";
+                fecEmisioLbl.Content = "Fecha de Ingreso";
+            }
+
             if (rowData.estado.Equals("Con Factura"))
             {
                 codOrdenTxtBox.IsEnabled = false;
                 proveedorTxtBox.IsEnabled = false;
                 fecEmiDp.IsEnabled = false;
                 fecPagoDp.IsEnabled = false;
+                guardarBtn.IsEnabled = false;
+                ultCompraTxtBox.IsEnabled = false;
+                facturaGbox.Visibility = System.Windows.Visibility.Visible;
+                facturaLbl.Visibility = System.Windows.Visibility.Visible;
+                facturaTxtBox.Visibility = System.Windows.Visibility.Visible;
+                facturaTxtBox.Text = "0113254";
+                facturaTxtBox.IsEnabled = false;
+  
+            }
+
+            if (rowData.estado.Equals("Aprobada"))
+            {
+                codOrdenTxtBox.IsEnabled = false;
+                proveedorTxtBox.IsEnabled = false;
+                fecEmiDp.IsEnabled = false;
+                fecPagoDp.IsEnabled = true;
+                guardarBtn.IsEnabled = true;
+                ultCompraTxtBox.IsEnabled = false;
+                facturaGbox.Visibility = System.Windows.Visibility.Visible;
+                facturaLbl.Visibility = System.Windows.Visibility.Visible;
+                facturaTxtBox.Visibility = System.Windows.Visibility.Visible;
+                facturaTxtBox.Text = "";
+                facturaTxtBox.IsEnabled = true;
             }
         }
     }

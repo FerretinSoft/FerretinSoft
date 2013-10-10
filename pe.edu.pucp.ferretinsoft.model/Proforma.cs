@@ -12,6 +12,6 @@ namespace pe.edu.pucp.ferretinsoft.model
         public Cliente Cliente { get; set; }
         public Vendedor Vendedor { get; set; }
         public String FechaProforma { get; set; }
-        public String Importe { get; set; }
+        public Double Importe { get; set; }
     }
 }

@@ -20,6 +20,13 @@
 
                     <Label Content="Módulo:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="62" Margin="21,51,0,0"/>
 
+                    <ComboBox x:Name="perfil" HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Width="222" Height="22" Grid.Column="1">
+                        <CheckBox Content="Todos" IsChecked="True"/>
+                        <CheckBox Content="Perfil A" IsChecked="True"/>
+                        <CheckBox Content="Perfil B" IsChecked="True"/>
+                        <CheckBox Content="Perfil C" IsChecked="True"/>
+                    </ComboBox>
+
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="0,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Grid.Column="1"/>
 
                     <Button x:Name="buscarUsuariosBtn" HorizontalAlignment="Left" Margin="347.5,34,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35" Grid.Column="1">
@@ -47,9 +54,6 @@
                         </Button>
 
                     </ToolBar>
-                    <ComboBox HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="222" Margin="0,23,0,0" Grid.Column="1"/>
-
-
 
                 </Grid>
             </TabItem>

@@ -33,13 +33,15 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
 
             Producto prod1 = new Producto();
             Producto prod2 = new Producto();
+            Producto prod3 = new Producto();
 
             prod1.ID = "000001";
             prod1.nombre = "cemento";
             prod1.categoria = "Construcción";
             prod1.stock = 5000;
             prod1.stockMin = 1000;
-            prod1.almacen = "1";
+            prod1.almacen = "Almacen benavides";
+            
 
 
             prod2.ID = "000002";
@@ -47,10 +49,20 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
             prod2.categoria = "Acabado";
             prod2.stock = 10000;
             prod2.stockMin = 2000;
-            prod2.almacen = "1";
+            prod2.almacen = "Almacen callao";
+
+
+            prod3.ID = "000002";
+            prod3.nombre = "ladrillo";
+            prod3.categoria = "Construcción";
+            prod3.stock = 20000;
+            prod3.stockMin = 5000;
+            prod3.almacen = "Almacen callao";
+            
 
             lisProd.Add(prod1);
             lisProd.Add(prod2);
+            lisProd.Add(prod3);
 
             return lisProd;
 

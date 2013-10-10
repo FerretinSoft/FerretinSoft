@@ -32,17 +32,25 @@
                         </Button.Background>
                     </Button>
 
-                    <DataGrid Margin="5,52,5,5" Grid.Row="2">
+                    <DataGrid x:Name="personalDg"  Margin="5,52,5,5" Grid.Row="2" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
                         <DataGrid.Columns>
-                            <DataGridCheckBoxColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Código"/>
-                            <DataGridHyperlinkColumn Width="2*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="DNI"/>
-                            <DataGridTextColumn Width="4*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombres y Apellidos"/>
-                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cargo"/>
-                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tienda"/>
-                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Dirección"/>
-                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Teléfono"/>
+                            <DataGridHyperlinkColumn Width="2*" Binding="{Binding Path=codigo}" Header="Código">
+                                <DataGridHyperlinkColumn.ElementStyle>
+                                    <Style>
+                                        <EventSetter Event="Hyperlink.Click" Handler="codigoPersonal_Click"/>
+                                    </Style>
+                                </DataGridHyperlinkColumn.ElementStyle>
+                            </DataGridHyperlinkColumn>
+
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=dni}" Header="DNI"/>
+                            <DataGridTextColumn Width="4*" Binding="{Binding Path=nombreCompleto}" Header="Nombres y Apellidos"/>
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=cargo}" Header="Cargo"/>
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=tienda}" Header="Tienda"/>
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=direccion}" Header="Dirección"/>
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=telefono}" Header="Teléfono"/>
                         </DataGrid.Columns>
                     </DataGrid>
+
                     <ToolBar HorizontalAlignment="Left" Margin="9,18,0,0" Grid.Row="2" VerticalAlignment="Top" Height="24">
                         <Button x:Name="nuevoEmpleadoBtn" Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,-1" Click="nuevoEmpleadoBtn_Click">
                             <Button.Background>
@@ -68,7 +76,7 @@
                     <Label Content="Cargo: " HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="57" Margin="223,70,0,0"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Edición">
+            <TabItem Header="Edición" IsEnabled="False">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="18*"></ColumnDefinition>

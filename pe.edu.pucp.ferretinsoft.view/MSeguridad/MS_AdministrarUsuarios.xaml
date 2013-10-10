@@ -34,9 +34,11 @@
                     <TextBox HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" Margin="421,57,0,0" />
                     <ComboBox x:Name="perfilCombo" HorizontalAlignment="Left" Margin="132,83,0,0" VerticalAlignment="Top" Width="180" Height="22" Grid.RowSpan="2">
                         <CheckBox Content="Todos" IsChecked="True"/>
-                        <CheckBox Content="Perfil A" IsChecked="True"/>
-                        <CheckBox Content="Perfil B" IsChecked="True"/>
-                        <CheckBox Content="Perfil C" IsChecked="True"/>
+                        <CheckBox Content="Administrador de Sistema" IsChecked="True"/>
+                        <CheckBox Content="Asistente de Almacen" IsChecked="True"/>
+                        <CheckBox Content="Asistente de Ventas" IsChecked="True"/>
+                        <CheckBox Content="Jefe de Tienda" IsChecked="True"/>
+                        <CheckBox Content="Vendedor" IsChecked="True"/>
                     </ComboBox>
 
                     <ComboBox x:Name="estadoCombo" HorizontalAlignment="Left" Margin="421,82,0,0" VerticalAlignment="Top" Width="203" Height="22" Grid.RowSpan="2">
@@ -98,11 +100,11 @@
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="20,75,0,0" TextWrapping="Wrap" Text="41414141" VerticalAlignment="Top" Width="172" Grid.Column="1" IsEnabled="False"/>
 
                     <Label Content="Nom. Usuario:" HorizontalAlignment="Left" Margin="177,118,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="310,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2" Text="SNJose"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="310,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2" Text="SNJosefina"/>
 
 
                     <Label Content="Nombre:" HorizontalAlignment="Left" Margin="177,146,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="310,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2" IsEnabled="False" Text="Jose Carlos"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="310,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2" IsEnabled="False" Text="Josefina Liz"/>
 
                     <Label Content="Apellidos:" HorizontalAlignment="Left" Margin="177,174,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
                     <Label Content="Estado:" HorizontalAlignment="Left" Margin="177,205,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
@@ -123,6 +125,7 @@
                         <ComboBoxItem Content="Asistente de ventas"></ComboBoxItem>
                         <ComboBoxItem Content="Vendedor"></ComboBoxItem>
                         <ComboBoxItem Content="Jefe de Tienda"></ComboBoxItem>
+                        <ComboBoxItem Content="Administrador de Sistema"></ComboBoxItem>
                     </ComboBox>
                     <PasswordBox HorizontalAlignment="Left" Height="23" Margin="310,269,0,0" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2"  RenderTransformOrigin="0.5,1.812" Password="madmasmdmsamdmas"/>
                     <Label Content="Confirmar Contraseña:" HorizontalAlignment="Left" Margin="174,295,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>

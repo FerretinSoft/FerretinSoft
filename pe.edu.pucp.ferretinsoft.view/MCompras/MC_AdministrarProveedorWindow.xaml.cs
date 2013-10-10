@@ -22,10 +22,12 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
     /// </summary>
     public partial class MC_AdministrarProveedorWindow : Window
     {
+        public static List<Proveedor> proveedores = ListProveedores();
+
         public MC_AdministrarProveedorWindow()
         {
             InitializeComponent();
-            proveedoresDg.ItemsSource = ListProveedores();
+            proveedoresDg.ItemsSource = proveedores;
         }
 
         private void importarProducto_Click(object sender, RoutedEventArgs e)
@@ -51,7 +53,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
             proveedorTab.SelectedIndex = 0;
         }
 
-        private List<Proveedor> ListProveedores()
+        private static List<Proveedor> ListProveedores()
         {
             List<Proveedor> proveedores = new List<Proveedor>();
 

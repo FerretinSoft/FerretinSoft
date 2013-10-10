@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pe.edu.pucp.ferretinsoft.model
 {
-    class Producto
+    public class Producto
     {
     }
 }

@@ -12,7 +12,7 @@ namespace pe.edu.pucp.ferretinsoft.model
         public Proveedor proveedor { get; set; }
         public string fecEmision { get; set; }
         public string fecPago { get; set; }
-        public List<ProductoOrdenCompra> productos{ get; set; }
+        public List<ProductoOrdenCompra> productos { get; set; }
         public string aprobadoPor { get; set; }
         public string emitidoPor { get; set; }
         public string ultimaCompra { get; set; }

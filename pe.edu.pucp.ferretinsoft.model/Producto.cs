@@ -13,6 +13,6 @@ namespace pe.edu.pucp.ferretinsoft.model
         public string categoria { set; get; }
         public int stock { set; get; }
         public int stockMin { set; get; }
-        public string almacen { set; get; }
+        
     }
 }

@@ -39,7 +39,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
             prod1.categoria = "Construcción";
             prod1.stock = 5000;
             prod1.stockMin = 1000;
-            prod1.almacen = "1";
+            
 
 
             prod2.ID = "000002";
@@ -47,7 +47,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
             prod2.categoria = "Acabado";
             prod2.stock = 10000;
             prod2.stockMin = 2000;
-            prod2.almacen = "1";
+            
 
             lisProd.Add(prod1);
             lisProd.Add(prod2);

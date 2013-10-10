@@ -111,12 +111,12 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
         public List<DataDetalle> listaSolicitudDetalle()
         {
             List<DataDetalle> data = new List<DataDetalle>();
-            data.Add(new DataDetalle { Codigo = "ABC123", Nombre = "Cemento Premium ", Cantidad = "300", Estado = "a" });
-            data.Add(new DataDetalle { Codigo = "BBB123", Nombre = "Cemento Regular", Cantidad = "300", Estado = "a" });
-            data.Add(new DataDetalle { Codigo = "AAA123", Nombre = "Taladro Boch", Cantidad = "400", Estado = "a" });
-            data.Add(new DataDetalle { Codigo = "PPP123", Nombre = "Inodor Trebol", Cantidad = "500", Estado = "a" });
-            data.Add(new DataDetalle { Codigo = "TTT123", Nombre = "Botas de construcción", Cantidad = "200", Estado = "a" });
-            data.Add(new DataDetalle { Codigo = "ZZZ123", Nombre = "Pinturas Tekno", Cantidad = "100", Estado = "a" });
+            data.Add(new DataDetalle { Codigo = "ABC123", Nombre = "Cemento Premium ", Cantidad = "300", Estado = "Posible de cumplir" });
+            data.Add(new DataDetalle { Codigo = "BBB123", Nombre = "Cemento Regular", Cantidad = "300", Estado = "Posible de cumplir" });
+            data.Add(new DataDetalle { Codigo = "AAA123", Nombre = "Taladro Boch", Cantidad = "400", Estado = "Posible de cumplir" });
+            data.Add(new DataDetalle { Codigo = "PPP123", Nombre = "Inodor Trebol", Cantidad = "500", Estado = "Posible de cumplir" });
+            data.Add(new DataDetalle { Codigo = "TTT123", Nombre = "Botas de construcción", Cantidad = "200", Estado = "No es posible cumplir" });
+            data.Add(new DataDetalle { Codigo = "ZZZ123", Nombre = "Pinturas Tekno", Cantidad = "100", Estado = "Posible de cumplir" });
 
             return data;
 

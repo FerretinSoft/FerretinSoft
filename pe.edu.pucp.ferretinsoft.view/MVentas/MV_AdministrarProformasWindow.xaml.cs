@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using pe.edu.pucp.ferretinsoft.model;
 
 namespace pe.edu.pucp.ferretinsoft.view.MVentas
 {
@@ -22,6 +23,56 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
         public MV_AdministrarProformasWindow()
         {
             InitializeComponent();
+            proformasGrid.ItemsSource = ListaProformas();
+        }
+
+        private List<Proforma> ListaProformas()
+        {
+            Vendedor vendedor = new Vendedor
+            {
+                Codigo = 000000256256,
+                Nombre = "José Olaya Balandra"
+            };
+
+            List<Proforma> proformas = new List<Proforma>();
+            proformas.Add(new Proforma
+            {
+                Codigo = 0000025625,
+                FechaProforma = "09/10/2013",
+                Importe = "S/. 869.50",
+                Cliente = new Cliente
+                {
+                    Codigo = 000000526358,
+                    Nombre = "Constructora MPM S.A."
+                },
+                Vendedor = vendedor
+            });
+            proformas.Add(new Proforma
+            {
+                Codigo = 0000025625,
+                FechaProforma = "10/10/2013",
+                Importe = "S/. 250.00",
+                Cliente = new Cliente
+                {
+                    Codigo = 0000008569524,
+                    Nombre = "MVD Arquitectos"
+                },
+                Vendedor = vendedor
+            });
+            proformas.Add(new Proforma
+            {
+                Codigo = 0000025625,
+                FechaProforma = "11/10/2013",
+                Importe = "S/. 760.00",
+                Cliente = new Cliente
+                {
+                    Codigo = 000000245632,
+                    Nombre = "Canalle Group"
+                },
+                Vendedor = vendedor
+            });
+
+            return proformas;
         }
 
         private void detalleProformaBtn_Click(object sender, RoutedEventArgs e)

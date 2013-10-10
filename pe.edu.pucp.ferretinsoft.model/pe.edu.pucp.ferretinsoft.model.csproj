@@ -43,6 +43,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Devolucion.cs" />
     <Compile Include="OrdenCompra.cs" />
+    <Compile Include="Perfil.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="ProductoOrdenCompra.cs" />
     <Compile Include="ProductoProveedor.cs" />

@@ -29,6 +29,13 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
         public List<Auditoria> ListAuditorias(){
             List<Auditoria> auditorias = new List<Auditoria>();            
             Auditoria auditoria_1 = new Auditoria();
+            auditoria_1.ip = "192.168.1.102";
+            auditoria_1.macAddress = "C8-F7-33-00-39-BD";
+            auditoria_1.hora = "22:15";
+            auditoria_1.fecha = "22/11/2012";
+            auditoria_1.perfil = "Administrador del Sistema";
+            auditoria_1.transaccion = "Modificación Parámetros";
+            auditoria_1.nombreUsuario = "FJLuis";
             auditorias.Add(auditoria_1);
             return auditorias;
         }

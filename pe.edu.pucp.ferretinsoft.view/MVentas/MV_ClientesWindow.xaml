@@ -11,10 +11,12 @@
             <TabItem Header="Búsqueda" x:Name="busquedaTab">
                 <Grid Background="#FFE5E5E5">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="393" />
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition/>
+                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <GroupBox Header="Parámetros" Margin="5,5,5,307" BorderBrush="Gray">
+                    <GroupBox Header="Parámetros" Margin="5" BorderBrush="Gray">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
@@ -51,7 +53,7 @@
                             </Button>
                         </Grid>
                     </GroupBox>
-                    <ToolBar HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" Height="24" Width="68">
+                    <ToolBar Grid.Row="1" HorizontalAlignment="Left" Margin="5,0" VerticalAlignment="Center" Height="24">
 
                         <Button x:Name="nuevoClienteBtn" Content="" VerticalAlignment="Top" Width="20" Margin="0,0,2,-1" Click="nuevoClienteBtn_Click" Height="20">
                             <Button.Background>
@@ -65,7 +67,7 @@
                         </Button>
 
                     </ToolBar>
-                    <DataGrid Margin="5,120,5,5">
+                    <DataGrid Margin="5" Grid.Row="2">
                         <DataGrid.Columns>
                             <DataGridHyperlinkColumn Width="2*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Núm. Doc."/>
                             <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tipo Doc."/>
@@ -76,15 +78,19 @@
                             <DataGridTextColumn Width="1.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Puntos"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <StackPanel x:Name="seleccionarListaPanel" Orientation="Horizontal" Margin="291,5" Grid.Row="1" HorizontalAlignment="Center" Width="0"/>
+                    <StackPanel x:Name="seleccionarListaPanel" Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center" Visibility="Collapsed">
+                        <Button Height="30" x:Name="seleccionarListaClienteBtn" Content="Seleccionar" Padding="5,0" Margin="5,0"/>
+                        <Button Height="30" x:Name="cancelarListaClienteBtn" Content="Cancelar" Padding="5,0" Margin="5,0" Click="cancelarListaClienteBtn_Click" />
+                    </StackPanel>
                 </Grid>
             </TabItem>
 
             <TabItem Header="Detalles" x:Name="detallesTab">
-                <Grid Background="#FFE5E5E5" Margin="0,0,0,-10">
+                <Grid Background="#FFE5E5E5" Margin="0,0,0,0">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
-                        <RowDefinition Height="Auto" MinHeight="40"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Grid Margin="5" >
                         <Grid.ColumnDefinitions>
@@ -159,7 +165,7 @@
                         <TextBox VerticalAlignment="Center" Grid.Column="3" Grid.Row="9" Grid.ColumnSpan="1" Height="22" Margin="0,2,0,4"/>
                         <TextBox VerticalAlignment="Center" Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="3" Height="22" Margin="0,4,0,2"/>
                         <DatePicker VerticalAlignment="Center" Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2" BorderThickness="0" Margin="0,4,0,3" Height="22"></DatePicker>
-                        <ComboBox VerticalAlignment="Center" Grid.Column="1" Grid.Row="12" Grid.ColumnSpan="2" Height="24" Margin="0,3,27,0">
+                        <ComboBox VerticalAlignment="Center" Grid.Column="1" Grid.Row="12" Grid.ColumnSpan="2"  Margin="0,0,27,0">
                             <ComboBoxItem Content="Masculino"></ComboBoxItem>
                             <ComboBoxItem Content="Femenino"></ComboBoxItem>
                         </ComboBox>
@@ -176,11 +182,15 @@
                         <TextBox VerticalAlignment="Center" Grid.Column="5" Grid.Row="8" IsEnabled="False" Margin="0,5,28,2" Height="22"/>
                         <TextBox VerticalAlignment="Stretch" Margin="0,5,28,5" Grid.Column="5" Grid.Row="9" Grid.RowSpan="2" IsEnabled="False"/>
 
-                        <StackPanel Grid.Column="4" Grid.Row="12" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,112,0" Width="0"/>
+                        <StackPanel Grid.Column="4" Grid.Row="12" Orientation="Horizontal" HorizontalAlignment="Right"/>
                     </Grid>
-                    <StackPanel x:Name="seleccionarDetallePanel" Orientation="Horizontal" Margin="223,5" Grid.Row="1" HorizontalAlignment="Center" Width="136">
-                        <Button Height="30" x:Name="seleccionarDetalleClienteBtn" Content="Guardar" Padding="5,0" Margin="5,0"/>
-                        <Button Height="30" x:Name="cancelarDetalleClienteBtn" Content="Cancelar" Padding="5,0" Margin="5,0" Click="cancelarListaClienteBtn_Click" />
+                    <StackPanel x:Name="guardarDetallePanel" Orientation="Horizontal" Margin="5" Grid.Row="1" HorizontalAlignment="Center">
+                        <Button Height="30" x:Name="guardarDetalleClienteBtn" Content="Guardar" Padding="5,0" Margin="5,0"/>
+                        <Button Height="30" Content="Cancelar" Padding="5,0" Margin="5,0" Click="cancelarListaClienteBtn_Click" />
+                    </StackPanel>
+                    <StackPanel x:Name="seleccionarDetallePanel" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Visibility="Collapsed">
+                        <Button Height="30" x:Name="seleccionarDetalleClienteBtn" Content="Seleccionar" Padding="5,0" Margin="5,0"/>
+                        <Button Height="30" Content="Cancelar" Padding="5,0" Margin="5,0" Click="cancelarListaClienteBtn_Click" />
                     </StackPanel>
                 </Grid>
             </TabItem>

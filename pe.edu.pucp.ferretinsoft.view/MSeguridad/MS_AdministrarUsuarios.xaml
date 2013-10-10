@@ -51,16 +51,14 @@
                             <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
                     </Button>
-                    <DataGrid Margin="10,22,10,10" Grid.Row="2">
+                    <DataGrid  x:Name="usuariosDg"  Margin="10,22,10,10" Grid.Row="2" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
                         <DataGrid.Columns>
-                            <DataGridCheckBoxColumn Width="0*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
-                            <DataGridHyperlinkColumn Width="2*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Código"/>
-                            <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nom.Usuario"/>
-
-                            <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombres"/>
-                            <DataGridTextColumn Width="3*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Apellidos"/>
-                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Perfil"/>
-                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Estado"/>
+                            <DataGridHyperlinkColumn Width="2*" Binding="{Binding Path=codigo}" Header="Código"/>
+                            <DataGridTextColumn Width="3*" Binding="{Binding Path=nombreUsuario}"  Header="Nombre de Usuario"/>
+                            <DataGridTextColumn Width="3*" Binding="{Binding Path=nombre}"  Header="Nombres"/>
+                            <DataGridTextColumn Width="3*" Binding="{Binding Path=apellido}" Header="Apellidos"/>
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=perfil}"  Header="Perfil"/>
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=estado}"  Header="Estado"/>
 
                         </DataGrid.Columns>
                     </DataGrid>
@@ -95,20 +93,20 @@
                     </Grid.ColumnDefinitions>
                     <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="/Resources/cliente_1.png" Stretch="Fill" Margin="177,13,0,0"/>
                     <Label Content="Código:" HorizontalAlignment="Left" Margin="301,43,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="20,45,0,0" TextWrapping="Wrap" Text="000157" VerticalAlignment="Top" Width="172" IsEnabled="False" Grid.Column="1"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="20,45,0,0" TextWrapping="Wrap" Text="100001" VerticalAlignment="Top" Width="172" IsEnabled="False" Grid.Column="1"/>
                     <Label Content="DNI:" HorizontalAlignment="Left" Margin="301,73,0,0" VerticalAlignment="Top"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="20,75,0,0" TextWrapping="Wrap" Text="41414141" VerticalAlignment="Top" Width="172" Grid.Column="1" IsEnabled="False"/>
 
                     <Label Content="Nom. Usuario:" HorizontalAlignment="Left" Margin="177,118,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="310,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="310,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2" Text="SNJose"/>
 
 
                     <Label Content="Nombre:" HorizontalAlignment="Left" Margin="177,146,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="310,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2" IsEnabled="False"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="310,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2" IsEnabled="False" Text="Jose Carlos"/>
 
                     <Label Content="Apellidos:" HorizontalAlignment="Left" Margin="177,174,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
                     <Label Content="Estado:" HorizontalAlignment="Left" Margin="177,205,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="310,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2" IsEnabled="False"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="310,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2" IsEnabled="False" Text="Solorzano Narvaez"/>
 
 
                     <Button Content="GUARDAR" HorizontalAlignment="Left" Margin="229,341,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Height="30"/>
@@ -126,9 +124,9 @@
                         <ComboBoxItem Content="Vendedor"></ComboBoxItem>
                         <ComboBoxItem Content="Jefe de Tienda"></ComboBoxItem>
                     </ComboBox>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="310,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2" TextChanged="TextBox_TextChanged" RenderTransformOrigin="0.5,1.812"/>
+                    <PasswordBox HorizontalAlignment="Left" Height="23" Margin="310,269,0,0" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2"  RenderTransformOrigin="0.5,1.812" Password="madmasmdmsamdmas"/>
                     <Label Content="Confirmar Contraseña:" HorizontalAlignment="Left" Margin="174,295,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="310,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2" TextChanged="TextBox_TextChanged" RenderTransformOrigin="0.5,1.812"/>
+                    <PasswordBox HorizontalAlignment="Left" Height="23" Margin="310,298,0,0" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2"  RenderTransformOrigin="0.5,1.812" Password="sdasdsadasdasdas"/>
 
                 </Grid>
             </TabItem>

@@ -20,9 +20,6 @@
             <Label Content="Fecha Hasta:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="81" Margin="0,64,0,0" Grid.Column="2"/>
             <Label Content="Nombre de Usuario:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="121" Margin="20,33,0,0" Grid.ColumnSpan="2"/>
             <Label Content="Perfil:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="68" Margin="0,33,0,0" Grid.Column="2"/>
-
-
-            <TextBox HorizontalAlignment="Left" Height="20" Margin="82,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" Grid.Column="2"/>
             <TextBox HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Margin="10,39,0,0" Grid.Column="1" />
 
             <Button x:Name="buscarUsuariosBtn" HorizontalAlignment="Left" Margin="277,58,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35" Grid.Column="2">
@@ -48,7 +45,12 @@
             <Label Content="Fecha Desde:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="81" Margin="20,64,0,0"/>
             <DatePicker HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="167" Grid.Column="1" Height="24"/>
             <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Margin="81,65,0,0" Width="178" Grid.Column="2"/>
-
+            <ComboBox HorizontalAlignment="Left" Height="22" Margin="81,37,0,0" VerticalAlignment="Top" Width="178" Grid.Column="2">
+                <CheckBox Content="Todos" IsChecked="True"/>
+                <CheckBox Content="Perfil A" IsChecked="True"/>
+                <CheckBox Content="Perfil B" IsChecked="True"/>
+                <CheckBox Content="Perfil C" IsChecked="True"/>
+            </ComboBox>
 
 
         </Grid>

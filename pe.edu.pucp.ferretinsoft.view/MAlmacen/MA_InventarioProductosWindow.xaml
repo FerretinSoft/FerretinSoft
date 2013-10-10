@@ -33,7 +33,7 @@
                             <DataGridTextColumn Width="1.2*" Binding="{Binding Path=stock}" Header="Stock"/>
                             <DataGridTextColumn Width="1.2*" Binding="{Binding Path=stockMin}" Header="Stock Min."/>
                             <DataGridTextColumn Width="2*" Binding="{Binding Path=almacen}" Header="Almacen"/>
-                            
+
                         </DataGrid.Columns>
                     </DataGrid>
                     <ComboBox x:Name="almacenCombo" HorizontalAlignment="Left" Margin="9,43,0,0" VerticalAlignment="Top" Width="180" Height="22" Grid.Column="1">
@@ -71,7 +71,7 @@
                     <TextBox HorizontalAlignment="Left" Height="53" Margin="62,185,0,0" TextWrapping="Wrap" Text="&lt;Descripción&gt;" VerticalAlignment="Top" Width="246" Grid.Column="2" IsEnabled="False"/>
                     <Label Content="Material Secundario:" HorizontalAlignment="Left" Margin="10,278,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="3"/>
                     <Label Content="Material Base:" HorizontalAlignment="Left" Margin="10,243,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="3"/>
-                    <ComboBox HorizontalAlignment="Right" Margin="0,247,10,0" VerticalAlignment="Top" Width="203" Grid.Column="2" IsEnabled="False" SelectedIndex="0">
+                    <ComboBox HorizontalAlignment="Left" Margin="106,247,0,0" VerticalAlignment="Top" Width="202" Grid.Column="2" IsEnabled="False" SelectedIndex="0">
                         <ComboBoxItem Content="Cerámico"/>
                         <ComboBoxItem Content="Textil"/>
                         <ComboBoxItem Content="Acero Inox."/>

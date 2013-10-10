@@ -20,11 +20,11 @@
                         <RowDefinition Height="133*"></RowDefinition>
                         <RowDefinition Height="295*"></RowDefinition>
                     </Grid.RowDefinitions>
-                    <GroupBox x:Name="nombreFilterTxt" Header="Parámetros" Margin="0,10,20.089,14.194" BorderBrush="Black"/>
+                    <GroupBox x:Name="nombreFilterTxt" Header="Parámetros" Margin="6,10,10,14" BorderBrush="Black"/>
                     <Label Content="Almacén:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="64" Margin="22,39,0,0"/>
                     <Label Content="Estado:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="65" Margin="323,39,0,0"/>
-                    <Button x:Name="consolidarBtn" Content="CONSOLIDAR" Margin="564,0,36,67" VerticalAlignment="Bottom" Height="23" Click="consolidarBtn_Click" RenderTransformOrigin="0.594,-0.567"/>
-                    <Button x:Name="buscarClienteBtn" HorizontalAlignment="Left" Margin="620,77,0,0" VerticalAlignment="Top" Width="32" Height="29" RenderTransformOrigin="0.3,-0.35">
+                    <Button x:Name="consolidarBtn" Content="CONSOLIDAR" Margin="564,0,0,67" VerticalAlignment="Bottom" Height="23" Click="consolidarBtn_Click" RenderTransformOrigin="0.594,-0.567" HorizontalAlignment="Left" Width="88"/>
+                    <Button x:Name="buscarClienteBtn" HorizontalAlignment="Left" Margin="620,76,0,0" VerticalAlignment="Top" Width="32" Height="29" RenderTransformOrigin="0.3,-0.35">
 
                         <Button.Background>
                             <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>

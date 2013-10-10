@@ -21,7 +21,7 @@
                             <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
                     </Button>
-                    <DataGrid Name="BúsquedaMovGrid" Margin="5,30,5,5" Grid.Row="1" Grid.ColumnSpan="2" AutoGenerateColumns="False" ItemsSource="{Binding Path=listaBusquedaMovimientos}">
+                    <DataGrid Name="BúsquedaMovGrid" Margin="5,30,5,5" CanUserAddRows="False" Grid.Row="1" Grid.ColumnSpan="2" AutoGenerateColumns="False" ItemsSource="{Binding Path=listaBusquedaMovimientos}">
                         <DataGrid.Columns>
                             <DataGridTextColumn Width="1*" Binding="{Binding Path=Fecha}" ClipboardContentBinding="{x:Null}" Header="Fecha"/>
                             <DataGridTextColumn Width="1*" Binding="{Binding Path=TipoMov}" ClipboardContentBinding="{x:Null}" Header="Tipo Mov."/>
@@ -120,7 +120,7 @@
             </TabItem>
             <TabItem Header="Tipos de Movimiento">
                 <Grid Background="#FFE5E5E5" Margin="0">
-                    <DataGrid Name="MovimientoGrid" Margin="10" AutoGenerateColumns="False" ItemsSource="{Binding Path=listaMovimientos}">
+                    <DataGrid Name="MovimientoGrid" CanUserAddRows="False" Margin="10" AutoGenerateColumns="False" ItemsSource="{Binding Path=listaMovimientos}">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Nombre de movimiento" Width="2*" Binding="{Binding Path=NombreMov}"/>
                             <DataGridComboBoxColumn Header="Categoría del movimiento" Width="2*"/>

@@ -12,7 +12,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <GroupBox x:Name="nombreFilterTxt" Header="Parámetros" Margin="10,12,10,317" BorderBrush="Black"/>
+                    <GroupBox x:Name="nombreFilterTxt" Header="Parámetros" Margin="10,12,10,313" BorderBrush="Black"/>
                     <CheckBox Content="Activos" HorizontalAlignment="Left" Height="17" VerticalAlignment="Top" Width="78" Margin="82,80,0,0" IsChecked="True"/>
                     <Label Content="Categorías:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="65" Margin="323,39,0,0"/>
                     <Button x:Name="buscarClienteBtn" HorizontalAlignment="Left" Margin="637,33,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35">
@@ -73,7 +73,7 @@
                     <TextBox HorizontalAlignment="Left" Height="36" Margin="115,131,0,0" TextWrapping="Wrap" Text="&lt;Descripción&gt;" VerticalAlignment="Top" Width="220"/>
                     <Label Content="Material Secundario:" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="1"/>
                     <Label Content="Material Base:" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="1"/>
-                    <ComboBox HorizontalAlignment="Right" Margin="0,46,11,0" VerticalAlignment="Top" Width="207" Grid.Column="1">
+                    <ComboBox HorizontalAlignment="Left" Margin="130,46,0,0" VerticalAlignment="Top" Width="205" Grid.Column="1">
                         <ComboBoxItem Content="Cerámico" IsSelected="True"/>
                         <ComboBoxItem Content="Textil"/>
                         <ComboBoxItem Content="Acero Inox."/>

@@ -104,13 +104,14 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
             oc1.proveedor = MC_AdministrarProveedorWindow.proveedores[0];
             oc1.fecEmision = "04/10/2013";
             oc1.fecPago = "12/10/2013";
-            oc1.aprobadoPor = "Juan Perez";
+            oc1.aprobadoPor = "Jerry Rivera";
             oc1.emitidoPor = "Carolina Suarez";
             oc1.ultimaCompra = "15/05/2013";
             oc1.subTotal = 1500.50;
             oc1.igv = 285.10;
             oc1.total = 1785.6;
             oc1.estado = "Con Factura";
+            oc1.tipo = "Orden de Compra";
 
             ordenesCompra.Add(oc1);
 

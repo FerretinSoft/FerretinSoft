@@ -64,7 +64,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
             Tienda tien1 = new Tienda();
             tien1.codigo = "CAL001";
             tien1.nombre = "Ferretin Callao";
-            tien1.direccion = "Av.Faucett 459 ";
+            tien1.direccion = "Av.Faucett 459";
             tiendas.Add(tien1);
 
 

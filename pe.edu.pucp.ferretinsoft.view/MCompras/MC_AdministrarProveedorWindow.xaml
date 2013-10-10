@@ -21,7 +21,7 @@
                             <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
                     </Button>
-                    <DataGrid x:Name="proveedoresDg" Margin="10,114,10,10" ItemsSource="{Binding Path=ListProveedores}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+                    <DataGrid x:Name="proveedoresDg" Margin="10,114,10,10" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
                         <DataGrid.Columns>
                             <DataGridTextColumn Width="5*" Header="Razón Social" Binding="{Binding Path=razSoc}"/>
                             <DataGridHyperlinkColumn Width="2.5*" Header="RUC" Binding="{Binding Path=codigo}">
@@ -106,12 +106,12 @@
                     <Label Content="Teléfono contacto:" HorizontalAlignment="Left" Margin="10,428,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4" Height="26" Width="108"/>
                     <TextBox x:Name="contactoTlfTxtBox" HorizontalAlignment="Left" Height="23" Margin="101,430,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Column="3" Text="&lt;Teléfono contacto&gt;"/>
                     <TextBox x:Name="tlfTxtBox" HorizontalAlignment="Left" Height="23" Margin="101,337,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Column="3" Text="&lt;Teléfono Proveedor&gt;" RenderTransformOrigin="0.514,1.435"/>
-                    <DataGrid x:Name="dgwCatalogo" Grid.Column="3" Margin="355,70,10,0" VerticalAlignment="Top" Height="392" CanUserAddRows="True" IsTabStop="True" Grid.ColumnSpan="2" >
+                    <DataGrid x:Name="dgwCatalogo" Grid.Column="3" Margin="355,70,10,0" VerticalAlignment="Top" Height="392" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsTabStop="False" Grid.ColumnSpan="2" >
                         <DataGrid.Columns>
-                            <DataGridTextColumn Width="2.6*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Producto"/>
-                            <DataGridTextColumn Width="1.1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Unidad"/>
-                            <DataGridTextColumn Width="1.1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Precio"/>
-                            <DataGridTextColumn Width="2.0*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tiempo de entrega"/>
+                            <DataGridTextColumn Width="2.6*" Header="Producto" Binding="{Binding Path=producto}"/>
+                            <DataGridTextColumn Width="1.1*" Header="Unidad" Binding="{Binding Path=unidad}"/>
+                            <DataGridTextColumn Width="1.1*" Header="Precio" Binding="{Binding Path=precio}"/>
+                            <DataGridTextColumn Width="2.0*" Header="Tiempo de entrega" Binding="{Binding Path=tiempoEentrega}"/>
                             <DataGridCheckBoxColumn Width="1.25*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Seleccionar"/>
                         </DataGrid.Columns>
                     </DataGrid>

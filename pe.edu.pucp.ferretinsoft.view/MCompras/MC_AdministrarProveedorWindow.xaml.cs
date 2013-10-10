@@ -26,7 +26,6 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
         {
             InitializeComponent();
             proveedoresDg.ItemsSource = ListProveedores();
-
         }
 
         private void importarProducto_Click(object sender, RoutedEventArgs e)
@@ -55,6 +54,31 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
         private List<Proveedor> ListProveedores()
         {
             List<Proveedor> proveedores = new List<Proveedor>();
+
+            List<ProductoProveedor> catalogoProv1 = new List<ProductoProveedor>();
+            ProductoProveedor prodProv1_1 = new ProductoProveedor();
+            ProductoProveedor prodProv1_2 = new ProductoProveedor();
+            ProductoProveedor prodProv1_3 = new ProductoProveedor();
+
+            prodProv1_1.producto = "Cemento Premium";
+            prodProv1_1.unidad = "1 TN";
+            prodProv1_1.precio = "1000";
+            prodProv1_1.tiempoEentrega = "30 dias";
+            catalogoProv1.Add(prodProv1_1);
+
+
+            prodProv1_2.producto = "Cemento Regular";
+            prodProv1_2.unidad = "1 TN";
+            prodProv1_2.precio = "800";
+            prodProv1_2.tiempoEentrega = "20 dias";
+            catalogoProv1.Add(prodProv1_2);
+
+            prodProv1_3.producto = "Ladrillo Rojo";
+            prodProv1_3.unidad = "Millar";
+            prodProv1_3.precio = "500";
+            prodProv1_3.tiempoEentrega = "15 dias";
+            catalogoProv1.Add(prodProv1_3);
+
             proveedores.Add(new Proveedor()
                 {
                     ID = "101",
@@ -70,9 +94,27 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
                     telefono = "4570889",
                     pagWeb = "www.acerosarequipa.com.pe",
                     nombContacto = "Juan Perez",
-                    tlfContacto = "99384577"
+                    tlfContacto = "99384577",
+                    catalogo = catalogoProv1
                 }
              );
+
+
+            List<ProductoProveedor> catalogoProv2 = new List<ProductoProveedor>();
+            ProductoProveedor prodProv2_1 = new ProductoProveedor();
+            ProductoProveedor prodProv2_2 = new ProductoProveedor();
+
+            prodProv2_1.producto = "Foco 50W";
+            prodProv2_1.unidad = "Caja 100 und.";
+            prodProv2_1.precio = "350";
+            prodProv2_1.tiempoEentrega = "10 dias";
+            catalogoProv2.Add(prodProv2_1);
+
+            prodProv2_2.producto = "Foco Ahorrador";
+            prodProv2_2.unidad = "Caja 50 und.";
+            prodProv2_2.precio = "200";
+            prodProv2_2.tiempoEentrega = "10 dias";
+            catalogoProv2.Add(prodProv2_2);
 
             proveedores.Add(new Proveedor()
                 {
@@ -89,7 +131,8 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
                     telefono = "4204789",
                     pagWeb = "www.philips.com.pe",
                     nombContacto = "Pedro Gonzales",
-                    tlfContacto = "980988264"
+                    tlfContacto = "980988264",
+                    catalogo = catalogoProv2
                 }
             );
 
@@ -110,6 +153,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
             contactoTlfTxtBox.Text = rowData.tlfContacto;
             idTxtBox.Text = rowData.ID;
 
+            dgwCatalogo.ItemsSource = rowData.catalogo;
             proveedorTab.SelectedIndex = 1;
         }
     }

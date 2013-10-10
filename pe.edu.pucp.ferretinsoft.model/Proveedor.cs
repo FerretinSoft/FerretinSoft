@@ -22,5 +22,6 @@ namespace pe.edu.pucp.ferretinsoft.model
         public string pagWeb { get; set; }
         public string nombContacto { get; set; }
         public string tlfContacto { get; set; }
+        public List<ProductoProveedor> catalogo { get; set; }
     }
 }

@@ -72,24 +72,24 @@
                     </Grid.ColumnDefinitions>
                     <Label Content="Código Mov.:" HorizontalAlignment="Left" Margin="15,17,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
                     <Label Content="Tipo Movimiento:" HorizontalAlignment="Left" Margin="15,57,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
-                    <TextBox Height="23" Margin="121,21,18,0" TextWrapping="Wrap" Text="02013B5874" VerticalAlignment="Top" IsEnabled="False"/>
+                    <TextBox Height="23" Margin="123,22,0,0" TextWrapping="Wrap" Text="02013B5874" VerticalAlignment="Top" IsEnabled="False" HorizontalAlignment="Left" Width="148"/>
                     <Label Content="Desde:" HorizontalAlignment="Left" Margin="15,138,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="56"/>
                     <Label Content="Hasta:" HorizontalAlignment="Left" Margin="15,182,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="74"/>
                     <TextBox HorizontalAlignment="Left" Height="50" Margin="18,368,0,0" TextWrapping="Wrap" Text="&lt;Comentarios aquí&gt;" VerticalAlignment="Top" Width="252"/>
                     <Label Content="Documento No.:" HorizontalAlignment="Left" Margin="15,224,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="99"/>
-                    <ComboBox HorizontalAlignment="Right" Margin="0,142,18,0" VerticalAlignment="Top" Width="149" Height="22">
+                    <ComboBox HorizontalAlignment="Left" Margin="123,142,0,0" VerticalAlignment="Top" Width="148" Height="22">
                         <ComboBoxItem Content="Almacén Central"/>
                         <ComboBoxItem Content="Tienda 1"/>
                         <ComboBoxItem Content="Tienda 2"/>
                         <ComboBoxItem Content="Tienda 3"/>
                     </ComboBox>
-                    <ComboBox HorizontalAlignment="Left" Margin="119,186,0,0" VerticalAlignment="Top" Width="149" Height="22">
+                    <ComboBox HorizontalAlignment="Left" Margin="121,186,0,0" VerticalAlignment="Top" Width="148" Height="22">
                         <ComboBoxItem Content="Almacén Central"/>
                         <ComboBoxItem Content="Tienda 1"/>
                         <ComboBoxItem Content="Tienda 2"/>
                         <ComboBoxItem Content="Tienda 3"/>
                     </ComboBox>
-                    <ComboBox x:Name="almacenCombo2_Copy" HorizontalAlignment="Left" Margin="121,61,0,0" VerticalAlignment="Top" Width="149" Height="22">
+                    <ComboBox x:Name="almacenCombo2_Copy" HorizontalAlignment="Left" Margin="123,61,0,0" VerticalAlignment="Top" Width="147" Height="22">
                         <ComboBoxItem Content="Entrada - Compra"/>
                         <ComboBoxItem Content="Entrada - Despacho"/>
                         <ComboBoxItem Content="Salida - Venta"/>
@@ -97,7 +97,7 @@
                         <ComboBoxItem Content="Baja"/>
                     </ComboBox>
                     <Label Content="Comentario:" HorizontalAlignment="Left" Margin="15,337,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="84"/>
-                    <DataGrid Name="NuevoMovimientoGrid" Grid.Column="1" Margin="10,0,10,84" CanUserAddRows="False" VerticalAlignment="Bottom" Height="323"  AutoGenerateColumns="False" ItemsSource="{Binding Path=listaNuevoMovimiento}">
+                    <DataGrid Name="NuevoMovimientoGrid" Grid.Column="1" Margin="582,0,-562,101" CanUserAddRows="False" VerticalAlignment="Bottom" Height="323"  AutoGenerateColumns="False" ItemsSource="{Binding Path=listaNuevoMovimiento}">
                         <DataGrid.Columns>
                             <DataGridTextColumn Width="1*" Binding="{Binding Path=CodProd}" ClipboardContentBinding="{x:Null}" Header="Cód Producto"/>
                             <DataGridTextColumn Width="2*" Binding="{Binding Path=NombreProd}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>
@@ -105,10 +105,10 @@
                         </DataGrid.Columns>
                     </DataGrid>
                     <Label Content="Fecha:" HorizontalAlignment="Left" Margin="15,99,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
-                    <DatePicker HorizontalAlignment="Left" Margin="121,101,0,0" VerticalAlignment="Top" Width="149" Height="24"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="121,227,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="122,101,0,0" VerticalAlignment="Top" Width="148" Height="24"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="121,227,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
                     <Label Content="Estado:" HorizontalAlignment="Left" Margin="15,300,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="74"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="121,304,0,0" VerticalAlignment="Top" Width="149" Height="22">
+                    <ComboBox HorizontalAlignment="Left" Margin="121,304,0,0" VerticalAlignment="Top" Width="148" Height="22">
                         <ComboBoxItem Content="Completado"/>
                         <ComboBoxItem Content="Anulado"/>
                         <ComboBoxItem Content="En progreso"/>

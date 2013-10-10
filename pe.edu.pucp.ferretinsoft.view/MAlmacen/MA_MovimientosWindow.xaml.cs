@@ -96,14 +96,14 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
             data.Add(new DataNuevoMovimiento { CodProd = "XYZ123", NombreProd = "Spray Especial", CantProd = "700" });
             data.Add(new DataNuevoMovimiento { CodProd = "RST123", NombreProd = "Brocha Mediana", CantProd = "300" });
             data.Add(new DataNuevoMovimiento { CodProd = "PPP123", NombreProd = "Caja clavo 1kg", CantProd = "100" });
-            data.Add(new DataNuevoMovimiento { CodProd = "MMM123", NombreProd = "Linterna Duracell", CantProd = "200" });
+            data.Add(new DataNuevoMovimiento { CodProd = "MMM123", NombreProd = "Linterna Ligth", CantProd = "200" });
             data.Add(new DataNuevoMovimiento { CodProd = "VVV123", NombreProd = "Martillo 'Fuerte'", CantProd = "50" });
             data.Add(new DataNuevoMovimiento { CodProd = "KKK123", NombreProd = "Baterías Power", CantProd = "30" });
             data.Add(new DataNuevoMovimiento { CodProd = "UUU123", NombreProd = "Taladros Boch", CantProd = "200" });
-            data.Add(new DataNuevoMovimiento { CodProd = "YYY123", NombreProd = "Set de desarmadores", CantProd = "100" });
-            data.Add(new DataNuevoMovimiento { CodProd = "RRR123", NombreProd = "Botas de construcción", CantProd = "300" });
-            
-            
+            data.Add(new DataNuevoMovimiento { CodProd = "YYY123", NombreProd = "Set desarmadores", CantProd = "100" });
+            data.Add(new DataNuevoMovimiento { CodProd = "RRR123", NombreProd = "Botas lona", CantProd = "300" });
+
+            //return null;
             return data;
         }
 

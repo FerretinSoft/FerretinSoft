@@ -20,7 +20,7 @@
                             <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
                     </Button>
-                    <DataGrid Name="gridProductos" Grid.Row="1" Margin="5,153,5,5" AutoGenerateColumns="False" ItemsSource="{Binding Path=listaProductos}">
+                    <DataGrid Name="gridProductos" CanUserAddRows="False" Grid.Row="1" Margin="5,153,5,5" AutoGenerateColumns="False" ItemsSource="{Binding Path=listaProductos}">
                         <DataGrid.Columns>
                             <DataGridHyperlinkColumn Width="1*" Binding="{Binding Path=CodProd}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cód. Producto"/>
                             <DataGridTextColumn Width="2*" Binding="{Binding Path=NombreProd}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>

@@ -20,5 +20,6 @@ namespace pe.edu.pucp.ferretinsoft.model
         public double igv { get; set; }
         public double total { get; set; }
         public string estado { get; set; }
+        public string tipo { get; set; }
     }
 }

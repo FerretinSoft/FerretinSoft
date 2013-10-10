@@ -20,12 +20,12 @@
                             <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
                         </Button.Background>
                     </Button>
-                    <DataGrid Margin="5,153,5,5">
+                    <DataGrid Name="gridProductos" Grid.Row="1" Margin="5,153,5,5" AutoGenerateColumns="False" ItemsSource="{Binding Path=listaProductos}">
                         <DataGrid.Columns>
-                            <DataGridHyperlinkColumn Width="1*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cód. Producto"/>
-                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>
-                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Categorías"/>
-                            <DataGridCheckBoxColumn Header="Estado" Width="1*"/>
+                            <DataGridHyperlinkColumn Width="1*" Binding="{Binding Path=CodProd}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cód. Producto"/>
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=NombreProd}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=Cat}" ClipboardContentBinding="{x:Null}" Header="Categorías"/>
+                            <DataGridCheckBoxColumn Header="Estado" Binding="{Binding Path=Estado}" Width="1*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <ComboBox x:Name="categoriaCombo" HorizontalAlignment="Left" Margin="402,43,0,0" VerticalAlignment="Top" Width="180" Height="22">

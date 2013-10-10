@@ -23,18 +23,19 @@
                     <Label Content="Proveedor:" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="68" Margin="295,33,0,0" Grid.Column="2"/>
                     <Label Content="Fecha hasta:" HorizontalAlignment="Left" Width="75" Margin="295,64,341,0" Height="27" VerticalAlignment="Top" Grid.Column="2"/>
                     <Label Content="Fecha desde:" Height="26" VerticalAlignment="Top" Margin="24,64,588,0" Grid.ColumnSpan="3"/>
-                    <DatePicker HorizontalAlignment="Left" Margin="36,64,0,0" VerticalAlignment="Top" Width="130" Height="24" Grid.Column="2"/>
+                    <DatePicker x:Name="fec" HorizontalAlignment="Left" Margin="36,64,0,0" VerticalAlignment="Top" Width="130" Height="24" Grid.Column="2"/>
                     <DatePicker HorizontalAlignment="Left" Margin="402,64,0,0" VerticalAlignment="Top" Width="130" Height="24" Grid.Column="2"/>
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="36,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.667,0.4" Grid.Column="2"/>
                     <TextBox HorizontalAlignment="Left" Height="20" Margin="402,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Grid.Column="2"/>
-                    <ComboBox HorizontalAlignment="Left" Height="20" Margin="36,101,0,0" SelectedIndex="0" VerticalAlignment="Top" Width="130" Grid.Column="2">
+                    <ComboBox HorizontalAlignment="Left" Height="20" Margin="36,101,0,0" VerticalAlignment="Top" Width="130" Grid.Column="2">
                         <ListBoxItem Content="Orden de Compra"/>
                         <ListBoxItem Content="Cotizacion"/>
                     </ComboBox>
-                    <ComboBox HorizontalAlignment="Left" Height="20" SelectedIndex="0" Margin="402,101,0,0" VerticalAlignment="Top" Width="130" Grid.Column="2">
+                    <ComboBox HorizontalAlignment="Left" Height="20" Margin="402,101,0,0" VerticalAlignment="Top" Width="130" Grid.Column="2">
                         <ListBoxItem Content="Ingresada"/>
                         <ListBoxItem Content="Emitida"/>
                         <ListBoxItem Content="Anulada"/>
+                        <ListBoxItem Content="Con Factura"/>
                     </ComboBox>
                     <Button x:Name="buscarUsuariosBtn" HorizontalAlignment="Left" Margin="707,58,0,0" Width="32" RenderTransformOrigin="0.3,-0.35" Height="32" VerticalAlignment="Top" Grid.Column="2">
                         <Button.Background>
@@ -56,13 +57,19 @@
                         </Button>
                     </ToolBar>
 
-                    <DataGrid Margin="10,30,10,10" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.RowSpan="2">
+                    <DataGrid x:Name="ordenesDgv" Margin="10,30,10,10" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Grid.RowSpan="2" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
                         <DataGrid.Columns>
-                            <DataGridCheckBoxColumn Width="1.8*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tipo"/>
-                            <DataGridHyperlinkColumn Width="1.8*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Código"/>
-                            <DataGridTextColumn Width="3.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Proveedor"/>
-                            <DataGridTextColumn Width="2.0*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Fecha"/>
-                            <DataGridTextColumn Width="1.8*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Estado"/>
+                            <DataGridTextColumn Width="1.8*" Binding="{Binding Path=tipo}" Header="Tipo"/>
+                            <DataGridHyperlinkColumn Width="1.8*" Binding="{Binding Path=codigo}" Header="Código">
+                                <DataGridHyperlinkColumn.ElementStyle>
+                                    <Style>
+                                        <EventSetter Event="Hyperlink.Click" Handler="codOrden_Click"/>
+                                    </Style>
+                                </DataGridHyperlinkColumn.ElementStyle>
+                            </DataGridHyperlinkColumn>
+                            <DataGridTextColumn Width="3.5*" Binding="{Binding Path=proveedor.razSoc}" Header="Proveedor"/>
+                            <DataGridTextColumn Width="2.0*" Binding="{Binding Path=fecEmision}" Header="Fecha"/>
+                            <DataGridTextColumn Width="1.8*" Binding="{Binding Path=estado}" Header="Estado"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
@@ -77,11 +84,11 @@
                     <GroupBox Header="Parámetros" Margin="10,5,0,0" BorderBrush="Black" Height="95" VerticalAlignment="Top" HorizontalAlignment="Left" Width="691" Grid.ColumnSpan="3">
                     </GroupBox>
                     <Label x:Name="tipoDocLbl" Content="Código:" HorizontalAlignment="Left" Margin="15,30,0,0" VerticalAlignment="Top" Height="26" Width="105" Grid.ColumnSpan="2"/>
-                    <TextBox HorizontalAlignment="Left" Height="20" Margin="110,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130" IsEnabled="False" Grid.Column="1"/>
+                    <TextBox x:Name="codOrdenTxtBox" HorizontalAlignment="Left" Height="20" Margin="110,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130" IsEnabled="False" Grid.Column="1"/>
                     <Label x:Name="provedorLbl" Content="Proveedor:" HorizontalAlignment="Left" Margin="314,30,0,0" VerticalAlignment="Top" Height="26" Width="121" Grid.Column="1"/>
-                    <TextBox HorizontalAlignment="Left" Height="20" Margin="426,33,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="172" Grid.Column="1"/>
+                    <TextBox x:Name="proveedorTxtBox" HorizontalAlignment="Left" Height="20" Margin="426,33,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="172" Grid.Column="1"/>
                     <Label x:Name="fecEmisioLbl" Content="Fecha de emision:" Margin="15,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.183,0.438" Height="26" HorizontalAlignment="Left" Width="105" Grid.ColumnSpan="2"/>
-                    <DataGrid Margin="10,135,178.105,0" RenderTransformOrigin="0.5, 0.5" Height="232" VerticalAlignment="Top" Grid.ColumnSpan="3" >
+                    <DataGrid x:Name="ordenesDetalleDgv" Margin="10,135,178.105,0" RenderTransformOrigin="0.5, 0.5" Height="232" VerticalAlignment="Top" Grid.ColumnSpan="3" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
                         <DataGrid.Columns>
                             <DataGridHyperlinkColumn Width="3.8*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Producto"/>
                             <DataGridTextColumn Width="3.0*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descripción"/>
@@ -93,10 +100,10 @@
                         </DataGrid.Columns>
                     </DataGrid>
                     <GroupBox Header="Resumen" Margin="328.393,383,183.105,0" BorderBrush="Black" Height="127" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1">
-                        <TextBox HorizontalAlignment="Right" Height="25" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" Width="114" IsEnabled="False" FontSize="16" TextAlignment="Right" Margin="0,66,42.77,0" TextChanged="TextBox_TextChanged"/>
+                        <TextBox x:Name="totalTxtBox" HorizontalAlignment="Right" Height="25" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" Width="114" IsEnabled="False" FontSize="16" TextAlignment="Right" Margin="0,66,42.77,0" TextChanged="TextBox_TextChanged"/>
                     </GroupBox>
-                    <TextBox Height="25" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" IsEnabled="False" FontSize="16" TextAlignment="Right" Margin="513.393,433,9.44,0" Grid.Column="1"/>
-                    <TextBox Height="25" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" IsEnabled="False" FontSize="16" TextAlignment="Right" Margin="513.393,402,9.44,0" Grid.Column="1" RenderTransformOrigin="3.68,-1.086"/>
+                    <TextBox x:Name="igvTxtBox" Height="25" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" IsEnabled="False" FontSize="16" TextAlignment="Right" Margin="513.393,433,9.44,0" Grid.Column="1"/>
+                    <TextBox x:Name="subTotalTxtBox" Height="25" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" IsEnabled="False" FontSize="16" TextAlignment="Right" Margin="513.393,402,9.44,0" Grid.Column="1" RenderTransformOrigin="3.68,-1.086"/>
                     <Label Content="SubTotal:" HorizontalAlignment="Left" Margin="389.393,401,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423" Height="26" Width="82" Grid.Column="1" FontSize="14"/>
                     <Label Content="IGV:" HorizontalAlignment="Left" Margin="389.393,432,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423" Height="26" Width="82" Grid.Column="1" FontSize="14"/>
                     <Label Content="Total a Pagar:" HorizontalAlignment="Left" Margin="389.393,463,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.64,1.423" Height="30" Width="94" Grid.Column="1" FontSize="14"/>
@@ -106,10 +113,10 @@
                             <ColumnDefinition Width="135"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Label Content="&lt;Razón Social&gt;" Margin="57,27,-14,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-                        <Label Content="&lt;Dirección&gt;" Margin="57,57,0,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left"/>
-                        <Label Content="&lt;Nombre Contacto&gt;" Margin="57,86,-43,-7" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-                        <Label Content="&lt;Teléfono Contacto&gt;" Margin="57,118,-45,-39" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+                        <Label x:Name="razSoc_Lbl" Content="&lt;Razón Social&gt;" Margin="57,27,-78,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Grid.ColumnSpan="2" Width="157"/>
+                        <Label x:Name="direcLbl" Content="&lt;Dirección&gt;" Margin="57,57,-78,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Grid.ColumnSpan="2" Width="157"/>
+                        <Label x:Name="contactoLbl" Content="&lt;Nombre Contacto&gt;" Margin="57,86,-78,-7" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Grid.ColumnSpan="2" Width="157"/>
+                        <Label x:Name="contactoTlfLbl" Content="&lt;Teléfono Contacto&gt;" Margin="57,118,-78,-39" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Grid.ColumnSpan="2" Width="157"/>
                     </Grid>
                     <Grid HorizontalAlignment="Left" Height="38" Margin="50,259,-3,0" VerticalAlignment="Top" Width="176" Grid.Column="2">
                         <Grid.ColumnDefinitions>
@@ -121,11 +128,11 @@
                         </Grid.ColumnDefinitions>
 
                         <Label Content="Últ. Compra:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Margin="7,30,0,-18" RenderTransformOrigin="0.442,0.846" Height="26"/>
-                        <TextBox HorizontalAlignment="Right" TextWrapping="Wrap" Text="04/01/2013" Width="69" Margin="0,31,14,-16" TextAlignment="Right" Grid.ColumnSpan="5"/>
+                        <TextBox x:Name="ultCompraTxtBox" HorizontalAlignment="Right" TextWrapping="Wrap" Text="04/01/2013" Width="69" Margin="0,31,14,-16" TextAlignment="Right" Grid.ColumnSpan="5"/>
                     </Grid>
                     <Label x:Name="fecValPagoLbl" Content="Fecha de pago:" Margin="314,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.183,0.438" Height="26" HorizontalAlignment="Left" Width="116" Grid.Column="1"/>
-                    <DatePicker Margin="426,61,0,0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="130" Grid.Column="1"/>
-                    <DatePicker Height="24" VerticalAlignment="Top" Margin="110,63,0,0" HorizontalAlignment="Left" Width="130" Grid.Column="1"/>
+                    <DatePicker x:Name="fecPagoDp" Margin="426,61,0,0" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="130" Grid.Column="1"/>
+                    <DatePicker x:Name="fecEmiDp" Height="24" VerticalAlignment="Top" Margin="110,63,0,0" HorizontalAlignment="Left" Width="130" Grid.Column="1"/>
                     <Label Content="Ingresado por:" HorizontalAlignment="Left" Margin="59,6,0,0" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="98"/>
                     <Label Content="Aprobado por:" HorizontalAlignment="Left" Margin="59,52,0,0" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="87"/>
                     <TextBox x:Name="aprobadoPorTxtBox" HorizontalAlignment="Left" Height="23" Margin="59,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" Grid.Column="2"/>

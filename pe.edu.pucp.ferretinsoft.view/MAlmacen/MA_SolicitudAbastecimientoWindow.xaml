@@ -163,7 +163,8 @@
                             <DataGridTextColumn Width="2*" Binding="{Binding Path=nombre}" Header="Nombre"/>
                             <DataGridTextColumn Width="1*" Binding="{Binding Path=cantidad}"  Header="Cantidad"/>
                             <DataGridTextColumn Width="1*" Binding="{Binding Path= stock}"  Header="En Stock"/>
-                            <DataGridTextColumn Width="1*" Binding="{Binding Path=atender}"  Header="Atender"/>
+                           
+                            <DataGridCheckBoxColumn Width="1*" Header="Atender"/>
                             <DataGridTextColumn Width="1*" Binding="{Binding Path=saldo}"  Header="Saldo"/>
                             <DataGridTextColumn Width="1*" Binding="{Binding Path=estado}"  Header="Estado"/>
                         </DataGrid.Columns>

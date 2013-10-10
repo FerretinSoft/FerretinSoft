@@ -113,14 +113,14 @@
                         </Button>
 
                     </ToolBar>
-                    <DataGrid Margin="5,5" Grid.Row="1">
+                    <DataGrid x:Name="devolucionesGrid" Margin="5,5" Grid.Row="1" IsManipulationEnabled="True" CanUserSortColumns="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" ItemsSource="{Binding Path=ListaDevoluciones}">
                         <DataGrid.Columns>
-                            <DataGridHyperlinkColumn Width="1.5*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Núm Devolución"/>
-                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Doc. Venta"/>
-                            <DataGridTextColumn Width="1.5*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="ID Cliente"/>
-                            <DataGridTextColumn Width="4*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre Cliente"/>
-                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Fecha Devolución"/>
-                            <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Importe"/>
+                            <DataGridHyperlinkColumn Width="1.5*" Binding="{Binding Path=Codigo}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Núm Devolución"/>
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=Venta.Codigo}" ClipboardContentBinding="{x:Null}" Header="Doc. Venta"/>
+                            <DataGridTextColumn Width="1.5*" Binding="{Binding Path=Cliente.Codigo}" ClipboardContentBinding="{x:Null}" Header="ID Cliente"/>
+                            <DataGridTextColumn Width="4*" Binding="{Binding Path=Cliente.Nombre}" ClipboardContentBinding="{x:Null}" Header="Nombre Cliente"/>
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=FechaDevolucion}" ClipboardContentBinding="{x:Null}" Header="Fecha Devolución"/>
+                            <DataGridTextColumn Width="1*" Binding="{Binding Path=Importe}" ClipboardContentBinding="{x:Null}" Header="Importe"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>

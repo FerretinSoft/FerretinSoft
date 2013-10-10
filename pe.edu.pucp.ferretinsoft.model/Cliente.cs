@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace pe.edu.pucp.ferretinsoft.model
 {
-    class Cliente
+    public class Cliente
     {
+        public int Codigo { get; set; }
+        public String Nombre { get; set; }
     }
 }

@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="Devolucion.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="ProductoProveedor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace pe.edu.pucp.ferretinsoft.model
 {
-    public class Producto
+    public class Perfil
     {
+        public String perf { get; set; }
+        public String Modulo { get; set; }
+        public String Descripcion { get; set; }
     }
 }

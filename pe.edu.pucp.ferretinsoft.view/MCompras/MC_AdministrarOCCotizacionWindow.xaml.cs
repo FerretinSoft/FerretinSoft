@@ -119,6 +119,27 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
             oc1.estado = "Con Factura";
             oc1.tipo = "Orden de Compra";
 
+            List<ProductoOrdenCompra> productos1 = new List<ProductoOrdenCompra>();
+
+            ProductoOrdenCompra prod1_1 = new ProductoOrdenCompra();
+            prod1_1.producto = "Cemento Premium";
+            prod1_1.descripcion = "El mejor cemento de todos";
+            prod1_1.unidad = "Saco 100 KG";
+            prod1_1.precUnit = 13.50;
+            prod1_1.cantidad = 1000;
+            prod1_1.precioTotal = 13500;
+            productos1.Add(prod1_1);
+
+            ProductoOrdenCompra prod1_2 = new ProductoOrdenCompra();
+            prod1_2.producto = "Cemento Regular";
+            prod1_2.descripcion = "El cemento regular";
+            prod1_2.unidad = "Saco 100 KG";
+            prod1_2.precUnit = 8.50;
+            prod1_2.cantidad = 1000;
+            prod1_2.precioTotal = 8500;
+            productos1.Add(prod1_2);
+
+            oc1.productos = productos1;
             ordenesCompra.Add(oc1);
 
             OrdenCompra oc2 = new OrdenCompra();
@@ -132,11 +153,32 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
             oc2.subTotal = 2500;
             oc2.igv = 475;
             oc2.total = 2975;
-            oc2.estado = "Aprobada";
+            oc2.estado = "Emitida";
             oc2.tipo = "Orden de Compra";
 
-            ordenesCompra.Add(oc2);
+            List<ProductoOrdenCompra> productos2 = new List<ProductoOrdenCompra>();
 
+            ProductoOrdenCompra prod2_1 = new ProductoOrdenCompra();
+            prod2_1.producto = "Foco 50W";
+            prod2_1.descripcion = "Foco para interiores";
+            prod2_1.unidad = "Caja 100 UND";
+            prod2_1.precUnit = 80;
+            prod2_1.cantidad = 200;
+            prod2_1.precioTotal = 16000;
+            productos2.Add(prod2_1);
+
+            ProductoOrdenCompra prod2_2 = new ProductoOrdenCompra();
+            prod2_2.producto = "Foco Ahorrador";
+            prod2_2.descripcion = "El foco mas ahorrador";
+            prod2_2.unidad = "Caja 100 UND";
+            prod2_2.precUnit = 50;
+            prod2_2.cantidad = 500;
+            prod2_2.precioTotal = 25000;
+            productos2.Add(prod2_2);
+
+            oc2.productos = productos2;
+
+            ordenesCompra.Add(oc2);
 
             return ordenesCompra;
         }
@@ -160,6 +202,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
             igvTxtBox.Text = rowData.igv.ToString();
             totalTxtBox.Text = rowData.total.ToString();
 
+            ordenesDetalleDgv.ItemsSource = rowData.productos;
             ordenesCompraTab.SelectedIndex = 1;
 
             if (rowData.tipo.Equals("Orden de Compra"))
@@ -192,7 +235,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MCompras
   
             }
 
-            if (rowData.estado.Equals("Aprobada"))
+            if (rowData.estado.Equals("Emitida"))
             {
                 codOrdenTxtBox.IsEnabled = false;
                 proveedorTxtBox.IsEnabled = false;

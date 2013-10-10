@@ -90,13 +90,13 @@
                     <Label x:Name="fecEmisioLbl" Content="Fecha de emision:" Margin="15,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.183,0.438" Height="26" HorizontalAlignment="Left" Width="105" Grid.ColumnSpan="2"/>
                     <DataGrid x:Name="ordenesDetalleDgv" Margin="10,135,178.105,0" RenderTransformOrigin="0.5, 0.5" Height="232" VerticalAlignment="Top" Grid.ColumnSpan="3" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
                         <DataGrid.Columns>
-                            <DataGridHyperlinkColumn Width="3.8*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Producto"/>
-                            <DataGridTextColumn Width="3.0*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descripción"/>
-                            <DataGridTextColumn Width="1.7*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Unidad"/>
-                            <DataGridTextColumn Width="1.7*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Precio Unit."/>
-                            <DataGridTextColumn Width="1.7*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cantidad"/>
-                            <DataGridTextColumn Width="2.0*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Total"/>
-                            <DataGridCheckBoxColumn Width="1.6*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Seleccionar"/>
+                            <DataGridTextColumn Width="3.8*" Header="Producto" Binding="{Binding Path=producto}"/>
+                            <DataGridTextColumn Width="3.0*" Header="Descripción" Binding="{Binding Path=descripcion}"/>
+                            <DataGridTextColumn Width="1.7*" Header="Unidad" Binding="{Binding Path=unidad}"/>
+                            <DataGridTextColumn Width="1.7*" Header="Precio Unit." Binding="{Binding Path=precUnit}"/>
+                            <DataGridTextColumn Width="1.7*" Header="Cantidad" Binding="{Binding Path=cantidad}"/>
+                            <DataGridTextColumn Width="2.0*" Header="Total" Binding="{Binding Path=precioTotal}"/>
+                            <DataGridCheckBoxColumn Width="1.6*" Header="Seleccionar"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <GroupBox Header="Resumen" Margin="10,383,299,0" BorderBrush="Black" Height="127" VerticalAlignment="Top" Grid.ColumnSpan="2">

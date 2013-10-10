@@ -97,11 +97,11 @@
                         <ComboBoxItem Content="Baja"/>
                     </ComboBox>
                     <Label Content="Comentario:" HorizontalAlignment="Left" Margin="15,337,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="84"/>
-                    <DataGrid Grid.Column="1" Margin="10,0,10,84" VerticalAlignment="Bottom" Height="323">
+                    <DataGrid Name="NuevoMovimientoGrid" Grid.Column="1" Margin="10,0,10,84" CanUserAddRows="False" VerticalAlignment="Bottom" Height="323"  AutoGenerateColumns="False" ItemsSource="{Binding Path=listaNuevoMovimiento}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cód Producto"/>
-                            <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>
-                            <DataGridTextColumn Width="1*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cantidad"/>
+                            <DataGridTextColumn Width="1*" Binding="{Binding Path=CodProd}" ClipboardContentBinding="{x:Null}" Header="Cód Producto"/>
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=NombreProd}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>
+                            <DataGridTextColumn Width="1*" Binding="{Binding Path=CantProd}" ClipboardContentBinding="{x:Null}" Header="Cantidad"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <Label Content="Fecha:" HorizontalAlignment="Left" Margin="15,99,0,0" VerticalAlignment="Top" Height="26" Width="102"/>

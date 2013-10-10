@@ -46,12 +46,12 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
 
         private void nuevaTiendaBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            tiendaTab.SelectedIndex = 1;            
         }
 
         private void edTiendaBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            tiendaTab.SelectedIndex = 1;
         }
     }
 }

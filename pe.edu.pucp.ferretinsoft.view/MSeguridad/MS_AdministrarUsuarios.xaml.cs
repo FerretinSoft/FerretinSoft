@@ -46,5 +46,10 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
             cw.ShowDialog();
         }
 
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
     }
 }

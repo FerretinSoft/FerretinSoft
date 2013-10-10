@@ -1,7 +1,7 @@
 ﻿<Window x:Class="pe.edu.pucp.ferretinsoft.view.MSeguridad.MS_CambiarContraseñaUsuario"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Cambiar Contraseña" Height="300" Width="425" Icon="/Resources/ferretin_ico.ico">
+        Title="Cambiar Contraseña" Height="300" WindowStartupLocation="CenterScreen"  Width="425" Icon="/Resources/ferretin_ico.ico" ResizeMode="CanMinimize">
     <Grid>
         <Grid Background="#FFE5E5E5" Height="270" VerticalAlignment="Top">
 

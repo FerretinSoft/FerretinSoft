@@ -8,8 +8,8 @@ namespace pe.edu.pucp.ferretinsoft.model
 {
     public class Perfil
     {
-        public String perf { get; set; }
-        public String Modulo { get; set; }
-        public String Descripcion { get; set; }
+        public String nombrePerfil { get; set; }
+        public String modulo { get; set; }
+        public String descripcion { get; set; }
     }
 }

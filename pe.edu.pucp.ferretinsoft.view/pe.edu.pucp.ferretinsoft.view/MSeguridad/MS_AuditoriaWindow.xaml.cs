@@ -23,9 +23,9 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
         public MS_AuditoriaWindow()
         {
             InitializeComponent();
-            auditoriasDg.ItemsSource = ListAuditorias();
+            //auditoriasDg.ItemsSource = ListAuditorias();
         }
-
+        /*
         public List<Auditoria> ListAuditorias(){
             List<Auditoria> auditorias = new List<Auditoria>();            
             Auditoria auditoria_1 = new Auditoria();
@@ -60,5 +60,6 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
 
             return auditorias;
         }
+        */
     }
 }

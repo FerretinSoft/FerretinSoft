@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using pe.edu.pucp.ferretinsoft.controller.Services;
+
 
 namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
 {
@@ -23,10 +25,13 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
         public MS_LoginWindow()
         {
             InitializeComponent();
+            
+            
         }
 
         private void iniSesionBtn_Click(object sender, RoutedEventArgs e)
         {
+            PruebaService.getWelcome();
             if (mainW == null)
             {
                 mainW = new MainWindow();

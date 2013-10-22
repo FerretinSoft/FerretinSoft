@@ -7,12 +7,27 @@
     <ProjectGuid>{3D7D76E9-0090-41C1-AEEA-1D789EEADF4A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>pe.edu.pucp.ferretinsoft.view</RootNamespace>
-    <AssemblyName>pe.edu.pucp.ferretinsoft.view</AssemblyName>
+    <RootNamespace>Project_FerretinSoft</RootNamespace>
+    <AssemblyName>Project_FerretinSoft</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,6 +50,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
+    <Reference Include="Castle.DynamicProxy, Version=1.1.5.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Ibatis.DataMapper.1.6.2.bin\Castle.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.Common, Version=1.6.2.0, Culture=neutral, PublicKeyToken=ed781d9fc396c6ca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Ibatis.DataMapper.1.6.2.bin\IBatisNet.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.Common.Logging.Log4Net">
+      <HintPath>..\..\Ibatis.DataMapper.1.6.2.bin\IBatisNet.Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.DataMapper, Version=1.6.2.0, Culture=neutral, PublicKeyToken=ed781d9fc396c6ca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Ibatis.DataMapper.1.6.2.bin\IBatisNet.DataMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\Ibatis.DataMapper.1.6.2.bin\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="ReachFramework" />
     <Reference Include="System" />
@@ -62,19 +95,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MCompras\MC_AdministrarGuiaRemiWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.controller\Services\PruebaService.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Auditoria.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Class1.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Cliente.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Devolucion.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\OrdenCompra.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Perfil.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Personal.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Producto.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\ProductoAlmacen.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\ProductoOrdenCompra.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\ProductoProveedor.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Proforma.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Promocion.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Proveedor.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\SolicitudAbastecimiento.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Tienda.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\UsuarioSistema.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Vendedor.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Venta.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_AdministrarGuiaRemiWindow.xaml.cs">
       <DependentUpon>MC_AdministrarGuiaRemiWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MSeguridad\MS_CambiarContraseñaUsuario.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_CambiarContraseñaUsuario.xaml.cs">
       <DependentUpon>MS_CambiarContraseñaUsuario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MSeguridad\MS_GenerarContraseñaWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_GenerarContraseñaWindow.xaml.cs">
       <DependentUpon>MS_GenerarContraseñaWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVentas\MV_AdministrarPromocionesWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_AdministrarPromocionesWindow.xaml.cs">
       <DependentUpon>MV_AdministrarPromocionesWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVentas\MV_AdministrarValesWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_AdministrarValesWindow.xaml.cs">
       <DependentUpon>MV_AdministrarValesWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resources\Custom Controls\CustomMessageBox.cs" />
@@ -94,159 +147,159 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MAlmacen\MA_InventarioProductosWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MAlmacen\MA_InventarioProductosWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MAlmacen\MA_MainWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MAlmacen\MA_MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MAlmacen\MA_MantenimientoCategoriasWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MAlmacen\MA_MantenimientoCategoriasWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MAlmacen\MA_MantenimientoProductosWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MAlmacen\MA_MantenimientoProductosWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MAlmacen\MA_MovimientosWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MAlmacen\MA_MovimientosWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MAlmacen\MA_ReportesWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MAlmacen\MA_ReportesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MAlmacen\MA_SolicitudAbastecimientoWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MAlmacen\MA_SolicitudAbastecimientoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MCompras\MC_AdministrarGuiaRemiWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_AdministrarGuiaRemiWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MCompras\MC_AdministrarOCCotizacionWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_AdministrarOCCotizacionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MCompras\MC_AdministrarProveedorWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_AdministrarProveedorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MCompras\MC_AgregarProdCatalogoWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_AgregarProdCatalogoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MCompras\MC_AgregarProdProveedor.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_AgregarProdProveedor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MCompras\MC_AtenderSolicitudWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_AtenderSolicitudWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MCompras\MC_BuscarProveedorProductoWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_BuscarProveedorProductoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MCompras\MC_ConsolidarSolicitudesWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_ConsolidarSolicitudesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MCompras\MC_MainWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MCompras\MC_ReportesWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_ReportesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MRecursosHumanos\MR_AdministrarPersonalWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MRecursosHumanos\MR_AdministrarPersonalWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MRecursosHumanos\MR_MainWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MRecursosHumanos\MR_MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MSeguridad\MS_AdministrarPerfiles.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_AdministrarPerfiles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MSeguridad\MS_AdministrarTiendas.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_AdministrarTiendas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MSeguridad\MS_AdministrarUsuarios.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_AdministrarUsuarios.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MSeguridad\MS_AuditoriaWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_AuditoriaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MSeguridad\MS_CambiarContraseñaUsuario.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_CambiarContraseñaUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MSeguridad\MS_GenerarContraseñaWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_GenerarContraseñaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MSeguridad\MS_LoginWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MSeguridad\MS_MainWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MSeguridad\MS_ParametrosWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_ParametrosWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MVentas\MV_AdministrarNotaCreditoWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_AdministrarNotaCreditoWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MVentas\MV_AdministrarProformasWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_AdministrarProformasWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MVentas\MV_AdministrarPromocionesWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_AdministrarPromocionesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MVentas\MV_AdministrarValesWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_AdministrarValesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MVentas\MV_AdministrarVentasWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_AdministrarVentasWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MVentas\MV_ClientesWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_ClientesWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MVentas\MV_DevolucionesWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_DevolucionesWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MVentas\MV_MainWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MVentas\MV_PagoWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_PagoWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MVentas\MV_RegistrarVentaWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_RegistrarVentaWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MVentas\MV_ReportesVentasWindow.xaml">
+    <Page Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_ReportesVentasWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -256,106 +309,106 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MAlmacen\MA_InventarioProductosWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MAlmacen\MA_InventarioProductosWindow.xaml.cs">
       <DependentUpon>MA_InventarioProductosWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MAlmacen\MA_MainWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MAlmacen\MA_MainWindow.xaml.cs">
       <DependentUpon>MA_MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MAlmacen\MA_MantenimientoCategoriasWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MAlmacen\MA_MantenimientoCategoriasWindow.xaml.cs">
       <DependentUpon>MA_MantenimientoCategoriasWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MAlmacen\MA_MantenimientoProductosWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MAlmacen\MA_MantenimientoProductosWindow.xaml.cs">
       <DependentUpon>MA_MantenimientoProductosWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MAlmacen\MA_MovimientosWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MAlmacen\MA_MovimientosWindow.xaml.cs">
       <DependentUpon>MA_MovimientosWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MAlmacen\MA_ReportesWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MAlmacen\MA_ReportesWindow.xaml.cs">
       <DependentUpon>MA_ReportesWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MAlmacen\MA_SolicitudAbastecimientoWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MAlmacen\MA_SolicitudAbastecimientoWindow.xaml.cs">
       <DependentUpon>MA_SolicitudAbastecimientoWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MCompras\MC_AdministrarOCCotizacionWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_AdministrarOCCotizacionWindow.xaml.cs">
       <DependentUpon>MC_AdministrarOCCotizacionWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MCompras\MC_AdministrarProveedorWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_AdministrarProveedorWindow.xaml.cs">
       <DependentUpon>MC_AdministrarProveedorWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MCompras\MC_AgregarProdCatalogoWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_AgregarProdCatalogoWindow.xaml.cs">
       <DependentUpon>MC_AgregarProdCatalogoWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MCompras\MC_AgregarProdProveedor.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_AgregarProdProveedor.xaml.cs">
       <DependentUpon>MC_AgregarProdProveedor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MCompras\MC_AtenderSolicitudWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_AtenderSolicitudWindow.xaml.cs">
       <DependentUpon>MC_AtenderSolicitudWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MCompras\MC_BuscarProveedorProductoWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_BuscarProveedorProductoWindow.xaml.cs">
       <DependentUpon>MC_BuscarProveedorProductoWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MCompras\MC_ConsolidarSolicitudesWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_ConsolidarSolicitudesWindow.xaml.cs">
       <DependentUpon>MC_ConsolidarSolicitudesWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MCompras\MC_MainWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_MainWindow.xaml.cs">
       <DependentUpon>MC_MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MCompras\MC_ReportesWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MCompras\MC_ReportesWindow.xaml.cs">
       <DependentUpon>MC_ReportesWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MRecursosHumanos\MR_AdministrarPersonalWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MRecursosHumanos\MR_AdministrarPersonalWindow.xaml.cs">
       <DependentUpon>MR_AdministrarPersonalWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MRecursosHumanos\MR_MainWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MRecursosHumanos\MR_MainWindow.xaml.cs">
       <DependentUpon>MR_MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MSeguridad\MS_AdministrarPerfiles.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_AdministrarPerfiles.xaml.cs">
       <DependentUpon>MS_AdministrarPerfiles.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MSeguridad\MS_AdministrarTiendas.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_AdministrarTiendas.xaml.cs">
       <DependentUpon>MS_AdministrarTiendas.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MSeguridad\MS_AdministrarUsuarios.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_AdministrarUsuarios.xaml.cs">
       <DependentUpon>MS_AdministrarUsuarios.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MSeguridad\MS_AuditoriaWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_AuditoriaWindow.xaml.cs">
       <DependentUpon>MS_AuditoriaWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MSeguridad\MS_LoginWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_LoginWindow.xaml.cs">
       <DependentUpon>MS_LoginWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MSeguridad\MS_MainWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_MainWindow.xaml.cs">
       <DependentUpon>MS_MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MSeguridad\MS_ParametrosWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MSeguridad\MS_ParametrosWindow.xaml.cs">
       <DependentUpon>MS_ParametrosWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVentas\MV_AdministrarNotaCreditoWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_AdministrarNotaCreditoWindow.xaml.cs">
       <DependentUpon>MV_AdministrarNotaCreditoWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVentas\MV_AdministrarProformasWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_AdministrarProformasWindow.xaml.cs">
       <DependentUpon>MV_AdministrarProformasWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVentas\MV_AdministrarVentasWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_AdministrarVentasWindow.xaml.cs">
       <DependentUpon>MV_AdministrarVentasWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVentas\MV_ClientesWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_ClientesWindow.xaml.cs">
       <DependentUpon>MV_ClientesWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVentas\MV_DevolucionesWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_DevolucionesWindow.xaml.cs">
       <DependentUpon>MV_DevolucionesWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVentas\MV_MainWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_MainWindow.xaml.cs">
       <DependentUpon>MV_MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVentas\MV_PagoWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_PagoWindow.xaml.cs">
       <DependentUpon>MV_PagoWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVentas\MV_RegistrarVentaWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_RegistrarVentaWindow.xaml.cs">
       <DependentUpon>MV_RegistrarVentaWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVentas\MV_ReportesVentasWindow.xaml.cs">
+    <Compile Include="pe.edu.pucp.ferretinsoft.view\MVentas\MV_ReportesVentasWindow.xaml.cs">
       <DependentUpon>MV_ReportesVentasWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -375,6 +428,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="bin\Debug\providers.config" />
+    <None Include="bin\Debug\SqlMap.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -383,12 +438,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\pe.edu.pucp.ferretinsoft.model\pe.edu.pucp.ferretinsoft.model.csproj">
-      <Project>{8711c7b7-a2d3-41cc-8f90-dc3f2c47f0c1}</Project>
-      <Name>pe.edu.pucp.ferretinsoft.model</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\add2_48.png" />
@@ -438,6 +487,28 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\texture_1_100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pe.edu.pucp.ferretinsoft.controller\MapperXML\test.xml">
+      <SubType>Designer</SubType>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="Product"
+xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+
+  <!--<resultMaps>
+    <resultMap id="mapaUsuario" class="Usuario">
+      <result property="Nombre" column="username"/>
+      <result property="Password" column="password"/>
+    </resultMap>
+  </resultMaps>-->
+
+  <statements>
+    <!--<select id="selectByUserName" parameterClass="string" resultMap="mapaUsuario">
+      select * from shiro_users where username = #value#
+    </select>
+
+    <select id="selectByUserNameObject" parameterClass="Usuario" resultMap="mapaUsuario">
+      select * from shiro_users where username = #Nombre#
+    </select>
+
+    <insert id ="agregarAlumno" parameterClass="Alumno">
+      insert into tbl_alumnos values(#nombre#, #app#, #apm# ,#edad#)
+    </insert>-->
+
+    <select id="msgPrueba" >
+      select msg_prueba from tblprueba where id_prueba=1;
+    </select>
+  </statements>
+
+</sqlMap>

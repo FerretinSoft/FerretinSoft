@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace pe.edu.pucp.ferretinsoft.controller.Services
-{
+{   
     public class PruebaService
     {
         public static void getWelcome()

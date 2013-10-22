@@ -63,7 +63,8 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
             UsuarioSistema usuario_4 = new UsuarioSistema();
 
             usuario_1.nombre = "Josefina Liz";
-            usuario_1.apellido = "Solorzano Narvaez";
+            usuario_1.apellidoP = "Solorzano";
+            usuario_1.apellidoM = "Narvaez";
             usuario_1.codigo = "100001";
             usuario_1.estado = "Activo";
             usuario_1.perfil = "Vendedor";
@@ -71,7 +72,8 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
             listaUsuarios.Add(usuario_1);
 
             usuario_2.nombre = "Cesar Luis";
-            usuario_2.apellido = "Flores Gutiérrez";
+            usuario_2.apellidoP = "Flores";
+            usuario_2.apellidoM = "Gutiérrez";
             usuario_2.codigo = "100002";
             usuario_2.estado = "Activo";
             usuario_2.perfil = "Vendedor";
@@ -79,7 +81,8 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
             listaUsuarios.Add(usuario_2);
 
             usuario_3.nombre = "Pedro Pablo";
-            usuario_3.apellido = "Cervantes Rodriguez";
+            usuario_3.apellidoP = "Cervantes";
+            usuario_3.apellidoM = "Rodriguez";
             usuario_3.codigo = "100003";
             usuario_3.estado = "Inactivo";
             usuario_3.perfil = "Jefe de Tienda";
@@ -87,7 +90,8 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
             listaUsuarios.Add(usuario_3);
 
             usuario_4.nombre = "Jose Luis";
-            usuario_4.apellido = "Fernandez Martinez";
+            usuario_4.apellidoP = "Fernandez";
+            usuario_4.apellidoM = "Martinez";
             usuario_4.codigo = "100004";
             usuario_4.estado = "Inactivo";
             usuario_4.perfil = "Administrador del Sistema";

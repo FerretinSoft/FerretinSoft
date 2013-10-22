@@ -11,11 +11,16 @@ namespace Project_FerretinSoft.pe.edu.pucp.ferretinsoft.controller.Services
 {
     class ProductoService
     {
-        public static List<Producto> obtenerListaProductos()
+        public static IList<Producto> obtenerListaProductos()
         {
-            IList listaProd= Mapper.Instance().QueryForList("obtenerListaProductos", null);
-            //Console.WriteLine(listaProd[0].nombre);
-            return null;
+            IList<Producto> listaProd= Mapper.Instance().QueryForList<Producto>("obtenerListaProductos", null);
+            return listaProd;
+        }
+
+        public static IList<Producto> obtenerProductoPorNombre(Producto p)
+        {
+            IList<Producto> listaProd = Mapper.Instance().QueryForList<Producto>("obtenerProductoPorNombre", p);
+            return listaProd;
         }
 
     }

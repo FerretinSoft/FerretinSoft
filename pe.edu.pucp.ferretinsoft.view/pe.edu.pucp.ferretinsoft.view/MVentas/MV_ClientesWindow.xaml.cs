@@ -27,9 +27,10 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
         {
             InitializeComponent();
             clientesGrid.ItemsSource = ClienteService.obtenerListaClientes();
-            
+
         }
 
+       
         private IList ListaClientes()
         {
 
@@ -39,7 +40,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
 
         public void numDocumento_Click(object sender, RoutedEventArgs e)
         {
-
+            /*
             var rowData = ((Hyperlink)e.OriginalSource).DataContext as Cliente;
 
             numDocTxtBox.Text = (rowData.codigo)+"";
@@ -62,7 +63,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
              ultCompraClienteTxtBox.Text = rowData.ultimaCompraCliente;
              totalComprasClienteTxtBox.Text=rowData.totalComprasCliente+"";
              vendedorClienteTxtBox.Text=rowData.registradoCliente;
-             direccionClienteTxtBox.Text=rowData.direccionCliente;
+             direccionClienteTxtBox.Text=rowData.direccionCliente;*/
             clientesTab.SelectedIndex = 1;
         }
 
@@ -77,6 +78,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
         private void nuevoClienteBtn_Click(object sender, RoutedEventArgs e)
         {
             clientesTab.SelectedIndex = 1;
+
         }
 
         private void edClienteBtn_Click(object sender, RoutedEventArgs e)

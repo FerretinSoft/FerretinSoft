@@ -1,10 +1,10 @@
 ﻿<Window x:Class="pe.edu.pucp.ferretinsoft.view.MVentas.MV_RegistrarVentaWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                Title="Registrar Venta" Height="487" Width="909" Icon="../Resources/ferretin_ico.ico">
+                Title="Registrar Venta" Height="487" Width="909" Icon="../../Resources/ferretin_ico.ico">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="../Resources/texture_3_100.png" TileMode="FlipX" 
+            <ImageBrush ImageSource="../../Resources/texture_3_100.png" TileMode="FlipX" 
             Viewport="0,0,100,100" ViewportUnits="Absolute"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
@@ -44,14 +44,14 @@
                 <TextBox  IsEnabled="True" Text="DNI/RUC" VerticalContentAlignment="Center" VerticalAlignment="Center" TextChanged="TextBox_TextChanged"/>
                 <Button x:Name="buscarClienteBtn" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Width="18" Height="18" Margin="0,5,0,5" Padding="0" BorderThickness="0" Click="buscarClienteBtn_Click">
                     <Button.Background>
-                        <ImageBrush ImageSource="../Resources/search1_20.png"/>
+                        <ImageBrush ImageSource="../../Resources/search1_20.png"/>
                     </Button.Background>
                 </Button>
             </Grid>
             <TextBox Grid.Column="3" Grid.Row="0" IsEnabled="False" Text="" VerticalContentAlignment="Center" Margin="0,2,20,2" VerticalAlignment="Center"/>
             <Button Grid.Column="3" Grid.Row="0" x:Name="buscarProformaBtn" HorizontalAlignment="Right" VerticalAlignment="Center" Width="18" Height="18" Margin="0,5,0,5" Padding="0" Click="buscarProformaBtn_Click" BorderThickness="0">
                 <Button.Background>
-                    <ImageBrush ImageSource="../Resources/search1_20.png"/>
+                    <ImageBrush ImageSource="../../Resources/search1_20.png"/>
                 </Button.Background>
             </Button>
             <TextBox Grid.Column="3" Grid.Row="1" IsEnabled="False" Text="Nombre Apellido" VerticalContentAlignment="Center" Margin="0,2,0,2" VerticalAlignment="Center" />
@@ -68,13 +68,13 @@
             <ToolBar HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Height="24" Grid.Row="0">
                 <Button x:Name="nuevoProductoBtn" Content="" VerticalAlignment="Stretch" Width="20" Margin="0,0,2,-1">
                     <Button.Background>
-                        <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/add_20.png" Stretch="None"/>
+                        <ImageBrush ImageSource="../../Resources/add_20.png" Stretch="None"/>
                     </Button.Background>
                 </Button>
 
                 <Button Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,0">
                     <Button.Background>
-                        <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/trash_20.png"/>
+                        <ImageBrush ImageSource="../../Resources/trash_20.png"/>
                     </Button.Background>
                 </Button>
             </ToolBar>
@@ -128,7 +128,7 @@
 
         <StackPanel Grid.Column="1" Grid.Row="1" >
             <Label Content="Datos Cliente" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"/>
-            <Image HorizontalAlignment="Center" Height="100" Width="100" Source="../Resources/cliente_1.png" Stretch="Fill"/>
+            <Image HorizontalAlignment="Center" Height="100" Width="100" Source="../../Resources/cliente_1.png" Stretch="Fill"/>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"></ColumnDefinition>

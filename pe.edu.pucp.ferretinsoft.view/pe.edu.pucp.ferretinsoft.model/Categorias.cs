@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project_FerretinSoft.pe.edu.pucp.ferretinsoft.model
+namespace pe.edu.pucp.ferretinsoft.model
 {
     public class Categorias
     {
-        public int ID{ set; get; }
-        public String nombre { set; get; }
-        public String descripcion { set; get; }
+        public int ID { set; get; }
+        public string nombre { set; get; }
+        public string descripcion { set; get; }
         public int nivel { set; get; }
+        public int id_padre { set; get; }
     }
 }

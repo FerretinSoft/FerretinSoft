@@ -506,18 +506,12 @@
                         <ComboBoxItem/> Venta
                         <ComboBoxItem/> Compra/Venta
                     </ComboBox>
-                    <ComboBox HorizontalAlignment="Left" Margin="187,176,0,0" VerticalAlignment="Top" Width="106" Grid.Column="4" Height="25">
-                        <ComboBoxItem/> Lima-01
-                        <ComboBoxItem/> Lima-02
-                        <ComboBoxItem/> Lima-03
-                        <ComboBoxItem/> Lima-04
-                        <ComboBoxItem/> Lima-05
-                    </ComboBox>
                     <Label Content="Email:" HorizontalAlignment="Left" Margin="0,518,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Width="41" Grid.Column="3"/>
                     <TextBox HorizontalAlignment="Left" Height="26" Margin="21,519,0,0" TextWrapping="Wrap" Text="example@domain.com" VerticalAlignment="Top" Width="272" Grid.Column="4"/>
-                    <GroupBox Header="Tienda" Margin="10,10,0,183" BorderBrush="Black" Grid.ColumnSpan="4" Grid.Column="1"/>
                     <GroupBox Header="Jefe de Tienda" Margin="10,424,0,40" BorderBrush="Black" Grid.ColumnSpan="4" Grid.Column="1"/>
                     <GroupBox Header="Horarios de Atencion" Margin="10,211,10,40" BorderBrush="Black" Grid.ColumnSpan="2" Grid.Column="5"/>
+                    <GroupBox Header="Tienda" Margin="10,0,0,183" BorderBrush="Black" Grid.ColumnSpan="4" Grid.Column="1"/>
+                    <TextBox HorizontalAlignment="Left" Height="26" Margin="188,175,0,0" TextWrapping="Wrap" Text="Lima 01" VerticalAlignment="Top" Width="106" Grid.Column="4"/>
 
 
 

@@ -22,7 +22,21 @@ namespace pe.edu.pucp.ferretinsoft.model
         public String idUbigeo { get; set; }
         public String descripcion { get; set; }
         public String fechaCreacion { get; set; }
+        public String fechaCierre { get; set; }
         public Cliente idCliente { get; set; }
-
+        public String horaIniLunes { get; set; }
+        public String horaFinLunes { get; set; }
+        public String horaIniMartes { get; set; }
+        public String horaFinMartes { get; set; }
+        public String horaIniMiercoles { get; set; }
+        public String horaFinMiercoles { get; set; }
+        public String horaIniJueves { get; set; }
+        public String horaFinJueves { get; set; }
+        public String horaIniViernes { get; set; }
+        public String horaFinViernes { get; set; }
+        public String horaIniSabado { get; set; }
+        public String horaFinSabado { get; set; }
+        public String horaIniDomingo { get; set; }
+        public String horaFinDomingo { get; set; }
     }
 }

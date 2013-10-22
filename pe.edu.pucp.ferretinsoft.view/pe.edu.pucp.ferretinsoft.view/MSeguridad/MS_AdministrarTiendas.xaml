@@ -153,358 +153,513 @@
                     <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="0,602,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.347,-0.05" Grid.Column="6" Height="30"/>
                     <TextBox HorizontalAlignment="Left" Height="75" Margin="21,375,0,0" TextWrapping="Wrap" Text="&lt;Descripcion aquí&gt;" VerticalAlignment="Top" Width="272" Grid.Column="4"/>
                     <Label Content="Descripcion:" HorizontalAlignment="Left" Margin="2,373,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="26" Width="74" Grid.Column="3"/>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="69,271,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="22" Margin="94,274,0,0" VerticalAlignment="Top" Width="59" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
+                        <System:String>8:30</System:String>
                         <System:String>9:00</System:String>
+                        <System:String>9:30</System:String>
                         <System:String>10:00</System:String>
+                        <System:String>10:30</System:String>
                         <System:String>11:00</System:String>
+                        <System:String>11:30</System:String>
                         <System:String>12:00</System:String>
-                        <System:String>1:00</System:String>
-                        <System:String>2:00</System:String>
-                        <System:String>3:00</System:String>
-                        <System:String>4:00</System:String>
-                        <System:String>5:00</System:String>
-                        <System:String>6:00</System:String>
-                        <System:String>7:00</System:String>
+                        <System:String>12:30</System:String>
+                        <System:String>13:00</System:String>
+                        <System:String>13:30</System:String>
+                        <System:String>14:00</System:String>
+                        <System:String>14:30</System:String>
+                        <System:String>15:00</System:String>
+                        <System:String>15:30</System:String>
+                        <System:String>16:00</System:String>
+                        <System:String>16:30</System:String>
+                        <System:String>17:00</System:String>
+                        <System:String>17:30</System:String>
+                        <System:String>18:00</System:String>
+                        <System:String>18:30</System:String>
+                        <System:String>19:00</System:String>
+                        <System:String>19:30</System:String>
+                        <System:String>20:00</System:String>
+                        <System:String>20:30</System:String>
+                        <System:String>21:00</System:String>
+                        <System:String>21:30</System:String>
+                        <System:String>22:00</System:String>
+                        <System:String>22:30</System:String>
+                        <System:String>23:00</System:String>
+                        <System:String>23:30</System:String>
 
                     </ListBox>
                     <Label Content="Apertura" HorizontalAlignment="Left" Margin="94,236,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="6" Width="65" Height="26"/>
-                    <Label Content="Cierre" HorizontalAlignment="Left" Margin="237,236,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="6" Width="60" Height="26"/>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="206,271,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <Label Content="Cierre" HorizontalAlignment="Left" Margin="230,236,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="6" Width="60" Height="26"/>
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="22" Margin="230,274,0,0" VerticalAlignment="Top" Width="59" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
+                        <System:String>8:30</System:String>
                         <System:String>9:00</System:String>
+                        <System:String>9:30</System:String>
                         <System:String>10:00</System:String>
+                        <System:String>10:30</System:String>
                         <System:String>11:00</System:String>
+                        <System:String>11:30</System:String>
                         <System:String>12:00</System:String>
-                        <System:String>1:00</System:String>
-                        <System:String>2:00</System:String>
-                        <System:String>3:00</System:String>
-                        <System:String>4:00</System:String>
-                        <System:String>5:00</System:String>
-                        <System:String>6:00</System:String>
-                        <System:String>7:00</System:String>
-
-                    </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="126,271,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-
-                        <System:String>am</System:String>
-                        <System:String>pm</System:String>
-
-                    </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="262,271,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
-
-                        <System:String>am</System:String>
-                        <System:String>pm</System:String>
+                        <System:String>12:30</System:String>
+                        <System:String>13:00</System:String>
+                        <System:String>13:30</System:String>
+                        <System:String>14:00</System:String>
+                        <System:String>14:30</System:String>
+                        <System:String>15:00</System:String>
+                        <System:String>15:30</System:String>
+                        <System:String>16:00</System:String>
+                        <System:String>16:30</System:String>
+                        <System:String>17:00</System:String>
+                        <System:String>17:30</System:String>
+                        <System:String>18:00</System:String>
+                        <System:String>18:30</System:String>
+                        <System:String>19:00</System:String>
+                        <System:String>19:30</System:String>
+                        <System:String>20:00</System:String>
+                        <System:String>20:30</System:String>
+                        <System:String>21:00</System:String>
+                        <System:String>21:30</System:String>
+                        <System:String>22:00</System:String>
+                        <System:String>22:30</System:String>
+                        <System:String>23:00</System:String>
+                        <System:String>23:30</System:String>
 
                     </ListBox>
                     <TextBox HorizontalAlignment="Left" Height="26" Margin="29,481,0,0" TextWrapping="Wrap" Text="Juan Perez" VerticalAlignment="Top" Width="262" Grid.Column="4"/>
                     <Label Content="Nombre:" HorizontalAlignment="Left" Margin="10,482,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="2" Grid.ColumnSpan="3" Width="94"/>
                     <Label Content="Lunes:" HorizontalAlignment="Left" Margin="2,271,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="6" Width="53"/>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="69,306,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="22" Margin="94,309,0,0" VerticalAlignment="Top" Width="59" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
+                        <System:String>8:30</System:String>
                         <System:String>9:00</System:String>
+                        <System:String>9:30</System:String>
                         <System:String>10:00</System:String>
+                        <System:String>10:30</System:String>
                         <System:String>11:00</System:String>
+                        <System:String>11:30</System:String>
                         <System:String>12:00</System:String>
-                        <System:String>1:00</System:String>
-                        <System:String>2:00</System:String>
-                        <System:String>3:00</System:String>
-                        <System:String>4:00</System:String>
-                        <System:String>5:00</System:String>
-                        <System:String>6:00</System:String>
-                        <System:String>7:00</System:String>
-                        <System:String>8:00</System:String>
-                        <System:String>9:00</System:String>
-                        <System:String>10:00</System:String>
-
+                        <System:String>12:30</System:String>
+                        <System:String>13:00</System:String>
+                        <System:String>13:30</System:String>
+                        <System:String>14:00</System:String>
+                        <System:String>14:30</System:String>
+                        <System:String>15:00</System:String>
+                        <System:String>15:30</System:String>
+                        <System:String>16:00</System:String>
+                        <System:String>16:30</System:String>
+                        <System:String>17:00</System:String>
+                        <System:String>17:30</System:String>
+                        <System:String>18:00</System:String>
+                        <System:String>18:30</System:String>
+                        <System:String>19:00</System:String>
+                        <System:String>19:30</System:String>
+                        <System:String>20:00</System:String>
+                        <System:String>20:30</System:String>
+                        <System:String>21:00</System:String>
+                        <System:String>21:30</System:String>
+                        <System:String>22:00</System:String>
+                        <System:String>22:30</System:String>
+                        <System:String>23:00</System:String>
+                        <System:String>23:30</System:String>
                     </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="206,306,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="22" Margin="230,309,0,0" VerticalAlignment="Top" Width="59" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
+                        <System:String>8:30</System:String>
                         <System:String>9:00</System:String>
+                        <System:String>9:30</System:String>
                         <System:String>10:00</System:String>
+                        <System:String>10:30</System:String>
                         <System:String>11:00</System:String>
+                        <System:String>11:30</System:String>
                         <System:String>12:00</System:String>
-                        <System:String>1:00</System:String>
-                        <System:String>2:00</System:String>
-                        <System:String>3:00</System:String>
-                        <System:String>4:00</System:String>
-                        <System:String>5:00</System:String>
-                        <System:String>6:00</System:String>
-                        <System:String>7:00</System:String>
-                        <System:String>8:00</System:String>
-                        <System:String>9:00</System:String>
-                        <System:String>10:00</System:String>
-
-                    </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="126,306,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
-
-                        <System:String>am</System:String>
-                        <System:String>pm</System:String>
-
-                    </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="262,306,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
-
-                        <System:String>am</System:String>
-                        <System:String>pm</System:String>
+                        <System:String>12:30</System:String>
+                        <System:String>13:00</System:String>
+                        <System:String>13:30</System:String>
+                        <System:String>14:00</System:String>
+                        <System:String>14:30</System:String>
+                        <System:String>15:00</System:String>
+                        <System:String>15:30</System:String>
+                        <System:String>16:00</System:String>
+                        <System:String>16:30</System:String>
+                        <System:String>17:00</System:String>
+                        <System:String>17:30</System:String>
+                        <System:String>18:00</System:String>
+                        <System:String>18:30</System:String>
+                        <System:String>19:00</System:String>
+                        <System:String>19:30</System:String>
+                        <System:String>20:00</System:String>
+                        <System:String>20:30</System:String>
+                        <System:String>21:00</System:String>
+                        <System:String>21:30</System:String>
+                        <System:String>22:00</System:String>
+                        <System:String>22:30</System:String>
+                        <System:String>23:00</System:String>
+                        <System:String>23:30</System:String>
 
                     </ListBox>
                     <Label Content="Martes:" HorizontalAlignment="Left" Margin="2,306,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="6" Width="53"/>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="69,341,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="22" Margin="94,344,0,0" VerticalAlignment="Top" Width="59" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
+                        <System:String>8:30</System:String>
                         <System:String>9:00</System:String>
+                        <System:String>9:30</System:String>
                         <System:String>10:00</System:String>
+                        <System:String>10:30</System:String>
                         <System:String>11:00</System:String>
+                        <System:String>11:30</System:String>
                         <System:String>12:00</System:String>
-                        <System:String>1:00</System:String>
-                        <System:String>2:00</System:String>
-                        <System:String>3:00</System:String>
-                        <System:String>4:00</System:String>
-                        <System:String>5:00</System:String>
-                        <System:String>6:00</System:String>
-                        <System:String>7:00</System:String>
-                        <System:String>8:00</System:String>
-                        <System:String>9:00</System:String>
-                        <System:String>10:00</System:String>
-
+                        <System:String>12:30</System:String>
+                        <System:String>13:00</System:String>
+                        <System:String>13:30</System:String>
+                        <System:String>14:00</System:String>
+                        <System:String>14:30</System:String>
+                        <System:String>15:00</System:String>
+                        <System:String>15:30</System:String>
+                        <System:String>16:00</System:String>
+                        <System:String>16:30</System:String>
+                        <System:String>17:00</System:String>
+                        <System:String>17:30</System:String>
+                        <System:String>18:00</System:String>
+                        <System:String>18:30</System:String>
+                        <System:String>19:00</System:String>
+                        <System:String>19:30</System:String>
+                        <System:String>20:00</System:String>
+                        <System:String>20:30</System:String>
+                        <System:String>21:00</System:String>
+                        <System:String>21:30</System:String>
+                        <System:String>22:00</System:String>
+                        <System:String>22:30</System:String>
+                        <System:String>23:00</System:String>
+                        <System:String>23:30</System:String>
                     </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="206,341,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="22" Margin="230,344,0,0" VerticalAlignment="Top" Width="59" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
+                        <System:String>8:30</System:String>
                         <System:String>9:00</System:String>
+                        <System:String>9:30</System:String>
                         <System:String>10:00</System:String>
+                        <System:String>10:30</System:String>
                         <System:String>11:00</System:String>
+                        <System:String>11:30</System:String>
                         <System:String>12:00</System:String>
-                        <System:String>1:00</System:String>
-                        <System:String>2:00</System:String>
-                        <System:String>3:00</System:String>
-                        <System:String>4:00</System:String>
-                        <System:String>5:00</System:String>
-                        <System:String>6:00</System:String>
-                        <System:String>7:00</System:String>
-                        <System:String>8:00</System:String>
-                        <System:String>9:00</System:String>
-                        <System:String>10:00</System:String>
-
-                    </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="126,341,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
-
-                        <System:String>am</System:String>
-                        <System:String>pm</System:String>
-
-                    </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="262,341,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
-
-                        <System:String>am</System:String>
-                        <System:String>pm</System:String>
-
+                        <System:String>12:30</System:String>
+                        <System:String>13:00</System:String>
+                        <System:String>13:30</System:String>
+                        <System:String>14:00</System:String>
+                        <System:String>14:30</System:String>
+                        <System:String>15:00</System:String>
+                        <System:String>15:30</System:String>
+                        <System:String>16:00</System:String>
+                        <System:String>16:30</System:String>
+                        <System:String>17:00</System:String>
+                        <System:String>17:30</System:String>
+                        <System:String>18:00</System:String>
+                        <System:String>18:30</System:String>
+                        <System:String>19:00</System:String>
+                        <System:String>19:30</System:String>
+                        <System:String>20:00</System:String>
+                        <System:String>20:30</System:String>
+                        <System:String>21:00</System:String>
+                        <System:String>21:30</System:String>
+                        <System:String>22:00</System:String>
+                        <System:String>22:30</System:String>
+                        <System:String>23:00</System:String>
+                        <System:String>23:30</System:String>
                     </ListBox>
                     <Label Content="Miercoles:" HorizontalAlignment="Left" Margin="2,341,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="6" Width="65"/>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="69,376,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="22" Margin="94,379,0,0" VerticalAlignment="Top" Width="59" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
+                        <System:String>8:30</System:String>
                         <System:String>9:00</System:String>
+                        <System:String>9:30</System:String>
                         <System:String>10:00</System:String>
+                        <System:String>10:30</System:String>
                         <System:String>11:00</System:String>
+                        <System:String>11:30</System:String>
                         <System:String>12:00</System:String>
-                        <System:String>1:00</System:String>
-                        <System:String>2:00</System:String>
-                        <System:String>3:00</System:String>
-                        <System:String>4:00</System:String>
-                        <System:String>5:00</System:String>
-                        <System:String>6:00</System:String>
-                        <System:String>7:00</System:String>
-                        <System:String>8:00</System:String>
-                        <System:String>9:00</System:String>
-                        <System:String>10:00</System:String>
-
+                        <System:String>12:30</System:String>
+                        <System:String>13:00</System:String>
+                        <System:String>13:30</System:String>
+                        <System:String>14:00</System:String>
+                        <System:String>14:30</System:String>
+                        <System:String>15:00</System:String>
+                        <System:String>15:30</System:String>
+                        <System:String>16:00</System:String>
+                        <System:String>16:30</System:String>
+                        <System:String>17:00</System:String>
+                        <System:String>17:30</System:String>
+                        <System:String>18:00</System:String>
+                        <System:String>18:30</System:String>
+                        <System:String>19:00</System:String>
+                        <System:String>19:30</System:String>
+                        <System:String>20:00</System:String>
+                        <System:String>20:30</System:String>
+                        <System:String>21:00</System:String>
+                        <System:String>21:30</System:String>
+                        <System:String>22:00</System:String>
+                        <System:String>22:30</System:String>
+                        <System:String>23:00</System:String>
+                        <System:String>23:30</System:String>
                     </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="206,376,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="22" Margin="230,379,0,0" VerticalAlignment="Top" Width="59" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
+                        <System:String>8:30</System:String>
                         <System:String>9:00</System:String>
+                        <System:String>9:30</System:String>
                         <System:String>10:00</System:String>
+                        <System:String>10:30</System:String>
                         <System:String>11:00</System:String>
+                        <System:String>11:30</System:String>
                         <System:String>12:00</System:String>
-                        <System:String>1:00</System:String>
-                        <System:String>2:00</System:String>
-                        <System:String>3:00</System:String>
-                        <System:String>4:00</System:String>
-                        <System:String>5:00</System:String>
-                        <System:String>6:00</System:String>
-                        <System:String>7:00</System:String>
-                        <System:String>8:00</System:String>
-                        <System:String>9:00</System:String>
-                        <System:String>10:00</System:String>
-
-                    </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="126,376,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
-
-                        <System:String>am</System:String>
-                        <System:String>pm</System:String>
-
-                    </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="262,376,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
-
-                        <System:String>am</System:String>
-                        <System:String>pm</System:String>
-
+                        <System:String>12:30</System:String>
+                        <System:String>13:00</System:String>
+                        <System:String>13:30</System:String>
+                        <System:String>14:00</System:String>
+                        <System:String>14:30</System:String>
+                        <System:String>15:00</System:String>
+                        <System:String>15:30</System:String>
+                        <System:String>16:00</System:String>
+                        <System:String>16:30</System:String>
+                        <System:String>17:00</System:String>
+                        <System:String>17:30</System:String>
+                        <System:String>18:00</System:String>
+                        <System:String>18:30</System:String>
+                        <System:String>19:00</System:String>
+                        <System:String>19:30</System:String>
+                        <System:String>20:00</System:String>
+                        <System:String>20:30</System:String>
+                        <System:String>21:00</System:String>
+                        <System:String>21:30</System:String>
+                        <System:String>22:00</System:String>
+                        <System:String>22:30</System:String>
+                        <System:String>23:00</System:String>
+                        <System:String>23:30</System:String>
                     </ListBox>
                     <Label Content="Jueves:" HorizontalAlignment="Left" Margin="2,376,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="6" Width="53"/>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="69,411,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="22" Margin="94,414,0,0" VerticalAlignment="Top" Width="59" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
+                        <System:String>8:30</System:String>
                         <System:String>9:00</System:String>
+                        <System:String>9:30</System:String>
                         <System:String>10:00</System:String>
+                        <System:String>10:30</System:String>
                         <System:String>11:00</System:String>
+                        <System:String>11:30</System:String>
                         <System:String>12:00</System:String>
-                        <System:String>1:00</System:String>
-                        <System:String>2:00</System:String>
-                        <System:String>3:00</System:String>
-                        <System:String>4:00</System:String>
-                        <System:String>5:00</System:String>
-                        <System:String>6:00</System:String>
-                        <System:String>7:00</System:String>
-                        <System:String>8:00</System:String>
-                        <System:String>9:00</System:String>
-                        <System:String>10:00</System:String>
+                        <System:String>12:30</System:String>
+                        <System:String>13:00</System:String>
+                        <System:String>13:30</System:String>
+                        <System:String>14:00</System:String>
+                        <System:String>14:30</System:String>
+                        <System:String>15:00</System:String>
+                        <System:String>15:30</System:String>
+                        <System:String>16:00</System:String>
+                        <System:String>16:30</System:String>
+                        <System:String>17:00</System:String>
+                        <System:String>17:30</System:String>
+                        <System:String>18:00</System:String>
+                        <System:String>18:30</System:String>
+                        <System:String>19:00</System:String>
+                        <System:String>19:30</System:String>
+                        <System:String>20:00</System:String>
+                        <System:String>20:30</System:String>
+                        <System:String>21:00</System:String>
+                        <System:String>21:30</System:String>
+                        <System:String>22:00</System:String>
+                        <System:String>22:30</System:String>
+                        <System:String>23:00</System:String>
+                        <System:String>23:30</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="206,411,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="22" Margin="230,414,0,0" VerticalAlignment="Top" Width="59" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
+                        <System:String>8:30</System:String>
                         <System:String>9:00</System:String>
+                        <System:String>9:30</System:String>
                         <System:String>10:00</System:String>
+                        <System:String>10:30</System:String>
                         <System:String>11:00</System:String>
+                        <System:String>11:30</System:String>
                         <System:String>12:00</System:String>
-                        <System:String>1:00</System:String>
-                        <System:String>2:00</System:String>
-                        <System:String>3:00</System:String>
-                        <System:String>4:00</System:String>
-                        <System:String>5:00</System:String>
-                        <System:String>6:00</System:String>
-                        <System:String>7:00</System:String>
-                        <System:String>8:00</System:String>
-                        <System:String>9:00</System:String>
-                        <System:String>10:00</System:String>
-
-                    </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="126,411,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
-
-                        <System:String>am</System:String>
-                        <System:String>pm</System:String>
-
-                    </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="262,411,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
-
-                        <System:String>am</System:String>
-                        <System:String>pm</System:String>
+                        <System:String>12:30</System:String>
+                        <System:String>13:00</System:String>
+                        <System:String>13:30</System:String>
+                        <System:String>14:00</System:String>
+                        <System:String>14:30</System:String>
+                        <System:String>15:00</System:String>
+                        <System:String>15:30</System:String>
+                        <System:String>16:00</System:String>
+                        <System:String>16:30</System:String>
+                        <System:String>17:00</System:String>
+                        <System:String>17:30</System:String>
+                        <System:String>18:00</System:String>
+                        <System:String>18:30</System:String>
+                        <System:String>19:00</System:String>
+                        <System:String>19:30</System:String>
+                        <System:String>20:00</System:String>
+                        <System:String>20:30</System:String>
+                        <System:String>21:00</System:String>
+                        <System:String>21:30</System:String>
+                        <System:String>22:00</System:String>
+                        <System:String>22:30</System:String>
+                        <System:String>23:00</System:String>
+                        <System:String>23:30</System:String>
 
                     </ListBox>
                     <Label Content="Viernes:" HorizontalAlignment="Left" Margin="2,411,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="6" Width="53"/>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="69,446,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="22" Margin="94,449,0,0" VerticalAlignment="Top" Width="59" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
+                        <System:String>8:30</System:String>
                         <System:String>9:00</System:String>
+                        <System:String>9:30</System:String>
                         <System:String>10:00</System:String>
+                        <System:String>10:30</System:String>
                         <System:String>11:00</System:String>
+                        <System:String>11:30</System:String>
                         <System:String>12:00</System:String>
-                        <System:String>1:00</System:String>
-                        <System:String>2:00</System:String>
-                        <System:String>3:00</System:String>
-                        <System:String>4:00</System:String>
-                        <System:String>5:00</System:String>
-                        <System:String>6:00</System:String>
-                        <System:String>7:00</System:String>
-                        <System:String>8:00</System:String>
-                        <System:String>9:00</System:String>
-                        <System:String>10:00</System:String>
-
+                        <System:String>12:30</System:String>
+                        <System:String>13:00</System:String>
+                        <System:String>13:30</System:String>
+                        <System:String>14:00</System:String>
+                        <System:String>14:30</System:String>
+                        <System:String>15:00</System:String>
+                        <System:String>15:30</System:String>
+                        <System:String>16:00</System:String>
+                        <System:String>16:30</System:String>
+                        <System:String>17:00</System:String>
+                        <System:String>17:30</System:String>
+                        <System:String>18:00</System:String>
+                        <System:String>18:30</System:String>
+                        <System:String>19:00</System:String>
+                        <System:String>19:30</System:String>
+                        <System:String>20:00</System:String>
+                        <System:String>20:30</System:String>
+                        <System:String>21:00</System:String>
+                        <System:String>21:30</System:String>
+                        <System:String>22:00</System:String>
+                        <System:String>22:30</System:String>
+                        <System:String>23:00</System:String>
+                        <System:String>23:30</System:String>
+                        
                     </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="206,446,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="22" Margin="230,449,0,0" VerticalAlignment="Top" Width="59" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
+                        <System:String>8:30</System:String>
                         <System:String>9:00</System:String>
+                        <System:String>9:30</System:String>
                         <System:String>10:00</System:String>
+                        <System:String>10:30</System:String>
                         <System:String>11:00</System:String>
+                        <System:String>11:30</System:String>
                         <System:String>12:00</System:String>
-                        <System:String>1:00</System:String>
-                        <System:String>2:00</System:String>
-                        <System:String>3:00</System:String>
-                        <System:String>4:00</System:String>
-                        <System:String>5:00</System:String>
-                        <System:String>6:00</System:String>
-                        <System:String>7:00</System:String>
-                        <System:String>8:00</System:String>
-                        <System:String>9:00</System:String>
-                        <System:String>10:00</System:String>
-
-                    </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="126,446,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
-
-                        <System:String>am</System:String>
-                        <System:String>pm</System:String>
-
-                    </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="262,446,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
-
-                        <System:String>am</System:String>
-                        <System:String>pm</System:String>
+                        <System:String>12:30</System:String>
+                        <System:String>13:00</System:String>
+                        <System:String>13:30</System:String>
+                        <System:String>14:00</System:String>
+                        <System:String>14:30</System:String>
+                        <System:String>15:00</System:String>
+                        <System:String>15:30</System:String>
+                        <System:String>16:00</System:String>
+                        <System:String>16:30</System:String>
+                        <System:String>17:00</System:String>
+                        <System:String>17:30</System:String>
+                        <System:String>18:00</System:String>
+                        <System:String>18:30</System:String>
+                        <System:String>19:00</System:String>
+                        <System:String>19:30</System:String>
+                        <System:String>20:00</System:String>
+                        <System:String>20:30</System:String>
+                        <System:String>21:00</System:String>
+                        <System:String>21:30</System:String>
+                        <System:String>22:00</System:String>
+                        <System:String>22:30</System:String>
+                        <System:String>23:00</System:String>
+                        <System:String>23:30</System:String>
 
                     </ListBox>
                     <Label Content="Sabado:" HorizontalAlignment="Left" Margin="2,446,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="6" Width="53"/>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="69,482,0,0" VerticalAlignment="Top" Width="52" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="22" Margin="94,485,0,0" VerticalAlignment="Top" Width="59" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.423,1.538" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
+                        <System:String>8:30</System:String>
                         <System:String>9:00</System:String>
+                        <System:String>9:30</System:String>
                         <System:String>10:00</System:String>
+                        <System:String>10:30</System:String>
                         <System:String>11:00</System:String>
+                        <System:String>11:30</System:String>
                         <System:String>12:00</System:String>
-                        <System:String>1:00</System:String>
-                        <System:String>2:00</System:String>
-                        <System:String>3:00</System:String>
-                        <System:String>4:00</System:String>
-                        <System:String>5:00</System:String>
-                        <System:String>6:00</System:String>
-                        <System:String>7:00</System:String>
-                        <System:String>8:00</System:String>
-                        <System:String>9:00</System:String>
-                        <System:String>10:00</System:String>
+                        <System:String>12:30</System:String>
+                        <System:String>13:00</System:String>
+                        <System:String>13:30</System:String>
+                        <System:String>14:00</System:String>
+                        <System:String>14:30</System:String>
+                        <System:String>15:00</System:String>
+                        <System:String>15:30</System:String>
+                        <System:String>16:00</System:String>
+                        <System:String>16:30</System:String>
+                        <System:String>17:00</System:String>
+                        <System:String>17:30</System:String>
+                        <System:String>18:00</System:String>
+                        <System:String>18:30</System:String>
+                        <System:String>19:00</System:String>
+                        <System:String>19:30</System:String>
+                        <System:String>20:00</System:String>
+                        <System:String>20:30</System:String>
+                        <System:String>21:00</System:String>
+                        <System:String>21:30</System:String>
+                        <System:String>22:00</System:String>
+                        <System:String>22:30</System:String>
+                        <System:String>23:00</System:String>
+                        <System:String>23:30</System:String>
 
                     </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="206,482,0,0" VerticalAlignment="Top" Width="51" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="22" Margin="230,485,0,0" VerticalAlignment="Top" Width="59" IsSynchronizedWithCurrentItem="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <System:String>8:00</System:String>
+                        <System:String>8:30</System:String>
                         <System:String>9:00</System:String>
+                        <System:String>9:30</System:String>
                         <System:String>10:00</System:String>
+                        <System:String>10:30</System:String>
                         <System:String>11:00</System:String>
+                        <System:String>11:30</System:String>
                         <System:String>12:00</System:String>
-                        <System:String>1:00</System:String>
-                        <System:String>2:00</System:String>
-                        <System:String>3:00</System:String>
-                        <System:String>4:00</System:String>
-                        <System:String>5:00</System:String>
-                        <System:String>6:00</System:String>
-                        <System:String>7:00</System:String>
-                        <System:String>8:00</System:String>
-                        <System:String>9:00</System:String>
-                        <System:String>10:00</System:String>
-
-                    </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="126,482,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
-
-                        <System:String>am</System:String>
-                        <System:String>pm</System:String>
-
-                    </ListBox>
-                    <ListBox Grid.Column="6" HorizontalAlignment="Left" Height="26" Margin="262,482,0,0" VerticalAlignment="Top" Width="47" IsSynchronizedWithCurrentItem="True" RenderTransformOrigin="-0.241,2.038">
-
-                        <System:String>am</System:String>
-                        <System:String>pm</System:String>
+                        <System:String>12:30</System:String>
+                        <System:String>13:00</System:String>
+                        <System:String>13:30</System:String>
+                        <System:String>14:00</System:String>
+                        <System:String>14:30</System:String>
+                        <System:String>15:00</System:String>
+                        <System:String>15:30</System:String>
+                        <System:String>16:00</System:String>
+                        <System:String>16:30</System:String>
+                        <System:String>17:00</System:String>
+                        <System:String>17:30</System:String>
+                        <System:String>18:00</System:String>
+                        <System:String>18:30</System:String>
+                        <System:String>19:00</System:String>
+                        <System:String>19:30</System:String>
+                        <System:String>20:00</System:String>
+                        <System:String>20:30</System:String>
+                        <System:String>21:00</System:String>
+                        <System:String>21:30</System:String>
+                        <System:String>22:00</System:String>
+                        <System:String>22:30</System:String>
+                        <System:String>23:00</System:String>
+                        <System:String>23:30</System:String>
 
                     </ListBox>
                     <Label Content="Domingo:" HorizontalAlignment="Left" Margin="2,482,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Height="30" Grid.Column="6" Width="65"/>

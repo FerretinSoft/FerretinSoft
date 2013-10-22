@@ -26,6 +26,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
             InitializeComponent();            
             perfilDg.ItemsSource = PerfilService.obtenerListaPerfiles();
             
+            
         }
 
         private void nuevoPerfilBtn_click(object sender, RoutedEventArgs e)

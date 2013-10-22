@@ -104,6 +104,7 @@
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Cliente.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Devolucion.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\OrdenCompra.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Parametro.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Perfil.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Personal.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Producto.cs" />

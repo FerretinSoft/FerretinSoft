@@ -49,29 +49,29 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
             Perfil perf4 = new Perfil();
             Perfil perf5 = new Perfil();
 
-            perf4.perf = "Administrador del Sistema";
-            perf4.Modulo = "Seguridad";
-            perf4.Descripcion = "Encargado de llevar un control de la seguridad y parametros.";
+            perf4.nombrePerfil = "Administrador del Sistema";
+            perf4.modulo = "Seguridad";
+            perf4.descripcion = "Encargado de llevar un control de la seguridad y parametros.";
             perfiles.Add(perf4);
 
-            perf5.perf = "Asistente de Almacén";
-            perf5.Modulo = "Almacén";
-            perf5.Descripcion = "Encargado de registrar las salidas y entradas de productos al almacen.";
+            perf5.nombrePerfil = "Asistente de Almacén";
+            perf5.modulo = "Almacén";
+            perf5.descripcion = "Encargado de registrar las salidas y entradas de productos al almacen.";
             perfiles.Add(perf5);
 
-            perf1.perf = "Asistente de Ventas";
-            perf1.Modulo = "Ventas";
-            perf1.Descripcion = "Encargado del mantenimiento de la información de los clientes.";
+            perf1.nombrePerfil = "Asistente de Ventas";
+            perf1.modulo = "Ventas";
+            perf1.descripcion = "Encargado del mantenimiento de la información de los clientes.";
             perfiles.Add(perf1);
 
-            perf3.perf = "Jefe de Tienda";
-            perf3.Modulo = "Almacen, Ventas";
-            perf3.Descripcion = "Encargado de controlar los movimientos de almacen y de las ventas.";
+            perf3.nombrePerfil = "Jefe de Tienda";
+            perf3.modulo = "Almacen, Ventas";
+            perf3.descripcion = "Encargado de controlar los movimientos de almacen y de las ventas.";
             perfiles.Add(perf3);
 
-            perf2.perf = "Vendedor";
-            perf2.Modulo = "Ventas";
-            perf2.Descripcion = "Encargado de realizar las ventas a los clientes.";
+            perf2.nombrePerfil = "Vendedor";
+            perf2.modulo = "Ventas";
+            perf2.descripcion = "Encargado de realizar las ventas a los clientes.";
             perfiles.Add(perf2);
             
             return perfiles;

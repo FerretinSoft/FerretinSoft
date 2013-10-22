@@ -39,9 +39,9 @@
                     </Button>
                     <DataGrid x:Name="perfilDg" Margin="5,30,5,5" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2"  AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" >
                         <DataGrid.Columns>
-                            <DataGridTextColumn Width="3*" Binding="{Binding Path=perf}" Header="Perfil"/>
-                            <DataGridTextColumn Width="3*" Binding="{Binding Path=Modulo}"  Header="Módulo"/>
-                            <DataGridTextColumn Width="4*" Binding="{Binding Path=Descripcion}" Header="Descripción"/>
+                            <DataGridTextColumn Width="3*" Binding="{Binding Path=nombrePerfil}" Header="Perfil"/>
+                            <DataGridTextColumn Width="3*" Binding="{Binding Path=modulo}"  Header="Módulo"/>
+                            <DataGridTextColumn Width="4*" Binding="{Binding Path=descripcion}" Header="Descripción"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <ToolBar HorizontalAlignment="Left" Margin="11,1,0,0" VerticalAlignment="Top" Height="24" Width="68" Grid.Row="1">

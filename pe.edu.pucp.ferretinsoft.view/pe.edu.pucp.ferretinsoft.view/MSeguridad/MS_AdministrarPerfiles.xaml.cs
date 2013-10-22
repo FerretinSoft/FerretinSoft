@@ -24,7 +24,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
         public MS_AdministrarPerfiles()
         {
             InitializeComponent();            
-            perfilDg.ItemsSource = PerfilService.obtenerListaPerfiles();
+            //perfilDg.ItemsSource = PerfilService.obtenerListaPerfiles();
             
         }
 

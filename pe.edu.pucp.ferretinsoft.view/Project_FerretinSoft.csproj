@@ -520,7 +520,6 @@
     <Content Include="libReference\IBatisNet.Common.Logging.Log4Net.dll" />
     <Content Include="libReference\IBatisNet.DataMapper.dll" />
     <Content Include="libReference\log4net.dll" />
-    <Resource Include="pe.edu.pucp.ferretinsoft.controller\MapperXML\configMapper.xml" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

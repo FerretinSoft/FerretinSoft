@@ -23,10 +23,8 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
     {
         public MS_AdministrarPerfiles()
         {
-            InitializeComponent();            
-            //perfilDg.ItemsSource = PerfilService.obtenerListaPerfiles();
-            
-            
+            InitializeComponent();                        
+            perfilDg.ItemsSource = PerfilService.obtenerListaPerfiles();            
         }
 
         private void nuevoPerfilBtn_click(object sender, RoutedEventArgs e)

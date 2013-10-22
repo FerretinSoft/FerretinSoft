@@ -510,6 +510,13 @@
       <SubType>Designer</SubType>
     </Resource>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="libReference\Castle.DynamicProxy.dll" />
+    <Content Include="libReference\IBatisNet.Common.dll" />
+    <Content Include="libReference\IBatisNet.Common.Logging.Log4Net.dll" />
+    <Content Include="libReference\IBatisNet.DataMapper.dll" />
+    <Content Include="libReference\log4net.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

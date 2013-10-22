@@ -20,33 +20,35 @@
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition Width="160"></ColumnDefinition>
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="60*"></ColumnDefinition>
+                                <ColumnDefinition Width="85*"/>
+
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition/>
                                 <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
-                            <Label Content="Núm. Doc:" Grid.Column="2" VerticalContentAlignment="Center"/>
-                            <Label Content="Nombre:" Grid.Column="2" Grid.Row ="1" VerticalContentAlignment="Center"/>
-                            <Label Content="Tipo Cliente:" Grid.Column="0" Grid.Row="1" VerticalContentAlignment="Center"/>
-                            <Label Content="Tipo Documento:" Grid.Column="0" Grid.Row="0" VerticalContentAlignment="Center"/>
-
-                            <TextBox VerticalAlignment="Center" Grid.Column="3" Grid.Row="1" Margin="0,5,10,5"/>
-                            <ComboBox x:Name="tipoCombo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="22" Grid.Column="1" Grid.Row="1" Margin="0,5,0,0">
-                                <ComboBoxItem Content="Jurídica"></ComboBoxItem>
-                                <ComboBoxItem Content="Natural"></ComboBoxItem>
-                            </ComboBox>
-                            <ComboBox x:Name="docCombo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="22" Grid.Column="1" Grid.Row="0" Margin="0,5,0,0">
+                            <Label Content="Núm. Doc:" Grid.Column="0" VerticalContentAlignment="Center"/>
+                            <Label Content="Nombre:" Grid.Column="0" Grid.Row ="1" VerticalContentAlignment="Center"/>
+                            <Label Content="Tipo Documento:" Grid.Column="3" Grid.Row="0" VerticalContentAlignment="Center"/>
+                            <Label Content="Apellido Paterno:" Grid.Column="0" Grid.Row="2" VerticalContentAlignment="Center"/>
+                            <Label Content="Apellido Materno:" Grid.Column="3" Grid.Row="2" VerticalContentAlignment="Center"/>
+                            <TextBox x:Name="apPatClienteSearchTxtBox" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Margin="0,5,10,5" Grid.ColumnSpan ="2"/>
+                            <TextBox x:Name="apMatClienteSearchTxtBox" VerticalAlignment="Center" Grid.Column="4" Grid.Row="2" Margin="0,5,5,5"/>
+                            <TextBox x:Name="nombreClienteSearchTxtBox" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Margin="0,6,10,5" Grid.ColumnSpan ="2"/>
+                            <ComboBox SelectedIndex="0" x:Name="docCombo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="22" Grid.Column="4" Grid.Row="0" Margin="0,5,0,0">
+                                <ComboBoxItem  Content=""></ComboBoxItem>
                                 <ComboBoxItem Content="DNI"></ComboBoxItem>
                                 <ComboBoxItem Content="RUC"></ComboBoxItem>
                             </ComboBox>
 
-                            <TextBox VerticalAlignment="Center" Grid.Column="3" Margin="0,2,158,3"/>
-                            <Button Grid.Row="1" x:Name="buscarClienteBtn" Width="32" Height="32" Grid.Column="4" BorderThickness="0">
+                            <TextBox VerticalAlignment="Center" Grid.Column="1" Grid.ColumnSpan ="2" Margin="0,2,10,3" x:Name="numDocSearchTxtBox"/>
+                            <Button Grid.Row="2" x:Name="buscarClienteBtn" Width="32" Height="32" Grid.Column="5" BorderThickness="0" HorizontalAlignment="Right" Click="buscarClienteBtn_Click">
                                 <Button.Background>
                                     <ImageBrush ImageSource="../../Resources/refresh2_48.png"/>
                                 </Button.Background>
@@ -60,27 +62,23 @@
                                 <ImageBrush ImageSource="../../Resources/add_20.png"/>
                             </Button.Background>
                         </Button>
-                        <Button x:Name="detalleClienteBtn" Content="" VerticalAlignment="Bottom" Width="20" Margin="0,0,2,-1" Click="edClienteBtn_Click" Height="20">
-                            <Button.Background>
-                                <ImageBrush ImageSource="../../Resources/edit_20.png"/>
-                            </Button.Background>
-                        </Button>
 
                     </ToolBar>
                     <DataGrid Margin="5" Grid.Row="2" x:Name="clientesGrid" IsManipulationEnabled="True" CanUserSortColumns="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" ItemsSource="{Binding Path=ListaClientes}">
                         <DataGrid.Columns>
-                            <DataGridHyperlinkColumn Width="2.5*" Binding="{Binding Path=Codigo}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Núm. Doc.">
-                            <DataGridHyperlinkColumn.ElementStyle>
-                                <Style>
-                                    <EventSetter Event="Hyperlink.Click" Handler="numDocumento_Click"/>
-                                </Style>
-                            </DataGridHyperlinkColumn.ElementStyle>
+                            <DataGridHyperlinkColumn Width="2.5*" Binding="{Binding Path=nroDoc}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Núm. Doc.">
+                                <DataGridHyperlinkColumn.ElementStyle>
+                                    <Style>
+                                        <EventSetter Event="Hyperlink.Click" Handler="numDocumento_Click"/>
+                                    </Style>
+                                </DataGridHyperlinkColumn.ElementStyle>
                             </DataGridHyperlinkColumn>
-                            <DataGridTextColumn Width="2.2*" Binding="{Binding Path=TipoDocumento}" ClipboardContentBinding="{x:Null}" Header="Tipo Doc."/>
-                            <DataGridTextColumn Width="4*" Binding="{Binding Path=Nombre}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>
-                            <DataGridTextColumn Width="4*" Binding="{Binding Path=Apellido}" ClipboardContentBinding="{x:Null}" Header="Apellido"/>
-                            <DataGridTextColumn Width="2*" Binding="{Binding Path=TelefonoCliente}" ClipboardContentBinding="{x:Null}" Header="Teléfono"/>
-                            <DataGridTextColumn Width="1.7*" Binding="{Binding Path=PuntosCliente}" ClipboardContentBinding="{x:Null}" Header="Puntos"/>
+                            <DataGridTextColumn Width="2.2*" Binding="{Binding Path=tipoDocumento}" ClipboardContentBinding="{x:Null}" Header="Tipo Doc."/>
+                            <DataGridTextColumn Width="4*" Binding="{Binding Path=nombre}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>
+                            <DataGridTextColumn Width="4*" Binding="{Binding Path=apellidoPaterno}" ClipboardContentBinding="{x:Null}" Header="Apellido Paterno"/>
+                            <DataGridTextColumn Width="4*" Binding="{Binding Path=apellidoMaterno}" ClipboardContentBinding="{x:Null}" Header="Apellido Materno"/>
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=telefonoCliente}" ClipboardContentBinding="{x:Null}" Header="Teléfono"/>
+                            <DataGridTextColumn Width="1.7*" Binding="{Binding Path=puntosCliente}" ClipboardContentBinding="{x:Null}" Header="Puntos"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <StackPanel x:Name="seleccionarListaPanel" Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center" Visibility="Collapsed">
@@ -154,7 +152,7 @@
                         <Label Content="Total Compras:" VerticalContentAlignment="Center" Grid.Column="4" Grid.Row="8"/>
                         <Label Content="Comentarios:" VerticalContentAlignment="Center" Grid.Column="4" Grid.Row="9"/>
 
-                        <TextBox x:Name="numDocTxtBox" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Height="22" />
+                        <TextBox Text="{Binding Path=nroDoc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="numDocTxtBox" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Height="22" />
                         <ComboBox x:Name="tipoClienteCombo" Grid.ColumnSpan="2" VerticalAlignment="Center" SelectedIndex="0" Grid.Column="2" Grid.Row="3" Height="22">
                             <ListBoxItem Content="Persona Natural"/>
                             <ListBoxItem Content="Persona Jurídica"/>

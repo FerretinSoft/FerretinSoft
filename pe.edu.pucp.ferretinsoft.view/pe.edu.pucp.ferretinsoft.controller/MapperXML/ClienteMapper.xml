@@ -5,15 +5,51 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
 
   <resultMaps>
     <resultMap id="mapaCliente" class="Cliente">
-      <result property="Nombre" column="nombre"/>
+      <result property="codigo" column="id"/>
+      <result property="nombre" column="nombre"/>
+      <result property="nroDoc" column="nroDoc"/>
+      <result property="tipoDocumento" column="tipoDocumento"/>
+      <result property="apellidoPaterno" column="apPaterno"/>
+      <result property="apellidoMaterno" column="apMaterno"/>
+      <result property="telefonoCliente" column="telefono1"/>
+      <result property="puntosCliente" column="puntosActual"/>
+      <result property="tipoCliente" column="tipoPersona"/>
+      <result property="emailCliente" column="email"/>
+      <result property="puntosGanadosCliente" column="puntosGanados"/>
+      <result property="puntosUsadosCliente" column="puntosUsados"/>
+      <result property="totalComprasCliente" column="totalCompras"/>
+      <result property="direccionCliente" column="direccion"/>
+
     </resultMap>
   </resultMaps>
 
+
   <statements>
 
-    <select id="obtenerListaClientes" resultClass="Cliente">
-      select nombre as Nombre from Tbl_Cliente;
+    <select id="obtenerListaClientes" resultMap="mapaCliente">
+      select * from Tbl_Cliente order by nroDoc;
     </select>
+    <select id="obtenerListaClientesby" parameterClass="Cliente" resultMap="mapaCliente">
+      select * from Tbl_Cliente
+      <dynamic prepend="where">
+        <isNotEqual prepend ="and" property="nroDoc" compareValue="-1">
+          nroDoc like '%$nroDoc$%'
+        </isNotEqual>
+        <isNotNull prepend ="and" property="nombre" >
+          nombre like '%$nombre$%'
+        </isNotNull>
+        <isNotNull prepend ="and" property="apellidoPaterno" >
+          apPaterno like '%$apellidoPaterno$%'
+        </isNotNull>
+        <isNotNull prepend ="and" property="apellidoMaterno" >
+          apMaterno like '%$apellidoMaterno$%'
+        </isNotNull>
+        <isNotNull prepend ="and" property="tipoDocumento" >
+            tipoDocumento like '%$tipoDocumento$%'
+        </isNotNull>
+      </dynamic>
+    order by nroDoc
+  </select>
   </statements>
 
 </sqlMap>

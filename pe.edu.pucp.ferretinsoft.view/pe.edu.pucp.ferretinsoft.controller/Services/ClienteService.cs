@@ -14,16 +14,13 @@ namespace Project_FerretinSoft.pe.edu.pucp.ferretinsoft.controller.Services
         public static IList obtenerListaClientes()
         {
             IList listaClientes = Mapper.Instance().QueryForList("obtenerListaClientes", null);
-           
-            /*if (listaClientes == null)
-                Console.WriteLine("es nula");
-            else
-            {
-                Console.WriteLine(((Cliente)listaClientes[0]).Nombre);
-                Console.WriteLine(((Cliente)listaClientes[1]).Nombre);
-            }*/
             return listaClientes;
+        }
 
+        public static IList obtenerListaClientesBy(Cliente cliente)
+        {
+            IList listaClientes = Mapper.Instance().QueryForList("obtenerListaClientesby", cliente);
+            return listaClientes;
         }
     }
 }

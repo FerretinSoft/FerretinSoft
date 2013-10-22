@@ -8,21 +8,21 @@ namespace pe.edu.pucp.ferretinsoft.model
 {
     public class Cliente
     {
-        public int Codigo { get; set; }
+        public int codigo { get; set; }
         public int nroDoc { get; set; }
-        public String Nombre { get; set; }
-        public String Apellido { get; set; }
-        public String direccion { get; set; }
-        public String TipoDocumento { get; set; }
-        public String TipoCliente { get; set; }
-        public String TelefonoCliente { get; set; }
-        public String EmailCliente { get; set; }
-        public int PuntosCliente { get; set; }
-        public int PuntosGanadosCliente { get; set; }
-        public int PuntosUsadosCliente { get; set; }
-        public String UltimaCompraCliente { get; set; }
-        public int TotalComprasCliente { get; set; }
-        public String RegistradoCliente { get; set; }
-        public String DireccionCliente { get; set; }
+        public String nombre { get; set; }
+        public String apellidoPaterno { get; set; }
+        public String apellidoMaterno { get; set; }
+        public String tipoDocumento { get; set; }
+        public String tipoCliente { get; set; }
+        public String telefonoCliente { get; set; }
+        public String emailCliente { get; set; }
+        public int puntosCliente { get; set; }
+        public int puntosGanadosCliente { get; set; }
+        public int puntosUsadosCliente { get; set; }
+        public String ultimaCompraCliente { get; set; }
+        public int totalComprasCliente { get; set; }
+        public String registradoCliente { get; set; }
+        public String direccionCliente { get; set; }
     }
 }

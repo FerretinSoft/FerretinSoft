@@ -35,42 +35,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             };
 
             List<Proforma> proformas = new List<Proforma>();
-            proformas.Add(new Proforma
-            {
-                Codigo = 25625,
-                FechaProforma = "09/10/2013",
-                Importe = 869.50,
-                Cliente = new Cliente
-                {
-                    Codigo = 0000526358,
-                    Nombre = "Constructora MPM S.A."
-                },
-                Vendedor = vendedor
-            });
-            proformas.Add(new Proforma
-            {
-                Codigo = 25625,
-                FechaProforma = "10/10/2013",
-                Importe = 250.00,
-                Cliente = new Cliente
-                {
-                    Codigo = 0000008569524,
-                    Nombre = "MVD Arquitectos"
-                },
-                Vendedor = vendedor
-            });
-            proformas.Add(new Proforma
-            {
-                Codigo = 25625,
-                FechaProforma = "11/10/2013",
-                Importe = 760.00,
-                Cliente = new Cliente
-                {
-                    Codigo = 000000245632,
-                    Nombre = "Canalle Group"
-                },
-                Vendedor = vendedor
-            });
+           
 
             return proformas;
         }
@@ -85,8 +50,8 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
              var rowData = ((Hyperlink)e.OriginalSource).DataContext as Proforma;
              codProformaTxtBox.Text = rowData.Codigo+"";
              vendedorTxtBox.Text = rowData.Vendedor.Nombre;
-             codClienteTxtBox.Text = rowData.Cliente.Codigo + "";
-             nombreClienteTxtBox.Text = rowData.Cliente.Nombre;
+             codClienteTxtBox.Text = rowData.Cliente.nroDoc + "";
+             nombreClienteTxtBox.Text = rowData.Cliente.nombre;
              fechaProformaTxtBox.Text = rowData.FechaProforma;
              totalProformaTxtBox.Text = "S/." + rowData.Importe;
              igvProformaTxtBox.Text = "S/." + (rowData.Importe * 0.18) + "";

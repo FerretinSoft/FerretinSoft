@@ -39,42 +39,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MVentas
             };
 
             List<Venta> ventas = new List<Venta>();
-            ventas.Add(new Venta
-            {
-                Codigo = 0000025625,
-                FechaVenta = "09/10/2013",
-                Importe = "S/. 869.50",
-                Cliente = new Cliente
-                {
-                    Codigo = 000000526358,
-                    Nombre = "Constructora MPM S.A."
-                },
-                Vendedor = vendedor
-            });
-            ventas.Add(new Venta
-            {
-                Codigo = 0000025625,
-                FechaVenta = "10/10/2013",
-                Importe = "S/. 250.00",
-                Cliente = new Cliente
-                {
-                    Codigo = 0000008569524,
-                    Nombre = "MVD Arquitectos"
-                },
-                Vendedor = vendedor
-            });
-            ventas.Add(new Venta
-            {
-                Codigo = 0000025625,
-                FechaVenta = "11/10/2013",
-                Importe = "S/. 760.00",
-                Cliente = new Cliente
-                {
-                    Codigo = 000000245632,
-                    Nombre = "Canalle Group"
-                },
-                Vendedor = vendedor
-            });
+            
 
             return ventas;
         }

@@ -1,10 +1,10 @@
 ﻿<Window x:Class="pe.edu.pucp.ferretinsoft.view.MVentas.MV_ReportesVentasWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Reportes Ventas" Height="353.004" Width="473.851" Icon="../Resources/ferretin_ico.ico">
+        Title="Reportes Ventas" Height="353.004" Width="473.851" Icon="../../Resources/ferretin_ico.ico">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="../Resources/texture_3_100.png" TileMode="FlipX" 
+            <ImageBrush ImageSource="../../Resources/texture_3_100.png" TileMode="FlipX" 
             Viewport="0,0,100,100" ViewportUnits="Absolute"/>
         </Grid.Background>
         <Grid.RowDefinitions>
@@ -74,27 +74,27 @@
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="0" Content="" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" Width="48" Height="48" ToolTip="Visualizar Reporte">
                     <Button.Background>
-                        <ImageBrush ImageSource="../Resources/view_48.png" Stretch="Uniform"/>
+                        <ImageBrush ImageSource="../../Resources/view_48.png" Stretch="Uniform"/>
                     </Button.Background>
                 </Button>
                 <Button Grid.Column="1" Content="" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" Width="48" Height="48" ToolTip="Guardar Reporte">
                     <Button.Background>
-                        <ImageBrush ImageSource="../Resources/save1_48.png" Stretch="Uniform"/>
+                        <ImageBrush ImageSource="../../Resources/save1_48.png" Stretch="Uniform"/>
                     </Button.Background>
                 </Button>
                 <Button Grid.Column="2" Content="" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" Width="48" Height="48" ToolTip="Imprimir Reporte">
                     <Button.Background>
-                        <ImageBrush ImageSource="../Resources/print_48.png" Stretch="Uniform"/>
+                        <ImageBrush ImageSource="../../Resources/print_48.png" Stretch="Uniform"/>
                     </Button.Background>
                 </Button>
                 <Button Grid.Column="3" Content="" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" Width="48" Height="48" ToolTip="Enviar por email">
                     <Button.Background>
-                        <ImageBrush ImageSource="../Resources/mail1_48.png" Stretch="Uniform"/>
+                        <ImageBrush ImageSource="../../Resources/mail1_48.png" Stretch="Uniform"/>
                     </Button.Background>
                 </Button>
                 <Button Grid.Column="4" Content="" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" Width="48" Height="48" ToolTip="Agregar a favoritos">
                     <Button.Background>
-                        <ImageBrush ImageSource="../Resources/fav_48.png" Stretch="Uniform"/>
+                        <ImageBrush ImageSource="../../Resources/fav_48.png" Stretch="Uniform"/>
                     </Button.Background>
                 </Button>
             </Grid>

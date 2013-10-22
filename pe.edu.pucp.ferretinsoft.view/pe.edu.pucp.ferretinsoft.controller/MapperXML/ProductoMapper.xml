@@ -30,7 +30,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
     </insert>-->
 
     <select id="obtenerListaProductos" resultMap="mapProducto" >
-      select top 1 * from Tbl_Producto;
+      select * from Tbl_Producto;
     </select>
 <!--
     <select id="obtenerCategoriasProducto" >

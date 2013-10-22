@@ -1,6 +1,7 @@
 ﻿using IBatisNet.DataMapper;
 using pe.edu.pucp.ferretinsoft.model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,8 +13,8 @@ namespace Project_FerretinSoft.pe.edu.pucp.ferretinsoft.controller.Services
     {
         public static List<Producto> obtenerListaProductos()
         {
-            Producto listaProd= Mapper.Instance().QueryForObject("obtenerListaProductos", null) as Producto;
-            Console.WriteLine(listaProd.nombre);
+            //IList listaProd= Mapper.Instance().QueryForObject("obtenerListaProductos", null);
+            //Console.WriteLine(listaProd.nombre);
             return null;
         }
 

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using pe.edu.pucp.ferretinsoft.controller.Services;
+using Project_FerretinSoft.pe.edu.pucp.ferretinsoft.controller.Services;
 
 
 namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
@@ -31,7 +32,8 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
 
         private void iniSesionBtn_Click(object sender, RoutedEventArgs e)
         {
-            PruebaService.getWelcome();
+            //PruebaService.getWelcome();
+            ProductoService.obtenerListaProductos();
             if (mainW == null)
             {
                 mainW = new MainWindow();

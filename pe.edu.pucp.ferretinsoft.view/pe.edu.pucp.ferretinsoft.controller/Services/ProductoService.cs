@@ -12,7 +12,8 @@ namespace Project_FerretinSoft.pe.edu.pucp.ferretinsoft.controller.Services
     {
         public static List<Producto> obtenerListaProductos()
         {
-            Mapper.Instance().QueryForList("obtenerListaProductos", null);
+            Producto listaProd= Mapper.Instance().QueryForObject("obtenerListaProductos", null) as Producto;
+            Console.WriteLine(listaProd.nombre);
             return null;
         }
 

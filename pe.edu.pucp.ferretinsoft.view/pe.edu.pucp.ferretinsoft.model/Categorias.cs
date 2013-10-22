@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project_FerretinSoft.pe.edu.pucp.ferretinsoft.model
 {
-    class Categorias
+    public class Categorias
     {
         public int ID{ set; get; }
         public String nombre { set; get; }

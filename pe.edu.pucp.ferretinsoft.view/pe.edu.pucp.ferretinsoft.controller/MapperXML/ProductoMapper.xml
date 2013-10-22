@@ -5,8 +5,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
 
   <resultMaps>
     <resultMap id="mapProducto" class="Producto">
-      <result property="Nombre" column="username"/>
-      <result property="Password" column="password"/>
+      <result property="ID" column="codigo"/>
+      <result property="nombre" column="nombre"/>
+      <result property="descripcion" column="descripcion"/>
+      <result property="precioLista" column="precioLista"/>
+      <result property="id_material_base" column="id_material_base"/>
+      <result property="id_material_sec" column="id_material_sec"/>
+      <result property="id_unidad_medida" column="id_unidad_medida"/>
+      <result property="estado" column="estado"/>
     </resultMap>
   </resultMaps>
 
@@ -23,14 +29,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
       insert into tbl_alumnos values(#nombre#, #app#, #apm# ,#edad#)
     </insert>-->
 
-    <select id="obtenerListaProductos" >
-      select msg_prueba from tblprueba where id_prueba=1;
+    <select id="obtenerListaProductos" resultMap="mapProducto" >
+      select top 1 * from Tbl_Producto;
     </select>
-
+<!--
     <select id="obtenerCategoriasProducto" >
       select msg_prueba from tblprueba where id_prueba=1;
     </select>
-    
+    -->
   </statements>
 
 </sqlMap>

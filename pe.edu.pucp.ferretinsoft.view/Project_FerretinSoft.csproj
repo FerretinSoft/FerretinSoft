@@ -428,17 +428,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="bin\Debug\providers.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="bin\Debug\SqlMap.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="bin\Debug\providers.config" />
+    <None Include="bin\Debug\SqlMap.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="providers.config" />
+    <None Include="SqlMap.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -520,6 +518,10 @@
     <Content Include="libReference\IBatisNet.Common.Logging.Log4Net.dll" />
     <Content Include="libReference\IBatisNet.DataMapper.dll" />
     <Content Include="libReference\log4net.dll" />
+    <Resource Include="pe.edu.pucp.ferretinsoft.controller\MapperXML\configMapper.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pe.edu.pucp.ferretinsoft.controller\ConfigDB\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

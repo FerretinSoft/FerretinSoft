@@ -34,7 +34,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
 
         private void iniSesionBtn_Click(object sender, RoutedEventArgs e)
         {
-            IList listaClientes = ClienteService.obtenerListaClientes();
+            //IList listaClientes = ClienteService.obtenerListaClientes();
             if (mainW == null)
             {
                 mainW = new MainWindow();

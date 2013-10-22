@@ -1,10 +1,10 @@
 ﻿<Window x:Class="pe.edu.pucp.ferretinsoft.view.MVentas.MV_AdministrarNotaCreditoWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Administrar Nota de Crédito" Icon="../Resources/ferretin_ico.ico" Width="827.701">
+        Title="Administrar Nota de Crédito" Icon="../../Resources/ferretin_ico.ico" Width="827.701">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="../Resources/texture_3_100.png" TileMode="FlipX" 
+            <ImageBrush ImageSource="../../Resources/texture_3_100.png" TileMode="FlipX" 
             Viewport="0,0,100,100" ViewportUnits="Absolute"/>
         </Grid.Background>
         <TabControl x:Name="NotaCreditoTab" Grid.RowSpan="2">
@@ -45,7 +45,7 @@
                                 <TextBox VerticalAlignment="Center" Text="DNI/RUC" HorizontalAlignment="Stretch"/>
                                 <Button Margin="0,0,5,0" x:Name="buscarClienteBtn" VerticalAlignment="Center" Width="20" Height="20" Click="buscarClienteBtn_Click" BorderThickness="0" Grid.Column="1">
                                     <Button.Background>
-                                        <ImageBrush ImageSource="../Resources/search1_20.png"/>
+                                        <ImageBrush ImageSource="../../Resources/search1_20.png"/>
                                     </Button.Background>
                                 </Button>
                             </Grid>
@@ -58,7 +58,7 @@
                                 <TextBox Text="Vendededor" VerticalAlignment="Center" IsEnabled="False"/>
                                 <Button x:Name="buscarVendedorBtn" VerticalAlignment="Center" Width="20" Height="20" Grid.Column="1" BorderThickness="0" Click="buscarVendedorBtn_Click">
                                     <Button.Background>
-                                        <ImageBrush ImageSource="../Resources/search1_20.png"/>
+                                        <ImageBrush ImageSource="../../Resources/search1_20.png"/>
                                     </Button.Background>
                                 </Button>
                             </Grid>
@@ -68,7 +68,7 @@
 
                             <Button x:Name="buscarProformasBtn" Grid.Row="3" BorderThickness="0" Grid.Column="5" Width="25" Height="25" VerticalAlignment="Center">
                                 <Button.Background>
-                                    <ImageBrush ImageSource="../Resources/refresh2_48.png"/>
+                                    <ImageBrush ImageSource="../../Resources/refresh2_48.png"/>
                                 </Button.Background>
                             </Button>
                         </Grid>
@@ -78,7 +78,7 @@
                         
                         <Button x:Name="detalleNotaCreditoBtn" Content="" VerticalAlignment="Bottom" Width="20" Margin="0,0,2,-1" Click="detalleNotaCreditoBtn_Click" Height="20">
                             <Button.Background>
-                                <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/edit_20.png"/>
+                                <ImageBrush ImageSource="../../Resources/edit_20.png"/>
                             </Button.Background>
                         </Button>
 

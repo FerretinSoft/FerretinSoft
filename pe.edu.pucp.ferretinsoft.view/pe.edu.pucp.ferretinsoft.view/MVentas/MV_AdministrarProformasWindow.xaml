@@ -1,10 +1,10 @@
 ﻿<Window x:Class="pe.edu.pucp.ferretinsoft.view.MVentas.MV_AdministrarProformasWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-               Title="Administrar Proformas"  Height="487" Width="909" Icon="../Resources/ferretin_ico.ico">
+               Title="Administrar Proformas"  Height="487" Width="909" Icon="../../Resources/ferretin_ico.ico">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="../Resources/texture_3_100.png" TileMode="FlipX" 
+            <ImageBrush ImageSource="../../Resources/texture_3_100.png" TileMode="FlipX" 
             Viewport="0,0,100,100" ViewportUnits="Absolute"/>
         </Grid.Background>
         <Grid.RowDefinitions>
@@ -48,7 +48,7 @@
                                 <TextBox VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
                                 <Button x:Name="buscarClienteBtn" VerticalAlignment="Center" Width="20" Height="20" Click="buscarClienteBtn_Click" BorderThickness="0" Grid.Column="1">
                                     <Button.Background>
-                                        <ImageBrush ImageSource="../Resources/search1_20.png"/>
+                                        <ImageBrush ImageSource="../../Resources/search1_20.png"/>
                                     </Button.Background>
                                 </Button>
                             </Grid>
@@ -61,7 +61,7 @@
                                 <TextBox Text="Vendededor" VerticalAlignment="Center" IsEnabled="False"/>
                                 <Button x:Name="buscarVendedorBtn" VerticalAlignment="Center" Width="20" Height="20" Grid.Column="1" BorderThickness="0" Click="buscarVendedorBtn_Click">
                                     <Button.Background>
-                                        <ImageBrush ImageSource="../Resources/search1_20.png"/>
+                                        <ImageBrush ImageSource="../../Resources/search1_20.png"/>
                                     </Button.Background>
                                 </Button>
                             </Grid>
@@ -71,7 +71,7 @@
 
                             <Button x:Name="buscarProformasBtn" BorderThickness="0" Grid.Row="3" Grid.Column="5" Width="25" Height="25" VerticalAlignment="Center">
                                 <Button.Background>
-                                    <ImageBrush ImageSource="../Resources/refresh2_48.png"/>
+                                    <ImageBrush ImageSource="../../Resources/refresh2_48.png"/>
                                 </Button.Background>
                             </Button>
                         </Grid>
@@ -80,12 +80,12 @@
 
                         <Button x:Name="nuevaProformaBtn" Content="" VerticalAlignment="Top" Width="20" Margin="0,0,2,-1" Click="nuevaProformaBtn_Click" Height="20">
                             <Button.Background>
-                                <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/add_20.png"/>
+                                <ImageBrush ImageSource="../../Resources/add_20.png"/>
                             </Button.Background>
                         </Button>
                         <Button x:Name="detalleProformaBtn" Content="" VerticalAlignment="Bottom" Width="20" Margin="0,0,2,-1" Click="detalleProformaBtn_Click" Height="20">
                             <Button.Background>
-                                <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/edit_20.png"/>
+                                <ImageBrush ImageSource="../../Resources/edit_20.png"/>
                             </Button.Background>
                         </Button>
 
@@ -152,7 +152,7 @@
                         <TextBox Grid.Column="3" Grid.Row="0" IsEnabled="False" Text="" VerticalContentAlignment="Center" Margin="0,2,20,2" VerticalAlignment="Center"/>
                         <Button Grid.Column="3" Grid.Row="0" x:Name="buscarProformaBtn" HorizontalAlignment="Right" VerticalAlignment="Center" Width="18" Height="18" Margin="0,5,0,5" Padding="0" Click="buscarProformaBtn_Click" BorderThickness="0">
                             <Button.Background>
-                                <ImageBrush ImageSource="../Resources/search1_20.png"/>
+                                <ImageBrush ImageSource="../../Resources/search1_20.png"/>
                             </Button.Background>
                         </Button>
                         <TextBox x:Name="vendedorTxtBox" Grid.Column="3" Grid.Row="1" IsEnabled="False" Text="" VerticalContentAlignment="Center" Margin="0,2,0,2" VerticalAlignment="Center" />
@@ -226,7 +226,7 @@
 
                     <StackPanel Grid.Column="1" Grid.Row="1" >
                         <Label Content="Datos Cliente" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"/>
-                        <Image HorizontalAlignment="Center" Height="100" Width="100" Source="../Resources/cliente_1.png" Stretch="Fill"/>
+                        <Image HorizontalAlignment="Center" Height="100" Width="100" Source="../../Resources/cliente_1.png" Stretch="Fill"/>
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>

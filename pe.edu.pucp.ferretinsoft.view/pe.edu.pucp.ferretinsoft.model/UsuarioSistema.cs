@@ -14,7 +14,8 @@ namespace pe.edu.pucp.ferretinsoft.model
         public string nombre { get; set; }
         public string apellidoP { get; set; }
         public string apellidoM { get; set; }
-        public string perfil { get; set; }
         public string estado { get; set; }
+        public Perfil perfil { get; set; }
+        public string contraseña { get; set; }
     }
 }

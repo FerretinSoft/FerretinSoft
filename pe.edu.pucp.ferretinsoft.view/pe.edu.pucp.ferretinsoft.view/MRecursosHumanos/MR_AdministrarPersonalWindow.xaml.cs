@@ -46,13 +46,13 @@ namespace pe.edu.pucp.ferretinsoft.view.MRecursosHumanos
 
             per1.codigo = "000001";
             per1.dni = "23453412";
-            per1.nombreCompleto = "Marcelo Martinez Cervantes";
-            per1.nombre = "Marcelo ";
-            per1.apPat = "Martinez ";
-            per1.apMat = "Cervantes";
+            per1.nombreCompleto = "Heidy Hernandez Breton";
+            per1.nombre = "Heidy";
+            per1.apPat = "Hernandez";
+            per1.apMat = "Breton";
             per1.cargo = "Jefe de Tienda";
             per1.tienda = "Tienda 1";
-            per1.direccion = "Av. La caleta 1150";
+            per1.direccion = "Av. Constructores 1150";
             per1.telefono = "923456231";
             personal.Add(per1);
 

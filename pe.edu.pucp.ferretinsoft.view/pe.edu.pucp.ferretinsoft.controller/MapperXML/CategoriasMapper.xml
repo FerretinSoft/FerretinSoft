@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="CategoriasMapper"
+xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+
+  <resultMaps>
+    <resultMap id="mapaCategorias" class="Categorias">
+      <result property="ID" column="id"/>
+      <result property="nombre" column="nombre"/>
+      <result property="descripcion" column="descripcion"/>
+      <result property="nivel" column="nivel"/>
+      <result property="id_padre" column="id_padre"/>
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+
+    <select id="obtenerListaCategorías" resultMap="mapaCategorias">
+      select * from Tbl_Categoria order by id;
+    </select>
+  </statements>
+
+</sqlMap>

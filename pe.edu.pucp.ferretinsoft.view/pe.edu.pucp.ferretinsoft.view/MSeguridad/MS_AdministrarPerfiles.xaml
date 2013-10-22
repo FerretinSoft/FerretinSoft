@@ -27,9 +27,6 @@
                         <CheckBox Content="Asistente de Ventas" IsChecked="True"/>
                         <CheckBox Content="Jefe de Tienda" IsChecked="True"/>
                         <CheckBox Content="Vendedor" IsChecked="True"/>
-
-
-
                     </ComboBox>
 
                     <Button x:Name="buscarUsuariosBtn" HorizontalAlignment="Left" Margin="494,21,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35" Grid.Column="1">

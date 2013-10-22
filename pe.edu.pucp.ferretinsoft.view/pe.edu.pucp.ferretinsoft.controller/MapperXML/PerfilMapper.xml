@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="PerfilMapper"
+xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+
+  <resultMaps>
+    <resultMap id="mapaPerfil" class="Perfil">
+      <result property="nombrePerfil" column="nombre"/>
+      <result property="descripcion" column="descripcion"/>
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+
+    <select id="obtenerListaPerfiles" resultMap="mapaPerfil">
+      select * from Tbl_Perfil;
+    </select>
+  </statements>
+
+</sqlMap>

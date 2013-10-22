@@ -32,6 +32,18 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
     <select id="obtenerListaProductos" resultMap="mapProducto" >
       select * from Tbl_Producto;
     </select>
+
+    <select id="obtenerProductoPorNombre" resultMap="mapProducto" parameterClass="Producto" >
+      select * from Tbl_Producto
+        <dynamic prepend="WHERE">
+          <isNull property="nombre">
+            nombre like '[a-z]'
+          </isNull>
+          <isNotNull property="nombre">
+            nombre like '%$nombre$%'
+          </isNotNull>
+       </dynamic>
+    </select>
 <!--
     <select id="obtenerCategoriasProducto" >
       select msg_prueba from tblprueba where id_prueba=1;

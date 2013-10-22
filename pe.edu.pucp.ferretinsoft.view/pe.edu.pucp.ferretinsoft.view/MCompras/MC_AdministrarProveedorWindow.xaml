@@ -18,7 +18,7 @@
                     </ComboBox>
                     <Button x:Name="buscarClienteBtn" HorizontalAlignment="Left" Margin="819,33,0,0" VerticalAlignment="Top" Width="32" Height="32" RenderTransformOrigin="0.3,-0.35">
                         <Button.Background>
-                            <ImageBrush ImageSource="/pe.edu.pucp.ferretinsoft.view;component/Resources/refresh2_48.png"/>
+                            <ImageBrush ImageSource="../../Resources/refresh2_48.png"/>
                         </Button.Background>
                     </Button>
                     <DataGrid x:Name="proveedoresDg" Margin="10,114,10,10" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
@@ -41,13 +41,13 @@
                     <ToolBar HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Height="24">
                         <Button x:Name="nuevoProveedorBtn" Content="" VerticalAlignment="Stretch" Width="20" Margin="0,0,2,-1" Click="nuevoProveedorBtn_Click">
                             <Button.Background>
-                                <ImageBrush ImageSource="/Resources/add_20.png" Stretch="None"/>
+                                <ImageBrush ImageSource="../../Resources/add_20.png" Stretch="None"/>
                             </Button.Background>
                         </Button>
 
                         <Button x:Name="eliminarProveedorBtn" Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,2,0">
                             <Button.Background>
-                                <ImageBrush ImageSource="/Resources/trash_20.png"/>
+                                <ImageBrush ImageSource="../../Resources/trash_20.png"/>
                             </Button.Background>
                         </Button>
 
@@ -122,17 +122,17 @@
                     <ToolBar Grid.Column="3" HorizontalAlignment="Left" Margin="355,40,0,0" VerticalAlignment="Top" Height="25" Width="92" Grid.ColumnSpan="2">
                         <Button x:Name="nuevoProductoBtn" Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,4,0" Click="nuevoProductoBtn_Click">
                             <Button.Background>
-                                <ImageBrush ImageSource="/Resources/add_20.png" Stretch="None"/>
+                                <ImageBrush ImageSource="../../Resources/add_20.png" Stretch="None"/>
                             </Button.Background>
                         </Button>
                         <Button x:Name="eliminarProdBtn" Content="" Height="20" VerticalAlignment="Top" Width="20" Margin="0,0,4,0">
                             <Button.Background>
-                                <ImageBrush ImageSource="/Resources/trash_20.png"/>
+                                <ImageBrush ImageSource="../../Resources/trash_20.png"/>
                             </Button.Background>
                         </Button>
                         <Button x:Name="importarProducto" Content="" VerticalAlignment="Top" Width="20" Height="20" Click="importarProducto_Click" Margin="0,0,0,0">
                             <Button.Background>
-                                <ImageBrush ImageSource="/Resources/back_20.png" Stretch="None"/>
+                                <ImageBrush ImageSource="../../Resources/back_20.png" Stretch="None"/>
                             </Button.Background>
                         </Button>
                     </ToolBar>

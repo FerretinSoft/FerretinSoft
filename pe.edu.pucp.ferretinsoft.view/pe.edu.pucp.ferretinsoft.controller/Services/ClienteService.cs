@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,17 @@ namespace Project_FerretinSoft.pe.edu.pucp.ferretinsoft.controller.Services
 {
     class ClienteService
     {
-        public static List<Cliente> obtenerListaClientes()
+        public static IList obtenerListaClientes()
         {
-            List<Cliente> listaClientes = Mapper.Instance().QueryForList("obtenerListaClientes", null) as List<Cliente>;
+            IList listaClientes = Mapper.Instance().QueryForList("obtenerListaClientes", null);
+           
+            /*if (listaClientes == null)
+                Console.WriteLine("es nula");
+            else
+            {
+                Console.WriteLine(((Cliente)listaClientes[0]).Nombre);
+                Console.WriteLine(((Cliente)listaClientes[1]).Nombre);
+            }*/
             return listaClientes;
 
         }

@@ -11,8 +11,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
 
   <statements>
 
-    <select id="obtenerListaClientes" resultMap ="mapaCliente">
-      select * from Tbl_Cliente;
+    <select id="obtenerListaClientes" resultClass="Cliente">
+      select nombre as Nombre from Tbl_Cliente;
     </select>
   </statements>
 

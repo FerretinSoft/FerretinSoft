@@ -428,8 +428,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="bin\Debug\providers.config" />
-    <None Include="bin\Debug\SqlMap.config" />
+    <None Include="providers.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SqlMap.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -518,9 +522,7 @@
     <Content Include="libReference\log4net.dll" />
     <Resource Include="pe.edu.pucp.ferretinsoft.controller\MapperXML\configMapper.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="pe.edu.pucp.ferretinsoft.controller\ConfigDB\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -96,8 +96,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="pe.edu.pucp.ferretinsoft.controller\Services\ClienteService.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.controller\Services\ProductoService.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.controller\Services\PruebaService.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Auditoria.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Categorias.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Class1.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Cliente.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Devolucion.cs" />
@@ -521,6 +523,7 @@
     <Content Include="libReference\IBatisNet.Common.Logging.Log4Net.dll" />
     <Content Include="libReference\IBatisNet.DataMapper.dll" />
     <Content Include="libReference\log4net.dll" />
+    <Resource Include="pe.edu.pucp.ferretinsoft.controller\MapperXML\ProductoMapper.xml" />
     <Resource Include="pe.edu.pucp.ferretinsoft.controller\MapperXML\ClienteMapper.xml" />
   </ItemGroup>
   <ItemGroup />

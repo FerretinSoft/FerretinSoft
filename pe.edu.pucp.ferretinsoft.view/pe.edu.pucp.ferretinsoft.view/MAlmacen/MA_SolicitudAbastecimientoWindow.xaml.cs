@@ -59,34 +59,34 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
         {
             List<Producto> Listprod = new List<Producto>();
 
-            Producto prod1 = new Producto();
-            Producto prod2 = new Producto();
-            Producto prod3 = new Producto();
+            //Producto prod1 = new Producto();
+            //Producto prod2 = new Producto();
+            //Producto prod3 = new Producto();
 
-            prod1.ID = "200001";
-            prod1.nombre = "Cemento Premium ";
-            prod1.cantidad = 200;
-            prod1.stock = 1000;
-            prod1.saldo = 1000;
-            prod1.estado = "Activo";
+            //prod1.ID = "200001";
+            //prod1.nombre = "Cemento Premium ";
+            //prod1.cantidad = 200;
+            //prod1.stock = 1000;
+            //prod1.saldo = 1000;
+            //prod1.estado = "Activo";
 
-            prod2.ID = "200002";
-            prod2.nombre = "Cemento Regular";
-            prod2.cantidad = 500;
-            prod2.stock = 1000;
-            prod2.saldo = 1000;
-            prod2.estado = "Activo";
+            //prod2.ID = "200002";
+            //prod2.nombre = "Cemento Regular";
+            //prod2.cantidad = 500;
+            //prod2.stock = 1000;
+            //prod2.saldo = 1000;
+            //prod2.estado = "Activo";
 
-            prod3.ID = "200003";
-            prod3.nombre = "Cemento Arqua";
-            prod3.cantidad = 400;
-            prod3.stock = 800;
-            prod3.saldo = 800;
-            prod3.estado = "Activo";
+            //prod3.ID = "200003";
+            //prod3.nombre = "Cemento Arqua";
+            //prod3.cantidad = 400;
+            //prod3.stock = 800;
+            //prod3.saldo = 800;
+            //prod3.estado = "Activo";
 
-            Listprod.Add(prod1);
-            Listprod.Add(prod2);
-            Listprod.Add(prod3);
+            //Listprod.Add(prod1);
+            //Listprod.Add(prod2);
+            //Listprod.Add(prod3);
 
             return Listprod;
 

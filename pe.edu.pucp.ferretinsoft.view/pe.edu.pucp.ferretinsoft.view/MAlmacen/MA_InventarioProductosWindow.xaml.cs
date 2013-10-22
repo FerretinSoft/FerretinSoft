@@ -29,42 +29,42 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
 
         private List<Producto> ListaProductos()
         {
-            List<Producto> lisProd = new List<Producto>();
+            //List<Producto> lisProd = new List<Producto>();
 
-            Producto prod1 = new Producto();
-            Producto prod2 = new Producto();
-            Producto prod3 = new Producto();
+            //Producto prod1 = new Producto();
+            //Producto prod2 = new Producto();
+            //Producto prod3 = new Producto();
 
-            prod1.ID = "000001";
-            prod1.nombre = "cemento";
-            prod1.categoria = "Construcción";
-            prod1.stock = 5000;
-            prod1.stockMin = 1000;
-            prod1.almacen = "Almacen benavides";
+            //prod1.ID = "000001";
+            //prod1.nombre = "cemento";
+            //prod1.categoria = "Construcción";
+            //prod1.stock = 5000;
+            //prod1.stockMin = 1000;
+            //prod1.idAlmacen = "Almacen benavides";
             
 
 
-            prod2.ID = "000002";
-            prod2.nombre = "Pintura tecno";
-            prod2.categoria = "Acabado";
-            prod2.stock = 10000;
-            prod2.stockMin = 2000;
-            prod2.almacen = "Almacen callao";
+            //prod2.ID = "000002";
+            //prod2.nombre = "Pintura tecno";
+            //prod2.categoria = "Acabado";
+            //prod2.stock = 10000;
+            //prod2.stockMin = 2000;
+            //prod2.idAlmacen = "Almacen callao";
 
 
-            prod3.ID = "000002";
-            prod3.nombre = "ladrillo";
-            prod3.categoria = "Construcción";
-            prod3.stock = 20000;
-            prod3.stockMin = 5000;
-            prod3.almacen = "Almacen callao";
+            //prod3.ID = "000002";
+            //prod3.nombre = "ladrillo";
+            //prod3.categoria = "Construcción";
+            //prod3.stock = 20000;
+            //prod3.stockMin = 5000;
+            //prod3.idAlmacen = "Almacen callao";
             
 
-            lisProd.Add(prod1);
-            lisProd.Add(prod2);
-            lisProd.Add(prod3);
+            //lisProd.Add(prod1);
+            //lisProd.Add(prod2);
+            //lisProd.Add(prod3);
 
-            return lisProd;
+            return null;
 
         }
 

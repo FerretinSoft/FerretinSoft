@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project_FerretinSoft.pe.edu.pucp.ferretinsoft.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,14 +9,14 @@ namespace pe.edu.pucp.ferretinsoft.model
 {
     public class Producto
     {
-        public string ID { set; get; }
+        public int ID { set; get; }
         public string nombre { set; get; }
-        public string categoria { set; get; }
-        public int cantidad { set; get; }
-        public int stock { set; get; }
-        public int saldo { set; get; }
-        public int stockMin { set; get; }
-        public string almacen { set; get; }
-        public string estado { set; get; }
+        public string descripcion { set; get; }
+        public List<Categorias> categorias { set; get; }
+        public double precioLista { set; get; }
+        public int id_material_base { set; get; }
+        public int id_material_sec { set; get; }
+        public int id_unidad_medida { set; get; }
+        public int estado { set; get; }
     }
 }

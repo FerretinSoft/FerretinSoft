@@ -29,10 +29,15 @@
                     </Button>
                     <DataGrid x:Name="tiendaDg" Margin="0,33,10,10" Grid.Row="1" Grid.ColumnSpan="3" SelectionChanged="DataGrid_SelectionChanged" Grid.Column="1" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
                         <DataGrid.Columns>
-
-                            <DataGridTextColumn Width="1*" Binding="{Binding Path=codigo}"  Header="Código"/>
-                            <DataGridTextColumn Width="2*" Binding="{Binding Path=nombre}" Header="Nombre Tienda"/>
-                            <DataGridTextColumn Width="2*" Binding="{Binding Path=direccion}" Header="Dirección"/>
+                            <DataGridHyperlinkColumn Width="2.5*" Binding="{Binding Path=codigo}" Header="Código">
+                                <DataGridHyperlinkColumn.ElementStyle>
+                                    <Style>
+                                        <EventSetter Event="Hyperlink.Click" Handler="codTienda_Click"/>
+                                    </Style>
+                                </DataGridHyperlinkColumn.ElementStyle>
+                            </DataGridHyperlinkColumn>                            
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=nombre}" ClipboardContentBinding="{x:Null}" Header="Nombre Tienda"/>
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=direccion}" ClipboardContentBinding="{x:Null}" Header="Dirección"/>
 
                         </DataGrid.Columns>
                     </DataGrid>
@@ -113,9 +118,9 @@
                     <GroupBox Header="Tienda" Margin="10,0,0,181" BorderBrush="Black" Grid.ColumnSpan="4" Grid.Column="1"/>
                     <Image HorizontalAlignment="Left" Height="155" VerticalAlignment="Top" Width="172" Source="/Resources/ferreteriaTienda.jpg" Stretch="Fill" Margin="99,28,0,0" Grid.Column="6"/>
                     <Label Content="Código:" HorizontalAlignment="Left" Margin="1,26,0,0" VerticalAlignment="Top" Grid.Column="3" Height="26" Width="50"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="21,28,0,0" TextWrapping="Wrap" Text="000001" VerticalAlignment="Top" Width="84" IsEnabled="False" Grid.Column="4"/>
+                    <TextBox Text="{Binding Path=codigo, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" x:Name="codigoTiendaTxtBox" HorizontalAlignment="Left" Height="23" Margin="21,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" IsEnabled="False" Grid.Column="4"/>                    
                     <Label Content="Nombre Tienda:" HorizontalAlignment="Left" Margin="1,62,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="3" Height="26" Width="94"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="21,64,0,0" TextWrapping="Wrap" Text="Ferretin Callao" VerticalAlignment="Top" Width="156" Grid.Column="4"/>
+                    <TextBox Text="{Binding Path=nombre, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" x:Name="nombreTiendaTxtBox" HorizontalAlignment="Left" Height="23" Margin="21,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" Grid.Column="4"/>
                     <Label Content="Dirección:" HorizontalAlignment="Left" Margin="1,137,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="3" Height="26" Width="62"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="21,139,0,0" TextWrapping="Wrap" Text="Av.Faucett 459 " VerticalAlignment="Top" Width="272" Grid.Column="4"/>
                     <Label Content="CP:" HorizontalAlignment="Left" Margin="144,177,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="4" Height="30" Width="27"/>

@@ -57,6 +57,10 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
             tiendaTab.SelectedIndex = 1;
         }
 
+        public void codTienda_Click(object sender, RoutedEventArgs e)
+        {         
+            tiendaTab.SelectedIndex = 1;
+        }
        
         private void Button_Click(object sender, RoutedEventArgs e)
         {

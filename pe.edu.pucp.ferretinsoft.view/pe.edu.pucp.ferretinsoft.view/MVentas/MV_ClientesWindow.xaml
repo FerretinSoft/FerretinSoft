@@ -66,7 +66,7 @@
                     </ToolBar>
                     <DataGrid Margin="5" Grid.Row="2" x:Name="clientesGrid" IsManipulationEnabled="True" CanUserSortColumns="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" ItemsSource="{Binding Path=ListaClientes}">
                         <DataGrid.Columns>
-                            <DataGridHyperlinkColumn Width="2.5*" Binding="{Binding Path=nroDoc}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Núm. Doc.">
+                            <DataGridHyperlinkColumn Width="2.5*" Binding="{Binding Path=nroDoc}" Header="Núm. Doc.">
                                 <DataGridHyperlinkColumn.ElementStyle>
                                     <Style>
                                         <EventSetter Event="Hyperlink.Click" Handler="numDocumento_Click"/>
@@ -95,7 +95,7 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Grid Margin="5" >
+                    <Grid Margin="5" DataContext="{Binding ElementName=clientesGrid, Path=SelectedItem}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"></ColumnDefinition>
                             <ColumnDefinition Width="70*"/>
@@ -124,23 +124,24 @@
                         <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="../../Resources/cliente_1.png" Stretch="Fill" Margin="10,9,0,0" Grid.RowSpan="3" Grid.Row="1"/>
                         <Label Content="Núm. Doc:" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="2" Margin="0,0,0,3.358"/>
                         <Label Content="Tipo Doc:" Grid.Column="1" Grid.Row="1" VerticalContentAlignment="Center"/>
-                        <ComboBox x:Name="documentoCombo" VerticalContentAlignment="Center" Height="22" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,10,0,9">
+                        <ComboBox SelectedItem="{Binding Path=tipoDocumento, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" x:Name="documentoCombo" VerticalContentAlignment="Center" Height="22" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,10,0,9">
                             <ComboBoxItem Content="DNI"></ComboBoxItem>
                             <ComboBoxItem Content="RUC"></ComboBoxItem>
                         </ComboBox>
                         <Label Content="Tipo:" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="3"/>
                         <Label Content="Nombres:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="4"/>
-                        <Label Content="Apellidos:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="5"/>
-                        <Label Content="Dirección:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="6"/>
-                        <Label Content="País:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="7"/>
-                        <Label Content="Cód Post.:" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="7"/>
-                        <Label Content="Provincia:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="8"/>
-                        <Label Content="Distrito:" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="8"/>
-                        <Label Content="Telf. 1:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="9"/>
-                        <Label Content="Telf. 2:" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="9"/>
-                        <Label Content="Email:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="10"/>
-                        <Label Content="Fecha Nacimiento:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="11"/>
-                        <Label Content="Sexo:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="12"/>
+                        <Label Content="Apellido Paterno:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="5"/>
+                        <Label Content="Apellido Materno:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="6"/>
+
+                        <Label Content="Dirección:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="7"/>
+                        <Label Content="País:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="8"/>
+                        <Label Content="Cód Post.:" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="8"/>
+                        <Label Content="Provincia:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="9"/>
+                        <Label Content="Distrito:" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="9"/>
+                        <Label Content="Telf. 1:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="10"/>
+                        <Label Content="Telf. 2:" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="10"/>
+                        <Label Content="Email:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="11"/>
+                        <Label Content="Fecha Nacimiento:" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="12"/>
 
                         <Label Content="Registrado Por:" VerticalContentAlignment="Center" Grid.Column="4" Grid.Row="1"/>
                         <Label Content="Fecha de Afiliación:" VerticalContentAlignment="Center" Grid.Column="4" Grid.Row="2"/>
@@ -152,37 +153,36 @@
                         <Label Content="Total Compras:" VerticalContentAlignment="Center" Grid.Column="4" Grid.Row="8"/>
                         <Label Content="Comentarios:" VerticalContentAlignment="Center" Grid.Column="4" Grid.Row="9"/>
 
-                        <TextBox Text="{Binding Path=nroDoc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="numDocTxtBox" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Height="22" />
+                        <TextBox  Text="{Binding Path=nroDoc, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" x:Name="numDocTxtBox" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Height="22" />
                         <ComboBox x:Name="tipoClienteCombo" Grid.ColumnSpan="2" VerticalAlignment="Center" SelectedIndex="0" Grid.Column="2" Grid.Row="3" Height="22">
                             <ListBoxItem Content="Persona Natural"/>
                             <ListBoxItem Content="Persona Jurídica"/>
                         </ComboBox>
-                        <TextBox x:Name="nombreClienteTxtBox" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" Height="22" Margin="0,4,0,5"/>
-                        <TextBox x:Name="apellidoClienteTxtBox" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="3" Height="22" Margin="0,5,0,3"/>
-                        <TextBox x:Name="direccionClienteTxtBox" VerticalAlignment="Center" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Height="22" Margin="0,3,0,4"/>
-                        <ComboBox VerticalAlignment="Center" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="1" Height="22" Margin="0,4,0,3"/>
-                        <ComboBox VerticalAlignment="Center" Grid.Column="3" Grid.Row="7" Grid.ColumnSpan="1" Height="22" Margin="0,4,0,3"/>
-                        <ComboBox VerticalAlignment="Center" Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="1" Height="22" Margin="0,3,0,4"/>
-                        <ComboBox VerticalAlignment="Center" Grid.Column="3" Grid.Row="8" Grid.ColumnSpan="1" Height="22" Margin="0,3,0,4"/>
-                        <TextBox x:Name="telefonoClienteTxtBox" VerticalAlignment="Center" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="1" Height="22" Margin="0,2,0,4"/>
-                        <TextBox x:Name="telefono2ClienteTxtBox" VerticalAlignment="Center" Grid.Column="3" Grid.Row="9" Grid.ColumnSpan="1" Height="22" Margin="0,2,0,4"/>
-                        <TextBox x:Name="emailClienteTxtBox" VerticalAlignment="Center" Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="3" Height="22" Margin="0,4,0,2"/>
-                        <DatePicker VerticalAlignment="Center" Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2" BorderThickness="0" Margin="0,4,0,3" Height="22"></DatePicker>
-                        <ComboBox VerticalAlignment="Center" Grid.Column="1" Grid.Row="12" Grid.ColumnSpan="2"  Margin="0,0,27,0">
-                            <ComboBoxItem Content="Masculino"></ComboBoxItem>
-                            <ComboBoxItem Content="Femenino"></ComboBoxItem>
-                        </ComboBox>
+                        <TextBox Text="{Binding Path=nombre, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" x:Name="nombreClienteTxtBox" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" Height="22" Margin="0,4,0,5"/>
+                        <TextBox Text="{Binding Path=apellidoPaterno, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" x:Name="apellidoPaClienteTxtBox" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="3" Height="22" Margin="0,5,0,3"/>
+                        <TextBox Text="{Binding Path=apellidoMaterno, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" x:Name="apellidoMaClienteTxtBox" VerticalAlignment="Center" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Height="22" Margin="0,5,0,3"/>
+
+                        <TextBox Text="{Binding Path=direccionCliente, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" x:Name="direccionClienteTxtBox" VerticalAlignment="Center" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" Height="22" Margin="0,3,0,4"/>
+                        <ComboBox VerticalAlignment="Center" Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="1" Height="22" Margin="0,4,0,3"/>
+                        <ComboBox VerticalAlignment="Center" Grid.Column="3" Grid.Row="8" Grid.ColumnSpan="1" Height="22" Margin="0,4,0,3"/>
+                        <ComboBox VerticalAlignment="Center" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="1" Height="22" Margin="0,3,0,4"/>
+                        <ComboBox VerticalAlignment="Center" Grid.Column="3" Grid.Row="9" Grid.ColumnSpan="1" Height="22" Margin="0,3,0,4"/>
+                        <TextBox Text="{Binding Path=telefonoCliente, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" x:Name="telefonoClienteTxtBox" VerticalAlignment="Center" Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="1" Height="22" Margin="0,2,0,4"/>
+                        <TextBox x:Name="telefono2ClienteTxtBox" VerticalAlignment="Center" Grid.Column="3" Grid.Row="10" Grid.ColumnSpan="1" Height="22" Margin="0,2,0,4"/>
+                        <TextBox Text="{Binding Path=emailCliente, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" x:Name="emailClienteTxtBox" VerticalAlignment="Center" Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="3" Height="22" Margin="0,4,0,2"/>
+                        <DatePicker VerticalAlignment="Center" Grid.Column="1" Grid.Row="12" Grid.ColumnSpan="2" BorderThickness="0" Margin="0,4,0,3" Height="22"></DatePicker>
+                        
 
 
                         <TextBox x:Name="vendedorClienteTxtBox" VerticalAlignment="Center" Grid.Column="5" Grid.Row="1" IsEnabled="False" Height="22" Margin="0,10,28,9"/>
                         <DatePicker VerticalAlignment="Center" Grid.Column="5" Grid.Row="2" BorderThickness="0" Height="22"></DatePicker>
-                        <TextBox x:Name="puntosGanadosClienteTxtBox" VerticalAlignment="Center" Grid.Column="5" Grid.Row="4" IsEnabled="False" Margin="0,4,28,5" Height="22"/>
+                        <TextBox Text="{Binding Path=puntosGanadosCliente, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" x:Name="puntosGanadosClienteTxtBox" VerticalAlignment="Center" Grid.Column="5" Grid.Row="4" IsEnabled="False" Margin="0,4,28,5" Height="22"/>
                         <TextBox x:Name="contactoClienteTxtBox" VerticalAlignment="Center" Grid.Column="5" Grid.Row="3" IsEnabled="true" Margin="0,4,28,5" Height="22"/>
 
-                        <TextBox x:Name="puntosUsadosClienteTxtBox" VerticalAlignment="Center" Grid.Column="5" Grid.Row="5" IsEnabled="False" Margin="0,5,28,3" Height="22"/>
-                        <TextBox x:Name="puntosActualClienteTxtBox" VerticalAlignment="Center" Grid.Column="5" Grid.Row="6" IsEnabled="False" Margin="0,5,28,2" Height="22"/>
+                        <TextBox Text="{Binding Path=puntosUsadosCliente, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" x:Name="puntosUsadosClienteTxtBox" VerticalAlignment="Center" Grid.Column="5" Grid.Row="5" IsEnabled="False" Margin="0,5,28,3" Height="22"/>
+                        <TextBox Text="{Binding Path=puntosCliente, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" x:Name="puntosActualClienteTxtBox" VerticalAlignment="Center" Grid.Column="5" Grid.Row="6" IsEnabled="False" Margin="0,5,28,2" Height="22"/>
                         <TextBox x:Name="ultCompraClienteTxtBox"  VerticalAlignment="Center" Grid.Column="5" Grid.Row="7" IsEnabled="False" Margin="0,4,28,3" Height="22"/>
-                        <TextBox x:Name="totalComprasClienteTxtBox" VerticalAlignment="Center" Grid.Column="5" Grid.Row="8" IsEnabled="False" Margin="0,5,28,2" Height="22"/>
+                        <TextBox Text="{Binding Path=totalComprasCliente, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" x:Name="totalComprasClienteTxtBox" VerticalAlignment="Center" Grid.Column="5" Grid.Row="8" IsEnabled="False" Margin="0,5,28,2" Height="22"/>
                         <TextBox VerticalAlignment="Stretch" Margin="0,5,28,5" Grid.Column="5" Grid.Row="9" Grid.RowSpan="2" IsEnabled="False"/>
 
                         <StackPanel Grid.Column="4" Grid.Row="12" Orientation="Horizontal" HorizontalAlignment="Right"/>

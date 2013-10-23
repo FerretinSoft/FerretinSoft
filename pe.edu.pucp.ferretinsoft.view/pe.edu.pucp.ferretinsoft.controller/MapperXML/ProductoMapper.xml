@@ -4,16 +4,26 @@ xmlns="http://ibatis.apache.org/mapping"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
 
   <resultMaps>
-    <resultMap id="mapProducto" class="Producto">
-      <result property="ID" column="codigo"/>
-      <result property="nombre" column="nombre"/>
-      <result property="descripcion" column="descripcion"/>
-      <result property="precioLista" column="precioLista"/>
-      <result property="id_material_base" column="id_material_base"/>
-      <result property="id_material_sec" column="id_material_sec"/>
-      <result property="id_unidad_medida" column="id_unidad_medida"/>
-      <result property="estado" column="estado"/>
-    </resultMap>
+    
+      <resultMap id="mapaCategorias" class="Categorias">
+        <result property="ID" column="id"/>
+        <result property="nombre" column="nombre"/>
+        <result property="descripcion" column="descripcion"/>
+        <result property="nivel" column="nivel"/>
+        <result property="id_padre" column="id_padre"/>
+      </resultMap>
+    
+      <resultMap id="mapProducto" class="Producto">
+        <result property="ID" column="id"/>
+        <result property="nombre" column="nombre"/>
+        <result property="descripcion" column="descripcion"/>
+        <result property="categorias" resultMapping="mapaCategorias"/>
+        <result property="precioLista" column="precioLista"/>
+        <result property="id_material_base" column="id_material_base"/>
+        <result property="id_material_sec" column="id_material_sec"/>
+        <result property="id_unidad_medida" column="id_unidad_medida"/>
+        <result property="estado" column="estado"/>
+      </resultMap>    
   </resultMaps>
 
   <statements>
@@ -29,8 +39,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
       insert into tbl_alumnos values(#nombre#, #app#, #apm# ,#edad#)
     </insert>-->
 
-    <select id="obtenerListaProductos" resultMap="mapProducto" >
-      select * from Tbl_Producto;
+    <select id="obtenerListaProductos" resultMap="mapProducto" parameterClass="int">
+      SELECT Tbl_Producto.*, Tbl_Categoria.*
+      FROM Tbl_Categoria INNER JOIN
+      Tbl_Producto_Categoria ON Tbl_Categoria.id = Tbl_Producto_Categoria.id_categoria INNER JOIN
+      Tbl_Producto ON Tbl_Producto_Categoria.id_producto = Tbl_Producto.id
+      WHERE Tbl_Producto.id=#value#
     </select>
 
     <select id="obtenerProductoPorNombre" resultMap="mapProducto" parameterClass="Producto" >

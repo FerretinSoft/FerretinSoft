@@ -18,6 +18,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
     <select id="obtenerListaCategorías" resultMap="mapaCategorias">
       select * from Tbl_Categoria order by id;
     </select>
+
+    <select id="obtenerCategoríasPorProducto" resultClass="int">
+      select id_categoria from Tbl_Producto_Categoria where id_producto=#value#;
+    </select>
+
+    <select id="obtenerNombreCategoría" resultClass="String">
+      select id_categoria from Tbl_Producto_Categoria where id_producto=#value#;
+    </select>
   </statements>
 
 </sqlMap>

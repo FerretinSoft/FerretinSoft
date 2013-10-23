@@ -26,10 +26,10 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
         public MA_MantenimientoProductosWindow()
         {
             InitializeComponent();
-            IList<Categorias> listaCat=CategoriasService.obtenerCategorias();
-            this.categoriaCombo.DisplayMemberPath = "nombre";
-            this.categoriaCombo.SelectedValuePath = "id";
-            this.categoriaCombo.ItemsSource=listaCat;
+            //IList<Categorias> listaCat=CategoriasService.obtenerCategorias();
+            //this.categoriaCombo.DisplayMemberPath = "nombre";
+            //this.categoriaCombo.SelectedValuePath = "id";
+            //this.categoriaCombo.ItemsSource=listaCat;
             gridProductos.ItemsSource = listaProductos();
         }
 
@@ -40,7 +40,9 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
 
         public IList<Producto> listaProductos()
         {
-            return ProductoService.obtenerListaProductos();
+            IList<Producto> listProd=ProductoService.obtenerListaProductos();
+
+            return listProd;
         }
 
         private void nuevoProductoBtn_Click(object sender, RoutedEventArgs e)

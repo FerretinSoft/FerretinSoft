@@ -57,7 +57,7 @@
                         <DataGrid.Columns>
                             <DataGridHyperlinkColumn Width="2*" Binding="{Binding Path=codigo}" Header="Código"/>
                             <DataGridTextColumn Width="3*" Binding="{Binding Path=nombreUsuario}"  Header="Nombre de Usuario"/>
-                            <DataGridTextColumn Width="3*" Binding="{Binding Path=nombre}"  Header="Nombres"/>
+                            <DataGridTextColumn Width="3*" Binding="{Binding Path=contraseña}"  Header="Nombres"/>
                             <DataGridTextColumn Width="3*" Binding="{Binding Path=apellido}" Header="Apellidos"/>
                             <DataGridTextColumn Width="2*" Binding="{Binding Path=perfil}"  Header="Perfil"/>
                             <DataGridTextColumn Width="2*" Binding="{Binding Path=estado}"  Header="Estado"/>
@@ -130,7 +130,7 @@
                     </ComboBox>
                     <PasswordBox HorizontalAlignment="Left" Height="23" Margin="310,287,0,0" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2"  RenderTransformOrigin="0.5,1.812" Password="madmasmdmsamdmas"/>
                     <Label Content="Confirmar Contraseña:" HorizontalAlignment="Left" Margin="174,311,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231"/>
-                    <PasswordBox HorizontalAlignment="Left" Height="23" Margin="310,315,0,0" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2"  RenderTransformOrigin="0.5,1.812" Password="sdasdsadasdasdas"/>                    
+                    <PasswordBox HorizontalAlignment="Left" Height="23" Margin="310,315,0,0" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2"  RenderTransformOrigin="0.5,1.812" Password="sdasdsadasdasdas"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="310,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Grid.ColumnSpan="2" IsEnabled="False" Text="Solorzano Narvaez"/>
 
                 </Grid>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pe.edu.pucp.ferretinsoft.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,17 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
     /// </summary>
     public partial class MS_CambiarContraseñaUsuario : Window
     {
-        public MS_CambiarContraseñaUsuario()
+        public static UsuarioSistema usuario;
+
+        public MS_CambiarContraseñaUsuario(UsuarioSistema usuarioLog)
         {
             InitializeComponent();
+            usuario = usuarioLog;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

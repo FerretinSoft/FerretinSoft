@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="UsuarioMapper"
+xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+
+
+
+  <resultMaps>
+    <resultMap id="mapaUsuario" class="Usuario">
+      <result property="nombreUsuario" column="nombre"/>
+      <result property="contraseña" column="contrasena"/>
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+
+    <select id="obtenerListaUsuarios" resultMap="mapaUsuario">
+      select * from Tbl_Usuario;
+    </select>
+
+
+
+  </statements>
+
+</sqlMap>

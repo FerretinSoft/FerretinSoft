@@ -96,6 +96,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="pe.edu.pucp.ferretinsoft.controller\Services\UsuarioService.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\FerretinDataContext.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -452,6 +453,7 @@
     </None>
     <None Include="SqlMap.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -539,6 +541,7 @@
     <Content Include="libReference\IBatisNet.Common.Logging.Log4Net.dll" />
     <Content Include="libReference\IBatisNet.DataMapper.dll" />
     <Content Include="libReference\log4net.dll" />
+    <Resource Include="pe.edu.pucp.ferretinsoft.controller\MapperXML\UsuarioMapper.xml" />
     <Resource Include="pe.edu.pucp.ferretinsoft.controller\MapperXML\TiendaMapper.xml" />
     <Resource Include="pe.edu.pucp.ferretinsoft.controller\MapperXML\PerfilMapper.xml" />
     <Resource Include="pe.edu.pucp.ferretinsoft.controller\MapperXML\CategoriasMapper.xml" />

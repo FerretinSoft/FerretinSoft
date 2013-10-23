@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using pe.edu.pucp.ferretinsoft.model;
 using System.Data;
+using Project_FerretinSoft.pe.edu.pucp.ferretinsoft.controller.Services;
+
 
 namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
 {
@@ -24,7 +26,8 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
         public MS_AdministrarUsuarios()
         {
             InitializeComponent();
-            usuariosDg.ItemsSource = listUsuarios();
+            //usuariosDg.ItemsSource = listUsuarios();
+            usuariosDg.ItemsSource = UsuarioService.obtenerListaUsuarios();
         }
 
         private void nuevoUsuarioBtn_Click(object sender, RoutedEventArgs e)
@@ -66,7 +69,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
             usuario_1.apellidoP = "Solorzano";
             usuario_1.apellidoM = "Narvaez";
             usuario_1.codigo = "100001";
-            usuario_1.estado = "Activo";            
+            usuario_1.estado = "Activo";
             usuario_1.nombreUsuario = "SNJosefina";
             listaUsuarios.Add(usuario_1);
 
@@ -74,7 +77,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
             usuario_2.apellidoP = "Flores";
             usuario_2.apellidoM = "Gutiérrez";
             usuario_2.codigo = "100002";
-            usuario_2.estado = "Activo";            
+            usuario_2.estado = "Activo";
             usuario_2.nombreUsuario = "FGCesar";
             listaUsuarios.Add(usuario_2);
 
@@ -82,7 +85,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
             usuario_3.apellidoP = "Cervantes";
             usuario_3.apellidoM = "Rodriguez";
             usuario_3.codigo = "100003";
-            usuario_3.estado = "Inactivo";            
+            usuario_3.estado = "Inactivo";
             usuario_3.nombreUsuario = "CRPedro";
             listaUsuarios.Add(usuario_3);
 
@@ -90,7 +93,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MSeguridad
             usuario_4.apellidoP = "Fernandez";
             usuario_4.apellidoM = "Martinez";
             usuario_4.codigo = "100004";
-            usuario_4.estado = "Inactivo";            
+            usuario_4.estado = "Inactivo";
             usuario_4.nombreUsuario = "FMJose";
             listaUsuarios.Add(usuario_4);
 

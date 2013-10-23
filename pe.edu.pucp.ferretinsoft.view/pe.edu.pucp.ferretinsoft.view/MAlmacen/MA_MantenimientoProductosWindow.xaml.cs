@@ -30,7 +30,7 @@ namespace pe.edu.pucp.ferretinsoft.view.MAlmacen
             //this.categoriaCombo.DisplayMemberPath = "nombre";
             //this.categoriaCombo.SelectedValuePath = "id";
             //this.categoriaCombo.ItemsSource=listaCat;
-            gridProductos.ItemsSource = listaProductos();
+            //gridProductos.ItemsSource = listaProductos();
         }
 
         public IList<Categorias> listaCategorias()

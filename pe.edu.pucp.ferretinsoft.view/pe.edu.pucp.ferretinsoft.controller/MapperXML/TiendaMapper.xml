@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="TiendaMapper"
+xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+
+  <resultMaps>
+    <resultMap id="mapaTienda" class="Tienda">
+      <result property="codigo" column="codigo"/>
+      <result property="nombre" column="nombre"/>
+      <result property="direccion" column="direccion"/>
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+
+    <select id="obtenerListaTiendas" resultMap="mapaTienda">
+      select * from Tbl_Almacen;
+    </select>
+  </statements>
+
+</sqlMap>

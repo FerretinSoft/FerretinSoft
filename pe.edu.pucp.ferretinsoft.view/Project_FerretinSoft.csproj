@@ -100,6 +100,7 @@
     <Compile Include="pe.edu.pucp.ferretinsoft.controller\Services\PerfilService.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.controller\Services\ProductoService.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.controller\Services\PruebaService.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.controller\Services\TiendaService.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Auditoria.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Categorias.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Cliente.cs" />
@@ -524,6 +525,7 @@
     <Content Include="libReference\IBatisNet.Common.Logging.Log4Net.dll" />
     <Content Include="libReference\IBatisNet.DataMapper.dll" />
     <Content Include="libReference\log4net.dll" />
+    <Resource Include="pe.edu.pucp.ferretinsoft.controller\MapperXML\TiendaMapper.xml" />
     <Resource Include="pe.edu.pucp.ferretinsoft.controller\MapperXML\PerfilMapper.xml" />
     <Resource Include="pe.edu.pucp.ferretinsoft.controller\MapperXML\CategoriasMapper.xml" />
     <Resource Include="pe.edu.pucp.ferretinsoft.controller\MapperXML\ProductoMapper.xml" />

@@ -8,7 +8,7 @@ namespace pe.edu.pucp.ferretinsoft.model
 {
     public class Tienda
     {
-        public int codigo { get; set; }
+        public String codigo { get; set; }
         public String nombre { get; set; }
         public String tipo { get; set; }
         public int codigoAlmacenAbastecedor { get; set; }        

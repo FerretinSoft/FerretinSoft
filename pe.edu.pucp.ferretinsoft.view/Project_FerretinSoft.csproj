@@ -72,6 +72,7 @@
     <Reference Include="ReachFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net" />
@@ -95,6 +96,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\FerretinDataContext.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FerretinDataContext.dbml</DependentUpon>
+    </Compile>
     <Compile Include="pe.edu.pucp.ferretinsoft.controller\Services\CategoriasService.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.controller\Services\ClienteService.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.controller\Services\PerfilService.cs" />
@@ -433,6 +439,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="pe.edu.pucp.ferretinsoft.model\FerretinDataContext.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>FerretinDataContext.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pe.edu.pucp.ferretinsoft.model\FerretinDataContext.dbml.layout">
+      <DependentUpon>FerretinDataContext.dbml</DependentUpon>
+    </None>
     <None Include="providers.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -531,7 +545,9 @@
     <Resource Include="pe.edu.pucp.ferretinsoft.controller\MapperXML\ProductoMapper.xml" />
     <Resource Include="pe.edu.pucp.ferretinsoft.controller\MapperXML\ClienteMapper.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

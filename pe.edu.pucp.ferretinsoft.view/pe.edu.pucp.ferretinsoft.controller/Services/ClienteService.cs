@@ -9,18 +9,45 @@ using pe.edu.pucp.ferretinsoft.model;
 
 namespace Project_FerretinSoft.pe.edu.pucp.ferretinsoft.controller.Services
 {
-    class ClienteService
+    static class ClienteService
     {
-        public static IList obtenerListaClientes()
+        public static FerretinDataContext db = new FerretinDataContext();
+
+        public static IEnumerable<Cliente> clientes = null;
+
+        public static IEnumerable<Cliente> obtenerListaClientes()
         {
-            IList listaClientes = Mapper.Instance().QueryForList("obtenerListaClientes", null);
-            return listaClientes;
+            clientes = from p in db.Cliente
+                   orderby p.nroDoc
+                   select p;
+            return clientes;
         }
 
-        public static IList obtenerListaClientesBy(Cliente cliente)
+        public static IEnumerable<Cliente> obtenerListaClientesBy(Cliente cliente)
         {
-            IList listaClientes = Mapper.Instance().QueryForList("obtenerListaClientesby", cliente);
-            return listaClientes;
+            if (clientes == null) obtenerListaClientes();
+
+            return from c in clientes
+                   where 
+                   (      c.nroDoc!=null && c.nroDoc.Contains(cliente.nroDoc)
+                       && c.nombre != null && c.nombre.Contains(cliente.nombre)
+                       && c.apPaterno!=null && c.apPaterno.Contains(cliente.apPaterno)
+                       && c.apMaterno!=null && c.apMaterno.Contains(cliente.apMaterno)
+                       && c.tipoDocumento!=null && c.tipoDocumento.Contains(cliente.tipoDocumento) 
+                    )
+                   orderby c.nroDoc
+                   select c;
+        }
+
+        public static void insertarCliente(Cliente cliente)
+        {
+            db.Cliente.InsertOnSubmit(cliente);
+            db.SubmitChanges();
+        }
+
+        public static void actualizarCliente(Cliente cliente)
+        {
+            db.SubmitChanges();
         }
     }
 }

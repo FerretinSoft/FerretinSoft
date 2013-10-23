@@ -14,4 +14,8 @@ namespace pe.edu.pucp.ferretinsoft.view
     public partial class App : Application
     {
     }
+    public class ComboBoxItemString
+    {
+        public string ValueString { get; set; }
+    }
 }

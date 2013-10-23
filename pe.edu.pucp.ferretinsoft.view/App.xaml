@@ -1,8 +1,16 @@
 ﻿<Application x:Class="pe.edu.pucp.ferretinsoft.view.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:pe.edu.pucp.ferretinsoft.view" 
              StartupUri="pe.edu.pucp.ferretinsoft.view/MSeguridad/MS_LoginWindow.xaml">
     <Application.Resources>
-         
+        <x:Array x:Key="Paises" Type="local:ComboBoxItemString">
+            <local:ComboBoxItemString ValueString = "Perú" />
+            <local:ComboBoxItemString ValueString = "Brazil"/>
+            <local:ComboBoxItemString ValueString = "Colombia"/>
+            <local:ComboBoxItemString ValueString = "Chile"/>
+            <local:ComboBoxItemString ValueString = "Argentina"/>
+            <local:ComboBoxItemString ValueString = "Bolivia"/>
+        </x:Array>
     </Application.Resources>
 </Application>

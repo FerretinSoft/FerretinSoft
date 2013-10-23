@@ -6,23 +6,46 @@ using System.Threading.Tasks;
 
 namespace pe.edu.pucp.ferretinsoft.model
 {
-    public class Cliente
+    public partial class Cliente
     {
-        public int codigo { get; set; }
-        public int nroDoc { get; set; }
-        public String nombre { get; set; }
-        public String apellidoPaterno { get; set; }
-        public String apellidoMaterno { get; set; }
-        public String tipoDocumento { get; set; }
-        public String tipoCliente { get; set; }
-        public String telefonoCliente { get; set; }
-        public String emailCliente { get; set; }
-        public int puntosCliente { get; set; }
-        public int puntosGanadosCliente { get; set; }
-        public int puntosUsadosCliente { get; set; }
-        public String ultimaCompraCliente { get; set; }
-        public int totalComprasCliente { get; set; }
-        public String registradoCliente { get; set; }
-        public String direccionCliente { get; set; }
+        public int tipo
+        {
+            get
+            {
+                if (tipoDocumento == "DNI")
+                {
+                    return 1;
+                }
+                else if (tipoDocumento == "RUC")
+                {
+                    return 2;
+                }
+                else
+                    return 0;
+            }
+            set
+            {
+                if (value == 1)
+                {
+                    tipoDocumento = "DNI";
+                }
+                else if (value == 2)
+                {
+                    tipoDocumento = "RUC";
+                }
+                else
+                    tipoDocumento = "";
+                this.SendPropertyChanged("tipo");
+            }
+        }
+
+        public String nombreCompleto
+        {
+            get
+            {
+                return String.Join(" ", nombre, apPaterno, apMaterno);
+            }
+        }
     }
+ 
 }

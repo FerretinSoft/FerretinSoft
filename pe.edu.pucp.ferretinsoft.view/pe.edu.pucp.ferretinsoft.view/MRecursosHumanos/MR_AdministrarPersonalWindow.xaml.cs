@@ -12,18 +12,92 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using pe.edu.pucp.ferretinsoft.model;
 using System.Windows.Shapes;
+using System.ComponentModel;
+using Project_FerretinSoft.pe.edu.pucp.ferretinsoft.controller.Services;
 
 namespace pe.edu.pucp.ferretinsoft.view.MRecursosHumanos
 {
+
+    public class MR_AdministrarPersonalViewModel : INotifyPropertyChanged
+    {
+
+        public IEnumerable<UbigeoDepartamento> departamento
+        {
+            get
+            {
+                return UbigeoService.departamentos;
+            }
+        }
+        private int _selectedDepartamento;
+        public int selectedDepartamento
+        {
+            get
+            {
+                return _selectedDepartamento>0?_selectedDepartamento:0;
+            }
+            set
+            {
+                _selectedDepartamento = value;
+                NotifyPropertyChanged("selectedDepartamento");
+                NotifyPropertyChanged("provincia");
+                NotifyPropertyChanged("distrito");
+            }
+        }
+
+        public IEnumerable<UbigeoProvincia> provincia
+        {
+            get
+            {
+                return UbigeoService.departamentos.ElementAt(selectedDepartamento).UbigeoProvincia;
+            }
+        }
+        private int _selectedProvincia;
+        public int selectedProvincia
+        {
+            get
+            {
+                return _selectedProvincia>0?_selectedProvincia:0;
+            }
+            set
+            {
+                _selectedProvincia = value;
+                NotifyPropertyChanged("distrito");
+            }
+        }
+
+        public IEnumerable<UbigeoDistrito> distrito
+        {
+            get
+            {
+                return UbigeoService.departamentos.ElementAt(selectedDepartamento).UbigeoProvincia.ElementAt(selectedProvincia).UbigeoDistrito;
+            }
+        }
+        private int selectedDistrito { get; set; }
+
+
+        #region INotifyPropertyChanged Members
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void NotifyPropertyChanged(string propName)
+        {
+            if (this.PropertyChanged != null)
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
+        #endregion
+    }
+
+
     /// <summary>
     /// Lógica de interacción para MR_AdministrarPersonalWindow.xaml
     /// </summary>
     public partial class MR_AdministrarPersonalWindow : Window
     {
+        MR_AdministrarPersonalViewModel MR_AdministrarPersonalViewModel = new MR_AdministrarPersonalViewModel();
+ 
         public MR_AdministrarPersonalWindow()
         {
             InitializeComponent();
             personalDg.ItemsSource = ListPersonal();
+            DataContext = MR_AdministrarPersonalViewModel;
         }
 
         private void nuevoEmpleadoBtn_Click(object sender, RoutedEventArgs e)

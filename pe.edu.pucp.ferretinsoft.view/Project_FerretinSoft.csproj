@@ -96,6 +96,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="pe.edu.pucp.ferretinsoft.controller\Services\UbigeoService.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.controller\Services\UsuarioService.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Enumeradores.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\EstadoMovimiento.cs" />

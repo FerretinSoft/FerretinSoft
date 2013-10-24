@@ -102,7 +102,7 @@
                     <ComboBox HorizontalAlignment="Left" Margin="195.75,252,0,0" VerticalAlignment="Top" Width="97" Grid.Column="3"/>
                     <Label Content="Dpto:" HorizontalAlignment="Left" Margin="148.75,279,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="3"/>
                     <Label Content="País:" HorizontalAlignment="Left" Margin="10,279,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="46.75,283,0,0" VerticalAlignment="Top" Width="97" Grid.Column="3"/>
+                    <ComboBox ItemsSource="{StaticResource Paises}" DisplayMemberPath="ValueString" SelectedValuePath="ValueString" HorizontalAlignment="Left" Margin="46.75,283,0,0" VerticalAlignment="Top" Width="97" Grid.Column="3"/>
                     <ComboBox HorizontalAlignment="Left" Margin="195.75,283,0,0" VerticalAlignment="Top" Width="97" Grid.Column="3"/>
                     <Label Content="Telf1:" HorizontalAlignment="Left" Margin="12,345,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.ColumnSpan="4"/>
                     <Label Content="Telf2:" HorizontalAlignment="Left" Margin="151,345,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,1.231" Grid.Column="3"/>

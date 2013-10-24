@@ -11,7 +11,7 @@ namespace pe.edu.pucp.ferretinsoft.model
         public int ID { set; get; }
         public string nombre { set; get; }
         public string descripcion { set; get; }
-        public int nivel { set; get; }
+        //public int nivel { set; get; }
         public int id_padre { set; get; }
     }
 }

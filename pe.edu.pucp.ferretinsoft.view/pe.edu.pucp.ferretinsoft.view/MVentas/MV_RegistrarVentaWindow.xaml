@@ -9,7 +9,7 @@
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>
-            <ColumnDefinition x:Name="clienteViewColumn" MaxWidth="250" Width="0"></ColumnDefinition>
+            <ColumnDefinition x:Name="clienteViewColumn" MaxWidth="250" Width="{Binding widthClienteBar,FallbackValue=0,Mode=OneWay}"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -33,7 +33,7 @@
             <Label Grid.Column="2" Grid.Row="0" Content="Proforma:" Margin="0,0,0,0"/>
             <Label Grid.Column="0" Grid.Row="1" Content="Cód. Venta:" Margin="0,0,0,0"/>
             <Label Grid.Column="2" Grid.Row="1" Content="Vendedor:" Margin="0,0,0,0"/>
-            <Label Grid.Column="0" Grid.Row="3" Content="Cliente:"  Margin="0,0,0,0"/>
+            <Label Grid.Column="0" Grid.Row="3" Content="Cliente DNI/RUC:"  Margin="0,0,0,0"/>
             <TextBox Grid.Column="1" Grid.Row="0" IsEnabled="False" Text="24/09/2013" VerticalContentAlignment="Center" Margin="0,2,18,2" VerticalAlignment="Center"/>
             <TextBox Grid.Column="1" Grid.Row="1" IsEnabled="False" Text="Auto" VerticalContentAlignment="Center" Margin="0,2,18,2" VerticalAlignment="Center"/>
             <Grid Grid.Column="1" Grid.Row="2">
@@ -41,7 +41,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <TextBox  IsEnabled="True" Text="DNI/RUC" VerticalContentAlignment="Center" VerticalAlignment="Center" TextChanged="TextBox_TextChanged"/>
+                <TextBox IsEnabled="True" Text="{Binding nroDocCliente}" VerticalContentAlignment="Center" VerticalAlignment="Center"/>
                 <Button x:Name="buscarClienteBtn" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Width="18" Height="18" Margin="0,5,0,5" Padding="0" BorderThickness="0" Click="buscarClienteBtn_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="../../Resources/search1_20.png"/>
@@ -55,7 +55,7 @@
                 </Button.Background>
             </Button>
             <TextBox Grid.Column="3" Grid.Row="1" IsEnabled="False" Text="Nombre Apellido" VerticalContentAlignment="Center" Margin="0,2,0,2" VerticalAlignment="Center" />
-
+            <TextBox Text="{Binding cliente.nombreCompleto,Mode=OneWay}" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="5,0,0,2" IsEnabled="False"/>
         </Grid>
         
         <Grid Margin="5,5"  Grid.Column="0" Grid.Row="1">
@@ -66,7 +66,7 @@
                 <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
             <ToolBar HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Top" Height="24" Grid.Row="0">
-                <Button x:Name="nuevoProductoBtn" Content="" VerticalAlignment="Stretch" Width="20" Margin="0,0,2,-1">
+                <Button x:Name="nuevoProductoBtn" Content="" VerticalAlignment="Stretch" Width="20" Margin="0,0,2,-1" Click="nuevoProductoBtn_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="../../Resources/add_20.png" Stretch="None"/>
                     </Button.Background>
@@ -80,7 +80,6 @@
             </ToolBar>
             <DataGrid Grid.Row="1" Grid.Column="0" VerticalAlignment="Stretch" Margin="0,5">
                 <DataGrid.Columns>
-                    <DataGridHyperlinkColumn Width="0.5*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header=""/>
                     <DataGridHyperlinkColumn Width="1.5*" Binding="{x:Null}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Código"/>
                     <DataGridTextColumn Width="2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descripción"/>
                     <DataGridTextColumn Width="1.2*" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cantidad"/>
@@ -113,7 +112,7 @@
                     <Label Content="Sub Total:" Grid.Row="1"/>
                     <Label Content="Total a Pagar:" Grid.Row="3"/>
                     <Label Content="%IGV:" Grid.Row="2"/>
-                    <TextBox TextWrapping="Wrap" Text="0" Grid.Column="1" HorizontalContentAlignment="Right" Grid.Row="0" VerticalContentAlignment="Center" Margin="0,2,0,2"/>
+                    <TextBox TextWrapping="Wrap" Text="0" Grid.Column="1" HorizontalContentAlignment="Right" Grid.Row="0" VerticalContentAlignment="Center" Margin="0,2,0,2" IsEnabled="False"/>
                     <TextBox TextWrapping="Wrap" Text="0.00" Grid.Column="1" HorizontalContentAlignment="Right" Grid.Row="1" VerticalContentAlignment="Center" Margin="0,2,0,2"/>
                     <TextBox TextWrapping="Wrap" Text="0.00" Grid.Column="1" HorizontalContentAlignment="Right" Grid.Row="2" VerticalContentAlignment="Center" Margin="0,2,0,2"/>
                     <TextBox TextWrapping="Wrap" Text="0.00" Grid.Column="1" HorizontalContentAlignment="Right" Grid.Row="3" VerticalContentAlignment="Center" Margin="0,2,0,2"/>
@@ -148,12 +147,12 @@
                 <Label Content="Correo:" Grid.Row="3"/>
                 <Label Content="Últ. Compra:" Grid.Row="4"/>
                 <Label Content="Puntos:" Grid.Row="5"/>
-                <Label Content="&lt;Persona/Empresa&gt;" Grid.Row="0" Grid.Column="1" />
-                <Label Content="&lt;RUC/DNI&gt;" Grid.Row="1" Grid.Column="1" />
-                <Label Content="&lt;teléfono&gt;" Grid.Row="2" Grid.Column="1" />
-                <Label Content="&lt;Email&gt;" Grid.Row="3" Grid.Column="1"/>
-                <Label Content="04/jul/2013" Grid.Row="4" Grid.Column="1"/>
-                <Label Content="10000" Grid.Row="5" Grid.Column="1"/>
+                <Label Content="{Binding cliente.tipoDocumento}" Grid.Row="0" Grid.Column="1" />
+                <Label Content="{Binding cliente.nroDoc}" Grid.Row="1" Grid.Column="1" />
+                <Label Content="{Binding cliente.telefono1}" Grid.Row="2" Grid.Column="1" />
+                <Label Content="{Binding cliente.email}" Grid.Row="3" Grid.Column="1"/>
+                <Label Content="{Binding cliente.ultimaCompra}" Grid.Row="4" Grid.Column="1"/>
+                <Label Content="{Binding cliente.puntos}" Grid.Row="5" Grid.Column="1"/>
             </Grid>
         </StackPanel>
 

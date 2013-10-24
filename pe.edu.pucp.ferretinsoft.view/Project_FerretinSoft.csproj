@@ -96,6 +96,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Enumeradores.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\EstadoMovimiento.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\FerretinDataContext.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -111,6 +113,7 @@
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Categorias.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Cliente.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Devolucion.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\Movimiento.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\OrdenCompra.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Perfil.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Personal.cs" />
@@ -123,6 +126,7 @@
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Proveedor.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\SolicitudAbastecimiento.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Tienda.cs" />
+    <Compile Include="pe.edu.pucp.ferretinsoft.model\TipoMovimiento.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\UsuarioSistema.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Vendedor.cs" />
     <Compile Include="pe.edu.pucp.ferretinsoft.model\Venta.cs" />

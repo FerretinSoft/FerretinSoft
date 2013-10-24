@@ -24,7 +24,7 @@
                         <DataGrid.Columns>
                             <DataGridHyperlinkColumn Width="1*" Binding="{Binding Path=ID}" ContentBinding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cód. Producto"/>
                             <DataGridTextColumn Width="2*" Binding="{Binding Path=nombre}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>
-                            <DataGridTextColumn Width="2*" Binding="{Binding Path=cat}" ClipboardContentBinding="{x:Null}" Header="Categorías"/>
+                            <DataGridTextColumn Width="2*" Binding="{Binding Path=categorias.nombre}" ClipboardContentBinding="{x:Null}" Header="Categorías"/>
                             <DataGridCheckBoxColumn Header="Estado" Binding="{Binding Path=estado}" Width="1*"/>
                         </DataGrid.Columns>
                     </DataGrid>

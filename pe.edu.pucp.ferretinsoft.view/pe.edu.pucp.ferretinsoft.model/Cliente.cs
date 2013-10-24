@@ -8,6 +8,7 @@ namespace pe.edu.pucp.ferretinsoft.model
 {
     public partial class Cliente
     {
+    
         public int tipo
         {
             get

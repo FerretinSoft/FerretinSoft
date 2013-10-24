@@ -11,6 +11,11 @@ namespace Project_FerretinSoft.pe.edu.pucp.ferretinsoft.controller.Services
 {
     class TiendaService
     {
+        /*
+         *Permite obtener todas las tiendas que se encuentran en la tabla
+         *Input (Vacio)
+         *Output: IList<Tienda> 
+         */
         public static IList<Tienda> obtenerTiendas()
         {
             IList<Tienda> listaTiend = Mapper.Instance().QueryForList<Tienda>("obtenerListaTiendas", null);
